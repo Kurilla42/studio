@@ -91,7 +91,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
             >
               Expert Plumbing Services
               <br />
-              <span className="inline-flex items-center">
+              <span className="inline-flex items-center h-[1.2em]">
                 You Can&nbsp;
                 <span className="relative w-[150px] sm:w-[210px] lg:w-[240px] text-left">
                   <AnimatePresence mode="wait">
