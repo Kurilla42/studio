@@ -21,7 +21,7 @@ export default function Faq() {
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-base text-muted-foreground leading-relaxed pt-2">
+              <AccordionContent className="text-base text-muted-foreground leading-relaxed pt-2 whitespace-pre-line">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

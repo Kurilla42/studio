@@ -148,24 +148,24 @@ export const teamMembers: TeamMember[] = [
 
 export const faqs: FaqItem[] = [
     {
-        question: "What plumbing services do you offer?",
-        answer: "We offer a comprehensive range of services including 24/7 emergency repairs (burst pipes, gas leaks), installation of water heaters and fixtures, preventive maintenance and inspections, and advanced drain cleaning services like hydro jetting."
+        question: "How much does plumbing service cost?",
+        answer: "Our pricing is transparent and upfront - no hidden fees or surprise charges. Here's our pricing structure:\n\n- Service Call: $79 (waived with completed repair)\n- Emergency Repairs: Starting at $150-$500 depending on complexity\n- Water Heater Installation: $800-$2,500 (depends on type and capacity)\n- Drain Cleaning: $150-$400 (standard cleaning)\n- Fixture Installation: $125-$350 per fixture\n\nEvery job begins with a free diagnostic and detailed quote. You'll know the exact price before any work starts."
     },
     {
-        question: "Are your plumbers licensed and insured?",
-        answer: "Yes, absolutely. All of our technicians are fully licensed, insured, and highly trained professionals. We prioritize safety and quality, ensuring you receive the best and most reliable service possible."
+        question: "How quickly can you arrive?",
+        answer: "We understand that plumbing emergencies can't wait. That's why we prioritize fast response:\n\n- Emergency Service: 60 minutes or less in most cases\n- Same-Day Service: Available for urgent non-emergency repairs\n- Scheduled Appointments: We offer flexible scheduling to fit your calendar\n- 24/7 Availability: Our team is always ready to respond, day or night\n\nCall now and we'll dispatch a certified technician to your location immediately."
     },
     {
-        question: "What is your emergency response time?",
-        answer: "We pride ourselves on our fast response times for emergencies. In most cases, we can have a technician at your door within an hour of your call, depending on your location and current demand. Our dispatch team will give you an accurate ETA when you call."
+        question: "Do you offer a warranty or guarantee?",
+        answer: "Yes! We stand behind every job we complete with comprehensive guarantees:\n\n- 2-Year Labor Warranty: All repairs and installations are covered for 2 full years\n- Parts Warranty: Manufacturer warranties on all parts and equipment\n- 100% Satisfaction Guarantee: If you're not happy, we'll make it right\n- Free Follow-up Visits: If an issue persists within warranty period, we return at no charge\n\nOur warranty is one of the best in the industry because we use quality parts and employ expert technicians."
     },
     {
-        question: "Do you provide free estimates?",
-        answer: "Yes, we provide free, no-obligation estimates for most of our services. For diagnostic work, a service fee may apply, but this is always communicated upfront. Our pricing is transparent with no hidden fees."
+        question: "What is your service process?",
+        answer: "Our streamlined service process ensures you get fast, professional results every time:\n\nStep 1 - Contact Us: Call us at (555) 123-4567 or submit an online request. We'll gather details about your plumbing issue.\nStep 2 - Fast Response: For emergencies, our certified technician arrives within 60 minutes, fully equipped to solve most common problems.\nStep 3 - Diagnosis & Quote: We perform a thorough inspection and provide upfront pricing with no hidden fees or surprise charges.\nStep 4 - Expert Repair: Once you approve, we complete the work using quality parts and proven techniques. Most jobs are finished the same day.\nStep 5 - Warranty & Payment: We clean up, review everything with you, and provide a 2-year warranty. You only pay when 100% satisfied.\n\nThis proven process has helped 1,000+ homeowners solve their plumbing problems quickly and reliably."
     },
     {
-        question: "What areas do you service?",
-        answer: "We service the entire metropolitan area and surrounding suburbs. Please give us a call with your address, and our team can confirm if you are within our service range."
+        question: "Are your technicians licensed and certified?",
+        answer: "Yes, absolutely. Every ProFlow technician is fully licensed, insured, and certified. Here's what that means for you:\n\n- State Licensed: All technicians hold current state plumbing licenses\n- Fully Insured: We carry comprehensive liability and workers' compensation insurance\n- Ongoing Training: Our team participates in continuous education to stay current with the latest techniques and code requirements\n- Background Checked: Every team member passes thorough background and drug screening\n\nWhen you hire ProFlow, you're hiring experienced professionals who meet the highest industry standards."
     }
 ]
 
