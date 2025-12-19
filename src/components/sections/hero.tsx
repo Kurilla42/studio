@@ -91,13 +91,13 @@ export default function Hero({ onScheduleClick }: HeroProps) {
             >
               Expert Plumbing Services
               <br />
-              <span className="inline-flex items-baseline">
+              <span className="inline-flex items-center">
                 You Can&nbsp;
-                <span className="relative inline-block w-[140px] sm:w-[200px] lg:w-[220px]">
+                <span className="relative w-[150px] sm:w-[210px] lg:w-[240px] text-left">
                   <AnimatePresence mode="wait">
                     <motion.span
                       key={currentTagline}
-                      className="absolute inset-0 primary-gradient-text"
+                      className="absolute inset-0 primary-gradient-text whitespace-nowrap"
                       style={{ filter: 'drop-shadow(2px 2px 4px hsla(var(--primary), 0.3))' }}
                       initial={{ opacity: 0, y: 20, scale: 0.9 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
