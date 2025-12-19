@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "Blurred background of a modern kitchen or bathroom",
-      "imageUrl": "https://images.unsplash.com/photo-1622372738946-62e02505feb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxraXRjaGVuJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzY2MDk5NDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "kitchen interior"
+      "description": "A wall with a network of white plumbing pipes",
+      "imageUrl": "https://images.unsplash.com/photo-1543169863-a0928a796b42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwbHVtYmluZyUyMHBpcGVzfGVufDB8fHx8MTc2NjE0MTQyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "plumbing pipes"
     },
     {
       "id": "hero-plumber",
