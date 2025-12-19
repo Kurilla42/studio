@@ -22,6 +22,17 @@ export default function SocialProof() {
   const [notification, setNotification] = useState<Notification | null>(null);
 
   useEffect(() => {
+    let hasShown = false;
+    try {
+      hasShown = sessionStorage.getItem('social-proof-shown') === 'true';
+    } catch (e) {
+      // sessionStorage is not available
+    }
+
+    if (hasShown) {
+      return;
+    }
+
     const showRandomNotification = () => {
       const randomAvatarData = socialProofData.avatars[Math.floor(Math.random() * socialProofData.avatars.length)];
       const image = PlaceHolderImages.find(p => p.id === randomAvatarData);
@@ -37,18 +48,16 @@ export default function SocialProof() {
         time: socialProofData.times[Math.floor(Math.random() * socialProofData.times.length)],
       };
       setNotification(newNotification);
+      try {
+        sessionStorage.setItem('social-proof-shown', 'true');
+      } catch (e) {
+        // sessionStorage is not available
+      }
     };
-
-    const interval = setInterval(() => {
-      // Hide current notification, then show a new one
-      setNotification(null);
-      setTimeout(showRandomNotification, 500); // Wait for exit animation
-    }, 7000 + Math.random() * 2000); // Every 7-9 seconds
 
     const initialTimeout = setTimeout(showRandomNotification, 5000); // First one after 5s
 
     return () => {
-      clearInterval(interval);
       clearTimeout(initialTimeout);
     };
   }, []);
@@ -57,7 +66,7 @@ export default function SocialProof() {
     if (notification) {
       const timer = setTimeout(() => {
         setNotification(null);
-      }, 5000); // Auto-dismiss after 5s
+      }, 12000); // Auto-dismiss after 12s
       return () => clearTimeout(timer);
     }
   }, [notification]);
