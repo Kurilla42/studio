@@ -15,7 +15,11 @@ const RotatingTaglineOutputSchema = z.object({
 export type RotatingTaglineOutput = z.infer<typeof RotatingTaglineOutputSchema>;
 
 export async function generateRotatingTagline(): Promise<RotatingTaglineOutput> {
-  return rotatingTaglineFlow();
+  // This flow is not called anymore to prevent rate limiting issues.
+  // The logic is now handled in the Hero component.
+  const taglines: ('Trust' | 'Afford' | 'Get Fast')[] = ['Trust', 'Afford', 'Get Fast'];
+  const tagline = taglines[Math.floor(Math.random() * taglines.length)];
+  return { tagline };
 }
 
 const prompt = ai.definePrompt({

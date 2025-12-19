@@ -9,7 +9,6 @@ import { Phone, Star as StarIcon } from 'lucide-react';
 import { heroStats } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
-import { generateRotatingTagline } from '@/ai/flows/rotating-tagline-generation';
 
 type HeroProps = {
   onScheduleClick: () => void;
@@ -23,17 +22,11 @@ export default function Hero({ onScheduleClick }: HeroProps) {
 
   useEffect(() => {
     setIsMounted(true);
-    const interval = setInterval(async () => {
-      try {
-        const result = await generateRotatingTagline();
-        setCurrentTagline(result.tagline);
-      } catch (error) {
-        console.error("Failed to generate tagline, cycling manually.", error);
-        setCurrentTagline(prev => {
-            const currentIndex = taglines.indexOf(prev);
-            return taglines[(currentIndex + 1) % taglines.length];
-        });
-      }
+    const interval = setInterval(() => {
+      setCurrentTagline(prev => {
+          const currentIndex = taglines.indexOf(prev);
+          return taglines[(currentIndex + 1) % taglines.length];
+      });
     }, 2000);
     return () => clearInterval(interval);
   }, []);
