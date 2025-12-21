@@ -16,7 +16,13 @@ import { cn } from '@/lib/utils';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const GoogleIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#4285F4" d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.75 8.36,4.73 12.19,4.73C15.28,4.73 17.29,6.42 17.29,6.42L19.5,4.36C19.5,4.36 17.22,2.38 12.2,2.38C6.42,2.38 2,7.34 2,12C2,16.66 6.42,21.62 12.2,21.62C17.6,21.62 21.5,17.92 21.5,12.29C21.5,11.73 21.45,11.41 21.35,11.1Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
+    <path fill="#4285F4" d="M24 9.8c3.86 0 6.96 1.56 9.17 3.62l6.5-6.5C35.24 2.85 30.14 0 24 0 14.62 0 6.62 5.56 2.68 13.61l7.86 6.07C12.25 13.9 17.64 9.8 24 9.8z"></path>
+    <path fill="#34A853" d="M46.32 25.13c0-1.66-.15-3.3-.43-4.88H24v9.17h12.52c-.54 2.97-2.17 5.48-4.63 7.18l7.27 5.66c4.25-3.92 6.76-9.67 6.76-16.13z"></path>
+    <path fill="#FBBC05" d="M10.54 25.68c-.48-1.45-.76-3-.76-4.68s.28-3.23.76-4.68L2.68 10.27C1.03 13.4 0 17.15 0 21c0 3.85 1.03 7.6 2.68 10.73l7.86-6.05z"></path>
+    <path fill="#EA4335" d="M24 48c6.4 0 11.8-2.12 15.73-5.74l-7.27-5.66c-2.12 1.42-4.84 2.26-7.96 2.26-6.36 0-11.75-4.1-13.67-9.73l-7.86 6.07C6.62 42.44 14.62 48 24 48z"></path>
+    <path fill="none" d="M0 0h48v48H0z"></path>
+  </svg>
 )
 
 export default function Testimonials() {
@@ -29,8 +35,8 @@ export default function Testimonials() {
             </h2>
             <div className="inline-flex items-center gap-2 mt-4">
                 <GoogleIcon />
-                <span className="text-lg text-muted-foreground font-semibold">Google</span>
-                <span className="text-lg text-muted-foreground font-bold">4.9</span>
+                <span className="text-lg text-muted-foreground">Google</span>
+                <span className="text-lg text-foreground font-bold">4.9</span>
             </div>
         </div>
         <Carousel
