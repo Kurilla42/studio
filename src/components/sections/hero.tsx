@@ -115,7 +115,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
               className="mt-8 flex flex-col sm:flex-row gap-4"
               variants={itemVariants}
             >
-              <Button size="lg" className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover animate-pulse-glow transition-all duration-300 hover:-translate-y-0.5" asChild>
+              <Button size="lg" className="emergency-gradient text-primary-foreground shadow-button-primary hover:shadow-button-primary-hover animate-pulse-glow transition-all duration-300 hover:-translate-y-0.5" asChild>
                 <a href="tel:5551234567">
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now: (555) 123-4567
