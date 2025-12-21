@@ -91,7 +91,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
             >
               Expert Plumbing Services
               <br />
-              <div className="inline-flex items-center h-[1.2em]">
+              <div className="inline-flex items-center h-[1.2em] z-10 relative">
                 You Can&nbsp;
                 <div className="relative w-[150px] sm:w-[210px] lg:w-[240px] text-left">
                   <AnimatePresence mode="wait">
@@ -121,7 +121,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                   Call Now: (555) 123-4567
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="bg-background/50 border-input" onClick={onScheduleClick}>
+              <Button size="lg" className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5" onClick={onScheduleClick}>
                 Schedule Service
               </Button>
             </motion.div>
