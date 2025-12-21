@@ -73,7 +73,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           animate={isMounted ? "visible" : "hidden"}
         >
           {/* Left Column: Content */}
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="flex flex-col items-end text-right md:items-start md:text-left">
             <motion.h1 
               className="text-5xl sm:text-5xl lg:text-6xl font-hero font-bold text-foreground text-shadow-hero leading-tight"
               variants={itemVariants}
