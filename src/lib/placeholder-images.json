@@ -15,7 +15,7 @@
     {
       "id": "about-main-image",
       "description": "Professional plumber working under a sink",
-      "imageUrl": "https://i.ibb.co/rfkjHzT/plumber-working.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1596910547037-842b2f845a76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwbHVtYmVyJTIwd29ya2luZ3xlbnwwfHx8fDE3NjYxNTM0ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "plumber working"
     },
     {
@@ -135,7 +135,7 @@
     {
       "id": "social-proof-avatar-4",
       "description": "Generic user avatar for social proof notification",
-      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjYwODgyNTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjYwODgyNTd8MA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
     }
   ]
