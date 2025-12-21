@@ -116,17 +116,17 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     initial="hidden"
                     animate={isMounted ? "visible" : "hidden"}
                   >
-                    <Card className="p-4 bg-background/80 backdrop-blur-md border-white/30 shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 ease-out">
-                      <div className="flex items-center gap-3 sm:gap-4">
-                        <stat.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary flex-shrink-0" />
+                    <Card className="p-3 sm:p-4 bg-background/80 backdrop-blur-md border-white/30 shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 ease-out">
+                      <div className="flex items-center gap-2 sm:gap-4">
+                        <stat.icon className="w-7 h-7 sm:w-10 sm:h-10 text-primary flex-shrink-0" />
                         <div className="flex flex-col">
-                          <div className="text-2xl font-bold font-hero text-foreground flex items-center gap-1">
+                          <div className="text-xl sm:text-2xl font-bold font-hero text-foreground flex items-center gap-1">
                             {stat.id === 'stat-3' ? (
                                 <div className="flex items-center gap-1 sm:gap-1.5">
                                     <span>4.9</span>
                                     <div className="flex items-center">
                                         {[...Array(5)].map((_, i) => (
-                                            <StarIcon key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
+                                            <StarIcon key={i} className="w-3 h-3 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
                                         ))}
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                                 stat.number
                             )}
                           </div>
-                          <p className="text-xs sm:text-sm text-muted-foreground">{stat.label}</p>
+                          <p className="text-[10px] sm:text-sm text-muted-foreground">{stat.label}</p>
                         </div>
                       </div>
                     </Card>
