@@ -21,7 +21,6 @@ export default function Hero({ onScheduleClick }: HeroProps) {
     setIsMounted(true);
   }, []);
 
-  const plumberImage = PlaceHolderImages.find(p => p.id === 'hero-plumber');
   const backgroundImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
   const containerVariants = {
@@ -64,7 +63,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           data-ai-hint={backgroundImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-background/85 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-background/40 to-transparent"></div>
       
       <div className="container relative z-10 pt-24 pb-12 md:pt-32 md:pb-16">
         <motion.div 
@@ -144,27 +143,6 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Right Column: Image */}
-          <div className="relative h-96 md:h-auto md:self-end justify-self-center">
-            {plumberImage && (
-              <motion.div 
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-                className="relative w-[300px] h-[400px] md:w-[450px] md:h-[600px] lg:w-[500px] lg:h-[667px]"
-              >
-                <Image
-                  src={plumberImage.imageUrl}
-                  alt={plumberImage.description}
-                  fill
-                  priority
-                  className="object-contain drop-shadow-2xl"
-                  data-ai-hint={plumberImage.imageHint}
-                />
-              </motion.div>
-            )}
           </div>
         </motion.div>
       </div>
