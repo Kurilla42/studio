@@ -25,6 +25,19 @@ const GoogleIcon = () => (
   </svg>
 )
 
+const fallbackColors = [
+    'bg-red-500 text-white',
+    'bg-green-500 text-white',
+    'bg-blue-500 text-white',
+    'bg-yellow-500 text-black',
+    'bg-purple-500 text-white',
+    'bg-pink-500 text-white',
+    'bg-indigo-500 text-white',
+    'bg-teal-500 text-white',
+];
+
+let colorIndex = 0;
+
 export default function Testimonials() {
   return (
     <section id="testimonials" className="bg-secondary">
@@ -50,7 +63,14 @@ export default function Testimonials() {
             {testimonials.map((testimonial, index) => {
               const image = testimonial.image ? PlaceHolderImages.find(p => p.id === testimonial.image) : null;
               const fallbackInitial = testimonial.name.charAt(0);
-              const fallbackColor = testimonial.fallbackColor || 'bg-primary text-primary-foreground';
+              
+              let fallbackColor;
+              if (!image) {
+                fallbackColor = testimonial.fallbackColor || fallbackColors[colorIndex % fallbackColors.length];
+                colorIndex++;
+              } else {
+                 fallbackColor = 'bg-primary text-primary-foreground';
+              }
               
               return (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
