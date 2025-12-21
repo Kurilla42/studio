@@ -14,9 +14,12 @@ export type Service = {
 
 export type Testimonial = {
   name: string;
-  image: string;
+  image: string | null;
   testimonial: string;
   rating: number;
+  time: string;
+  verified: boolean;
+  fallbackColor?: string;
 };
 
 export type Offer = {

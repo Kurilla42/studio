@@ -3,7 +3,7 @@
     {
       "id": "hero-background",
       "description": "A wall with a network of white plumbing pipes",
-      "imageUrl": "https://images.unsplash.com/photo-1543169863-a0928a796b42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwbHVtYmluZyUyMHBpcGVzfGVufDB8fHx8MTc2NjE0MTQyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1621282136018-25b42d765870?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwbHVtYmluZyUyMHBpcGVzfGVufDB8fHx8MTc2NjE0MTQyNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "plumbing pipes"
     },
     {
@@ -15,7 +15,7 @@
     {
       "id": "about-main-image",
       "description": "Professional plumber working under a sink",
-      "imageUrl": "https://i.ibb.co/bF0PSQ1/plumber-working.jpg",
+      "imageUrl": "https://i.ibb.co/rfkjHzT/plumber-working.jpg",
       "imageHint": "plumber working"
     },
     {
@@ -62,31 +62,49 @@
     },
     {
       "id": "testimonial1-avatar",
-      "description": "Avatar of Sarah Johnson",
+      "description": "Avatar of Deborah Meniane",
       "imageUrl": "https://images.unsplash.com/photo-1610655507808-a59293f4e332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NjA3MDMzMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
     },
     {
       "id": "testimonial2-avatar",
-      "description": "Avatar of Robert Anderson",
+      "description": "Avatar of Steve McCollum",
       "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjYwNTI3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man portrait"
     },
     {
-      "id": "testimonial3-avatar",
-      "description": "Avatar of Emily Rodriguez",
+      "id": "testimonial-marco",
+      "description": "Avatar of Marco Tietz",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBwb3J0cmFpdCUyMGhhdHxlbnwwfHx8fDE3NjYxNTMyMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "testimonial-jessica",
+      "description": "Avatar of Jessica Miller",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NjA3MDMzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-olivia",
+      "description": "Avatar of Olivia Garcia",
       "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NjA3MDMzMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
     },
     {
-      "id": "testimonial4-avatar",
-      "description": "Avatar of David Williams",
+      "id": "testimonial-chris",
+      "description": "Avatar of Chris Brown",
       "imageUrl": "https://images.unsplash.com/photo-1624395213043-fa2e123b2656?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjYwNTI3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man portrait"
     },
     {
-      "id": "testimonial5-avatar",
-      "description": "Avatar of Amanda Foster",
+      "id": "testimonial-robert",
+      "description": "Avatar of Robert Johnson",
+      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjYwNTI3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "testimonial-linda",
+      "description": "Avatar of Linda Davis",
       "imageUrl": "https://images.unsplash.com/photo-1592621385612-4d7129426394?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NjA3MDMzMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
     },

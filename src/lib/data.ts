@@ -67,35 +67,114 @@ export const heroStats = [
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Sarah Johnson",
+    name: "Deborah Meniane",
     image: "testimonial1-avatar",
-    testimonial: "Incredible service! They fixed our burst pipe within an hour of my call. The plumber was professional, courteous, and explained everything clearly. I highly recommend ProFlow Plumbing for any emergency.",
+    testimonial: "Always professional. Quick to respond and they get the job done right the first time. Highly recommended!",
     rating: 5,
+    time: "1 day ago",
+    verified: true
   },
   {
-    name: "Robert Anderson",
+    name: "Steve McCollum",
     image: "testimonial2-avatar",
-    testimonial: "Best plumbers in town! Installed our new water heater efficiently and at a fair price. The team was punctual, clean, and did a fantastic job. We'll definitely be using them for all our plumbing needs.",
-    rating: 5,
+    testimonial: "Prompt courteous professional. Too early to tell if everything works as it should but so far so good. The technician was very knowledgeable.",
+    rating: 4,
+    time: "1 day ago",
+    verified: true
   },
   {
-    name: "Emily Rodriguez",
-    image: "testimonial3-avatar",
-    testimonial: "A professional team that went above and beyond. They not only fixed the leak but also identified a potential future issue, saving us a lot of money and stress. Their honesty and expertise are unmatched.",
+    name: "Marco Tietz",
+    image: "testimonial-marco",
+    testimonial: "Winson did a great job diagnosing the problem with my dishwasher and the team helped negotiating the warranty. Great service.",
     rating: 5,
-  },
-    {
-    name: "David Williams",
-    image: "testimonial4-avatar",
-    testimonial: "Outstanding emergency service! Called them at midnight for a clogged drain and they arrived promptly. The technician was friendly and had the problem resolved in no time. Truly a 24/7 lifesaver!",
-    rating: 5,
+    time: "1 day ago",
+    verified: true
   },
   {
-    name: "Amanda Foster",
-    image: "testimonial5-avatar",
-    testimonial: "Exceptional quality and service! They renovated our master bathroom plumbing, and the results are flawless. Their attention to detail and craftsmanship is impressive. So glad we chose ProFlow.",
+    name: "Bruce Neighbors",
+    image: null,
+    fallbackColor: "bg-red-500 text-white",
+    testimonial: "Great customer care skills, very efficient and communicated effectively. I was very pleased with the work.",
     rating: 5,
+    time: "2 days ago",
+    verified: true
   },
+  {
+    name: "David Sargent",
+    image: null,
+    fallbackColor: "bg-green-500 text-white",
+    testimonial: "Mario did a great job finding the problem with our clothes washer and fixing it. Very happy with the fast service.",
+    rating: 5,
+    time: "3 days ago",
+    verified: true
+  },
+  {
+    name: "Jessica Miller",
+    image: "testimonial-jessica",
+    testimonial: "They replaced our old water heater. The team was on time, very respectful of our home, and the price was fair. I'm so glad we called them.",
+    rating: 5,
+    time: "4 days ago",
+    verified: true
+  },
+  {
+    name: "Tom Wilson",
+    image: null,
+    fallbackColor: "bg-indigo-500 text-white",
+    testimonial: "Had a recurring drain clog that other companies couldn't fix. ProFlow's hydro-jetting service cleared it completely. It's been months with no issues.",
+    rating: 5,
+    time: "1 week ago",
+    verified: true
+  },
+  {
+    name: "Olivia Garcia",
+    image: "testimonial-olivia",
+    testimonial: "Called them on a Sunday for a leak under the sink. The plumber arrived in under an hour and fixed it quickly. A real lifesaver!",
+    rating: 5,
+    time: "1 week ago",
+    verified: false
+  },
+  {
+    name: "Chris Brown",
+    image: "testimonial-chris",
+    testimonial: "Good service, but it took a bit longer than I expected to get an appointment for a non-emergency issue.",
+    rating: 4,
+    time: "2 weeks ago",
+    verified: true
+  },
+  {
+    name: "Patricia Smith",
+    image: null,
+    fallbackColor: "bg-pink-500 text-white",
+    testimonial: "Professional, clean, and transparent pricing. No surprises on the final bill. I appreciate their honesty and will use them again.",
+    rating: 5,
+    time: "3 weeks ago",
+    verified: true
+  },
+  {
+    name: "Robert Johnson",
+    image: "testimonial-robert",
+    testimonial: "The technician, Mike, was fantastic. He explained the repair options for my furnace clearly and didn't pressure me. Great experience.",
+    rating: 5,
+    time: "1 month ago",
+    verified: true
+  },
+  {
+    name: "Linda Davis",
+    image: "testimonial-linda",
+    testimonial: "They did a full repipe on our old house. It was a big job, but they handled it with professionalism and finished on schedule. The peace of mind is worth it.",
+    rating: 5,
+    time: "1 month ago",
+    verified: false
+  },
+  {
+    name: "James Martinez",
+    image: null,
+    fallbackColor: "bg-purple-500 text-white",
+    testimonial: "Always reliable. I've used ProFlow for both big and small jobs over the years and they consistently deliver high-quality work.",
+    rating: 5,
+    time: "2 months ago",
+    verified: true
+  }
 ];
 
 export const specialOffers: Offer[] = [
