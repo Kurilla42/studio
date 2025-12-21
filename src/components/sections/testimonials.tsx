@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Star, CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { testimonials } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
@@ -16,26 +16,22 @@ import { cn } from '@/lib/utils';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const GoogleIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.75 8.36,4.73 12.19,4.73C15.28,4.73 17.29,6.42 17.29,6.42L19.5,4.36C19.5,4.36 17.22,2.38 12.2,2.38C6.42,2.38 2,7.34 2,12C2,16.66 6.42,21.62 12.2,21.62C17.6,21.62 21.5,17.92 21.5,12.29C21.5,11.73 21.45,11.41 21.35,11.1Z"/></svg>
-)
-
-const VerifiedIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4285F4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#4285F4" d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.75 8.36,4.73 12.19,4.73C15.28,4.73 17.29,6.42 17.29,6.42L19.5,4.36C19.5,4.36 17.22,2.38 12.2,2.38C6.42,2.38 2,7.34 2,12C2,16.66 6.42,21.62 12.2,21.62C17.6,21.62 21.5,17.92 21.5,12.29C21.5,11.73 21.45,11.41 21.35,11.1Z"/></svg>
 )
 
 export default function Testimonials() {
   return (
     <section id="testimonials" className="bg-secondary">
       <div className="container">
-        <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 mb-4">
-                <GoogleIcon />
-                <span className="text-xl font-bold">Google</span>
-                <span className="text-lg text-muted-foreground font-semibold">4.9</span>
-            </div>
+        <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 What Our Customers Say
             </h2>
+            <div className="inline-flex items-center gap-2 mt-4">
+                <GoogleIcon />
+                <span className="text-lg text-muted-foreground font-semibold">Google</span>
+                <span className="text-lg text-muted-foreground font-bold">4.9</span>
+            </div>
         </div>
         <Carousel
           opts={{
@@ -68,18 +64,16 @@ export default function Testimonials() {
                         <div className="flex-1">
                             <div className="flex items-center gap-1.5">
                                 <p className="font-bold text-sm text-foreground">{testimonial.name}</p>
-                                {testimonial.verified && <VerifiedIcon />}
                             </div>
-                           <div className="flex items-center gap-1.5">
-                            <GoogleIcon />
+                           <div className="flex items-center gap-2">
+                            <div className="flex items-center">
+                                {[...Array(5)].map((_, i) => (
+                                <Star key={i} className={cn("w-4 h-4", i < testimonial.rating ? "fill-yellow-400 text-yellow-400" : "fill-gray-300 text-gray-300")} />
+                                ))}
+                            </div>
                             <p className="text-xs text-muted-foreground">{testimonial.time}</p>
                            </div>
                         </div>
-                      </div>
-                      <div className="flex items-center mb-3">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={cn("w-5 h-5", i < testimonial.rating ? "fill-yellow-400 text-yellow-400" : "fill-gray-300 text-gray-300")} />
-                        ))}
                       </div>
                       <CardContent className="p-0 text-sm text-muted-foreground">
                         <p>{testimonial.testimonial}</p>
