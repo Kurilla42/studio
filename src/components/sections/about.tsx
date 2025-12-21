@@ -15,7 +15,7 @@ export default function About() {
   const aboutImage = PlaceHolderImages.find(p => p.id === 'about-main-image');
 
   return (
-    <section id="about" className="bg-secondary !py-12 md:!py-16">
+    <section id="about" className="bg-secondary !py-12 md:!py-16 lg:!py-20">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">

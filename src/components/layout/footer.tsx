@@ -45,7 +45,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
   }
 
   return (
-    <footer id="contact" className="bg-secondary border-t pt-16 sm:pt-24 pb-8">
+    <footer id="contact" className="bg-secondary border-t pt-16 sm:pt-20 pb-8">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-8">
           {/* Form Column */}

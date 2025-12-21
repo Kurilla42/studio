@@ -79,7 +79,7 @@
     @apply font-headline;
   }
   section {
-    @apply px-6 py-20 sm:py-24 md:py-28 lg:py-32;
+    @apply px-6 !py-12;
   }
   .container {
     @apply mx-auto w-full max-w-7xl px-4;
