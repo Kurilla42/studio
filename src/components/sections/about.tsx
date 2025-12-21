@@ -1,5 +1,15 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Card } from '@/components/ui/card';
+
+const comparisonData = [
+  { feature: 'Response Time', us: '60 minutes', competitors: '3-5 hours' },
+  { feature: 'Licensed & Insured', us: 'Yes', competitors: 'Not Always' },
+  { feature: 'Upfront Pricing', us: 'Always', competitors: 'Rarely' },
+  { feature: 'Background-Checked Technicians', us: '100%', competitors: 'Unknown' },
+  { feature: 'Warranty on Work', us: 'Yes', competitors: 'Limited' },
+  { feature: '24/7 Emergency Service', us: 'Yes', competitors: 'No' },
+];
 
 export default function About() {
   const aboutImage = PlaceHolderImages.find(p => p.id === 'about-main-image');
@@ -29,16 +39,36 @@ export default function About() {
               <p className="text-sm">Years of Excellence</p>
             </div>
           </div>
-          <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
-            <p>
-              ProFlow Plumbing is more than a plumbing service — it's your partner in protecting your home. For over 10 years, we've helped 1,000+ families avoid costly damage and get their plumbing back to normal quickly and safely. Our licensed and insured specialists handle everything from emergency burst pipes to planned upgrades and preventative maintenance.
-            </p>
-            <p>
-              Plumbing issues never happen at a good time. A leak can destroy walls, a sewer backup can stop life at home, and a burst winter pipe can cost thousands. That's why we provide fast emergency response, accurate diagnostics, and fair, transparent pricing — no hidden fees or surprise charges.
-            </p>
-            <p>
-              We don't just fix problems; we build long-term relationships with homeowners who know they can rely on us. When plumbing trouble hits, we work to be the first name you trust — that's the ProFlow Plumbing promise.
-            </p>
+          <div className="space-y-6">
+            <Card className="overflow-hidden shadow-card">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="primary-gradient">
+                    <th className="p-3 text-left font-bold text-primary-foreground"></th>
+                    <th className="p-3 text-center font-bold text-primary-foreground">Us</th>
+                    <th className="p-3 text-center font-bold text-primary-foreground">Competitors</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.map((item, index) => (
+                    <tr key={item.feature} className="border-b border-border last:border-b-0">
+                      <td className="p-3 font-semibold text-foreground">{item.feature}</td>
+                      <td className="p-3 text-center bg-primary/10 text-primary font-bold">{item.us}</td>
+                      <td className="p-3 text-center text-muted-foreground">{item.competitors}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </Card>
+
+            <div className="space-y-4 text-muted-foreground text-base leading-relaxed border-l-4 border-primary pl-6">
+                <p>
+                ProFlow Plumbing is more than a plumbing service — it's your partner in protecting your home. For over 10 years, we've helped 1,000+ families avoid costly damage and get their plumbing back to normal quickly and safely. Our licensed and insured specialists handle everything from emergency burst pipes to planned upgrades and preventative maintenance.
+                </p>
+                <p>
+                We don't just fix problems; we build long-term relationships with homeowners who know they can rely on us. When plumbing trouble hits, we work to be the first name you trust — that's the ProFlow Plumbing promise.
+                </p>
+            </div>
           </div>
         </div>
       </div>
