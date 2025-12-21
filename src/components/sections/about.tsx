@@ -66,6 +66,9 @@ export default function About() {
                 ProFlow Plumbing is more than a plumbing service — it's your partner in protecting your home. For over 10 years, we've helped 1,000+ families avoid costly damage and get their plumbing back to normal quickly and safely. Our licensed and insured specialists handle everything from emergency burst pipes to planned upgrades and preventative maintenance.
                 </p>
                 <p>
+                Plumbing issues never happen at a good time. A leak can destroy walls, a sewer backup can stop life at home, and a burst winter pipe can cost thousands. That's why we provide fast emergency response, accurate diagnostics, and fair, transparent pricing — no hidden fees or surprise charges.
+                </p>
+                <p>
                 We don't just fix problems; we build long-term relationships with homeowners who know they can rely on us. When plumbing trouble hits, we work to be the first name you trust — that's the ProFlow Plumbing promise.
                 </p>
             </div>
