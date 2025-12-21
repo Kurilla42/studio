@@ -1,5 +1,5 @@
 import type { Service, TeamMember, Testimonial, FaqItem, NavItem, Offer } from '@/lib/types';
-import { Award, CheckCircle, Droplet, Shield, Smile, Star, Wrench, Zap } from 'lucide-react';
+import { Award, CheckCircle, Clock, Droplet, Shield, Smile, Star, Wrench, Zap } from 'lucide-react';
 
 export const navItems: NavItem[] = [
   { name: 'Services', href: '#services' },
@@ -58,9 +58,9 @@ export const heroStats = [
         id: "stat-3"
     },
     {
-        icon: CheckCircle,
-        number: "Licensed",
-        label: "Professionals",
+        icon: Clock,
+        number: "24/7",
+        label: "Available",
         id: "stat-4"
     }
 ];
@@ -180,3 +180,5 @@ export const socialProofData = {
   avatars: ["social-proof-avatar-1", "social-proof-avatar-2", "social-proof-avatar-3", "social-proof-avatar-4"],
   names: ["Alex P.", "Maria K.", "John D.", "Samantha G.", "Michael B."],
 };
+
+    
