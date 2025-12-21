@@ -63,7 +63,6 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           data-ai-hint={backgroundImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/40 to-transparent"></div>
       
       <div className="container relative z-10 pt-24 pb-12 md:pt-32 md:pb-16">
         <motion.div 
