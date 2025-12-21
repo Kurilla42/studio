@@ -91,9 +91,9 @@ export default function Hero({ onScheduleClick }: HeroProps) {
             >
               Expert Plumbing Services
               <br />
-              <span className="inline-flex items-center h-[1.2em]">
+              <div className="inline-flex items-center h-[1.2em]">
                 You Can&nbsp;
-                <span className="relative w-[150px] sm:w-[210px] lg:w-[240px] text-left">
+                <div className="relative w-[150px] sm:w-[210px] lg:w-[240px] text-left z-20">
                   <AnimatePresence mode="wait">
                     <motion.span
                       key={currentTagline}
@@ -107,8 +107,8 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                       {currentTagline}
                     </motion.span>
                   </AnimatePresence>
-                </span>
-              </span>
+                </div>
+              </div>
             </motion.h1>
 
             <motion.div 
@@ -141,9 +141,14 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                         <stat.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary flex-shrink-0" />
                         <div className="flex flex-col">
                           <div className="text-lg sm:text-2xl font-bold font-hero text-foreground flex items-center gap-1">
-                            {stat.number}
-                            {stat.id === 'stat-3' && (
-                                <StarIcon className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400 ml-1" />
+                            {stat.id === 'stat-3' ? (
+                                <div className="flex items-center">
+                                    {[...Array(5)].map((_, i) => (
+                                        <StarIcon key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
+                                    ))}
+                                </div>
+                            ) : (
+                                stat.number
                             )}
                           </div>
                           <p className="text-xs sm:text-sm text-muted-foreground">{stat.label}</p>

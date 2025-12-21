@@ -53,7 +53,7 @@ export const heroStats = [
     },
     {
         icon: Star,
-        number: "4.9",
+        number: "",
         label: "Google Rating",
         id: "stat-3"
     },
@@ -149,23 +149,60 @@ export const teamMembers: TeamMember[] = [
 export const faqs: FaqItem[] = [
     {
         question: "How much does plumbing service cost?",
-        answer: "Our pricing is transparent and upfront - no hidden fees or surprise charges. Here's our pricing structure:\n\n- Service Call: $79 (waived with completed repair)\n- Emergency Repairs: Starting at $150-$500 depending on complexity\n- Water Heater Installation: $800-$2,500 (depends on type and capacity)\n- Drain Cleaning: $150-$400 (standard cleaning)\n- Fixture Installation: $125-$350 per fixture\n\nEvery job begins with a free diagnostic and detailed quote. You'll know the exact price before any work starts."
+        answer: `Our pricing is transparent and upfront - no hidden fees or surprise charges. Here's our pricing structure:
+
+- Service Call: $79 (waived with completed repair)
+- Emergency Repairs: Starting at $150-$500 depending on complexity
+- Water Heater Installation: $800-$2,500 (depends on type and capacity)
+- Drain Cleaning: $150-$400 (standard cleaning)
+- Fixture Installation: $125-$350 per fixture
+
+Every job begins with a free diagnostic and detailed quote. You'll know the exact price before any work starts.`
     },
     {
         question: "How quickly can you arrive?",
-        answer: "We understand that plumbing emergencies can't wait. That's why we prioritize fast response:\n\n- Emergency Service: 60 minutes or less in most cases\n- Same-Day Service: Available for urgent non-emergency repairs\n- Scheduled Appointments: We offer flexible scheduling to fit your calendar\n- 24/7 Availability: Our team is always ready to respond, day or night\n\nCall now and we'll dispatch a certified technician to your location immediately."
+        answer: `We understand that plumbing emergencies can't wait. That's why we prioritize fast response:
+
+- Emergency Service: 60 minutes or less in most cases
+- Same-Day Service: Available for urgent non-emergency repairs
+- Scheduled Appointments: We offer flexible scheduling to fit your calendar
+- 24/7 Availability: Our team is always ready to respond, day or night
+
+Call now and we'll dispatch a certified technician to your location immediately.`
     },
     {
         question: "Do you offer a warranty or guarantee?",
-        answer: "Yes! We stand behind every job we complete with comprehensive guarantees:\n\n- 2-Year Labor Warranty: All repairs and installations are covered for 2 full years\n- Parts Warranty: Manufacturer warranties on all parts and equipment\n- 100% Satisfaction Guarantee: If you're not happy, we'll make it right\n- Free Follow-up Visits: If an issue persists within warranty period, we return at no charge\n\nOur warranty is one of the best in the industry because we use quality parts and employ expert technicians."
+        answer: `Yes! We stand behind every job we complete with comprehensive guarantees:
+
+- 2-Year Labor Warranty: All repairs and installations are covered for 2 full years
+- Parts Warranty: Manufacturer warranties on all parts and equipment
+- 100% Satisfaction Guarantee: If you're not happy, we'll make it right
+- Free Follow-up Visits: If an issue persists within warranty period, we return at no charge
+
+Our warranty is one of the best in the industry because we use quality parts and employ expert technicians.`
     },
     {
         question: "What is your service process?",
-        answer: "Our streamlined service process ensures you get fast, professional results every time:\n\nStep 1 - Contact Us: Call us at (555) 123-4567 or submit an online request. We'll gather details about your plumbing issue.\nStep 2 - Fast Response: For emergencies, our certified technician arrives within 60 minutes, fully equipped to solve most common problems.\nStep 3 - Diagnosis & Quote: We perform a thorough inspection and provide upfront pricing with no hidden fees or surprise charges.\nStep 4 - Expert Repair: Once you approve, we complete the work using quality parts and proven techniques. Most jobs are finished the same day.\nStep 5 - Warranty & Payment: We clean up, review everything with you, and provide a 2-year warranty. You only pay when 100% satisfied.\n\nThis proven process has helped 1,000+ homeowners solve their plumbing problems quickly and reliably."
+        answer: `Our streamlined service process ensures you get fast, professional results every time:
+
+Step 1 - Contact Us: Call us at (555) 123-4567 or submit an online request. We'll gather details about your plumbing issue.
+Step 2 - Fast Response: For emergencies, our certified technician arrives within 60 minutes, fully equipped to solve most common problems.
+Step 3 - Diagnosis & Quote: We perform a thorough inspection and provide upfront pricing with no hidden fees or surprise charges.
+Step 4 - Expert Repair: Once you approve, we complete the work using quality parts and proven techniques. Most jobs are finished the same day.
+Step 5 - Warranty & Payment: We clean up, review everything with you, and provide a 2-year warranty. You only pay when 100% satisfied.
+
+This proven process has helped 1,000+ homeowners solve their plumbing problems quickly and reliably.`
     },
     {
         question: "Are your technicians licensed and certified?",
-        answer: "Yes, absolutely. Every ProFlow technician is fully licensed, insured, and certified. Here's what that means for you:\n\n- State Licensed: All technicians hold current state plumbing licenses\n- Fully Insured: We carry comprehensive liability and workers' compensation insurance\n- Ongoing Training: Our team participates in continuous education to stay current with the latest techniques and code requirements\n- Background Checked: Every team member passes thorough background and drug screening\n\nWhen you hire ProFlow, you're hiring experienced professionals who meet the highest industry standards."
+        answer: `Yes, absolutely. Every ProFlow technician is fully licensed, insured, and certified. Here's what that means for you:
+
+- State Licensed: All technicians hold current state plumbing licenses
+- Fully Insured: We carry comprehensive liability and workers' compensation insurance
+- Ongoing Training: Our team participates in continuous education to stay current with the latest techniques and code requirements
+- Background Checked: Every team member passes thorough background and drug screening
+
+When you hire ProFlow, you're hiring experienced professionals who meet the highest industry standards.`
     }
 ]
 
