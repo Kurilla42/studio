@@ -93,7 +93,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
               <br />
               <div className="inline-flex items-center h-[1.2em]">
                 You Can&nbsp;
-                <div className="relative w-[150px] sm:w-[210px] lg:w-[240px] text-left z-20">
+                <div className="relative w-[150px] sm:w-[210px] lg:w-[240px] text-left">
                   <AnimatePresence mode="wait">
                     <motion.span
                       key={currentTagline}
@@ -142,10 +142,14 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                         <div className="flex flex-col">
                           <div className="text-lg sm:text-2xl font-bold font-hero text-foreground flex items-center gap-1">
                             {stat.id === 'stat-3' ? (
-                                <div className="flex items-center">
-                                    {[...Array(5)].map((_, i) => (
-                                        <StarIcon key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
-                                    ))}
+                                <div className="flex items-center gap-1 sm:gap-1.5">
+                                    <span className="text-lg sm:text-xl">4.9</span>
+                                    <div className="flex items-center">
+                                        {[...Array(5)].map((_, i) => (
+                                            <StarIcon key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
+                                        ))}
+                                    </div>
+                                    <span className="text-sm sm:text-base font-body font-normal text-muted-foreground">(108)</span>
                                 </div>
                             ) : (
                                 stat.number
