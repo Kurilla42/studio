@@ -174,7 +174,7 @@ export const specialOffers: Offer[] = [
     {
         id: "offer2",
         discount: "$50 OFF",
-        title: "Air Conditioning Repair",
+        title: "Water filter cleaning",
         disclaimer: "Must be mentioned when booking appointment. Cannot be combined with any other offers or discounts."
     },
     {
