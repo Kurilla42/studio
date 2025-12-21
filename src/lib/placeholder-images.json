@@ -3,19 +3,19 @@
     {
       "id": "hero-background",
       "description": "A wall with a network of white plumbing pipes",
-      "imageUrl": "https://images.unsplash.com/photo-1621282136018-25b42d765870?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwbHVtYmluZyUyMHBpcGVzfGVufDB8fHx8MTc2NjE0MTQyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://ibb.co/BHJPKWj3",
       "imageHint": "plumbing pipes"
     },
     {
       "id": "hero-plumber",
       "description": "Friendly plumber with tools, transparent background",
-      "imageUrl": "https://images.unsplash.com/photo-1651480343182-5053ab153db6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwbHVtYmVyJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY2MDUxODMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://ibb.co/Z1v8QcHY",
       "imageHint": "plumber portrait"
     },
     {
       "id": "about-main-image",
       "description": "Professional plumber working under a sink",
-      "imageUrl": "https://i.ibb.co/rfkjHzT/plumber-working.jpg",
+      "imageUrl": "https://ibb.co/Zz6GF4xC",
       "imageHint": "plumber working"
     },
     {
