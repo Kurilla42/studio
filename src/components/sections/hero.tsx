@@ -52,19 +52,20 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden !p-0">
+    <section id="hero" className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden !p-0">
       {backgroundImage && (
         <Image
           src={backgroundImage.imageUrl}
           alt={backgroundImage.description}
           fill
           priority
-          className="object-cover"
+          className="object-cover object-top"
           data-ai-hint={backgroundImage.imageHint}
         />
       )}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/70 to-transparent from-0% via-40% to-65%"></div>
       
-      <div className="container relative z-10 pt-24 pb-12 md:pt-32 md:pb-16">
+      <div className="container relative z-10 py-12">
         <motion.div 
           className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center"
           variants={containerVariants}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, Phone, Wrench, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -13,24 +13,12 @@ type HeaderProps = {
 };
 
 export default function Header({ onGetQuoteClick }: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
-        isScrolled
-          ? 'bg-background/95 backdrop-blur-sm border-b'
-          : 'bg-transparent border-b border-transparent'
+        'fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b'
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between">
