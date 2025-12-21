@@ -15,97 +15,97 @@
     {
       "id": "about-main-image",
       "description": "Professional plumber working under a sink",
-      "imageUrl": "https://images.unsplash.com/photo-1596910547037-842b2f845a76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwbHVtYmVyJTIwd29ya2luZ3xlbnwwfHx8fDE3NjYxNTM0ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/vCd7spMz/plumbing-professional-doing-his-job-scaled.jpg",
       "imageHint": "plumber working"
     },
     {
       "id": "offer1-bg",
       "description": "Modern chrome faucet in a clean bathroom",
-      "imageUrl": "https://images.unsplash.com/photo-1595515770358-b0047714ccb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYXRocm9vbSUyMGZhdWNldHxlbnwwfHx8fDE3NjYxMzIzNDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://unsplash.com/photos/person-opening-faucet-Vve7XkiUq_Y",
       "imageHint": "bathroom faucet"
     },
     {
       "id": "offer2-bg",
       "description": "Close up of a water filter system",
-      "imageUrl": "https://images.unsplash.com/photo-1616996691029-96500d6523b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3YXRlciUyMGZpbHRlcnxlbnwwfHx8fDE3NjYwNzU5Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/wFmcYfMP/2025-12-03-20-07-24.jpg",
       "imageHint": "water filter"
     },
     {
       "id": "offer3-bg",
       "description": "Water swirling down a clean drain",
-      "imageUrl": "https://images.unsplash.com/photo-1582669300365-630322b86cf9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjbGVhbiUyMGRyYWlufGVufDB8fHx8MTc2NjEzMjM0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/C3zVZyDR/hydro-jetting-vs-traditional-drain-cleaning-pros-and-cons.jpg",
       "imageHint": "clean drain"
     },
     {
       "id": "team1-image",
       "description": "Portrait of a serious looking emergency specialist",
-      "imageUrl": "https://images.unsplash.com/photo-1590086782792-42dd2350140d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY2MDg2NjQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/BVwfS11g/slider-5.png",
       "imageHint": "male portrait"
     },
     {
       "id": "team2-image",
       "description": "Portrait of a smiling installation expert",
-      "imageUrl": "https://images.unsplash.com/photo-1656338997878-279d71d48f6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY2MDg2NjQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/JRsVq6M2/Plumbing-Inspection-01-0601020002.jpg",
       "imageHint": "male portrait"
     },
     {
       "id": "team3-image",
       "description": "Portrait of a diligent maintenance professional",
-      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmZW1hbGUlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjYwOTI2NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/93Yj9hS0/default-image-Additional-26970-ce4ddff9476a75f2e0bd9176402063ec.jpg",
       "imageHint": "female portrait"
     },
     {
       "id": "team4-image",
       "description": "Portrait of a focused drain cleaning technician",
-      "imageUrl": "https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY2MDg2NjQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/N6BjGkRk/9e0791ba0cfb996f4e7df15e339446be.jpg",
       "imageHint": "male portrait"
     },
     {
       "id": "testimonial1-avatar",
       "description": "Avatar of Deborah Meniane",
-      "imageUrl": "https://images.unsplash.com/photo-1610655507808-a59293f4e332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NjA3MDMzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/chKWQCwJ/2025-12-03-19-16-59.jpg",
       "imageHint": "woman portrait"
     },
     {
       "id": "testimonial2-avatar",
       "description": "Avatar of Steve McCollum",
-      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjYwNTI3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/Vy2BLfS/2025-12-03-19-14-23.jpg",
       "imageHint": "man portrait"
     },
     {
       "id": "testimonial-marco",
       "description": "Avatar of Marco Tietz",
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBwb3J0cmFpdCUyMGhhdHxlbnwwfHx8fDE3NjYxNTMyMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/rKGxRQNz/2025-12-03-19-15-03.jpg",
       "imageHint": "man portrait"
     },
     {
       "id": "testimonial-jessica",
       "description": "Avatar of Jessica Miller",
-      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NjA3MDMzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/Zz0wjjrr/2025-12-03-19-19-59.jpg",
       "imageHint": "woman portrait"
     },
     {
       "id": "testimonial-olivia",
       "description": "Avatar of Olivia Garcia",
-      "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NjA3MDMzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/PsknB9jj/2025-12-03-19-18-45.jpg",
       "imageHint": "woman portrait"
     },
     {
       "id": "testimonial-chris",
       "description": "Avatar of Chris Brown",
-      "imageUrl": "https://images.unsplash.com/photo-1624395213043-fa2e123b2656?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjYwNTI3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/Kpqq9dz6/7aeaaf49-ba2f-488d-ae3a-9bba2df06897-2580x3491.jpg",
       "imageHint": "man portrait"
     },
     {
       "id": "testimonial-robert",
       "description": "Avatar of Robert Johnson",
-      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjYwNTI3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/hFgBxB7s/2019-10-22-10-12-40.jpg",
       "imageHint": "man portrait"
     },
     {
       "id": "testimonial-linda",
       "description": "Avatar of Linda Davis",
-      "imageUrl": "https://images.unsplash.com/photo-1592621385612-4d7129426394?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NjA3MDMzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/20BJ1fts/istockphoto-1413764595-612x612.jpg",
       "imageHint": "woman portrait"
     },
     {
