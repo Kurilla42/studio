@@ -47,21 +47,15 @@ export default function Faq() {
                   <span className="text-left">{faq.question}</span>
                 </AccordionTrigger>
                 <AccordionContent className="p-6 pt-2">
-                  {faq.id === 'faq-1' && faq.list ? (
-                    <div className="space-y-4">
-                      <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">
-                        {faq.answer}
-                      </p>
-                      <FaqList items={faq.list} />
-                      <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line pt-2">
-                        {faq.conclusion}
-                      </p>
-                    </div>
-                  ) : (
-                    <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">
+                  <div className="space-y-4">
+                    {faq.answer && <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">
                       {faq.answer}
-                    </p>
-                  )}
+                    </p>}
+                    {faq.list && <FaqList items={faq.list} />}
+                    {faq.conclusion && <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line pt-2">
+                      {faq.conclusion}
+                    </p>}
+                  </div>
                 </AccordionContent>
               </Card>
             </AccordionItem>

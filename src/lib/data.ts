@@ -229,51 +229,51 @@ export const faqs: FaqItem[] = [
     {
         id: 'faq-2',
         question: "How quickly can you arrive?",
-        answer: `We understand that plumbing emergencies can't wait. That's why we prioritize fast response:
-
-- Emergency Service: 60 minutes or less in most cases
-- Same-Day Service: Available for urgent non-emergency repairs
-- Scheduled Appointments: We offer flexible scheduling to fit your calendar
-- 24/7 Availability: Our team is always ready to respond, day or night
-
-Call now and we'll dispatch a certified technician to your location immediately.`
+        answer: `We understand that plumbing emergencies can't wait. That's why we prioritize fast response:`,
+        list: [
+          { title: "Emergency Service", detail: "60 minutes or less in most cases" },
+          { title: "Same-Day Service", detail: "Available for urgent non-emergency repairs" },
+          { title: "Scheduled Appointments", detail: "We offer flexible scheduling to fit your calendar" },
+          { title: "24/7 Availability", detail: "Our team is always ready to respond, day or night" }
+        ],
+        conclusion: `Call now and we'll dispatch a certified technician to your location immediately.`
     },
     {
         id: 'faq-3',
         question: "Do you offer a warranty or guarantee?",
-        answer: `Yes! We stand behind every job we complete with comprehensive guarantees:
-
-- 2-Year Labor Warranty: All repairs and installations are covered for 2 full years
-- Parts Warranty: Manufacturer warranties on all parts and equipment
-- 100% Satisfaction Guarantee: If you're not happy, we'll make it right
-- Free Follow-up Visits: If an issue persists within warranty period, we return at no charge
-
-Our warranty is one of the best in the industry because we use quality parts and employ expert technicians.`
+        answer: `Yes! We stand behind every job we complete with comprehensive guarantees:`,
+        list: [
+            { title: "2-Year Labor Warranty", detail: "All repairs and installations are covered for 2 full years" },
+            { title: "Parts Warranty", detail: "Manufacturer warranties on all parts and equipment" },
+            { title: "100% Satisfaction Guarantee", detail: "If you're not happy, we'll make it right" },
+            { title: "Free Follow-up Visits", detail: "If an issue persists within warranty period, we return at no charge" }
+        ],
+        conclusion: `Our warranty is one of the best in the industry because we use quality parts and employ expert technicians.`
     },
     {
         id: 'faq-4',
         question: "What is your service process?",
-        answer: `Our streamlined service process ensures you get fast, professional results every time:
-
-Step 1 - Contact Us: Call us at (555) 123-4567 or submit an online request. We'll gather details about your plumbing issue.
-Step 2 - Fast Response: For emergencies, our certified technician arrives within 60 minutes, fully equipped to solve most common problems.
-Step 3 - Diagnosis & Quote: We perform a thorough inspection and provide upfront pricing with no hidden fees or surprise charges.
-Step 4 - Expert Repair: Once you approve, we complete the work using quality parts and proven techniques. Most jobs are finished the same day.
-Step 5 - Warranty & Payment: We clean up, review everything with you, and provide a 2-year warranty. You only pay when 100% satisfied.
-
-This proven process has helped 1,000+ homeowners solve their plumbing problems quickly and reliably.`
+        answer: `Our streamlined service process ensures you get fast, professional results every time:`,
+        list: [
+          { title: "Step 1 - Contact Us", detail: "Call us at (555) 123-4567 or submit an online request. We'll gather details about your plumbing issue." },
+          { title: "Step 2 - Fast Response", detail: "For emergencies, our certified technician arrives within 60 minutes, fully equipped to solve most common problems." },
+          { title: "Step 3 - Diagnosis & Quote", detail: "We perform a thorough inspection and provide upfront pricing with no hidden fees or surprise charges." },
+          { title: "Step 4 - Expert Repair", detail: "Once you approve, we complete the work using quality parts and proven techniques. Most jobs are finished the same day." },
+          { title: "Step 5 - Warranty & Payment", detail: "We clean up, review everything with you, and provide a 2-year warranty. You only pay when 100% satisfied." }
+        ],
+        conclusion: `This proven process has helped 1,000+ homeowners solve their plumbing problems quickly and reliably.`
     },
     {
         id: 'faq-5',
         question: "Are your technicians licensed and certified?",
-        answer: `Yes, absolutely. Every ProFlow technician is fully licensed, insured, and certified. Here's what that means for you:
-
-- State Licensed: All technicians hold current state plumbing licenses
-- Fully Insured: We carry comprehensive liability and workers' compensation insurance
-- Ongoing Training: Our team participates in continuous education to stay current with the latest techniques and code requirements
-- Background Checked: Every team member passes thorough background and drug screening
-
-When you hire ProFlow, you're hiring experienced professionals who meet the highest industry standards.`
+        answer: `Yes, absolutely. Every ProFlow technician is fully licensed, insured, and certified. Here's what that means for you:`,
+        list: [
+            { title: "State Licensed", detail: "All technicians hold current state plumbing licenses" },
+            { title: "Fully Insured", detail: "We carry comprehensive liability and workers' compensation insurance" },
+            { title: "Ongoing Training", detail: "Our team participates in continuous education to stay current with the latest techniques and code requirements" },
+            { title: "Background Checked", detail: "Every team member passes thorough background and drug screening" }
+        ],
+        conclusion: `When you hire ProFlow, you're hiring experienced professionals who meet the highest industry standards.`
     }
 ]
 

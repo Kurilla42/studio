@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card } from '@/components/ui/card';
+import { CheckCircle } from 'lucide-react';
 
 const comparisonData = [
   { feature: 'Response Time', us: '60 minutes', competitors: '3-5 hours' },
@@ -11,17 +12,19 @@ const comparisonData = [
   { feature: '24/7 Emergency Service', us: 'Yes', competitors: 'No' },
 ];
 
+const advantages = [
+    { title: 'Upfront Pricing' },
+    { title: 'No Hidden Fees' },
+    { title: 'Free Estimates' },
+    { title: 'Dependable Service' }
+];
+
 export default function About() {
   const aboutImage = PlaceHolderImages.find(p => p.id === 'about-main-image');
 
   return (
     <section id="about" className="bg-secondary !py-12 md:!py-16 lg:!py-20">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Why Hundreds of Homeowners Choose ProFlow Plumbing
-          </h2>
-        </div>
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="relative group rounded-2xl overflow-hidden shadow-lg">
             {aboutImage && (
@@ -40,6 +43,11 @@ export default function About() {
             </div>
           </div>
           <div className="space-y-6">
+            <div className="text-left mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Why Hundreds of Homeowners Choose ProFlow Plumbing
+              </h2>
+            </div>
             <Card className="overflow-hidden shadow-card">
               <table className="w-full text-sm">
                 <thead>
@@ -71,6 +79,14 @@ export default function About() {
                 <p>
                 We don't just fix problems; we build long-term relationships with homeowners who know they can rely on us. When plumbing trouble hits, we work to be the first name you trust — that's the ProFlow Plumbing promise.
                 </p>
+            </div>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-3 pt-4">
+              {advantages.map((advantage) => (
+                <div key={advantage.title} className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="font-semibold text-foreground">{advantage.title}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
