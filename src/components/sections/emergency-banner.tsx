@@ -16,7 +16,7 @@ export default function EmergencyBanner() {
                 <p className="opacity-90 mt-1">We're available 24/7 for urgent repairs. Fast response guaranteed!</p>
               </div>
             </div>
-            <Button asChild size="lg" className="bg-white text-foreground hover:bg-gray-200 shrink-0 shadow-lg hover:-translate-y-0.5 transition-transform">
+            <Button asChild size="lg" className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 shrink-0">
               <a href="tel:5551234567">Call Emergency Line</a>
             </Button>
           </div>
