@@ -14,21 +14,11 @@ type HeroProps = {
   onScheduleClick: () => void;
 };
 
-const taglines = ["Trust", "Afford", "Get Fast"];
-
 export default function Hero({ onScheduleClick }: HeroProps) {
-  const [currentTagline, setCurrentTagline] = useState(taglines[0]);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
-    const interval = setInterval(() => {
-      setCurrentTagline(prev => {
-          const currentIndex = taglines.indexOf(prev);
-          return taglines[(currentIndex + 1) % taglines.length];
-      });
-    }, 2000);
-    return () => clearInterval(interval);
   }, []);
 
   const plumberImage = PlaceHolderImages.find(p => p.id === 'hero-plumber');
@@ -93,21 +83,12 @@ export default function Hero({ onScheduleClick }: HeroProps) {
               <br />
               <div className="inline-flex items-center h-[1.2em] z-10 relative">
                 You Can&nbsp;
-                <div className="relative w-[150px] sm:w-[210px] lg:w-[240px] text-left">
-                  <AnimatePresence mode="wait">
-                    <motion.span
-                      key={currentTagline}
-                      className="absolute inset-0 primary-gradient-text whitespace-nowrap"
-                      style={{ filter: 'drop-shadow(2px 2px 4px hsla(var(--primary), 0.3))' }}
-                      initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: -20, scale: 0.9 }}
-                      transition={{ duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275] }}
-                    >
-                      {currentTagline}
-                    </motion.span>
-                  </AnimatePresence>
-                </div>
+                <span
+                  className="text-primary"
+                  style={{ filter: 'drop-shadow(2px 2px 4px hsla(var(--primary), 0.3))' }}
+                >
+                  Trust
+                </span>
               </div>
             </motion.h1>
 
