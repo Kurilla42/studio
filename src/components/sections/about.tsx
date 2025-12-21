@@ -33,12 +33,12 @@ export default function About() {
                   src={aboutImage.imageUrl}
                   alt={aboutImage.description}
                   fill
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover object-center"
                   data-ai-hint={aboutImage.imageHint}
                 />
               </div>
             )}
-            <div className="absolute top-4 right-4 md:top-8 md:right-8 bg-primary text-primary-foreground p-6 rounded-2xl text-center shadow-lg">
+            <div className="absolute bottom-4 right-4 bg-primary text-primary-foreground p-6 rounded-2xl text-center shadow-lg">
               <p className="text-3xl font-bold">10+</p>
               <p className="text-sm">Years of Excellence</p>
             </div>

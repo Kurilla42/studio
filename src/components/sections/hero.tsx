@@ -59,7 +59,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           alt={backgroundImage.description}
           fill
           priority
-          className="object-cover object-top"
+          className="object-cover object-left-top"
           data-ai-hint={backgroundImage.imageHint}
         />
       )}
@@ -73,9 +73,9 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           animate={isMounted ? "visible" : "hidden"}
         >
           {/* Left Column: Content */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <motion.h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-hero font-bold text-foreground text-shadow-hero leading-tight"
+              className="text-5xl sm:text-5xl lg:text-6xl font-hero font-bold text-foreground text-shadow-hero leading-tight"
               variants={itemVariants}
             >
               Expert Plumbing Services
@@ -120,7 +120,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                       <div className="flex items-center gap-3 sm:gap-4">
                         <stat.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary flex-shrink-0" />
                         <div className="flex flex-col">
-                          <div className="text-lg sm:text-2xl font-bold font-hero text-foreground flex items-center gap-1">
+                          <div className="text-2xl font-bold font-hero text-foreground flex items-center gap-1">
                             {stat.id === 'stat-3' ? (
                                 <div className="flex items-center gap-1 sm:gap-1.5">
                                     <span>4.9</span>

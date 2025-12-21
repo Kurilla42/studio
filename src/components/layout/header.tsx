@@ -54,11 +54,6 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
         </div>
 
         <div className="lg:hidden flex items-center">
-            <Button variant="ghost" className="mr-2 sm:hidden" asChild>
-                <a href="tel:5551234567">
-                    <Phone size={20} />
-                </a>
-            </Button>
             <Sheet open={isMobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -92,14 +87,14 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
                     ))}
                 </nav>
                 <div className="mt-8 flex flex-col gap-4">
-                    <Button onClick={() => { onGetQuoteClick(); setMobileMenuOpen(false); }} className="w-full primary-gradient">
-                    Get Quote
-                    </Button>
-                     <Button variant="outline" asChild>
-                        <a href="tel:5551234567" className="w-full flex items-center justify-center gap-2">
+                    <Button asChild className="w-full primary-gradient">
+                        <a href="tel:5551234567" className="flex items-center gap-2">
                             <Phone size={16} />
                             (555) 123-4567
                         </a>
+                    </Button>
+                    <Button onClick={() => { onGetQuoteClick(); setMobileMenuOpen(false); }} className="w-full primary-gradient">
+                        Get Quote
                     </Button>
                 </div>
                 </div>

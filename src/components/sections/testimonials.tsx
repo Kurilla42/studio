@@ -40,7 +40,7 @@ let colorIndex = 0;
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="bg-secondary">
+    <section id="testimonials" className="bg-secondary !py-12 md:!py-16">
       <div className="container">
         <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -110,8 +110,8 @@ export default function Testimonials() {
               );
             })}
           </CarouselContent>
-          <CarouselPrevious className="hidden sm:inline-flex" />
-          <CarouselNext className="hidden sm:inline-flex" />
+          <CarouselPrevious />
+          <CarouselNext />
         </Carousel>
       </div>
     </section>
