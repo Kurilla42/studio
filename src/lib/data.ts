@@ -179,8 +179,8 @@ export const specialOffers: Offer[] = [
     },
     {
         id: "offer3",
-        discount: "$100 OFF",
-        title: "Heating System Installation or Replacement",
+        discount: "$10 OFF",
+        title: "Drain cleaning",
         disclaimer: "Must be mentioned when booking appointment. Cannot be combined with any other offers or discounts."
     }
 ];
