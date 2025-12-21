@@ -42,7 +42,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <Button variant="ghost" asChild>
+          <Button asChild className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5">
             <a href="tel:5551234567" className="flex items-center gap-2">
               <Phone size={16} />
               (555) 123-4567
