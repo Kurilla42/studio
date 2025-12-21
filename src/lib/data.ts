@@ -167,21 +167,21 @@ export const testimonials: Testimonial[] = [
 export const specialOffers: Offer[] = [
     {
         id: "offer1",
-        title: "Faucet installation",
-        discount: "$24 off",
-        image: "offer1-bg",
+        discount: "$25 OFF",
+        title: "First Time Customers",
+        disclaimer: "Must be mentioned when booking appointment. Cannot be combined with any other offers or discounts."
     },
     {
         id: "offer2",
-        title: "Water filter cleaning",
-        discount: "50% off",
-        image: "offer2-bg",
+        discount: "$50 OFF",
+        title: "Air Conditioning Repair",
+        disclaimer: "Must be mentioned when booking appointment. Cannot be combined with any other offers or discounts."
     },
     {
         id: "offer3",
-        title: "Drain cleaning",
-        discount: "$10 off",
-        image: "offer3-bg",
+        discount: "$100 OFF",
+        title: "Heating System Installation or Replacement",
+        disclaimer: "Must be mentioned when booking appointment. Cannot be combined with any other offers or discounts."
     }
 ];
 

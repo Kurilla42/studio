@@ -25,7 +25,7 @@ export type Offer = {
     id: string;
     title: string;
     discount: string;
-    image: string;
+    disclaimer: string;
 };
 
 export type TeamMember = {
