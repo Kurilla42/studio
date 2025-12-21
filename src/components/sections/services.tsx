@@ -13,7 +13,7 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => (
-            <Card key={service.title} className="bg-card border-2 border-input/50 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+            <Card key={service.title} className="bg-card border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
               <CardHeader>
                 <div className="mb-4">
                   <service.icon className="w-12 h-12 text-primary" />

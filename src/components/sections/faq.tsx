@@ -42,7 +42,7 @@ export default function Faq() {
               asChild
               className="border-none"
             >
-              <Card className="shadow-card hover:shadow-card-hover transition-shadow duration-300 [&[data-state=open]]:border-primary/30">
+              <Card className="shadow-card hover:shadow-card-hover transition-shadow duration-300 border-border [&[data-state=open]]:border-primary/30">
                 <AccordionTrigger className="p-6 text-lg font-semibold hover:no-underline hover:text-primary data-[state=open]:text-primary data-[state=open]:border-b">
                   <span className="text-left">{faq.question}</span>
                 </AccordionTrigger>

@@ -55,7 +55,7 @@ export default function Testimonials() {
               return (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                   <div className="p-1 h-full">
-                    <Card className="h-full flex flex-col p-6 bg-card border shadow-card">
+                    <Card className="h-full flex flex-col p-6 bg-card border-border shadow-card">
                       <div className="flex items-center mb-3">
                         <Avatar className="w-10 h-10 mr-3 border-2 border-primary/50">
                           {image ? (

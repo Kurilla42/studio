@@ -20,7 +20,7 @@ export default function Team() {
           {teamMembers.map((member) => {
             const image = PlaceHolderImages.find(p => p.id === member.image);
             return (
-              <Card key={member.name} className="flex flex-col md:flex-row overflow-hidden group shadow-card hover:shadow-card-hover border-2 border-input/50 transition-all duration-300 hover:-translate-y-1">
+              <Card key={member.name} className="flex flex-col md:flex-row overflow-hidden group shadow-card hover:shadow-card-hover border-border transition-all duration-300 hover:-translate-y-1">
                 <div className="relative w-full h-64 md:w-48 md:h-auto flex-shrink-0 overflow-hidden">
                   {image && (
                     <Image

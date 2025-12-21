@@ -21,7 +21,7 @@ export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps)
           {specialOffers.map((offer) => {
             const image = PlaceHolderImages.find(p => p.id === offer.image);
             return (
-              <Card key={offer.id} className="relative group overflow-hidden rounded-lg h-[400px] shadow-lg text-primary-foreground isolate">
+              <Card key={offer.id} className="relative group overflow-hidden rounded-lg h-[400px] shadow-lg text-primary-foreground isolate border-border">
                 {image && (
                   <Image
                     src={image.imageUrl}
