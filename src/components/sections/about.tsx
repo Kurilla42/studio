@@ -25,17 +25,18 @@ export default function About() {
   return (
     <section id="about" className="bg-secondary !py-12 md:!py-16 lg:!py-20">
       <div className="container">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="relative group rounded-2xl overflow-hidden shadow-lg">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg h-full">
             {aboutImage && (
-              <Image
-                src={aboutImage.imageUrl}
-                alt={aboutImage.description}
-                width={600}
-                height={450}
-                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                data-ai-hint={aboutImage.imageHint}
-              />
+              <div className="relative w-full h-full min-h-[400px] md:min-h-0">
+                <Image
+                  src={aboutImage.imageUrl}
+                  alt={aboutImage.description}
+                  fill
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                  data-ai-hint={aboutImage.imageHint}
+                />
+              </div>
             )}
             <div className="absolute top-4 right-4 md:top-8 md:right-8 bg-primary text-primary-foreground p-6 rounded-2xl text-center shadow-lg">
               <p className="text-3xl font-bold">10+</p>
