@@ -18,7 +18,6 @@ export type Testimonial = {
   testimonial: string;
   rating: number;
   time: string;
-  verified: boolean;
   fallbackColor?: string;
 };
 
@@ -37,8 +36,11 @@ export type TeamMember = {
 };
 
 export type FaqItem = {
+    id: string;
     question: string;
     answer: string;
+    list?: { title: string; detail: string }[];
+    conclusion?: string;
 };
 
 export type ChatMessage = {

@@ -72,7 +72,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "Always professional. Quick to respond and they get the job done right the first time. Highly recommended!",
     rating: 5,
     time: "1 day ago",
-    verified: true
   },
   {
     name: "Steve McCollum",
@@ -80,7 +79,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "Prompt courteous professional. Too early to tell if everything works as it should but so far so good. The technician was very knowledgeable.",
     rating: 4,
     time: "1 day ago",
-    verified: true
   },
   {
     name: "Marco Tietz",
@@ -88,7 +86,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "Winson did a great job diagnosing the problem with my dishwasher and the team helped negotiating the warranty. Great service.",
     rating: 5,
     time: "1 day ago",
-    verified: true
   },
   {
     name: "Bruce Neighbors",
@@ -97,7 +94,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "Great customer care skills, very efficient and communicated effectively. I was very pleased with the work.",
     rating: 5,
     time: "2 days ago",
-    verified: true
   },
   {
     name: "David Sargent",
@@ -106,7 +102,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "Mario did a great job finding the problem with our clothes washer and fixing it. Very happy with the fast service.",
     rating: 5,
     time: "3 days ago",
-    verified: true
   },
   {
     name: "Jessica Miller",
@@ -114,7 +109,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "They replaced our old water heater. The team was on time, very respectful of our home, and the price was fair. I'm so glad we called them.",
     rating: 5,
     time: "4 days ago",
-    verified: true
   },
   {
     name: "Tom Wilson",
@@ -123,7 +117,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "Had a recurring drain clog that other companies couldn't fix. ProFlow's hydro-jetting service cleared it completely. It's been months with no issues.",
     rating: 5,
     time: "1 week ago",
-    verified: true
   },
   {
     name: "Olivia Garcia",
@@ -131,7 +124,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "Called them on a Sunday for a leak under the sink. The plumber arrived in under an hour and fixed it quickly. A real lifesaver!",
     rating: 5,
     time: "1 week ago",
-    verified: false
   },
   {
     name: "Chris Brown",
@@ -139,7 +131,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "Good service, but it took a bit longer than I expected to get an appointment for a non-emergency issue.",
     rating: 4,
     time: "2 weeks ago",
-    verified: true
   },
   {
     name: "Patricia Smith",
@@ -148,7 +139,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "Professional, clean, and transparent pricing. No surprises on the final bill. I appreciate their honesty and will use them again.",
     rating: 5,
     time: "3 weeks ago",
-    verified: true
   },
   {
     name: "Robert Johnson",
@@ -156,7 +146,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "The technician, Mike, was fantastic. He explained the repair options for my furnace clearly and didn't pressure me. Great experience.",
     rating: 5,
     time: "1 month ago",
-    verified: true
   },
   {
     name: "Linda Davis",
@@ -164,7 +153,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "They did a full repipe on our old house. It was a big job, but they handled it with professionalism and finished on schedule. The peace of mind is worth it.",
     rating: 5,
     time: "1 month ago",
-    verified: false
   },
   {
     name: "James Martinez",
@@ -173,7 +161,6 @@ export const testimonials: Testimonial[] = [
     testimonial: "Always reliable. I've used ProFlow for both big and small jobs over the years and they consistently deliver high-quality work.",
     rating: 5,
     time: "2 months ago",
-    verified: true
   }
 ];
 
@@ -227,18 +214,20 @@ export const teamMembers: TeamMember[] = [
 
 export const faqs: FaqItem[] = [
     {
+        id: 'faq-1',
         question: "How much does plumbing service cost?",
-        answer: `Our pricing is transparent and upfront - no hidden fees or surprise charges. Here's our pricing structure:
-
-- Service Call: $79 (waived with completed repair)
-- Emergency Repairs: Starting at $150-$500 depending on complexity
-- Water Heater Installation: $800-$2,500 (depends on type and capacity)
-- Drain Cleaning: $150-$400 (standard cleaning)
-- Fixture Installation: $125-$350 per fixture
-
-Every job begins with a free diagnostic and detailed quote. You'll know the exact price before any work starts.`
+        answer: `Our pricing is transparent and upfront - no hidden fees or surprise charges. Here's our pricing structure:`,
+        list: [
+            { title: "Service Call", detail: "$79 (waived with completed repair)" },
+            { title: "Emergency Repairs", detail: "Starting at $150-$500 depending on complexity" },
+            { title: "Water Heater Installation", detail: "$800-$2,500 (depends on type and capacity)" },
+            { title: "Drain Cleaning", detail: "$150-$400 (standard cleaning)" },
+            { title: "Fixture Installation", detail: "$125-$350 per fixture" }
+        ],
+        conclusion: `Every job begins with a free diagnostic and detailed quote. You'll know the exact price before any work starts.`
     },
     {
+        id: 'faq-2',
         question: "How quickly can you arrive?",
         answer: `We understand that plumbing emergencies can't wait. That's why we prioritize fast response:
 
@@ -250,6 +239,7 @@ Every job begins with a free diagnostic and detailed quote. You'll know the exac
 Call now and we'll dispatch a certified technician to your location immediately.`
     },
     {
+        id: 'faq-3',
         question: "Do you offer a warranty or guarantee?",
         answer: `Yes! We stand behind every job we complete with comprehensive guarantees:
 
@@ -261,6 +251,7 @@ Call now and we'll dispatch a certified technician to your location immediately.
 Our warranty is one of the best in the industry because we use quality parts and employ expert technicians.`
     },
     {
+        id: 'faq-4',
         question: "What is your service process?",
         answer: `Our streamlined service process ensures you get fast, professional results every time:
 
@@ -273,6 +264,7 @@ Step 5 - Warranty & Payment: We clean up, review everything with you, and provid
 This proven process has helped 1,000+ homeowners solve their plumbing problems quickly and reliably.`
     },
     {
+        id: 'faq-5',
         question: "Are your technicians licensed and certified?",
         answer: `Yes, absolutely. Every ProFlow technician is fully licensed, insured, and certified. Here's what that means for you:
 
@@ -296,5 +288,3 @@ export const socialProofData = {
   avatars: ["social-proof-avatar-1", "social-proof-avatar-2", "social-proof-avatar-3", "social-proof-avatar-4"],
   names: ["Alex P.", "Maria K.", "John D.", "Samantha G.", "Michael B."],
 };
-
-    
