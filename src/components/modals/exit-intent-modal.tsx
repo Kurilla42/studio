@@ -16,8 +16,6 @@ type ExitIntentModalProps = {
   onGetQuoteClick: () => void;
 };
 
-let hasShownExitIntent = false;
-
 export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   
