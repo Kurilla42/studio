@@ -22,6 +22,8 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   }, []);
 
   const backgroundImage = PlaceHolderImages.find(p => p.id === 'hero-background');
+  const mobileBackgroundImage = PlaceHolderImages.find(p => p.id === 'hero-background-mobile');
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -53,14 +55,24 @@ export default function Hero({ onScheduleClick }: HeroProps) {
 
   return (
     <section id="hero" className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden !p-0">
-      {backgroundImage && (
+       {backgroundImage && (
         <Image
           src={backgroundImage.imageUrl}
           alt={backgroundImage.description}
           fill
           priority
-          className="object-cover object-left-top"
+          className="object-cover object-left-top hidden md:block"
           data-ai-hint={backgroundImage.imageHint}
+        />
+      )}
+      {mobileBackgroundImage && (
+        <Image
+          src={mobileBackgroundImage.imageUrl}
+          alt={mobileBackgroundImage.description}
+          fill
+          priority
+          className="object-cover object-center md:hidden"
+          data-ai-hint={mobileBackgroundImage.imageHint}
         />
       )}
       <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/70 to-transparent from-0% via-40% to-65%"></div>

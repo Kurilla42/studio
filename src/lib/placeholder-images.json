@@ -7,6 +7,12 @@
       "imageHint": "plumbing pipes"
     },
     {
+      "id": "hero-background-mobile",
+      "description": "Plumbing pipes against a white wall, mobile view",
+      "imageUrl": "https://i.ibb.co/Dg7TmLDG/Whisk-1a78cbb33e26baa9783466a80547e5a8dr.jpg",
+      "imageHint": "plumbing pipes"
+    },
+    {
       "id": "hero-plumber",
       "description": "Friendly plumber with tools, transparent background",
       "imageUrl": "https://i.ibb.co/Wp7yrBDP/background-transparent-03-removebg-preview.png",
