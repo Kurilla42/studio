@@ -18,15 +18,14 @@ type ExitIntentModalProps = {
 
 export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasShown, setHasShown] = useState(false);
   
   const onExitIntent = () => {
-    if (!sessionStorage.getItem('hasShownExitIntent')) {
+    if (!hasShown) {
       setIsOpen(true);
-      sessionStorage.setItem('hasShownExitIntent', 'true');
+      setHasShown(true);
     }
   };
-  
-  // Reset on unmount (e.g. page navigation) is not needed anymore with sessionStorage
   
   useExitIntent(onExitIntent);
 
@@ -40,7 +39,7 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
       <DialogContent className="max-w-4xl p-0" onOpenAutoFocus={(e) => e.preventDefault()}>
         <div className="p-8 sm:p-12">
             <DialogHeader className="text-center mb-6">
-            <DialogTitle className="text-3xl md:text-4xl font-extrabold primary-gradient-text">Wait! Don't Miss Our Special Offers!</DialogTitle>
+            <DialogTitle className="text-3xl md:text-4xl font-extrabold primary-gradient-text text-center">Wait! Don't Miss Our Special Offers!</DialogTitle>
             <DialogDescription className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
                 Before you go, check out these exclusive deals to save on your next service.
             </DialogDescription>
@@ -61,7 +60,7 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
                     <div className="flex items-center text-primary">
                     <span className="text-5xl font-bold">{offer.discount}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mt-4 h-14 flex items-center">{offer.title}</h3>
+                    <h3 className="text-xl font-bold text-foreground mt-4 h-14 flex items-center justify-center">{offer.title}</h3>
                     <Button
                     onClick={handleClaimOffer}
                     className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 mt-6 w-full max-w-xs"
