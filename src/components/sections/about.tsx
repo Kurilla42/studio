@@ -1,4 +1,8 @@
+'use client';
+
+import { useRef } from 'react';
 import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
@@ -21,14 +25,25 @@ const advantages = [
 
 export default function About() {
   const aboutImage = PlaceHolderImages.find(p => p.id === 'about-main-image');
+  
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start end', 'end start'],
+  });
+
+  const imageY = useTransform(scrollYProgress, [0, 1], ['-20%', '20%']);
 
   return (
-    <section id="about" className="bg-secondary !py-12 md:!py-16 lg:!py-20">
+    <section id="about" ref={sectionRef} className="bg-secondary !py-12 md:!py-16 lg:!py-20 overflow-hidden">
       <div className="container">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
-          <div className="relative group rounded-2xl overflow-hidden shadow-lg h-full">
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg h-full min-h-[400px] md:min-h-[600px]">
             {aboutImage && (
-              <div className="relative w-full h-full min-h-[400px] md:min-h-0">
+              <motion.div
+                className="absolute inset-0"
+                style={{ y: imageY }}
+              >
                 <Image
                   src={aboutImage.imageUrl}
                   alt={aboutImage.description}
@@ -36,7 +51,7 @@ export default function About() {
                   className="object-cover object-center"
                   data-ai-hint={aboutImage.imageHint}
                 />
-              </div>
+              </motion.div>
             )}
             <div className="absolute bottom-4 right-4 bg-primary text-primary-foreground p-6 rounded-2xl text-center shadow-lg">
               <p className="text-3xl font-bold">10+</p>
