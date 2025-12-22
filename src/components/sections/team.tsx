@@ -12,9 +12,6 @@ export default function Team() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Meet Our Expert Team
           </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-lg text-muted-foreground">
-            Highly trained specialists dedicated to delivering exceptional service
-          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {teamMembers.map((member) => {

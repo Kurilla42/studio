@@ -145,21 +145,16 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     className="p-4"
                   >
                     <div className="flex flex-col text-left">
-                      <div className="text-3xl sm:text-4xl font-bold font-hero text-foreground flex items-center gap-1">
+                      <div className="text-2xl sm:text-3xl font-bold font-hero text-foreground flex items-center gap-1">
                         {stat.id === 'stat-3' ? (
                             <div className="flex items-center gap-2">
                                 <span>4.9</span>
-                                <div className="flex items-center">
-                                    {[...Array(5)].map((_, i) => (
-                                        <StarIcon key={i} className="w-5 h-5 sm:w-7 sm:h-7 fill-yellow-400 text-yellow-400" />
-                                    ))}
-                                </div>
                             </div>
                         ) : (
                             stat.number
                         )}
                       </div>
-                      <p className="text-base sm:text-lg text-muted-foreground font-bold whitespace-nowrap">{stat.label}</p>
+                      <p className="text-sm sm:text-base text-muted-foreground font-bold whitespace-nowrap">{stat.label}</p>
                       <div className="mt-2 h-1 w-12 bg-primary rounded-full"></div>
                     </div>
                   </motion.div>

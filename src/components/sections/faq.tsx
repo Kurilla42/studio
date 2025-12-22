@@ -30,7 +30,7 @@ export default function Faq() {
     <section id="faq" className="bg-secondary">
       <div className="container max-w-4xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground font-body">
             Frequently Asked Questions
           </h2>
         </div>

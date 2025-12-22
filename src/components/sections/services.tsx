@@ -17,7 +17,7 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
               <CardHeader>
                 <div className="flex items-center gap-4">
                   <service.icon className="w-12 h-12 text-primary" />
-                  <CardTitle>{service.title}</CardTitle>
+                  <CardTitle className="font-headline">{service.title}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="flex flex-col flex-grow">
