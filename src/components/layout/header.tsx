@@ -69,12 +69,12 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
 
         <div className="flex items-center gap-2 sm:hidden">
             <div className="flex items-center gap-2">
-                <Button size="sm" asChild className="primary-gradient flex-1 flex-grow-0 basis-auto">
-                    <a href="tel:5551234567" className="flex items-center gap-1 text-xs px-2 h-8">
+                <Button size="sm" asChild className="primary-gradient text-xs h-8 px-2 w-28 flex-1 flex-grow-0 basis-auto justify-center">
+                    <a href="tel:5551234567" className="flex items-center gap-1">
                       (555) 123-4567
                     </a>
                 </Button>
-                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient text-xs px-2 h-8 flex-1 flex-grow-0 basis-auto">
+                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient text-xs h-8 px-2 w-28 flex-1 flex-grow-0 basis-auto">
                     Get Quote
                 </Button>
             </div>

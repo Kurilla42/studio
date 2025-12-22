@@ -48,7 +48,7 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
             </DialogDescription>
             </DialogHeader>
 
-            <div className="relative my-8 py-3 px-6 text-center text-primary-foreground font-bold primary-gradient rounded-lg overflow-hidden max-w-xs mx-auto">
+            <div className="relative my-8 py-3 px-6 text-center text-primary-foreground font-bold primary-gradient rounded-lg overflow-hidden max-w-[calc(33.33%-2rem)] mx-auto">
                 Just 1 day left
                 <div className="absolute top-0 left-0 w-full h-full animate-shimmer bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
             </div>
