@@ -15,10 +15,10 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
           {services.map((service) => (
             <Card key={service.title} className="bg-card border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
               <CardHeader>
-                <div className="mb-4">
+                <div className="flex items-center gap-4">
                   <service.icon className="w-12 h-12 text-primary" />
+                  <CardTitle>{service.title}</CardTitle>
                 </div>
-                <CardTitle className="whitespace-nowrap">{service.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex flex-col flex-grow">
                 <CardDescription className="mb-6">{service.description}</CardDescription>
