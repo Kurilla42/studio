@@ -87,7 +87,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           {/* Left Column: Content */}
           <div className="flex flex-col items-start text-left">
             <motion.h1 
-              className="text-5xl sm:text-5xl lg:text-6xl font-hero font-bold text-foreground text-shadow-hero leading-tight"
+              className="text-[2.7rem] sm:text-5xl lg:text-6xl font-hero font-bold text-foreground text-shadow-hero leading-tight"
               variants={itemVariants}
             >
               Expert Plumbing Services
