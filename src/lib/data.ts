@@ -41,8 +41,14 @@ export const heroStats = [
     {
         icon: Award,
         number: "10+",
-        label: "Experience",
+        label: "Years Experience",
         id: "stat-1"
+    },
+    {
+        icon: Star,
+        number: "4.9",
+        label: "Google Rating",
+        id: "stat-3"
     },
     {
         icon: Smile,
@@ -55,12 +61,6 @@ export const heroStats = [
         number: "24/7",
         label: "Available",
         id: "stat-4"
-    },
-    {
-        icon: Star,
-        number: "4.9",
-        label: "Google Rating",
-        id: "stat-3"
     }
 ];
 
