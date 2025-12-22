@@ -16,6 +16,7 @@ import LiveChat from '@/components/floating/live-chat';
 import SocialProof from '@/components/floating/social-proof';
 import ContactModal from '@/components/modals/contact-modal';
 import ExitIntentModal from '@/components/modals/exit-intent-modal';
+import RevealOnScroll from '@/components/animations/reveal-on-scroll';
 
 export default function Home() {
   const [isContactModalOpen, setContactModalOpen] = useState(false);
@@ -29,13 +30,13 @@ export default function Home() {
       <Header onGetQuoteClick={handleOpenContactModal} />
       <main className="flex-1 pt-20">
         <Hero onScheduleClick={handleOpenContactModal} />
-        <Services onGetPriceClick={handleOpenContactModal} />
-        <About />
-        <EmergencyBanner />
-        <Testimonials />
-        <SpecialOffers onClaimOfferClick={handleOpenContactModal} />
-        <Team />
-        <Faq />
+        <RevealOnScroll><Services onGetPriceClick={handleOpenContactModal} /></RevealOnScroll>
+        <RevealOnScroll><About /></RevealOnScroll>
+        <RevealOnScroll><EmergencyBanner /></RevealOnScroll>
+        <RevealOnScroll><Testimonials /></RevealOnScroll>
+        <RevealOnScroll><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
+        <RevealOnScroll><Team /></RevealOnScroll>
+        <RevealOnScroll><Faq /></RevealOnScroll>
       </main>
       <Footer onFormSubmit={() => {}} />
 
