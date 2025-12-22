@@ -128,7 +128,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     initial="hidden"
                     animate={isMounted ? "visible" : "hidden"}
                   >
-                    <Card className="p-3 sm:p-4 bg-background/80 backdrop-blur-md border-white/30 shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 ease-out">
+                    <Card className="p-3 sm:p-4 bg-background/80 backdrop-blur-md border-border shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 ease-out">
                       <div className="flex items-center gap-2 sm:gap-4">
                         <stat.icon className="w-7 h-7 sm:w-10 sm:h-10 text-primary flex-shrink-0" />
                         <div className="flex flex-col">
