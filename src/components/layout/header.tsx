@@ -53,7 +53,19 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
           </Button>
         </div>
 
-        <div className="lg:hidden flex items-center">
+        <div className="lg:hidden flex items-center gap-2">
+            <div className="hidden sm:flex items-center gap-2">
+                <Button size="sm" asChild className="primary-gradient">
+                    <a href="tel:5551234567" className="flex items-center gap-1">
+                    <Phone size={14} />
+                    (555) 123-4567
+                    </a>
+                </Button>
+                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient">
+                    Get Quote
+                </Button>
+            </div>
+
             <Sheet open={isMobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
