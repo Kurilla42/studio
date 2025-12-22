@@ -41,7 +41,7 @@ export const services: Service[] = [
 export const heroStats = [
     {
         icon: Award,
-        number: "10+ Years",
+        number: "10+",
         label: "Experience",
         id: "stat-1"
     },
@@ -53,7 +53,7 @@ export const heroStats = [
     },
     {
         icon: Star,
-        number: "",
+        number: "4.9",
         label: "Google Rating",
         id: "stat-3"
     },

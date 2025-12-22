@@ -149,6 +149,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                         {stat.id === 'stat-3' ? (
                             <div className="flex items-center gap-2">
                                 <span>4.9</span>
+                                <StarIcon className="w-6 h-6 text-yellow-400 fill-yellow-400" />
                             </div>
                         ) : (
                             stat.number
