@@ -28,7 +28,7 @@ export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps)
                 <div className="flex items-center text-primary">
                   <span className="text-5xl font-bold">{offer.discount}</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mt-4 h-14 flex items-center">{offer.title}</h3>
+                <h3 className="text-2xl font-bold text-foreground mt-4 h-14 flex items-center justify-center">{offer.title}</h3>
                 <Button
                   onClick={onClaimOfferClick}
                   className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 mt-6 w-full max-w-xs"
