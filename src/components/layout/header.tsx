@@ -44,12 +44,13 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
         {/* Mobile Buttons - Centered */}
         <div className="flex-1 justify-center items-center hidden sm:flex md:hidden">
             <div className="flex items-center gap-2">
-                <Button size="sm" asChild className="primary-gradient">
+                <Button size="sm" asChild className="primary-gradient flex-1">
                     <a href="tel:5551234567" className="flex items-center gap-1 text-xs px-2 h-8">
+                      <Phone size={14} />
                       (555) 123-4567
                     </a>
                 </Button>
-                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient text-xs px-2 h-8">
+                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient text-xs px-2 h-8 flex-1">
                     Get Quote
                 </Button>
             </div>
@@ -67,14 +68,15 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
           </Button>
         </div>
 
-        <div className="flex items-center gap-2 sm:hidden lg:hidden">
+        <div className="flex items-center gap-2 sm:hidden">
             <div className="flex items-center gap-2">
-                <Button size="sm" asChild className="primary-gradient">
+                <Button size="sm" asChild className="primary-gradient flex-1">
                     <a href="tel:5551234567" className="flex items-center gap-1 text-xs px-2 h-8">
+                      <Phone size={14} />
                       (555) 123-4567
                     </a>
                 </Button>
-                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient text-xs px-2 h-8">
+                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient text-xs px-2 h-8 flex-1">
                     Get Quote
                 </Button>
             </div>
