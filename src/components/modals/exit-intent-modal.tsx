@@ -22,18 +22,13 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
   const [isOpen, setIsOpen] = useState(false);
   
   const onExitIntent = () => {
-    if (!hasShownExitIntent) {
+    if (!sessionStorage.getItem('hasShownExitIntent')) {
       setIsOpen(true);
-      hasShownExitIntent = true;
+      sessionStorage.setItem('hasShownExitIntent', 'true');
     }
   };
   
-  // Reset on unmount (e.g. page navigation)
-  useState(() => {
-    return () => {
-      hasShownExitIntent = false;
-    };
-  }, []);
+  // Reset on unmount (e.g. page navigation) is not needed anymore with sessionStorage
   
   useExitIntent(onExitIntent);
 
@@ -48,12 +43,12 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
         <div className="p-8 sm:p-12">
             <DialogHeader className="text-center mb-6">
             <DialogTitle className="text-3xl md:text-4xl font-extrabold primary-gradient-text">Wait! Don't Miss Our Special Offers!</DialogTitle>
-            <DialogDescription className="text-lg text-muted-foreground mt-2">
+            <DialogDescription className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
                 Before you go, check out these exclusive deals to save on your next service.
             </DialogDescription>
             </DialogHeader>
 
-            <div className="relative my-8 py-3 px-6 text-center text-primary-foreground font-bold primary-gradient rounded-lg overflow-hidden">
+            <div className="relative my-8 py-3 px-6 text-center text-primary-foreground font-bold primary-gradient rounded-lg overflow-hidden max-w-xs mx-auto">
                 Just 1 day left
                 <div className="absolute top-0 left-0 w-full h-full animate-shimmer bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
             </div>
@@ -75,14 +70,13 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
                     >
                     Get This Deal
                     </Button>
-                    <p className="text-xs text-muted-foreground mt-auto pt-6">{offer.disclaimer}</p>
                 </div>
                 </div>
             ))}
             </div>
             <div className="text-center mt-10">
                 <Button size="lg" onClick={handleClaimOffer} className="primary-gradient">
-                    Get a Free Quote Now!
+                    Claim Your Offer Now!
                 </Button>
                 <p className="mt-4 text-sm text-muted-foreground">Or call us: <a href="tel:5551234567" className="font-bold text-primary hover:underline">(555) 123-4567</a></p>
             </div>
