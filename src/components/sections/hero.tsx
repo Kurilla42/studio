@@ -1,9 +1,9 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Phone, Star as StarIcon } from 'lucide-react';
@@ -20,6 +20,15 @@ const rotatingWords = ['Trust', 'Afford', 'Get Fast'];
 export default function Hero({ onScheduleClick }: HeroProps) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
+
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
+  });
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+
 
   useEffect(() => {
     setIsMounted(true);
@@ -62,7 +71,11 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   };
 
   return (
-    <section id="hero" className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden !p-0">
+    <section ref={heroRef} id="hero" className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden !p-0">
+      <motion.div
+        className="absolute inset-0 z-0"
+        style={{ y: backgroundY }}
+      >
        {backgroundImage && (
         <Image
           src={backgroundImage.imageUrl}
@@ -83,6 +96,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           data-ai-hint={mobileBackgroundImage.imageHint}
         />
       )}
+      </motion.div>
       <div className="absolute inset-0 bg-gradient-to-r from-white/[.80] via-white/[.80] to-transparent from-0% via-40% to-65%"></div>
       
       <div className="container relative z-10 py-12">
