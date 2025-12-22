@@ -61,13 +61,13 @@ export default function Faq() {
                     value={value}
                     className="border-none bg-background rounded-lg shadow-card transition-all duration-300"
                   >
-                    <AccordionTrigger className="p-6 text-base font-semibold hover:no-underline text-left">
+                    <AccordionTrigger className="p-6 text-base font-semibold hover:no-underline text-left font-body">
                       <span className="flex-1 pr-4">{faq.question}</span>
                        <div className="w-7 h-7 flex items-center justify-center rounded-full bg-primary text-primary-foreground flex-shrink-0">
                         {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="p-6 pt-0">
+                    <AccordionContent className="p-6 pt-0 font-body">
                       <div className="space-y-4 border-t pt-4">
                         {faq.answer && <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">
                           {faq.answer}
