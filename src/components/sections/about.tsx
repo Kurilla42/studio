@@ -81,7 +81,7 @@ export default function About() {
                 We don't just fix problems; we build long-term relationships with homeowners who know they can rely on us. When plumbing trouble hits, we work to be the first name you trust — that's the ProFlow Plumbing promise.
                 </p>
             </div>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-3 pt-4">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-3 pt-4 pl-6">
               {advantages.map((advantage) => (
                 <div key={advantage.title} className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
