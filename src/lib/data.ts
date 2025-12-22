@@ -52,16 +52,16 @@ export const heroStats = [
         id: "stat-2"
     },
     {
-        icon: Star,
-        number: "4.9",
-        label: "Google Rating",
-        id: "stat-3"
-    },
-    {
         icon: Clock,
         number: "24/7",
         label: "Available",
         id: "stat-4"
+    },
+    {
+        icon: Star,
+        number: "4.9",
+        label: "Google Rating",
+        id: "stat-3"
     }
 ];
 

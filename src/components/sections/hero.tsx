@@ -149,7 +149,11 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                         {stat.id === 'stat-3' ? (
                             <div className="flex items-center gap-2">
                                 <span>4.9</span>
-                                <StarIcon className="w-6 h-6 text-yellow-400 fill-yellow-400" />
+                                <div className="flex">
+                                    {[...Array(5)].map((_, j) => (
+                                        <StarIcon key={j} className={cn("w-5 h-5", j < 4 ? "text-yellow-400 fill-yellow-400" : (j < 5 ? "text-yellow-400 fill-yellow-400 opacity-50" : "text-gray-300 fill-gray-300"))} />
+                                    ))}
+                                </div>
                             </div>
                         ) : (
                             stat.number
