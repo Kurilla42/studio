@@ -18,8 +18,8 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        hero: ['Inter', 'sans-serif'],
+        headline: ['Oswald', 'sans-serif'],
+        hero: ['Oswald', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
