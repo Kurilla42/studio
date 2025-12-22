@@ -41,6 +41,20 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
           ))}
         </nav>
 
+        {/* Mobile Buttons - Centered */}
+        <div className="flex-1 justify-center items-center hidden sm:flex md:hidden">
+            <div className="flex items-center gap-2">
+                <Button size="sm" asChild className="primary-gradient">
+                    <a href="tel:5551234567" className="flex items-center gap-1 text-xs px-2 h-8">
+                      (555) 123-4567
+                    </a>
+                </Button>
+                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient text-xs px-2 h-8">
+                    Get Quote
+                </Button>
+            </div>
+        </div>
+
         <div className="hidden lg:flex items-center gap-4">
           <Button asChild className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5">
             <a href="tel:5551234567" className="flex items-center gap-2">
@@ -53,19 +67,20 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
           </Button>
         </div>
 
-        <div className="lg:hidden flex items-center gap-2">
+        <div className="flex items-center gap-2 sm:hidden lg:hidden">
             <div className="flex items-center gap-2">
                 <Button size="sm" asChild className="primary-gradient">
                     <a href="tel:5551234567" className="flex items-center gap-1 text-xs px-2 h-8">
-                    <Phone size={12} />
-                    (555) 123-4567
+                      (555) 123-4567
                     </a>
                 </Button>
                 <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient text-xs px-2 h-8">
                     Get Quote
                 </Button>
             </div>
+        </div>
 
+        <div className="flex items-center lg:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -80,11 +95,6 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
                         <Wrench className="h-6 w-6 text-primary" />
                         <span className="font-bold">ProFlow Plumbing</span>
                     </Link>
-                    <SheetClose asChild>
-                        <Button variant="ghost" size="icon">
-                            <X className="h-6 w-6" />
-                        </Button>
-                    </SheetClose>
                 </div>
                 <nav className="mt-8 flex flex-1 flex-col gap-6">
                     {navItems.map((item) => (
