@@ -2,22 +2,14 @@
 
 import { useEffect } from 'react';
 
+let hasShownExitIntent = false;
+
 const useExitIntent = (onExitIntent: () => void) => {
   useEffect(() => {
     const handleMouseLeave = (e: MouseEvent) => {
-      try {
-        if (
-          e.clientY <= 0 &&
-          sessionStorage.getItem('exit-intent-shown') !== 'true'
-        ) {
-          onExitIntent();
-          sessionStorage.setItem('exit-intent-shown', 'true');
-        }
-      } catch (error) {
-        // sessionStorage is not available
-        if (e.clientY <= 0) {
-          onExitIntent();
-        }
+      if (e.clientY <= 0 && !hasShownExitIntent) {
+        onExitIntent();
+        hasShownExitIntent = true;
       }
     };
 

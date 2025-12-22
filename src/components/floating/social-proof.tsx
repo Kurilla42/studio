@@ -18,18 +18,13 @@ type Notification = {
   time: string;
 };
 
+let hasShownSocialProof = false;
+
 export default function SocialProof() {
   const [notification, setNotification] = useState<Notification | null>(null);
 
   useEffect(() => {
-    let hasShown = false;
-    try {
-      hasShown = sessionStorage.getItem('social-proof-shown') === 'true';
-    } catch (e) {
-      // sessionStorage is not available
-    }
-
-    if (hasShown) {
+    if (hasShownSocialProof) {
       return;
     }
 
@@ -48,11 +43,7 @@ export default function SocialProof() {
         time: socialProofData.times[Math.floor(Math.random() * socialProofData.times.length)],
       };
       setNotification(newNotification);
-      try {
-        sessionStorage.setItem('social-proof-shown', 'true');
-      } catch (e) {
-        // sessionStorage is not available
-      }
+      hasShownSocialProof = true;
     };
 
     const initialTimeout = setTimeout(showRandomNotification, 5000); // First one after 5s
