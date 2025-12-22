@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -143,16 +144,16 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     animate={isMounted ? "visible" : "hidden"}
                     className="p-4 bg-background/0"
                   >
-                    <div className="flex items-center gap-3">
-                      <stat.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary flex-shrink-0" />
+                    <div className="flex items-center gap-4">
+                      <stat.icon className="w-10 h-10 sm:w-12 sm:h-12 text-primary flex-shrink-0" />
                       <div className="flex flex-col">
-                        <div className="text-xl sm:text-2xl font-bold font-hero text-foreground flex items-center gap-1">
+                        <div className="text-2xl sm:text-3xl font-bold font-hero text-foreground flex items-center gap-1">
                           {stat.id === 'stat-3' ? (
-                              <div className="flex items-center gap-1.5">
+                              <div className="flex items-center gap-2">
                                   <span>4.9</span>
                                   <div className="flex items-center">
                                       {[...Array(5)].map((_, i) => (
-                                          <StarIcon key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
+                                          <StarIcon key={i} className="w-5 h-5 sm:w-6 sm:h-6 fill-yellow-400 text-yellow-400" />
                                       ))}
                                   </div>
                               </div>
@@ -160,7 +161,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                               stat.number
                           )}
                         </div>
-                        <p className="text-xs sm:text-sm text-muted-foreground font-bold whitespace-nowrap">{stat.label}</p>
+                        <p className="text-sm sm:text-base text-muted-foreground font-bold whitespace-nowrap">{stat.label}</p>
                       </div>
                     </div>
                   </motion.div>
