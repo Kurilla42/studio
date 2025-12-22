@@ -45,7 +45,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0
   }
 
   return (
-    <li className="w-[350px] max-w-[calc(100vw-2rem)] flex-shrink-0 px-3 py-1">
+    <li className="w-[350px] max-w-[calc(100vw-2rem)] flex-shrink-0 px-3 py-1 list-none">
       <Card className="h-full flex flex-col p-6 bg-card border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
         <div className="flex items-center mb-3">
           <Avatar className="w-10 h-10 mr-3 border-2 border-primary/50">
