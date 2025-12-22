@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import { Star } from 'lucide-react';
 import { testimonials } from '@/lib/data';
@@ -12,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import Autoplay from "embla-carousel-autoplay"
 import { cn } from '@/lib/utils';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
@@ -39,6 +41,10 @@ const fallbackColors = [
 let colorIndex = 0;
 
 export default function Testimonials() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  )
+
   return (
     <section id="testimonials" className="bg-secondary !py-12 md:!py-16">
       <div className="container">
@@ -53,11 +59,14 @@ export default function Testimonials() {
             </div>
         </div>
         <Carousel
+          plugins={[plugin.current]}
           opts={{
             align: 'start',
             loop: true,
           }}
           className="w-full"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {testimonials.map((testimonial, index) => {
