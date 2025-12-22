@@ -6,10 +6,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Card } from '@/components/ui/card';
 import { faqs } from '@/lib/data';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Plus, Minus } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useState } from 'react';
 
 const FaqList = ({ items }: { items: { title: string; detail: string }[] }) => (
   <ul className="space-y-3">
@@ -26,41 +26,64 @@ const FaqList = ({ items }: { items: { title: string; detail: string }[] }) => (
 );
 
 export default function Faq() {
+  const [openItem, setOpenItem] = useState<string | null>(null);
+
+  const handleValueChange = (value: string) => {
+    setOpenItem(openItem === value ? null : value);
+  };
+
   return (
     <section id="faq" className="bg-secondary">
-      <div className="container max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground font-body">
-            Frequently Asked Questions
-          </h2>
-        </div>
-        <Accordion type="single" collapsible className="w-full space-y-4">
-          {faqs.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              value={`item-${index}`}
-              asChild
-              className="border-none"
+      <div className="container">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="lg:sticky lg:top-24">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground font-headline">
+              Frequently Asked Questions
+            </h2>
+            <p className="mt-4 text-muted-foreground text-base max-w-lg">
+              Have questions about our plumbing services? We've compiled answers to the most common inquiries we receive, from pricing and scheduling to warranties. If you don't find your answer here, please don't hesitate to contact us directly.
+            </p>
+          </div>
+          <div className="w-full">
+            <Accordion 
+              type="single" 
+              collapsible 
+              className="w-full space-y-4"
+              value={openItem ?? ''}
+              onValueChange={handleValueChange}
             >
-              <Card className="shadow-card hover:shadow-card-hover transition-shadow duration-300 border-border [&[data-state=open]]:border-primary/30">
-                <AccordionTrigger className="p-6 text-lg font-semibold hover:no-underline hover:text-primary data-[state=open]:text-primary data-[state=open]:border-b">
-                  <span className="text-left">{faq.question}</span>
-                </AccordionTrigger>
-                <AccordionContent className="p-6 pt-2">
-                  <div className="space-y-4">
-                    {faq.answer && <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">
-                      {faq.answer}
-                    </p>}
-                    {faq.list && <FaqList items={faq.list} />}
-                    {faq.conclusion && <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line pt-2">
-                      {faq.conclusion}
-                    </p>}
-                  </div>
-                </AccordionContent>
-              </Card>
-            </AccordionItem>
-          ))}
-        </Accordion>
+              {faqs.map((faq, index) => {
+                const value = `item-${index}`;
+                const isOpen = openItem === value;
+                return (
+                  <AccordionItem
+                    key={index}
+                    value={value}
+                    className="border-none bg-background rounded-lg shadow-card transition-all duration-300"
+                  >
+                    <AccordionTrigger className="p-6 text-base font-semibold hover:no-underline text-left">
+                      <span className="flex-1 pr-4">{faq.question}</span>
+                       <div className="w-7 h-7 flex items-center justify-center rounded-full bg-primary text-primary-foreground flex-shrink-0">
+                        {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="p-6 pt-0">
+                      <div className="space-y-4 border-t pt-4">
+                        {faq.answer && <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">
+                          {faq.answer}
+                        </p>}
+                        {faq.list && <FaqList items={faq.list} />}
+                        {faq.conclusion && <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line pt-2">
+                          {faq.conclusion}
+                        </p>}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                )
+              })}
+            </Accordion>
+          </div>
+        </div>
       </div>
     </section>
   );
