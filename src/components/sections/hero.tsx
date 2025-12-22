@@ -75,7 +75,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           data-ai-hint={mobileBackgroundImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/70 to-transparent from-0% via-40% to-65%"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-white/[.80] via-white/[.80] to-transparent from-0% via-40% to-65%"></div>
       
       <div className="container relative z-10 py-12">
         <motion.div 
@@ -128,7 +128,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     initial="hidden"
                     animate={isMounted ? "visible" : "hidden"}
                   >
-                    <Card className="p-3 sm:p-4 md:p-3 lg:p-4 bg-background/80 backdrop-blur-md border border-transparent shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 ease-out">
+                    <Card className="p-3 sm:p-4 md:p-3 lg:p-4 bg-background/80 backdrop-blur-md border-border shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 ease-out">
                       <div className="flex items-center gap-2 sm:gap-4 md:gap-3 lg:gap-4">
                         <stat.icon className="w-7 h-7 sm:w-10 sm:h-10 md:w-8 md:h-8 lg:w-10 lg:h-10 text-primary flex-shrink-0" />
                         <div className="flex flex-col">
