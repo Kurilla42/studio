@@ -6,14 +6,6 @@ import { Star } from 'lucide-react';
 import { testimonials } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
-import Autoplay from "embla-carousel-autoplay"
 import { cn } from '@/lib/utils';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
@@ -40,11 +32,56 @@ const fallbackColors = [
 
 let colorIndex = 0;
 
-export default function Testimonials() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
-  )
+const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0] }) => {
+  const image = testimonial.image ? PlaceHolderImages.find(p => p.id === testimonial.image) : null;
+  const fallbackInitial = testimonial.name.charAt(0);
+  
+  let fallbackColor;
+  if (!image) {
+    fallbackColor = testimonial.fallbackColor || fallbackColors[colorIndex % fallbackColors.length];
+    colorIndex++;
+  } else {
+      fallbackColor = 'bg-primary text-primary-foreground';
+  }
 
+  return (
+    <li className="w-[350px] max-w-[calc(100vw-2rem)] flex-shrink-0 px-3 py-1">
+      <Card className="h-full flex flex-col p-6 bg-card border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
+        <div className="flex items-center mb-3">
+          <Avatar className="w-10 h-10 mr-3 border-2 border-primary/50">
+            {image ? (
+              <AvatarImage src={image.imageUrl} alt={testimonial.name} data-ai-hint={image.imageHint}/>
+            ) : (
+              <AvatarFallback className={cn("font-bold", fallbackColor)}>
+                {fallbackInitial}
+              </AvatarFallback>
+            )}
+          </Avatar>
+          
+          <div className="flex-1">
+              <div className="flex items-center gap-1.5">
+                  <p className="font-bold text-sm text-foreground">{testimonial.name}</p>
+              </div>
+              <div className="flex items-center gap-2">
+              <div className="flex items-center">
+                  {[...Array(5)].map((_, i) => (
+                  <Star key={i} className={cn("w-4 h-4", i < testimonial.rating ? "fill-yellow-400 text-yellow-400" : "fill-gray-300 text-gray-300")} />
+                  ))}
+              </div>
+              <p className="text-xs text-muted-foreground">{testimonial.time}</p>
+              </div>
+          </div>
+        </div>
+        <CardContent className="p-0 text-sm text-muted-foreground">
+          <p>{testimonial.testimonial}</p>
+        </CardContent>
+      </Card>
+    </li>
+  );
+};
+
+
+export default function Testimonials() {
   return (
     <section id="testimonials" className="bg-secondary !py-12 md:!py-16">
       <div className="container">
@@ -58,70 +95,18 @@ export default function Testimonials() {
                 <span className="text-lg text-foreground font-bold">4.9</span>
             </div>
         </div>
-        <Carousel
-          plugins={[plugin.current]}
-          opts={{
-            align: 'start',
-            loop: true,
+        <div 
+          className="relative w-full overflow-hidden"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
           }}
-          className="w-full"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
-            {testimonials.map((testimonial, index) => {
-              const image = testimonial.image ? PlaceHolderImages.find(p => p.id === testimonial.image) : null;
-              const fallbackInitial = testimonial.name.charAt(0);
-              
-              let fallbackColor;
-              if (!image) {
-                fallbackColor = testimonial.fallbackColor || fallbackColors[colorIndex % fallbackColors.length];
-                colorIndex++;
-              } else {
-                 fallbackColor = 'bg-primary text-primary-foreground';
-              }
-              
-              return (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                  <div className="p-1 h-full">
-                    <Card className="h-full flex flex-col p-6 bg-card border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
-                      <div className="flex items-center mb-3">
-                        <Avatar className="w-10 h-10 mr-3 border-2 border-primary/50">
-                          {image ? (
-                            <AvatarImage src={image.imageUrl} alt={testimonial.name} data-ai-hint={image.imageHint}/>
-                          ) : (
-                            <AvatarFallback className={cn("font-bold", fallbackColor)}>
-                              {fallbackInitial}
-                            </AvatarFallback>
-                          )}
-                        </Avatar>
-                        
-                        <div className="flex-1">
-                            <div className="flex items-center gap-1.5">
-                                <p className="font-bold text-sm text-foreground">{testimonial.name}</p>
-                            </div>
-                           <div className="flex items-center gap-2">
-                            <div className="flex items-center">
-                                {[...Array(5)].map((_, i) => (
-                                <Star key={i} className={cn("w-4 h-4", i < testimonial.rating ? "fill-yellow-400 text-yellow-400" : "fill-gray-300 text-gray-300")} />
-                                ))}
-                            </div>
-                            <p className="text-xs text-muted-foreground">{testimonial.time}</p>
-                           </div>
-                        </div>
-                      </div>
-                      <CardContent className="p-0 text-sm text-muted-foreground">
-                        <p>{testimonial.testimonial}</p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              );
-            })}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+          <div className="flex w-max animate-scroll">
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <TestimonialCard key={index} testimonial={testimonial} />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

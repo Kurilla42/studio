@@ -152,4 +152,13 @@
       transform: translateY(0px);
     }
   }
+  
+  .animate-scroll {
+    animation: scroll 80s linear infinite;
+  }
+
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
