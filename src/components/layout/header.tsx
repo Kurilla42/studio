@@ -54,14 +54,14 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
         </div>
 
         <div className="lg:hidden flex items-center gap-2">
-            <div className="hidden sm:flex items-center gap-2">
+            <div className="flex items-center gap-2">
                 <Button size="sm" asChild className="primary-gradient">
-                    <a href="tel:5551234567" className="flex items-center gap-1">
-                    <Phone size={14} />
+                    <a href="tel:5551234567" className="flex items-center gap-1 text-xs px-2 h-8">
+                    <Phone size={12} />
                     (555) 123-4567
                     </a>
                 </Button>
-                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient">
+                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient text-xs px-2 h-8">
                     Get Quote
                 </Button>
             </div>
