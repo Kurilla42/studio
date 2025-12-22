@@ -132,7 +132,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
               </Button>
             </motion.div>
 
-            <div className="mt-12 w-full max-w-xl">
+            <div className="mt-12 w-full">
               <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
                 {heroStats.map((stat, i) => (
                   <motion.div
@@ -141,29 +141,28 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     variants={statCardVariants}
                     initial="hidden"
                     animate={isMounted ? "visible" : "hidden"}
+                    className="p-4 bg-background/0"
                   >
-                    <Card className="p-4 bg-background/80 backdrop-blur-md border shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 ease-out border-border">
-                      <div className="flex items-center gap-3">
-                        <stat.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary flex-shrink-0" />
-                        <div className="flex flex-col">
-                          <div className="text-xl sm:text-2xl font-bold font-hero text-foreground flex items-center gap-1">
-                            {stat.id === 'stat-3' ? (
-                                <div className="flex items-center gap-1.5">
-                                    <span>4.9</span>
-                                    <div className="flex items-center">
-                                        {[...Array(5)].map((_, i) => (
-                                            <StarIcon key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
-                                        ))}
-                                    </div>
-                                </div>
-                            ) : (
-                                stat.number
-                            )}
-                          </div>
-                          <p className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">{stat.label}</p>
+                    <div className="flex items-center gap-3">
+                      <stat.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary flex-shrink-0" />
+                      <div className="flex flex-col">
+                        <div className="text-xl sm:text-2xl font-bold font-hero text-foreground flex items-center gap-1">
+                          {stat.id === 'stat-3' ? (
+                              <div className="flex items-center gap-1.5">
+                                  <span>4.9</span>
+                                  <div className="flex items-center">
+                                      {[...Array(5)].map((_, i) => (
+                                          <StarIcon key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
+                                      ))}
+                                  </div>
+                              </div>
+                          ) : (
+                              stat.number
+                          )}
                         </div>
+                        <p className="text-xs sm:text-sm text-muted-foreground font-bold whitespace-nowrap">{stat.label}</p>
                       </div>
-                    </Card>
+                    </div>
                   </motion.div>
                 ))}
               </div>
