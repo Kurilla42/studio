@@ -244,14 +244,14 @@ export default function LiveChat() {
       </AnimatePresence>
       
       {!isOpen && (
-        <div className="fixed bottom-20 right-4 sm:right-6 z-50">
+        <div className="fixed bottom-4 right-4 sm:right-6 z-50">
           <Button
             size="icon"
             onClick={() => { setIsOpen(true); setHasInteracted(true); }}
-            className="w-14 h-14 rounded-full primary-gradient shadow-lg hover:scale-110 transition-transform animate-pulse-glow"
+            className="w-12 h-12 sm:w-14 sm:h-14 rounded-full primary-gradient shadow-lg hover:scale-110 transition-transform animate-pulse-glow"
             aria-label="Open live chat"
           >
-            <MessageCircle className="w-7 h-7" />
+            <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
           </Button>
           <span className="absolute -top-1 -right-1 flex h-6 w-6">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
