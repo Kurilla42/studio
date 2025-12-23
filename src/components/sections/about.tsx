@@ -65,7 +65,7 @@ export default function About() {
               </h2>
             </div>
             <Card className="overflow-hidden shadow-card">
-              <table className="w-full text-sm">
+              <table className="w-full text-sm text-center md:text-left">
                 <thead>
                   <tr className="primary-gradient">
                     <th className="p-3 text-left font-bold text-primary-foreground"></th>
@@ -76,7 +76,7 @@ export default function About() {
                 <tbody>
                   {comparisonData.map((item, index) => (
                     <tr key={item.feature} className="border-b border-border last:border-b-0">
-                      <td className="p-3 font-semibold text-foreground">{item.feature}</td>
+                      <td className="p-3 font-semibold text-foreground text-center md:text-left">{item.feature}</td>
                       <td className="p-3 text-center bg-primary/10 text-primary font-bold">{item.us}</td>
                       <td className="p-3 text-center text-muted-foreground">{item.competitors}</td>
                     </tr>
