@@ -58,7 +58,7 @@ export default function About() {
               <p className="text-sm">Years of Excellence</p>
             </div>
           </div>
-          <div className="space-y-6 md:border-l-4 md:border-primary md:pl-6">
+          <div className="space-y-6 border-l-4 border-primary pl-6">
             <div className="text-left mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Why Hundreds of Homeowners Choose ProFlow Plumbing
