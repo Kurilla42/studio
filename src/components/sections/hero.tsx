@@ -97,7 +97,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
         />
       )}
       </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-r from-white/[.80] via-white/[.80] to-transparent from-0% via-40% to-65%"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent from-0% via-40% to-65%"></div>
       <div className="absolute inset-x-0 top-0 h-[15%] bg-gradient-to-b from-background to-transparent [mask:linear-gradient(to_top,transparent,black_90%)]"></div>
       <div className="absolute inset-x-0 bottom-0 h-[15%] bg-gradient-to-t from-background to-transparent [mask:linear-gradient(to_bottom,transparent,black_90%)]"></div>
       
