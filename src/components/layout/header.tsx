@@ -21,7 +21,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
         'fixed top-0 left-0 right-0 z-50 bg-background/95'
       )}
     >
-      <div className="container mx-auto flex h-20 items-center justify-between">
+      <div className="container mx-auto flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Wrench className="h-8 w-8 text-primary" />
           <span className="hidden text-xl font-bold text-foreground sm:inline-block md:hidden lg:inline-block text-shadow-hero">
@@ -42,7 +42,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
         </nav>
 
         {/* Mobile Buttons - Centered */}
-        <div className="flex-1 justify-center items-center hidden sm:flex md:hidden">
+        <div className="absolute left-1/2 -translate-x-1/2 sm:hidden">
             <div className="flex items-center gap-2">
                 <Button size="sm" asChild className="primary-gradient flex-1 flex-grow-0 basis-auto">
                     <a href="tel:5551234567" className="flex items-center gap-1 text-xs px-2 h-8">
@@ -67,20 +67,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
           </Button>
         </div>
 
-        <div className="flex items-center gap-2 sm:hidden">
-            <div className="flex items-center gap-2">
-                <Button size="sm" asChild className="primary-gradient text-xs h-8 px-2 w-28 flex-1 flex-grow-0 basis-auto justify-center">
-                    <a href="tel:5551234567" className="flex items-center gap-1">
-                      (555) 123-4567
-                    </a>
-                </Button>
-                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient text-xs h-8 px-2 w-28 flex-1 flex-grow-0 basis-auto">
-                    Get Quote
-                </Button>
-            </div>
-        </div>
-
-        <div className="flex items-center lg:hidden">
+        <div className="flex items-center sm:hidden ml-auto">
             <Sheet open={isMobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">

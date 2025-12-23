@@ -85,7 +85,7 @@ export default function About() {
               </table>
             </Card>
 
-            <div className="space-y-4 text-muted-foreground text-base leading-relaxed border-l-4 border-primary pl-6">
+            <div className="space-y-4 text-muted-foreground text-base leading-relaxed pl-0 md:border-l-4 md:border-primary md:pl-6">
                 <p>
                 ProFlow Plumbing is more than a plumbing service — it's your partner in protecting your home. For over 10 years, we've helped 1,000+ families avoid costly damage and get their plumbing back to normal quickly and safely. Our licensed and insured specialists handle everything from emergency burst pipes to planned upgrades and preventative maintenance.
                 </p>
@@ -96,7 +96,7 @@ export default function About() {
                 We don't just fix problems; we build long-term relationships with homeowners who know they can rely on us. When plumbing trouble hits, we work to be the first name you trust — that's the ProFlow Plumbing promise.
                 </p>
             </div>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-3 pt-4 pl-6">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-3 pt-4 pl-0 md:pl-6">
               {advantages.map((advantage) => (
                 <div key={advantage.title} className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
