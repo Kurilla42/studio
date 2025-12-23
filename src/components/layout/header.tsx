@@ -24,7 +24,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
       <div className="container mx-auto flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Wrench className="h-8 w-8 text-primary" />
-          <span className="hidden text-xl font-bold text-foreground sm:inline-block md:hidden lg:inline-block">
+          <span className="hidden text-xl font-bold text-foreground sm:inline-block md:hidden lg:inline-block text-shadow-hero">
             ProFlow Plumbing
           </span>
         </Link>
@@ -93,7 +93,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
                 <div className="flex items-center justify-between border-b pb-4">
                     <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
                         <Wrench className="h-6 w-6 text-primary" />
-                        <span className="font-bold">ProFlow Plumbing</span>
+                        <span className="font-bold text-shadow-hero">ProFlow Plumbing</span>
                     </Link>
                 </div>
                 <nav className="mt-8 flex flex-1 flex-col gap-6">

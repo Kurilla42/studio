@@ -161,7 +161,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     className="p-4"
                   >
                     <div className="flex flex-col text-left">
-                      <div className="text-5xl sm:text-6xl font-bold font-hero text-foreground flex items-center gap-1">
+                      <div className="text-[2.7rem] sm:text-5xl font-bold font-hero text-foreground flex items-center gap-1 text-shadow-hero">
                         {stat.id === 'stat-3' ? (
                             <div className="flex items-baseline gap-2">
                                 <span>4.9</span>
