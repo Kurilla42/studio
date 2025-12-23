@@ -138,13 +138,13 @@ export default function Hero({ onScheduleClick }: HeroProps) {
               className="mt-8 flex flex-col sm:flex-row gap-4"
               variants={itemVariants}
             >
-              <Button size="lg" className="emergency-gradient text-primary-foreground shadow-button-primary hover:shadow-button-primary-hover animate-pulse-glow transition-all duration-300 hover:-translate-y-0.5" asChild>
+              <Button size="lg" className="emergency-gradient text-primary-foreground shadow-button-primary hover:shadow-button-primary-hover animate-pulse-glow transition-all duration-300 hover:-translate-y-0.5 h-12 px-10 text-base" asChild>
                 <a href="tel:5551234567">
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now: (555) 123-4567
                 </a>
               </Button>
-              <Button size="lg" className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5" onClick={onScheduleClick}>
+              <Button size="lg" className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 h-12 px-10 text-base" onClick={onScheduleClick}>
                 Schedule Service
               </Button>
             </motion.div>
@@ -164,11 +164,11 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                       <div className="text-[2.7rem] sm:text-5xl font-bold font-hero text-foreground flex items-center gap-1 text-shadow-hero">
                         {stat.id === 'stat-3' ? (
                             <div className="flex items-baseline gap-2">
-                                <span>4.9</span>
-                                <StarIcon className="w-10 h-10 text-yellow-400 fill-yellow-400 -translate-y-1" />
+                                <span className="text-4xl">4.9</span>
+                                <StarIcon className="w-9 h-9 text-yellow-400 fill-yellow-400 -translate-y-1" />
                             </div>
                         ) : (
-                            stat.number
+                            <span className="text-4xl">{stat.number}</span>
                         )}
                       </div>
                       <p className="text-sm sm:text-base text-muted-foreground font-bold whitespace-nowrap">{stat.label}</p>
