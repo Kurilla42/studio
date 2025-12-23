@@ -244,7 +244,7 @@ export default function LiveChat() {
       </AnimatePresence>
       
       {!isOpen && (
-        <div className="fixed bottom-4 right-4 sm:right-6 z-50">
+        <div className="fixed bottom-20 right-4 sm:right-6 z-50">
           <Button
             size="icon"
             onClick={() => { setIsOpen(true); setHasInteracted(true); }}
