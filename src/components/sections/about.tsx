@@ -38,7 +38,7 @@ export default function About() {
     <section id="about" ref={sectionRef} className="bg-secondary !py-12 md:!py-16 lg:!py-20 overflow-hidden">
       <div className="container">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
-          <div className="relative group rounded-2xl overflow-hidden shadow-lg h-full min-h-[400px] md:min-h-[600px]">
+          <div className="hidden md:block relative group rounded-2xl overflow-hidden shadow-lg h-full min-h-[400px] md:min-h-[600px]">
             {aboutImage && (
               <motion.div
                 className="absolute inset-0"
