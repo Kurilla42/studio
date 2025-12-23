@@ -12,7 +12,7 @@ const comparisonData = [
   { feature: 'Licensed & Insured', us: 'Yes', competitors: 'Not Always' },
   { feature: 'Upfront Pricing', us: 'Always', competitors: 'Rarely' },
   { feature: 'Background-Checked Technicians', us: '100%', competitors: 'Unknown' },
-  { feature: 'Warranty on Work', us: 'Yes', competitors: 'Limited' },
+  { feature: 'Warranty on Work', us: '1 year', competitors: 'Limited' },
   { feature: '24/7 Emergency Service', us: 'Yes', competitors: 'No' },
 ];
 
