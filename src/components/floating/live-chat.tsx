@@ -9,7 +9,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { ChatMessage } from '@/lib/types';
-import { liveChatAssistance } from '@/ai/flows/live-chat-assistance';
 import { useToast } from "@/hooks/use-toast"
 import { cn } from '@/lib/utils';
 import { MessageCircle, X, Phone, Send, Clock, DollarSign, Wrench } from 'lucide-react';
@@ -77,63 +76,44 @@ export default function LiveChat() {
     }
   }, [messages, isTyping]);
 
-
-  const handleSendMessage = async (messageText: string) => {
-    if (!messageText.trim()) return;
-
+  const showAppointmentForm = (userMessageContent: string) => {
     const userMessage: ChatMessage = {
       id: `user-${Date.now()}`,
       role: 'user',
-      content: messageText,
+      content: userMessageContent,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     };
 
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
-    setShowQuickReplies(false);
-    setIsTyping(true);
+    const botMessage: ChatMessage = {
+        id: `bot-form-${Date.now()}`,
+        role: 'bot',
+        content: "Of course! To provide you with the most accurate information, please fill out your details below and we'll get back to you to confirm your appointment.",
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+    };
 
-    try {
-      const result = await liveChatAssistance({ query: messageText });
-      const botMessage: ChatMessage = {
-        id: `bot-${Date.now()}`,
-        role: 'bot',
-        content: result.response,
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      };
-      setMessages(prev => [...prev, botMessage]);
-    } catch (error) {
-      const errorMessage: ChatMessage = {
-        id: `error-${Date.now()}`,
-        role: 'bot',
-        content: "Sorry, I'm having trouble connecting. Please try again later or call us directly.",
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      };
-      setMessages(prev => [...prev, errorMessage]);
-    } finally {
-      setIsTyping(false);
-    }
+    setMessages(prev => [...prev, userMessage, botMessage]);
+    setShowQuickReplies(false);
+    setShowForm(true);
+    setIsTyping(false);
+    setInputValue('');
+  }
+
+  const handleSendMessage = async (messageText: string) => {
+    if (!messageText.trim()) return;
+    
+    setIsTyping(true);
+    // Simulate bot thinking time
+    setTimeout(() => {
+        showAppointmentForm(messageText);
+    }, 1000);
   };
 
   const handleQuickReply = (question: string) => {
-    if (question === "Can I schedule an appointment?") {
-        const botMessage: ChatMessage = {
-            id: `bot-form-${Date.now()}`,
-            role: 'bot',
-            content: "Of course! Please fill out your details below and we'll get back to you to confirm your appointment.",
-            timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        };
-        setMessages(prev => [...prev, {
-            id: `user-qr-${Date.now()}`,
-            role: 'user',
-            content: question,
-            timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        }, botMessage]);
-        setShowQuickReplies(false);
-        setShowForm(true);
-    } else {
-        handleSendMessage(question);
-    }
+    setIsTyping(true);
+    // Simulate bot thinking time
+    setTimeout(() => {
+        showAppointmentForm(question);
+    }, 1000);
   };
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -163,7 +143,7 @@ export default function LiveChat() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="fixed bottom-24 right-4 sm:right-6 z-[9998] w-[calc(100vw-2rem)] max-w-sm"
+            className="fixed bottom-20 right-4 sm:right-6 z-[9998] w-[calc(100vw-2rem)] max-w-sm"
           >
             <Card className="flex flex-col h-[60vh] max-h-[500px] shadow-2xl border-2">
               <header className="flex items-center gap-3 p-3 primary-gradient text-primary-foreground rounded-t-lg">
