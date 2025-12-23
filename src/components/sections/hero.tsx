@@ -138,13 +138,13 @@ export default function Hero({ onScheduleClick }: HeroProps) {
               className="mt-8 flex flex-col sm:flex-row gap-4"
               variants={itemVariants}
             >
-              <Button size="lg" className="emergency-gradient text-primary-foreground shadow-button-primary hover:shadow-button-primary-hover animate-pulse-glow transition-all duration-300 hover:-translate-y-0.5 h-12 px-10 text-base" asChild>
+              <Button size="lg" className="emergency-gradient text-primary-foreground shadow-button-primary hover:shadow-button-primary-hover animate-pulse-glow transition-all duration-300 hover:-translate-y-0.5 h-14 px-12 text-lg" asChild>
                 <a href="tel:5551234567">
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now: (555) 123-4567
                 </a>
               </Button>
-              <Button size="lg" className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 h-12 px-10 text-base" onClick={onScheduleClick}>
+              <Button size="lg" className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 h-14 px-12 text-lg" onClick={onScheduleClick}>
                 Schedule Service
               </Button>
             </motion.div>
@@ -161,14 +161,14 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     className="p-4"
                   >
                     <div className="flex flex-col text-left">
-                      <div className="text-[2.7rem] sm:text-5xl font-bold font-hero text-foreground flex items-center gap-1 text-shadow-hero">
+                      <div className="text-[2.7rem] sm:text-5xl font-bold font-hero text-foreground flex items-center gap-1">
                         {stat.id === 'stat-3' ? (
                             <div className="flex items-baseline gap-2">
-                                <span className="text-4xl">4.9</span>
-                                <StarIcon className="w-9 h-9 text-yellow-400 fill-yellow-400 -translate-y-1" />
+                                <span className="text-4xl text-shadow-hero">4.9</span>
+                                <StarIcon className="w-8 h-8 text-yellow-400 fill-yellow-400 -translate-y-1 text-shadow-hero" />
                             </div>
                         ) : (
-                            <span className="text-4xl">{stat.number}</span>
+                            <span className="text-4xl text-shadow-hero">{stat.number}</span>
                         )}
                       </div>
                       <p className="text-sm sm:text-base text-muted-foreground font-bold whitespace-nowrap">{stat.label}</p>
