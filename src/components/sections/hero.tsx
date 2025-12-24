@@ -75,6 +75,9 @@ export default function Hero({ onScheduleClick }: HeroProps) {
       <motion.div
         className="absolute inset-0 z-0"
         style={{ y: backgroundY }}
+        initial={{ scale: 1.05 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
       >
        {backgroundImage && (
         <Image

@@ -31,12 +31,12 @@ export default function Home() {
       <main className="flex-1 pt-20">
         <Hero onScheduleClick={handleOpenContactModal} />
         <RevealOnScroll><Services onGetPriceClick={handleOpenContactModal} /></RevealOnScroll>
-        <RevealOnScroll><About /></RevealOnScroll>
-        <RevealOnScroll><EmergencyBanner /></RevealOnScroll>
-        <RevealOnScroll><Testimonials /></RevealOnScroll>
-        <RevealOnScroll><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
-        <RevealOnScroll><Team /></RevealOnScroll>
-        <RevealOnScroll><Faq /></RevealOnScroll>
+        <RevealOnScroll delay={0.2}><About /></RevealOnScroll>
+        <RevealOnScroll delay={0.2}><EmergencyBanner /></RevealOnScroll>
+        <RevealOnScroll delay={0.2}><Testimonials /></RevealOnScroll>
+        <RevealOnScroll delay={0.2}><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
+        <RevealOnScroll delay={0.2}><Team /></RevealOnScroll>
+        <RevealOnScroll delay={0.2}><Faq /></RevealOnScroll>
       </main>
       <Footer onFormSubmit={() => {}} />
 

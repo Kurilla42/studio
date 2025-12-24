@@ -17,7 +17,7 @@ const comparisonData = [
 ];
 
 const advantages = [
-    { title: 'Upfront Pricing' },
+    { title: 'Clean Work' },
     { title: 'No Hidden Fees' },
     { title: 'Free Estimates' },
     { title: 'Dependable Service' }
@@ -59,16 +59,16 @@ export default function About() {
             </div>
           </div>
           <div className="space-y-6">
-            <div className="text-left mb-8">
+            <div className="text-center md:text-left mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Why Hundreds of Homeowners Choose ProFlow Plumbing
               </h2>
             </div>
             <Card className="overflow-hidden shadow-card">
-              <table className="w-full text-sm text-center md:text-left">
+              <table className="w-full text-sm text-center">
                 <thead>
                   <tr className="primary-gradient">
-                    <th className="p-3 text-left font-bold text-primary-foreground"></th>
+                    <th className="p-3 text-center md:text-left font-bold text-primary-foreground"></th>
                     <th className="p-3 text-center font-bold text-primary-foreground">Us</th>
                     <th className="p-3 text-center font-bold text-primary-foreground">Competitors</th>
                   </tr>
