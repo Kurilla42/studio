@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { cn } from '@/lib/utils';
 
 const trustLogosIds = [
   'trust-logo-1',
@@ -19,12 +20,20 @@ export default function TrustStrip() {
       <div className="container">
         <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 md:gap-x-12 lg:gap-x-16">
           {trustLogos.map(logo => (
-            <div key={logo.id} className="relative h-11 w-32 sm:h-14 sm:w-36 lg:h-16 lg:w-40">
+            <div 
+              key={logo.id} 
+              className={cn(
+                "relative h-11 w-32 sm:h-14 sm:w-36 lg:h-16 lg:w-40 transition-transform duration-300",
+                {
+                  "scale-130": logo.id === 'trust-logo-4'
+                }
+              )}
+            >
               <Image
                 src={logo.imageUrl}
                 alt={logo.description}
                 fill
-                className="object-contain transition-all duration-300"
+                className="object-contain"
                 data-ai-hint={logo.imageHint}
               />
             </div>
