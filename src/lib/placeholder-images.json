@@ -143,6 +143,36 @@
       "description": "Generic user avatar for social proof notification",
       "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjYwODgyNTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
+    },
+    {
+      "id": "trust-logo-1",
+      "description": "BBB Accredited Business logo",
+      "imageUrl": "https://i.ibb.co/DDQwmZZD/602e66f27b5b5700048a4aa9.png",
+      "imageHint": "accreditation logo"
+    },
+    {
+      "id": "trust-logo-2",
+      "description": "Licensed and Insured logo",
+      "imageUrl": "https://i.ibb.co/prNLrwSV/602e376ed9ced200045a579c.png",
+      "imageHint": "certification logo"
+    },
+    {
+      "id": "trust-logo-3",
+      "description": "Family Owned and Operated logo",
+      "imageUrl": "https://i.ibb.co/sv4rDHkr/2025-12-25-18-03-33.png",
+      "imageHint": "business logo"
+    },
+    {
+      "id": "trust-logo-4",
+      "description": "Google Guaranteed logo",
+      "imageUrl": "https://i.ibb.co/sd6K0SJn/629383c530fb025780ee296e.png",
+      "imageHint": "guarantee logo"
+    },
+    {
+      "id": "trust-logo-5",
+      "description": "HomeAdvisor Screened and Approved logo",
+      "imageUrl": "https://i.ibb.co/7Nbs9RpC/home-advisor-seeklogo.png",
+      "imageHint": "approval logo"
     }
   ]
 }

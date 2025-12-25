@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Hero from '@/components/sections/hero';
+import TrustStrip from '@/components/sections/trust-strip';
 import Services from '@/components/sections/services';
 import About from '@/components/sections/about';
 import EmergencyBanner from '@/components/sections/emergency-banner';
@@ -30,8 +31,9 @@ export default function Home() {
       <Header onGetQuoteClick={handleOpenContactModal} />
       <main className="flex-1 pt-20">
         <Hero onScheduleClick={handleOpenContactModal} />
-        <RevealOnScroll><Services onGetPriceClick={handleOpenContactModal} /></RevealOnScroll>
-        <RevealOnScroll delay={0.2}><About /></RevealOnScroll>
+        <RevealOnScroll><TrustStrip /></RevealOnScroll>
+        <RevealOnScroll delay={0.2}><Services onGetPriceClick={handleOpenContactModal} /></RevealOnScroll>
+        <RevealOnScroll delay={0.4}><About /></RevealOnScroll>
         <RevealOnScroll delay={0.2}><EmergencyBanner /></RevealOnScroll>
         <RevealOnScroll delay={0.2}><Testimonials /></RevealOnScroll>
         <RevealOnScroll delay={0.2}><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
