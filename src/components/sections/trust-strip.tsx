@@ -23,9 +23,11 @@ export default function TrustStrip() {
             <div 
               key={logo.id} 
               className={cn(
-                "relative h-11 w-32 sm:h-14 sm:w-36 lg:h-16 lg:w-40 transition-transform duration-300",
+                "relative transition-transform duration-300",
+                // Special size for the Google logo to visually balance it
                 {
-                  "scale-130": logo.id === 'trust-logo-4'
+                  "h-8 w-28 sm:h-10 sm:w-32 lg:h-12 lg:w-36": logo.id === 'trust-logo-4',
+                  "h-11 w-32 sm:h-14 sm:w-36 lg:h-16 lg:w-40": logo.id !== 'trust-logo-4'
                 }
               )}
             >
