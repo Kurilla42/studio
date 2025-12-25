@@ -19,12 +19,12 @@ export default function TrustStrip() {
       <div className="container">
         <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 md:gap-x-12 lg:gap-x-16">
           {trustLogos.map(logo => (
-            <div key={logo.id} className="relative h-10 w-28 sm:h-12 sm:w-32 lg:h-14 lg:w-36">
+            <div key={logo.id} className="relative h-11 w-32 sm:h-14 sm:w-36 lg:h-16 lg:w-40">
               <Image
                 src={logo.imageUrl}
                 alt={logo.description}
                 fill
-                className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                className="object-contain transition-all duration-300"
                 data-ai-hint={logo.imageHint}
               />
             </div>
