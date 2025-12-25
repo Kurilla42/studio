@@ -17,10 +17,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Пожалуйста, заполните это поле." }),
-  phone: z.string().min(10, { message: "Пожалуйста, заполните это поле." }),
-  email: z.string().email({ message: "Неверный email." }).optional().or(z.literal('')),
-  message: z.string().min(10, { message: "Сообщение должно быть не менее 10 символов." }),
+  name: z.string().min(2, { message: "Please fill this field." }),
+  phone: z.string().min(10, { message: "Please enter a valid phone number." }),
+  zip: z.string().min(5, { message: "Please enter a valid ZIP code." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 })
 
 type ContactModalProps = {
@@ -32,7 +32,7 @@ export default function ContactModal({ open, onOpenChange }: ContactModalProps) 
   const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: { name: "", phone: "", email: "", message: "" },
+    defaultValues: { name: "", phone: "", zip: "", message: "" },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
@@ -85,12 +85,12 @@ export default function ContactModal({ open, onOpenChange }: ContactModalProps) 
               />
               <FormField
                 control={form.control}
-                name="email"
+                name="zip"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email <span className="text-muted-foreground font-normal text-sm">(not required)</span></FormLabel>
+                    <FormLabel>ZIP Code</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="Your Email Address" {...field} />
+                      <Input placeholder="Your ZIP Code" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

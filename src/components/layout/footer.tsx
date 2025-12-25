@@ -12,10 +12,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from "@/hooks/use-toast"
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Пожалуйста, заполните это поле." }),
-  phone: z.string().min(10, { message: "Пожалуйста, заполните это поле." }),
-  email: z.string().email({ message: "Неверный email." }).optional().or(z.literal('')),
-  message: z.string().min(10, { message: "Сообщение должно быть не менее 10 символов." }),
+  name: z.string().min(2, { message: "Please fill this field." }),
+  phone: z.string().min(10, { message: "Please enter a valid phone number." }),
+  zip: z.string().min(5, { message: "Please enter a valid ZIP code." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 })
 
 type FooterProps = {
@@ -29,7 +29,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
     defaultValues: {
       name: "",
       phone: "",
-      email: "",
+      zip: "",
       message: "",
     },
   });
@@ -38,8 +38,8 @@ export default function Footer({ onFormSubmit }: FooterProps) {
     console.log(values);
     onFormSubmit(values);
     toast({
-      title: "Сообщение отправлено!",
-      description: "Наша команда скоро свяжется с вами.",
+      title: "Message Sent!",
+      description: "Our team will be in touch with you shortly.",
     });
     form.reset();
   }
@@ -82,12 +82,12 @@ export default function Footer({ onFormSubmit }: FooterProps) {
                 />
                  <FormField
                   control={form.control}
-                  name="email"
+                  name="zip"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email <span className="text-muted-foreground font-normal text-sm">(not required)</span></FormLabel>
+                      <FormLabel>ZIP Code</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="Your Email Address" {...field} className="bg-background shadow-card"/>
+                        <Input placeholder="Your ZIP Code" {...field} className="bg-background shadow-card"/>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
