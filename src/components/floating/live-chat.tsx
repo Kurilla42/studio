@@ -39,6 +39,7 @@ export default function LiveChat() {
   const [showForm, setShowForm] = useState(false);
   const [showQuickReplies, setShowQuickReplies] = useState(true);
   const [hasInteracted, setHasInteracted] = useState(false);
+  const [isButtonVisible, setIsButtonVisible] = useState(false);
 
   const consultantAvatar = PlaceHolderImages.find(p => p.id === 'chat-consultant-avatar');
   const chatBodyRef = useRef<HTMLDivElement>(null);
@@ -46,16 +47,18 @@ export default function LiveChat() {
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    if (!isMobile) {
-      const timer = setTimeout(() => {
-        if (!hasInteracted && !isOpen) {
-          setIsOpen(true);
-          setHasInteracted(true);
-        }
-      }, 30000);
-      return () => clearTimeout(timer);
-    }
-  }, [isMobile, hasInteracted, isOpen]);
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsButtonVisible(true);
+      } else {
+        setIsButtonVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
 
   useEffect(() => {
     if (isOpen && messages.length === 0) {
@@ -223,22 +226,30 @@ export default function LiveChat() {
         )}
       </AnimatePresence>
       
-      {!isOpen && (
-        <div className="fixed bottom-20 right-4 sm:right-6 z-50">
-          <Button
-            size="icon"
-            onClick={() => { setIsOpen(true); setHasInteracted(true); }}
-            className="w-12 h-12 sm:w-14 sm:h-14 rounded-full primary-gradient shadow-lg hover:scale-110 transition-transform animate-pulse-glow"
-            aria-label="Open live chat"
+      <AnimatePresence>
+        {!isOpen && isButtonVisible && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            className="fixed bottom-20 right-4 sm:right-6 z-50"
           >
-            <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
-          </Button>
-          <span className="absolute -top-1 -right-1 flex h-6 w-6">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-6 w-6 bg-destructive text-xs text-white items-center justify-center">1</span>
-          </span>
-        </div>
-      )}
+            <Button
+              size="icon"
+              onClick={() => { setIsOpen(true); setHasInteracted(true); }}
+              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full primary-gradient shadow-lg hover:scale-110 transition-transform animate-pulse-glow"
+              aria-label="Open live chat"
+            >
+              <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
+            </Button>
+            <span className="absolute -top-1 -right-1 flex h-6 w-6">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-6 w-6 bg-destructive text-xs text-white items-center justify-center">1</span>
+            </span>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
