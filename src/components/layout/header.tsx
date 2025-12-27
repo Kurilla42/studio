@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { navItems } from '@/lib/data';
 import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/hooks/use-mobile';
+
 
 type HeaderProps = {
   onGetQuoteClick: () => void;
@@ -16,14 +18,22 @@ type HeaderProps = {
 export default function Header({ onGetQuoteClick }: HeaderProps) {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isPastHero, setIsPastHero] = useState(false);
+  const isMobile = useIsMobile();
+
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50);
+      if (isMobile) {
+        setIsPastHero(scrollPosition > window.innerHeight);
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobile]);
 
   const logoVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -39,7 +49,8 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'bg-background/95 shadow-md h-16' : 'bg-transparent h-20'
+        isScrolled ? 'bg-background/95 shadow-md h-16' : 'bg-transparent h-20',
+        isMobile && !isPastHero && 'transform -translate-y-full'
       )}
     >
       <div className="container mx-auto flex h-full items-center justify-between relative">
@@ -50,7 +61,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+                className="text-sm text-foreground transition-colors hover:text-primary"
               >
                 {item.name}
               </Link>
@@ -67,7 +78,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
           >
             <Link href="/" className="flex items-center gap-2">
               <Wrench className="h-8 w-8 text-primary" />
-              <span className="text-xl font-medium text-foreground text-shadow-hero">
+              <span className="text-xl text-foreground text-shadow-hero">
                 ProFlow Plumbing
               </span>
             </Link>
@@ -121,7 +132,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
                   <div className="flex items-center justify-between border-b pb-4">
                       <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
                           <Wrench className="h-6 w-6 text-primary" />
-                          <span className="font-medium text-shadow-hero">ProFlow Plumbing</span>
+                          <span className="text-shadow-hero">ProFlow Plumbing</span>
                       </Link>
                   </div>
                   <nav className="mt-8 flex flex-1 flex-col gap-6">
@@ -129,7 +140,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
                       <Link
                           key={item.name}
                           href={item.href}
-                          className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+                          className="text-lg text-foreground transition-colors hover:text-primary"
                           onClick={() => setMobileMenuOpen(false)}
                       >
                           {item.name}
