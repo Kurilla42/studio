@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header onGetQuoteClick={handleOpenContactModal} />
-      <main className="flex-1 pt-20">
+      <main className="flex-1">
         <Hero onScheduleClick={handleOpenContactModal} />
         <RevealOnScroll><TrustStrip /></RevealOnScroll>
         <RevealOnScroll delay={0.2}><Services onGetPriceClick={handleOpenContactModal} /></RevealOnScroll>
