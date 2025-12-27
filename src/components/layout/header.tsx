@@ -25,11 +25,6 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItemVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-  };
-  
   const logoVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.3, delay: 0.1 } },
@@ -49,20 +44,22 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
     >
       <div className="container mx-auto flex h-full items-center justify-between relative">
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-4">
-          {navItems.slice(0, 3).map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-bold text-foreground transition-colors hover:text-primary"
-            >
-              {item.name}
-            </Link>
-          ))}
-        </nav>
+        <div className="hidden lg:flex w-1/3">
+           <nav className="flex items-center gap-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-sm font-bold text-foreground transition-colors hover:text-primary"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
 
         {/* Logo - Centered */}
-        <div className="absolute left-1/2 -translate-x-1/2">
+        <div className="hidden lg:flex w-1/3 justify-center">
           <motion.div
             initial="hidden"
             animate={isScrolled ? "visible" : "hidden"}
@@ -70,28 +67,16 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
           >
             <Link href="/" className="flex items-center gap-2">
               <Wrench className="h-8 w-8 text-primary" />
-              <span className="hidden text-xl font-bold text-foreground sm:inline-block md:hidden lg:inline-block text-shadow-hero">
+              <span className="text-xl font-bold text-foreground text-shadow-hero">
                 ProFlow Plumbing
               </span>
             </Link>
           </motion.div>
         </div>
-
-        <div className="hidden lg:flex items-center gap-4">
-           {navItems.slice(3).map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-bold text-foreground transition-colors hover:text-primary"
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
         
         {/* Right side buttons - Desktop */}
         <motion.div 
-            className="hidden lg:flex items-center gap-4 absolute right-0"
+            className="hidden lg:flex w-1/3 justify-end items-center gap-4"
             initial="hidden"
             animate={isScrolled ? "visible" : "hidden"}
             variants={buttonsVariants}
