@@ -71,7 +71,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   };
 
   return (
-    <section ref={heroRef} id="hero" className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden !p-0">
+    <section ref={heroRef} id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden !p-0">
       <motion.div
         className="absolute inset-0 z-0"
         style={{ y: backgroundY }}
@@ -112,7 +112,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           {/* Left Column: Content */}
           <div className="flex flex-col items-start text-left">
             <motion.h1 
-              className="text-[2.7rem] sm:text-5xl lg:text-6xl font-hero font-bold text-foreground text-shadow-hero leading-tight"
+              className="text-[2.7rem] sm:text-5xl lg:text-6xl font-hero text-foreground text-shadow-hero leading-tight"
               variants={itemVariants}
             >
               Expert Plumbing Services
@@ -162,7 +162,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     className="p-4"
                   >
                     <div className="flex flex-col text-left">
-                      <div className="text-[2.7rem] sm:text-5xl font-bold font-hero text-foreground flex items-center gap-1">
+                      <div className="text-[2.7rem] sm:text-5xl font-hero text-foreground flex items-center gap-1">
                         {stat.id === 'stat-3' ? (
                             <div className="flex items-baseline gap-2">
                                 <span className="text-4xl sm:text-5xl text-shadow-hero">4.9</span>
@@ -172,7 +172,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                             <span className="text-4xl sm:text-5xl text-shadow-hero">{stat.number}</span>
                         )}
                       </div>
-                      <p className="text-sm sm:text-base text-muted-foreground font-bold whitespace-nowrap">{stat.label}</p>
+                      <p className="text-sm sm:text-base text-muted-foreground whitespace-nowrap">{stat.label}</p>
                       <div className="mt-2 h-1 w-12 bg-primary rounded-full"></div>
                     </div>
                   </motion.div>
