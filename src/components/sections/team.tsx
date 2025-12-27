@@ -9,7 +9,7 @@ export default function Team() {
     <section id="team" className="bg-background">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-4xl text-foreground">
             Meet Our Expert Team
           </h2>
         </div>
@@ -30,7 +30,7 @@ export default function Team() {
                   )}
                 </div>
                 <CardContent className="p-6 flex flex-col">
-                  <h3 className="text-xl font-bold text-foreground mb-2">{member.name}</h3>
+                  <h3 className="text-xl text-foreground mb-2">{member.name}</h3>
                   <p className="text-muted-foreground text-sm mb-4 flex-grow">{member.description}</p>
                   <div className="grid grid-cols-2 gap-x-4 gap-y-2 mt-auto">
                     {member.certifications.map((cert) => (

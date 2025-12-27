@@ -18,7 +18,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 const QuickReplyButton = ({ icon: Icon, text, onClick }: { icon: React.ElementType, text: string, onClick: () => void }) => (
     <button onClick={onClick} className="w-full text-left flex items-center gap-2 p-2 rounded-lg bg-background border-2 border-primary/50 text-primary shadow-sm hover:bg-primary hover:text-primary-foreground hover:translate-x-0.5 transition-all duration-200">
         <Icon className="w-4 h-4 flex-shrink-0" />
-        <span className="text-sm font-semibold">{text}</span>
+        <span className="text-sm">{text}</span>
     </button>
 );
 
@@ -154,7 +154,7 @@ export default function LiveChat() {
                   <Image src={consultantAvatar.imageUrl} width={40} height={40} alt="Sarah Johnson" className="rounded-full border-2 border-white/50" data-ai-hint={consultantAvatar.imageHint} />
                 )}
                 <div>
-                  <p className="font-bold">Sarah Johnson</p>
+                  <p className="font-medium">Sarah Johnson</p>
                   <p className="text-xs opacity-90 flex items-center gap-1.5">
                     <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                     Online Now

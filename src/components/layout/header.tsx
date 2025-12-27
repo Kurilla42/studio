@@ -50,7 +50,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-bold text-foreground transition-colors hover:text-primary"
+                className="text-sm font-medium text-foreground transition-colors hover:text-primary"
               >
                 {item.name}
               </Link>
@@ -67,7 +67,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
           >
             <Link href="/" className="flex items-center gap-2">
               <Wrench className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold text-foreground text-shadow-hero">
+              <span className="text-xl font-medium text-foreground text-shadow-hero">
                 ProFlow Plumbing
               </span>
             </Link>
@@ -121,7 +121,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
                   <div className="flex items-center justify-between border-b pb-4">
                       <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
                           <Wrench className="h-6 w-6 text-primary" />
-                          <span className="font-bold text-shadow-hero">ProFlow Plumbing</span>
+                          <span className="font-medium text-shadow-hero">ProFlow Plumbing</span>
                       </Link>
                   </div>
                   <nav className="mt-8 flex flex-1 flex-col gap-6">
@@ -129,7 +129,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
                       <Link
                           key={item.name}
                           href={item.href}
-                          className="text-lg font-semibold text-foreground transition-colors hover:text-primary"
+                          className="text-lg font-medium text-foreground transition-colors hover:text-primary"
                           onClick={() => setMobileMenuOpen(false)}
                       >
                           {item.name}

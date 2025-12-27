@@ -67,7 +67,7 @@ export default function SocialProof() {
           >
             <Card className="w-[320px] p-4 shadow-2xl flex items-start gap-4">
               <div className="flex-1">
-                <p className="font-bold text-sm text-foreground">{notification.name}</p>
+                <p className="font-medium text-sm text-foreground">{notification.name}</p>
                 <p className="text-sm text-muted-foreground">{notification.action}</p>
                 <p className="text-xs text-muted-foreground/70 mt-1">{notification.time}</p>
               </div>

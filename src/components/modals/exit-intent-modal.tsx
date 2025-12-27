@@ -39,13 +39,13 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
       <DialogContent className="max-w-4xl p-0" onOpenAutoFocus={(e) => e.preventDefault()}>
         <div className="p-8 sm:p-12">
             <DialogHeader className="text-center mb-6">
-            <DialogTitle className="text-3xl md:text-4xl font-extrabold primary-gradient-text text-center">Wait! Don't Miss Our Special Offers!</DialogTitle>
+            <DialogTitle className="text-3xl md:text-4xl primary-gradient-text text-center">Wait! Don't Miss Our Special Offers!</DialogTitle>
             <DialogDescription className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
                 Before you go, check out these exclusive deals to save on your next service.
             </DialogDescription>
             </DialogHeader>
 
-            <div className="relative my-8 py-3 px-6 text-center text-primary-foreground font-bold primary-gradient rounded-lg overflow-hidden max-w-xs mx-auto">
+            <div className="relative my-8 py-3 px-6 text-center text-primary-foreground font-medium primary-gradient rounded-lg overflow-hidden max-w-xs mx-auto">
                 Just 1 day left
                 <div className="absolute top-0 left-0 w-full h-full animate-shimmer bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
             </div>
@@ -58,9 +58,9 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
                 >
                 <div className="border-2 border-dashed border-border rounded-xl h-full p-8 flex flex-col text-center items-center">
                     <div className="flex items-center text-primary">
-                    <span className="text-5xl font-bold">{offer.discount}</span>
+                    <span className="text-5xl font-medium">{offer.discount}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mt-4 h-14 flex items-center justify-center">{offer.title}</h3>
+                    <h3 className="text-xl text-foreground mt-4 h-14 flex items-center justify-center">{offer.title}</h3>
                     <Button
                     onClick={handleClaimOffer}
                     className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 mt-6 w-full max-w-xs"
@@ -75,7 +75,7 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
                 <Button size="lg" onClick={handleClaimOffer} className="primary-gradient">
                     Claim Your Offer Now!
                 </Button>
-                <p className="mt-4 text-sm text-muted-foreground">Or call us: <a href="tel:5551234567" className="font-bold text-primary hover:underline">(555) 123-4567</a></p>
+                <p className="mt-4 text-sm text-muted-foreground">Or call us: <a href="tel:5551234567" className="font-medium text-primary hover:underline">(555) 123-4567</a></p>
             </div>
         </div>
       </DialogContent>

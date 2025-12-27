@@ -50,7 +50,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-8">
           {/* Form Column */}
           <div>
-            <h3 className="text-3xl font-bold text-foreground mb-2">Contact Us</h3>
+            <h3 className="text-3xl text-foreground mb-2">Contact Us</h3>
             <p className="text-muted-foreground mb-8">Leave your contact details and our team will reach out today to provide a free, no-obligation quote.</p>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -116,7 +116,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
           {/* Info & Map Column */}
           <div className="flex flex-col gap-8">
             <div>
-              <h4 className="text-3xl font-bold text-foreground mb-4">ProFlow Plumbing</h4>
+              <h4 className="text-3xl text-foreground mb-4">ProFlow Plumbing</h4>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-primary" />
@@ -137,7 +137,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
               </ul>
             </div>
             <div className="flex-1 flex flex-col min-h-[300px]">
-              <h4 className="text-xl font-bold text-foreground mb-4">Location</h4>
+              <h4 className="text-xl text-foreground mb-4">Location</h4>
               <div className="relative flex-1 rounded-lg overflow-hidden group">
                  <a href="https://www.google.com/maps/search/?api=1&query=Empire+State+Building" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10">
                     <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center flex-col text-white">

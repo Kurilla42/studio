@@ -12,7 +12,7 @@ export default function EmergencyBanner() {
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold">Plumbing Emergency?</h3>
+                <h3 className="text-2xl md:text-3xl">Plumbing Emergency?</h3>
                 <p className="opacity-90 mt-1">We're available 24/7 for urgent repairs. Fast response guaranteed!</p>
               </div>
             </div>

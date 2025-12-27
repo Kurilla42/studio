@@ -54,13 +54,13 @@ export default function About() {
               </motion.div>
             )}
             <div className="absolute bottom-4 right-4 bg-primary text-primary-foreground p-6 rounded-2xl text-center shadow-lg">
-              <p className="text-3xl font-bold">10+</p>
+              <p className="text-3xl font-medium">10+</p>
               <p className="text-sm">Years of Excellence</p>
             </div>
           </div>
           <div className="space-y-6">
             <div className="text-center md:text-left mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl text-foreground">
                 Why Hundreds of Homeowners Choose ProFlow Plumbing
               </h2>
             </div>
@@ -68,16 +68,16 @@ export default function About() {
               <table className="w-full text-sm text-center">
                 <thead>
                   <tr className="primary-gradient">
-                    <th className="p-3 text-center md:text-left font-bold text-primary-foreground"></th>
-                    <th className="p-3 text-center font-bold text-primary-foreground">Us</th>
-                    <th className="p-3 text-center font-bold text-primary-foreground">Competitors</th>
+                    <th className="p-3 text-center md:text-left font-medium text-primary-foreground"></th>
+                    <th className="p-3 text-center font-medium text-primary-foreground">Us</th>
+                    <th className="p-3 text-center font-medium text-primary-foreground">Competitors</th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonData.map((item, index) => (
                     <tr key={item.feature} className="border-b border-border last:border-b-0">
-                      <td className="p-3 font-semibold text-foreground text-center md:text-left">{item.feature}</td>
-                      <td className="p-3 text-center bg-primary/10 text-primary font-bold">{item.us}</td>
+                      <td className="p-3 font-medium text-foreground text-center md:text-left">{item.feature}</td>
+                      <td className="p-3 text-center bg-primary/10 text-primary font-medium">{item.us}</td>
                       <td className="p-3 text-center text-muted-foreground">{item.competitors}</td>
                     </tr>
                   ))}
@@ -100,7 +100,7 @@ export default function About() {
               {advantages.map((advantage) => (
                 <div key={advantage.title} className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="font-semibold text-foreground">{advantage.title}</span>
+                  <span className="font-medium text-foreground">{advantage.title}</span>
                 </div>
               ))}
             </div>

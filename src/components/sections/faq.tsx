@@ -17,7 +17,7 @@ const FaqList = ({ items }: { items: { title: string; detail: string }[] }) => (
       <li key={index} className="flex items-start gap-3">
         <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
         <div>
-          <span className="font-bold text-foreground">{item.title}:</span>{' '}
+          <span className="font-medium text-foreground">{item.title}:</span>{' '}
           <span className="text-muted-foreground">{item.detail}</span>
         </div>
       </li>
@@ -37,7 +37,7 @@ export default function Faq() {
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="lg:sticky lg:top-24">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground font-headline">
+            <h2 className="text-3xl md:text-4xl text-foreground font-headline">
               Frequently Asked Questions
             </h2>
             <p className="mt-4 text-muted-foreground text-base max-w-lg">
@@ -61,7 +61,7 @@ export default function Faq() {
                     value={value}
                     className="border-none bg-background rounded-lg shadow-card transition-all duration-300"
                   >
-                    <AccordionTrigger className="p-6 text-base font-semibold hover:no-underline text-left font-body">
+                    <AccordionTrigger className="p-6 text-base font-medium hover:no-underline text-left font-body">
                       <span className="flex-1 pr-4">{faq.question}</span>
                        <div className="w-7 h-7 flex items-center justify-center rounded-full bg-primary text-primary-foreground flex-shrink-0">
                         {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}

@@ -52,7 +52,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0
             {image ? (
               <AvatarImage src={image.imageUrl} alt={testimonial.name} data-ai-hint={image.imageHint}/>
             ) : (
-              <AvatarFallback className={cn("font-bold", fallbackColor)}>
+              <AvatarFallback className={cn("font-medium", fallbackColor)}>
                 {fallbackInitial}
               </AvatarFallback>
             )}
@@ -60,7 +60,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0
           
           <div className="flex-1">
               <div className="flex items-center gap-1.5">
-                  <p className="font-bold text-sm text-foreground">{testimonial.name}</p>
+                  <p className="font-medium text-sm text-foreground">{testimonial.name}</p>
               </div>
               <div className="flex items-center gap-2">
               <div className="flex items-center">
@@ -86,13 +86,13 @@ export default function Testimonials() {
     <section id="testimonials" className="bg-secondary !py-12 md:!py-16">
       <div className="container">
         <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl text-foreground">
                 What Our Customers Say
             </h2>
             <div className="inline-flex items-center gap-2 mt-4">
                 <GoogleIcon />
                 <span className="text-lg text-muted-foreground">Google</span>
-                <span className="text-lg text-foreground font-bold">4.9</span>
+                <span className="text-lg text-foreground font-medium">4.9</span>
             </div>
         </div>
         <div 
