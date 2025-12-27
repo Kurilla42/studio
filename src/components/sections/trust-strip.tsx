@@ -24,9 +24,10 @@ export default function TrustStrip() {
               key={logo.id} 
               className={cn(
                 "relative transition-transform duration-300",
-                // Special size for the Google logo to visually balance it
+                // Special size for the Google logo to visually balance it. 
+                // It's increased by roughly 30% from the base size of other logos.
                 {
-                  "h-8 w-28 sm:h-10 sm:w-32 lg:h-12 lg:w-36": logo.id === 'trust-logo-4',
+                  "h-[5.7rem] w-52 sm:h-[6.5rem] sm:w-60 lg:h-[7.3rem] lg:w-64": logo.id === 'trust-logo-4',
                   "h-11 w-32 sm:h-14 sm:w-36 lg:h-16 lg:w-40": logo.id !== 'trust-logo-4'
                 }
               )}
