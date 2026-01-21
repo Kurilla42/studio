@@ -109,14 +109,14 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
         
         {/* Mobile Header Content */}
         <div className="flex items-center justify-center w-full lg:hidden">
-            <div className="flex items-center gap-4">
-                <Button size="sm" asChild className="primary-gradient">
-                    <a href="tel:5551234567" className="flex items-center gap-2">
+            <div className="flex w-full items-center gap-4">
+                <Button size="sm" asChild className="primary-gradient flex-1">
+                    <a href="tel:5551234567" className="flex items-center justify-center gap-2">
                       <Phone size={16} />
                       Call Now
                     </a>
                 </Button>
-                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient">
+                <Button size="sm" onClick={onGetQuoteClick} className="primary-gradient flex-1">
                     Get Quote
                 </Button>
             </div>
