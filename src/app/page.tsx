@@ -47,7 +47,7 @@ export default function Home() {
       <SocialProof />
       <LiveChat />
       <ContactModal open={isContactModalOpen} onOpenChange={setContactModalOpen} />
-      <ExitIntentModal onGetQuoteClick={handleOpenContactModal} />
+      {/* <ExitIntentModal onGetQuoteClick={handleOpenContactModal} /> */}
     </div>
   );
 }

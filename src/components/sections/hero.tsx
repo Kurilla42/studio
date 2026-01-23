@@ -100,7 +100,6 @@ export default function Hero({ onScheduleClick }: HeroProps) {
         />
       )}
       </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent from-0% via-40% to-65%"></div>
       
       <div className="container relative z-10 py-12">
         <motion.div 
@@ -112,7 +111,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           {/* Left Column: Content */}
           <div className="flex flex-col items-start text-left">
             <motion.h1 
-              className="text-[2.7rem] sm:text-5xl lg:text-6xl font-hero text-foreground text-shadow-hero leading-tight"
+              className="text-[2.7rem] sm:text-5xl lg:text-6xl font-hero text-white text-shadow-hero leading-tight"
               variants={itemVariants}
             >
               Expert Plumbing Services
@@ -126,8 +125,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     animate={{ y: '0%', opacity: 1 }}
                     exit={{ y: '-100%', opacity: 0 }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    className="inline-block text-primary"
-                    style={{ filter: 'drop-shadow(2px 2px 4px hsla(var(--primary), 0.3))' }}
+                    className="inline-block text-white"
                   >
                     {rotatingWords[currentWordIndex]}
                   </motion.span>
@@ -162,7 +160,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     className="p-4"
                   >
                     <div className="flex flex-col text-left">
-                      <div className="text-[2.7rem] sm:text-5xl font-hero text-foreground flex items-center gap-1">
+                      <div className="text-[2.7rem] sm:text-5xl font-hero text-white flex items-center gap-1">
                         {stat.id === 'stat-3' ? (
                             <div className="flex items-baseline gap-2">
                                 <span className="text-4xl sm:text-5xl text-shadow-hero">4.9</span>
@@ -172,7 +170,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                             <span className="text-4xl sm:text-5xl text-shadow-hero">{stat.number}</span>
                         )}
                       </div>
-                      <p className="text-sm sm:text-base text-muted-foreground whitespace-nowrap">{stat.label}</p>
+                      <p className="text-sm sm:text-base text-gray-300 whitespace-nowrap">{stat.label}</p>
                       <div className="mt-2 h-1 w-12 bg-primary rounded-full"></div>
                     </div>
                   </motion.div>
