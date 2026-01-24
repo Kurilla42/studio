@@ -85,6 +85,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           alt={backgroundImage.description}
           fill
           priority
+          quality={100}
           className="object-cover object-left-top hidden md:block"
           data-ai-hint={backgroundImage.imageHint}
         />
@@ -95,6 +96,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           alt={mobileBackgroundImage.description}
           fill
           priority
+          quality={100}
           className="object-cover object-center md:hidden"
           data-ai-hint={mobileBackgroundImage.imageHint}
         />
