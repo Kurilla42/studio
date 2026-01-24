@@ -87,7 +87,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           priority
           quality={100}
           unoptimized={true}
-          className="object-cover object-left-top hidden md:block"
+          className="object-cover object-center hidden md:block"
           data-ai-hint={backgroundImage.imageHint}
         />
       )}
