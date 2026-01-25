@@ -4,65 +4,65 @@
 
 @layer base {
   :root {
-    --background: 39 33% 96%; /* #FAF8F2 */
-    --foreground: 340 100% 5%; /* #17000C */
+    --background: 0 0% 100%; /* #FFFFFF */
+    --foreground: 215 28% 17%; /* #1E293B */
 
-    --card: 39 33% 96%; /* #FAF8F2 */
-    --card-foreground: 340 100% 5%; /* #17000C */
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
 
-    --popover: 39 33% 96%;
-    --popover-foreground: 340 100% 5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
 
-    --primary: 217 43% 57%; /* #5B8FD8 */
+    --primary: 32 55% 56%; /* #C68E56 */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 44% 96%; /* #F7F1ED */
-    --secondary-foreground: 340 100% 5%;
+    --secondary: 210 14% 97%; /* #F4F6F8 */
+    --secondary-foreground: 215 28% 17%;
 
-    --muted: 30 44% 96%; /* #F7F1ED */
-    --muted-foreground: 340 100% 5% / 0.6; /* rgba(23, 0, 12, 0.6) */
+    --muted: 210 14% 97%; /* #F4F6F8 */
+    --muted-foreground: 215 28% 17% / 0.6;
 
-    --accent: 30 44% 96%; /* #F7F1ED */
-    --accent-foreground: 340 100% 5%;
+    --accent: 210 14% 97%;
+    --accent-foreground: 215 28% 17%;
 
-    --destructive: 0 72% 56%; /* #E03E3E */
+    --destructive: 0 72% 56%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 340 100% 5% / 0.1; /* rgba(23, 0, 12, 0.1) */
-    --input: 340 100% 5% / 0.2; /* rgba(23, 0, 12, 0.2) */
-    --ring: 13 81% 56%; /* #E75937 */
+    --border: 215 28% 17% / 0.1;
+    --input: 215 28% 17% / 0.2;
+    --ring: 32 55% 56%; /* Muted Copper */
 
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 340 100% 5%;
-    --foreground: 39 33% 96%;
+    --background: 203 39% 14%; /* #162631 */
+    --foreground: 210 20% 96%; /* #F1F5F9 */
 
-    --card: 340 100% 5%;
-    --card-foreground: 39 33% 96%;
+    --card: 203 39% 14%;
+    --card-foreground: 210 20% 96%;
 
-    --popover: 340 100% 5%;
-    --popover-foreground: 39 33% 96%;
+    --popover: 203 39% 14%;
+    --popover-foreground: 210 20% 96%;
 
-    --primary: 39 33% 96%;
-    --primary-foreground: 340 100% 5%;
+    --primary: 32 55% 56%; /* #C68E56 */
+    --primary-foreground: 215 28% 17%; /* Dark Slate */
 
-    --secondary: 30 44% 10%;
-    --secondary-foreground: 39 33% 96%;
+    --secondary: 203 39% 10%;
+    --secondary-foreground: 210 20% 96%;
 
-    --muted: 30 44% 10%;
-    --muted-foreground: 39 33% 90%;
+    --muted: 203 39% 10%;
+    --muted-foreground: 215 25% 65%; /* #94A3B8 */
 
-    --accent: 30 44% 10%;
-    --accent-foreground: 39 33% 96%;
+    --accent: 203 39% 10%;
+    --accent-foreground: 210 20% 96%;
 
     --destructive: 0 72% 56%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 39 33% 96% / 0.1;
-    --input: 39 33% 96% / 0.2;
-    --ring: 13 81% 56%;
+    --border: 210 20% 96% / 0.1;
+    --input: 210 20% 96% / 0.2;
+    --ring: 32 55% 56%; /* Muted Copper */
   }
 }
 
@@ -88,10 +88,10 @@
 
 @layer utilities {
   .primary-gradient {
-    @apply bg-gradient-to-r from-primary to-[hsl(217,52%,54%)] text-primary-foreground;
+    @apply bg-gradient-to-r from-primary to-[hsl(34,62%,65%)] text-primary-foreground; /* from #C68E56 to #DBA670 */
   }
   .primary-gradient-text {
-    @apply bg-gradient-to-r from-primary to-[hsl(217,52%,54%)] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-[hsl(34,62%,65%)] bg-clip-text text-transparent;
   }
   .emergency-gradient {
     background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--destructive)) 100%);
