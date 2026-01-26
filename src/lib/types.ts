@@ -36,6 +36,12 @@ export type TeamMember = {
     certifications: string[];
 };
 
+export type WhyChooseUsItem = {
+  id: string;
+  title: string;
+  content: string;
+};
+
 export type FaqItem = {
     id: string;
     question: string;
