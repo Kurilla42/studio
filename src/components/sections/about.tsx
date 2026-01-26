@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import {
   Accordion,
   AccordionContent,
@@ -30,12 +31,11 @@ export default function About() {
           {/* Left Column: Video */}
           <div className="w-full aspect-[9/12] lg:sticky lg:top-24 rounded-2xl overflow-hidden shadow-lg">
             {video && (
-              <video
+              <Image
                 src={video.imageUrl}
-                autoPlay
-                loop
-                muted
-                playsInline
+                alt={video.description}
+                fill
+                unoptimized
                 className="w-full h-full object-cover"
                 data-ai-hint={video.imageHint}
               />
