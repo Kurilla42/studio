@@ -15,7 +15,8 @@ export const services: Service[] = [
     icon: Wrench,
     title: "Emergency Repairs",
     description: "24/7 emergency plumbing services for urgent issues. Fast response time.",
-    features: ["Burst Pipes", "Gas Leaks", "Blocked Drains"]
+    features: ["Burst Pipes", "Gas Leaks", "Blocked Drains"],
+    imageUrl: "https://i.ibb.co/YBM9fDq9/Whisk-62cf5a72f797ffb983e42bff62dd7fc8eg-1.png"
   },
   {
     icon: Droplet,

@@ -10,6 +10,7 @@ export type Service = {
   title: string;
   description: string;
   features: string[];
+  imageUrl?: string;
 };
 
 export type Testimonial = {
