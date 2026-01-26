@@ -2,18 +2,41 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
 import { services } from '@/lib/data';
+import { cn } from '@/lib/utils';
 
 type ServicesProps = {
   onGetPriceClick: () => void;
 };
 
 export default function Services({ onGetPriceClick }: ServicesProps) {
+  // Define layout classes for bento grid
+  const serviceLayouts = [
+    'lg:row-span-2', // Emergency Repairs - tall
+    '', // Installation Services - standard
+    '', // Maintenance - standard
+    'lg:col-span-2', // Drain Cleaning - wide
+  ];
+
   return (
     <section id="services" className="bg-secondary">
       <div className="container">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service) => (
-            <Card key={service.title} className="bg-card border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        {/* Section Title */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl text-foreground">
+            Our Plumbing Services
+          </h2>
+          <p className="max-w-2xl mx-auto mt-4 text-lg text-muted-foreground">
+            From urgent repairs to routine maintenance, we provide reliable solutions for your home.
+          </p>
+        </div>
+
+        {/* Bento Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-flow-row-dense gap-8">
+          {services.map((service, index) => (
+            <Card key={service.title} className={cn(
+              "bg-card border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col",
+              serviceLayouts[index]
+            )}>
               <CardHeader>
                 <div className="flex items-center gap-4">
                   <service.icon className="w-12 h-12 text-primary" />
