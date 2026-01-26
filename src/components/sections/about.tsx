@@ -1,20 +1,20 @@
 'use client';
 
-import { useState } from 'react';
-import Image from 'next/image';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Card, CardTitle } from '@/components/ui/card';
 import { whyChooseUsItems } from '@/lib/data';
 import { cn } from '@/lib/utils';
 
+
 export default function About() {
-  const video = PlaceHolderImages.find(p => p.id === 'why-choose-us-video');
-  const [openItem, setOpenItem] = useState<string>('why-1'); // Default to first item open
+  const layoutClasses = [
+    'lg:col-span-3', // 24/7 Emergency
+    'lg:col-span-3', // Upfront Pricing
+    'lg:col-span-2', // 1 Year Warranty
+    'lg:col-span-2', // Background-Checked
+    'lg:col-span-2', // Installations
+    'lg:col-span-3', // Preventive Maintenance
+    'lg:col-span-3', // Drain Cleaning
+  ];
 
   return (
     <section id="about" className="bg-secondary !py-12 md:!py-16 lg:!py-20">
@@ -27,59 +27,28 @@ export default function About() {
                 For over a decade, we've built a reputation for reliable, transparent, and high-quality plumbing services. Here's why homeowners trust ProFlow for their most critical plumbing needs.
             </p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Video */}
-          <div className="w-full aspect-[9/12] lg:sticky lg:top-24 rounded-2xl overflow-hidden shadow-lg">
-            {video && (
-              <Image
-                src={video.imageUrl}
-                alt={video.description}
-                fill
-                unoptimized
-                className="w-full h-full object-cover"
-                data-ai-hint={video.imageHint}
-              />
-            )}
-          </div>
 
-          {/* Right Column: Accordion */}
-          <div className="w-full">
-            <Accordion 
-              type="single" 
-              collapsible 
-              className="w-full border-t border-border"
-              value={openItem}
-              onValueChange={(value) => setOpenItem(value || '')}
-            >
-              {whyChooseUsItems.map((item, index) => {
-                const isOpen = openItem === item.id;
-                return (
-                  <AccordionItem
-                    key={item.id}
-                    value={item.id}
-                    className={cn(
-                        "border-b border-border transition-colors duration-300",
-                        isOpen ? 'bg-card' : 'bg-transparent'
-                    )}
-                  >
-                    <AccordionTrigger className="w-full text-left p-6 text-base md:text-lg font-medium hover:no-underline !justify-start">
-                      <div className="flex items-center gap-4">
-                        <span className="text-sm font-semibold text-primary opacity-70">
-                          {`0${index + 1}`}
-                        </span>
-                        <span className="flex-1 text-foreground">{item.title}</span>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="pb-6 px-6 pl-[4.25rem]">
-                      <p className="text-base text-muted-foreground leading-relaxed">
-                        {item.content}
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                )
-              })}
-            </Accordion>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          {whyChooseUsItems.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <Card
+                key={item.id}
+                className={cn(
+                  "bg-card border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col p-4 sm:p-6",
+                  layoutClasses[index],
+                )}
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+                     <Icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <CardTitle className="font-headline text-xl">{item.title}</CardTitle>
+                </div>
+                <p className="text-muted-foreground text-sm flex-grow">{item.content}</p>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
