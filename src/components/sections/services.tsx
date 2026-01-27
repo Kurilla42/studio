@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -50,7 +51,7 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
             return (
               <div
                 key={service.id}
-                className={cn("relative cursor-pointer min-h-[420px]", serviceLayouts[index])}
+                className={cn("relative cursor-pointer min-h-[280px]", serviceLayouts[index])}
                 style={{ perspective: '1200px' }}
                 onClick={() => handleFlip(service.id)}
               >
@@ -64,8 +65,7 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
                   <div style={{ backfaceVisibility: 'hidden' }} className="w-full h-full">
                     <Card 
                         className={cn(
-                            "border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col relative overflow-hidden h-full",
-                            service.imageUrl ? 'text-primary-foreground' : 'bg-card'
+                            "border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col relative overflow-hidden h-full text-primary-foreground"
                         )}
                     >
                       {service.imageUrl && (
@@ -79,12 +79,12 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
                       <div className="relative z-20 flex flex-col flex-grow h-full justify-between p-6">
                         <CardHeader className="p-0">
                             <div className="flex items-center gap-4">
-                            <service.icon className={cn("w-12 h-12", service.imageUrl ? 'text-primary-foreground' : 'text-primary')} />
-                            <CardTitle className={cn("font-headline text-2xl", service.imageUrl && "text-shadow-md")}>{service.title}</CardTitle>
+                            <service.icon className="w-12 h-12 text-primary-foreground" />
+                            <CardTitle className="font-headline text-2xl text-shadow-md">{service.title}</CardTitle>
                             </div>
                         </CardHeader>
                         <CardFooter className="p-0">
-                          <p className={cn("font-semibold text-sm flex items-center gap-2", service.imageUrl && "text-shadow-md")}>
+                          <p className="font-semibold text-sm flex items-center gap-2 text-shadow-md">
                             View pricing <ArrowRight className="w-4 h-4" />
                           </p>
                         </CardFooter>
@@ -100,13 +100,13 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
                     }}
                     className="absolute top-0 left-0 w-full h-full"
                   >
-                     <Card className="border-border shadow-card flex flex-col h-full bg-card p-6">
-                        <CardHeader className="p-0 mb-4">
-                            <CardTitle className="text-3xl text-primary">{service.pricing}</CardTitle>
+                     <Card className="border-border shadow-card flex flex-col h-full bg-card p-4">
+                        <CardHeader className="p-0 mb-2">
+                            <CardTitle className="text-2xl text-primary">{service.pricing}</CardTitle>
                             <CardDescription className="text-muted-foreground">{service.pricingDetails}</CardDescription>
                         </CardHeader>
                         <CardContent className="p-0 flex flex-col flex-grow">
-                            <p className="text-sm text-foreground mb-4">{service.description}</p>
+                            <p className="text-sm text-foreground mb-2">{service.description}</p>
                             <div className="flex flex-wrap gap-x-4 gap-y-2 mt-auto">
                             {service.features.map((feature) => (
                                 <div key={feature} className="flex items-center gap-2">
@@ -132,5 +132,3 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
     </section>
   );
 }
-
-    

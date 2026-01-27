@@ -72,7 +72,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           priority
           quality={100}
           unoptimized={true}
-          className="object-contain object-right hidden md:block"
+          className="object-cover object-center hidden md:block"
           data-ai-hint={backgroundImage.imageHint}
         />
       )}
@@ -84,7 +84,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           priority
           quality={100}
           unoptimized={true}
-          className="object-contain object-bottom md:hidden"
+          className="object-cover object-center md:hidden"
           data-ai-hint={mobileBackgroundImage.imageHint}
         />
       )}
@@ -174,5 +174,3 @@ export default function Hero({ onScheduleClick }: HeroProps) {
     </section>
   );
 }
-
-    
