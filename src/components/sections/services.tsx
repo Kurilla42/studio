@@ -65,25 +65,22 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
                         )}
                     >
                       {service.imageUrl && (
-                        <>
-                            <Image 
-                                src={service.imageUrl}
-                                alt={`${service.title} background`}
-                                fill
-                                className="object-cover z-0"
-                            />
-                            <div className="absolute inset-0 bg-black/40 z-10"></div>
-                        </>
+                        <Image 
+                            src={service.imageUrl}
+                            alt={`${service.title} background`}
+                            fill
+                            className="object-cover z-0"
+                        />
                       )}
                       <div className="relative z-20 flex flex-col flex-grow h-full justify-between">
                         <CardHeader>
                             <div className="flex items-center gap-4">
                             <service.icon className={cn("w-12 h-12", service.imageUrl ? 'text-primary-foreground' : 'text-primary')} />
-                            <CardTitle className="font-headline">{service.title}</CardTitle>
+                            <CardTitle className={cn("font-headline", service.imageUrl && "text-shadow-md")}>{service.title}</CardTitle>
                             </div>
                         </CardHeader>
                         <CardFooter>
-                          <p className="font-semibold text-sm flex items-center gap-2">
+                          <p className={cn("font-semibold text-sm flex items-center gap-2", service.imageUrl && "text-shadow-md")}>
                             View pricing <ArrowRight className="w-4 h-4" />
                           </p>
                         </CardFooter>
@@ -106,14 +103,14 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
                         </CardHeader>
                         <CardContent className="p-0 flex flex-col flex-grow">
                             <p className="text-sm text-foreground mb-4">{service.description}</p>
-                            <ul className="space-y-3 mt-auto">
+                            <div className="flex flex-wrap gap-x-4 gap-y-2 mt-auto">
                             {service.features.map((feature) => (
-                                <li key={feature} className="flex items-center gap-2">
+                                <div key={feature} className="flex items-center gap-2">
                                 <CheckCircle className="w-4 h-4 flex-shrink-0 text-primary" />
                                 <span className="text-sm font-medium text-foreground">{feature}</span>
-                                </li>
+                                </div>
                             ))}
-                            </ul>
+                            </div>
                         </CardContent>
                     </Card>
                   </div>
