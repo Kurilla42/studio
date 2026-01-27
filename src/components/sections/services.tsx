@@ -31,13 +31,17 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
   return (
     <section id="services" className="bg-secondary">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl text-foreground">
-            Our Plumbing Services
-          </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-lg text-muted-foreground">
-            From urgent repairs to routine maintenance, we provide reliable solutions for your home.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center mb-12">
+          <div>
+            <h2 className="text-4xl md:text-5xl text-foreground text-left">
+              Our Plumbing Services
+            </h2>
+          </div>
+          <div>
+            <p className="text-xl text-muted-foreground text-left lg:text-right">
+              From urgent repairs to routine maintenance, we provide reliable solutions for your home.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-flow-row-dense gap-8">
@@ -46,7 +50,7 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
             return (
               <div
                 key={service.id}
-                className={cn("relative cursor-pointer", serviceLayouts[index])}
+                className={cn("relative cursor-pointer min-h-[420px]", serviceLayouts[index])}
                 style={{ perspective: '1200px' }}
                 onClick={() => handleFlip(service.id)}
               >
@@ -72,14 +76,14 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
                             className="object-cover z-0"
                         />
                       )}
-                      <div className="relative z-20 flex flex-col flex-grow h-full justify-between">
-                        <CardHeader>
+                      <div className="relative z-20 flex flex-col flex-grow h-full justify-between p-6">
+                        <CardHeader className="p-0">
                             <div className="flex items-center gap-4">
                             <service.icon className={cn("w-12 h-12", service.imageUrl ? 'text-primary-foreground' : 'text-primary')} />
-                            <CardTitle className={cn("font-headline", service.imageUrl && "text-shadow-md")}>{service.title}</CardTitle>
+                            <CardTitle className={cn("font-headline text-2xl", service.imageUrl && "text-shadow-md")}>{service.title}</CardTitle>
                             </div>
                         </CardHeader>
-                        <CardFooter>
+                        <CardFooter className="p-0">
                           <p className={cn("font-semibold text-sm flex items-center gap-2", service.imageUrl && "text-shadow-md")}>
                             View pricing <ArrowRight className="w-4 h-4" />
                           </p>
@@ -128,3 +132,5 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
     </section>
   );
 }
+
+    

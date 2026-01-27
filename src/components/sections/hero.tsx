@@ -1,15 +1,13 @@
 
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { Phone, Star as StarIcon } from 'lucide-react';
 import { heroStats } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { cn } from '@/lib/utils';
 
 type HeroProps = {
   onScheduleClick: () => void;
@@ -20,15 +18,6 @@ const rotatingWords = ['Trust', 'Afford', 'Get Fast'];
 export default function Hero({ onScheduleClick }: HeroProps) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
-
-  const heroRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ['start start', 'end start'],
-  });
-
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
-
 
   useEffect(() => {
     setIsMounted(true);
@@ -71,13 +60,9 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   };
 
   return (
-    <section ref={heroRef} id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden !p-0">
-      <motion.div
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden !p-0 bg-gray-800">
+      <div
         className="absolute inset-0 z-0"
-        style={{ y: backgroundY }}
-        initial={{ scale: 1.05 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
       >
        {backgroundImage && (
         <Image
@@ -87,7 +72,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           priority
           quality={100}
           unoptimized={true}
-          className="object-cover object-center hidden md:block"
+          className="object-contain object-right hidden md:block"
           data-ai-hint={backgroundImage.imageHint}
         />
       )}
@@ -99,11 +84,12 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           priority
           quality={100}
           unoptimized={true}
-          className="object-cover object-center md:hidden"
+          className="object-contain object-bottom md:hidden"
           data-ai-hint={mobileBackgroundImage.imageHint}
         />
       )}
-      </motion.div>
+      </div >
+      <div className="absolute inset-0 bg-black/30 z-0"></div>
       
       <div className="container relative z-10 py-12">
         <motion.div 
@@ -182,8 +168,11 @@ export default function Hero({ onScheduleClick }: HeroProps) {
               </div>
             </div>
           </div>
+          <div></div>
         </motion.div>
       </div>
     </section>
   );
 }
+
+    

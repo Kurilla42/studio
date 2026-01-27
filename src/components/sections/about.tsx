@@ -19,13 +19,17 @@ export default function About() {
   return (
     <section id="about" className="bg-secondary !py-12 md:!py-16 lg:!py-20">
       <div className="container">
-        <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl text-foreground">
-                Why Choose Us
-            </h2>
-            <p className="max-w-3xl mx-auto mt-4 text-lg text-muted-foreground">
-                For over a decade, we've built a reputation for reliable, transparent, and high-quality plumbing services. Here's why homeowners trust ProFlow for their most critical plumbing needs.
-            </p>
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center mb-12">
+            <div>
+                <h2 className="text-4xl md:text-5xl text-foreground text-left">
+                    Why Choose Us
+                </h2>
+            </div>
+            <div>
+                <p className="text-xl text-muted-foreground text-left lg:text-right">
+                    For over a decade, we've built a reputation for reliable, transparent, and high-quality plumbing services. Here's why homeowners trust ProFlow for their most critical plumbing needs.
+                </p>
+            </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
@@ -54,3 +58,5 @@ export default function About() {
     </section>
   );
 }
+
+    
