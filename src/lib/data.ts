@@ -1,5 +1,5 @@
 import type { Service, TeamMember, Testimonial, FaqItem, NavItem, Offer, WhyChooseUsItem } from '@/lib/types';
-import { Award, CheckCircle, Clock, DollarSign, Droplet, HardHat, Shield, ShieldAlert, ShieldCheck, Smile, Star, UserCheck, Wrench, Zap } from 'lucide-react';
+import { Award, CheckCircle, Clock, DollarSign, Droplet, HardHat, Shield, ShieldAlert, ShieldCheck, Smile, Star, UserCheck, Wrench, Zap, Search } from 'lucide-react';
 
 export const navItems: NavItem[] = [
   { name: 'Services', href: '#services' },
@@ -35,6 +35,12 @@ export const services: Service[] = [
     title: "Drain Cleaning",
     description: "Advanced drain cleaning services using the latest technology and techniques.",
     features: ["Hydro Jetting", "Camera Inspection", "Root Removal"]
+  },
+  {
+    icon: Search,
+    title: "Leak Detection",
+    description: "High water bill or damp spots? We pinpoint hidden leaks fast to prevent water damage and save you money.",
+    features: ["Electronic Leak Finders", "Slab & Wall Leaks", "Save on Water Bills"]
   }
 ];
 

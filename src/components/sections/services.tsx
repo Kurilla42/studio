@@ -16,6 +16,7 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
     '', // Installation Services - standard
     '', // Maintenance - standard
     'lg:col-span-2', // Drain Cleaning - wide
+    '', // Leak Detection - standard
   ];
 
   return (
