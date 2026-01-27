@@ -16,31 +16,35 @@ export const services: Service[] = [
     title: "Emergency Repairs",
     description: "24/7 emergency plumbing services for urgent issues. Fast response time.",
     features: ["Burst Pipes", "Gas Leaks", "Blocked Drains"],
-    imageUrl: "https://i.ibb.co/YBM9fDq9/Whisk-62cf5a72f797ffb983e42bff62dd7fc8eg-1.png"
+    imageUrl: "https://i.ibb.co/d0Mt5vYW/15015806.png"
   },
   {
     icon: Droplet,
     title: "Installation Services",
     description: "Professional installation of fixtures, appliances, and complete plumbing systems.",
-    features: ["Water Heaters", "Fixtures", "Appliances"]
+    features: ["Water Heaters", "Fixtures", "Appliances"],
+    imageUrl: "https://i.ibb.co/Pv89skpp/Whisk-3be546c194a8ef5862e45c9da3927f58dr.jpg"
   },
   {
     icon: Shield,
     title: "Maintenance",
     description: "Regular maintenance and thorough inspections to prevent costly future repairs.",
-    features: ["Annual Checks", "Preventive Care", "System Audits"]
+    features: ["Annual Checks", "Preventive Care", "System Audits"],
+    imageUrl: "https://i.ibb.co/GQh6QWG2/Whisk-028cb44d54956adbf3d474cd805f4969dr.jpg"
   },
   {
     icon: Zap,
     title: "Drain Cleaning",
     description: "Advanced drain cleaning services using the latest technology and techniques.",
-    features: ["Hydro Jetting", "Camera Inspection", "Root Removal"]
+    features: ["Hydro Jetting", "Camera Inspection", "Root Removal"],
+    imageUrl: "https://i.ibb.co/BHbvJ1bC/Whisk-f949fcc608cd6779bf84dc3d5850354ddr.jpg"
   },
   {
     icon: Search,
     title: "Leak Detection",
     description: "High water bill or damp spots? We pinpoint hidden leaks fast to prevent water damage and save you money.",
-    features: ["Electronic Leak Finders", "Slab & Wall Leaks", "Save on Water Bills"]
+    features: ["Electronic Leak Finders", "Slab & Wall Leaks", "Save on Water Bills"],
+    imageUrl: "https://i.ibb.co/QFXRdd5C/Whisk-b60815e8cde1df692d246340dd1e7cb5dr.jpg"
   }
 ];
 

@@ -15,7 +15,7 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
     'lg:row-span-2', // Emergency Repairs - tall
     '', // Installation Services - standard
     '', // Maintenance - standard
-    'lg:col-span-2', // Drain Cleaning - wide
+    '', // Drain Cleaning - standard
     '', // Leak Detection - standard
   ];
 
@@ -51,6 +51,7 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
                         fill
                         className="object-cover z-0"
                     />
+                    <div className="absolute inset-0 bg-black/40 z-10"></div>
                 </>
               )}
               <div className="relative z-20 flex flex-col flex-grow h-full">
