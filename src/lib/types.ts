@@ -6,11 +6,14 @@ export type NavItem = {
 };
 
 export type Service = {
+  id: string;
   icon: LucideIcon;
   title: string;
   description: string;
   features: string[];
   imageUrl?: string;
+  pricing: string;
+  pricingDetails: string;
 };
 
 export type Testimonial = {
