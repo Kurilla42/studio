@@ -89,7 +89,6 @@ export default function Hero({ onScheduleClick }: HeroProps) {
         />
       )}
       </div >
-      <div className="absolute inset-0 bg-black/30 z-0"></div>
       
       <div className="container relative z-10 py-12">
         <motion.div 
