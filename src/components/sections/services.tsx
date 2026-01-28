@@ -22,11 +22,11 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
   };
   
   const serviceLayouts = [
-    'lg:row-span-2', // Emergency Repairs - tall
-    '', // Installation Services - standard
-    '', // Maintenance - standard
-    '', // Drain Cleaning - standard
-    '', // Leak Detection - standard
+    'md:col-span-2', // Emergency Repairs
+    'md:col-span-1', // Installation Services
+    'md:col-span-1', // Drain Cleaning
+    'md:col-span-1', // Preventive Maintenance
+    'md:col-span-1', // Leak Detection
   ];
 
   return (
@@ -45,13 +45,13 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-flow-row-dense gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const isFlipped = flippedCards[service.id];
             return (
               <div
                 key={service.id}
-                className={cn("relative cursor-pointer min-h-[280px]", serviceLayouts[index])}
+                className={cn("relative cursor-pointer min-h-[260px]", serviceLayouts[index])}
                 style={{ perspective: '1200px' }}
                 onClick={() => handleFlip(service.id)}
               >
@@ -65,7 +65,7 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
                   <div style={{ backfaceVisibility: 'hidden' }} className="w-full h-full">
                     <Card 
                         className={cn(
-                            "border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col relative overflow-hidden h-full text-primary-foreground"
+                            "border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col relative overflow-hidden h-full"
                         )}
                     >
                       {service.imageUrl && (
@@ -76,15 +76,15 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
                             className="object-cover z-0"
                         />
                       )}
-                      <div className="relative z-20 flex flex-col flex-grow h-full justify-between p-6">
+                      <div className="relative z-20 flex flex-col flex-grow h-full justify-between p-6 text-shadow-md text-primary-foreground">
                         <CardHeader className="p-0">
                             <div className="flex items-center gap-4">
-                            <service.icon className="w-12 h-12 text-primary-foreground" />
-                            <CardTitle className="font-headline text-2xl text-shadow-md">{service.title}</CardTitle>
+                            <service.icon className="w-12 h-12" />
+                            <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
                             </div>
                         </CardHeader>
                         <CardFooter className="p-0">
-                          <p className="font-semibold text-sm flex items-center gap-2 text-shadow-md">
+                          <p className="font-semibold text-sm flex items-center gap-2">
                             View pricing <ArrowRight className="w-4 h-4" />
                           </p>
                         </CardFooter>
@@ -102,11 +102,11 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
                   >
                      <Card className="border-border shadow-card flex flex-col h-full bg-card p-4">
                         <CardHeader className="p-0 mb-2">
-                            <CardTitle className="text-2xl text-primary">{service.pricing}</CardTitle>
+                            <CardTitle className="text-xl text-primary">{service.pricing}</CardTitle>
                             <CardDescription className="text-muted-foreground">{service.pricingDetails}</CardDescription>
                         </CardHeader>
                         <CardContent className="p-0 flex flex-col flex-grow">
-                            <p className="text-sm text-foreground mb-2">{service.description}</p>
+                            <p className="text-sm text-foreground mb-4">{service.description}</p>
                             <div className="flex flex-wrap gap-x-4 gap-y-2 mt-auto">
                             {service.features.map((feature) => (
                                 <div key={feature} className="flex items-center gap-2">

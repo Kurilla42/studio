@@ -32,16 +32,6 @@ export const services: Service[] = [
     pricingDetails: "For fixtures, appliances, and water heaters. Price varies by item."
   },
   {
-    id: "service-3",
-    icon: Shield,
-    title: "Preventive Maintenance",
-    description: "Catch small issues before they become big repairs with annual checks, tune-ups, and honest recommendations.",
-    features: ["Annual Checks", "Preventive Care", "System Audits"],
-    imageUrl: "https://i.ibb.co/GQh6QWG2/Whisk-028cb44d54956adbf3d474cd805f4969dr.jpg",
-    pricing: "Custom Quote",
-    pricingDetails: "Contact us for a personalized maintenance plan and quote."
-  },
-  {
     id: "service-4",
     icon: Zap,
     title: "Drain Cleaning",
@@ -50,6 +40,16 @@ export const services: Service[] = [
     imageUrl: "https://i.ibb.co/BHbvJ1bC/Whisk-f949fcc608cd6779bf84dc3d5850354ddr.jpg",
     pricing: "$150 - $400",
     pricingDetails: "For standard clogs. Hydro jetting may have different pricing."
+  },
+  {
+    id: "service-3",
+    icon: Shield,
+    title: "Preventive Maintenance",
+    description: "Catch small issues before they become big repairs with annual checks, tune-ups, and honest recommendations.",
+    features: ["Annual Checks", "Preventive Care", "System Audits"],
+    imageUrl: "https://i.ibb.co/GQh6QWG2/Whisk-028cb44d54956adbf3d474cd805f4969dr.jpg",
+    pricing: "Custom Quote",
+    pricingDetails: "Contact us for a personalized maintenance plan and quote."
   },
   {
     id: "service-5",
