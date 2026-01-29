@@ -4,7 +4,8 @@
 
 @layer base {
   :root {
-    --background: 227 100% 8%;
+    --page-background: 201 38% 75%;
+    --background: 227 96% 7%;
     --foreground: 212 27% 84%;
 
     --card: 227 80% 12%;
@@ -16,7 +17,7 @@
     --primary: 199 81% 48%; /* Electric Cyan */
     --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 227 100% 8%;
+    --secondary: 227 96% 7%;
     --secondary-foreground: 212 27% 84%;
 
     --muted: 227 80% 12%;
@@ -41,7 +42,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--page-background));
+    @apply text-foreground;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
