@@ -16,7 +16,7 @@ export default function TrustStrip() {
   const trustLogos = PlaceHolderImages.filter(p => trustLogosIds.includes(p.id));
 
   return (
-    <section className="bg-background py-8">
+    <section className="bg-background !py-8">
       <div className="container">
         <div className="grid grid-cols-6 gap-x-4 gap-y-6 md:flex md:items-center md:justify-center md:gap-x-12 lg:gap-x-16">
           {trustLogos.map((logo, index) => (

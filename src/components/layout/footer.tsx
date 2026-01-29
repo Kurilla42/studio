@@ -61,7 +61,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
                     <FormItem>
                       <FormLabel>Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your Name" {...field} className="bg-background shadow-card"/>
+                        <Input placeholder="Your Name" {...field} className="bg-card shadow-card"/>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -74,7 +74,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
                     <FormItem>
                       <FormLabel>Phone</FormLabel>
                       <FormControl>
-                        <Input type="tel" placeholder="Your Phone Number" {...field} className="bg-background shadow-card"/>
+                        <Input type="tel" placeholder="Your Phone Number" {...field} className="bg-card shadow-card"/>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -87,7 +87,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
                     <FormItem>
                       <FormLabel>ZIP Code</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your ZIP Code" {...field} className="bg-background shadow-card"/>
+                        <Input placeholder="Your ZIP Code" {...field} className="bg-card shadow-card"/>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -100,7 +100,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="How can we help?" {...field} rows={4} className="bg-background shadow-card"/>
+                        <Textarea placeholder="How can we help?" {...field} rows={4} className="bg-card shadow-card"/>
                       </FormControl>
                       <FormMessage />
                     </FormItem>

@@ -49,12 +49,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isMobile
-          ? 'bg-transparent h-16'
-          : isScrolled
-          ? 'bg-background/95 shadow-md h-16'
-          : 'bg-transparent h-20',
-        isMobile && !isPastHero && 'transform -translate-y-full'
+        'bg-background/95 shadow-md h-16'
       )}
     >
       <div className="container mx-auto flex h-full items-center justify-between relative">
@@ -77,7 +72,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
         <div className="hidden lg:flex w-1/3 justify-center">
           <motion.div
             initial="hidden"
-            animate={isScrolled ? "visible" : "hidden"}
+            animate="visible"
             variants={logoVariants}
           >
             <Link href="/" className="flex items-center gap-2">
@@ -93,7 +88,7 @@ export default function Header({ onGetQuoteClick }: HeaderProps) {
         <motion.div 
             className="hidden lg:flex w-1/3 justify-end items-center gap-4"
             initial="hidden"
-            animate={isScrolled ? "visible" : "hidden"}
+            animate="visible"
             variants={buttonsVariants}
         >
           <Button asChild className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5">

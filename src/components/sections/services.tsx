@@ -51,7 +51,7 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
             return (
               <div
                 key={service.id}
-                className={cn("relative cursor-pointer min-h-[260px]", serviceLayouts[index])}
+                className={cn("relative cursor-pointer min-h-[320px]", serviceLayouts[index])}
                 style={{ perspective: '1200px' }}
                 onClick={() => handleFlip(service.id)}
               >

@@ -16,14 +16,14 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 
 const QuickReplyButton = ({ icon: Icon, text, onClick }: { icon: React.ElementType, text: string, onClick: () => void }) => (
-    <button onClick={onClick} className="w-full text-left flex items-center gap-2 p-2 rounded-lg bg-background border-2 border-primary/50 text-primary shadow-sm hover:bg-primary hover:text-primary-foreground hover:translate-x-0.5 transition-all duration-200">
+    <button onClick={onClick} className="w-full text-left flex items-center gap-2 p-2 rounded-lg bg-card border-2 border-primary/50 text-primary shadow-sm hover:bg-primary hover:text-primary-foreground hover:translate-x-0.5 transition-all duration-200">
         <Icon className="w-4 h-4 flex-shrink-0" />
         <span className="text-sm">{text}</span>
     </button>
 );
 
 const TypingIndicator = () => (
-    <div className="flex items-center space-x-1 p-3 bg-background rounded-lg rounded-bl-sm shadow-sm self-start">
+    <div className="flex items-center space-x-1 p-3 bg-card rounded-lg rounded-bl-sm shadow-sm self-start">
         <span className="w-2 h-2 bg-muted-foreground/50 rounded-full animate-[typing_1.4s_infinite] [animation-delay:0.2s]"></span>
         <span className="w-2 h-2 bg-muted-foreground/50 rounded-full animate-[typing_1.4s_infinite] [animation-delay:0.4s]"></span>
         <span className="w-2 h-2 bg-muted-foreground/50 rounded-full animate-[typing_1.4s_infinite] [animation-delay:0.6s]"></span>
@@ -177,7 +177,7 @@ export default function LiveChat() {
                       <Image src={consultantAvatar.imageUrl} width={24} height={24} alt="Bot" className="rounded-full self-start" data-ai-hint={consultantAvatar.imageHint}/>
                     )}
                     <div className={cn('max-w-[80%] p-3 rounded-2xl text-sm', {
-                      'bg-background shadow-sm rounded-bl-md': msg.role === 'bot',
+                      'bg-card shadow-sm rounded-bl-md': msg.role === 'bot',
                       'primary-gradient text-primary-foreground rounded-br-md': msg.role === 'user',
                     })}>
                       {msg.content}
@@ -193,7 +193,7 @@ export default function LiveChat() {
                     </div>
                 )}
                 {showForm && (
-                     <Card className="bg-background p-4">
+                     <Card className="bg-card p-4">
                         <form onSubmit={handleFormSubmit} className="space-y-3">
                             <Input name="name" placeholder="Your Name" required className="text-sm"/>
                             <Input name="phone" type="tel" placeholder="Phone Number" required className="text-sm"/>
@@ -206,7 +206,7 @@ export default function LiveChat() {
                 )}
               </div>
 
-              <footer className="p-2 border-t bg-background rounded-b-lg">
+              <footer className="p-2 border-t bg-card rounded-b-lg">
                 <form onSubmit={(e) => { e.preventDefault(); handleSendMessage(inputValue); }} className="flex items-center gap-2">
                   <Textarea
                     value={inputValue}
