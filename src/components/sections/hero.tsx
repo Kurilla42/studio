@@ -60,7 +60,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden !p-0 bg-gray-800">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden !p-0">
       <div
         className="absolute inset-0 z-0"
       >
