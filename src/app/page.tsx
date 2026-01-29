@@ -7,7 +7,6 @@ import Hero from '@/components/sections/hero';
 import TrustStrip from '@/components/sections/trust-strip';
 import Services from '@/components/sections/services';
 import About from '@/components/sections/about';
-import EmergencyBanner from '@/components/sections/emergency-banner';
 import Testimonials from '@/components/sections/testimonials';
 import SpecialOffers from '@/components/sections/special-offers';
 import Team from '@/components/sections/team';
@@ -34,7 +33,6 @@ export default function Home() {
         <RevealOnScroll><TrustStrip /></RevealOnScroll>
         <RevealOnScroll delay={0.2}><Services onGetPriceClick={handleOpenContactModal} /></RevealOnScroll>
         <RevealOnScroll delay={0.4}><About /></RevealOnScroll>
-        <RevealOnScroll delay={0.2}><EmergencyBanner /></RevealOnScroll>
         <RevealOnScroll delay={0.2}><Testimonials /></RevealOnScroll>
         <RevealOnScroll delay={0.2}><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
         <RevealOnScroll delay={0.2}><Team /></RevealOnScroll>

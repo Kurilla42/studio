@@ -6,15 +6,6 @@ import { cn } from '@/lib/utils';
 
 
 export default function About() {
-  const layoutClasses = [
-    'lg:col-span-3', // 24/7 Emergency
-    'lg:col-span-3', // Upfront Pricing
-    'lg:col-span-2', // 1 Year Warranty
-    'lg:col-span-2', // Background-Checked
-    'lg:col-span-2', // Installations
-    'lg:col-span-3', // Preventive Maintenance
-    'lg:col-span-3', // Drain Cleaning
-  ];
 
   return (
     <section id="about" className="bg-secondary !py-12 md:!py-16 lg:!py-20">
@@ -32,7 +23,7 @@ export default function About() {
             </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {whyChooseUsItems.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -40,7 +31,7 @@ export default function About() {
                 key={item.id}
                 className={cn(
                   "bg-card border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col p-4 sm:p-6",
-                  layoutClasses[index],
+                  index < 2 && "lg:col-span-2"
                 )}
               >
                 <div className="flex items-center gap-4 mb-4">
@@ -58,5 +49,3 @@ export default function About() {
     </section>
   );
 }
-
-    

@@ -95,43 +95,37 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     id: "why-1",
     icon: Clock,
     title: "24/7 Emergency Plumbing",
-    content: "Burst pipe, overflowing toilet, no water? We answer fast, arrive prepared, and stop the damage—day or night. Our emergency response time is 60 minutes or less in most cases."
+    content: "Burst pipe, overflowing toilet, no water? We answer fast, arrive prepared, and stop the damage—day or night."
   },
   {
     id: "why-2",
     icon: DollarSign,
     title: "Upfront Pricing",
-    content: "We provide a free diagnostic and a detailed quote before any work begins. You'll know the exact price with no hidden fees or surprise charges. Our service call fee is waived with any completed repair."
+    content: "We provide a free diagnostic and a detailed quote before any work begins. You'll know the exact price with no hidden fees or surprise charges."
+  },
+  {
+    id: "why-8",
+    icon: Clock,
+    title: "Response Time - 60 min",
+    content: "In an emergency, every minute counts. We guarantee to have a certified technician at your door within 60 minutes of your call."
+  },
+  {
+    id: "why-9",
+    icon: ShieldCheck,
+    title: "Licensed & Insured",
+    content: "Your peace of mind is paramount. We are fully licensed and insured, protecting you and your property throughout the entire service process."
   },
   {
     id: "why-3",
     icon: ShieldCheck,
     title: "1 Year Warranty",
-    content: "We stand behind our work. All repairs and installations are covered by a 1-year labor warranty, in addition to manufacturer warranties on all parts used. If you're not satisfied, we'll make it right."
+    content: "We stand behind our work. All repairs and installations are covered by a 1-year labor warranty. If you're not satisfied, we'll make it right."
   },
   {
     id: "why-4",
     icon: UserCheck,
     title: "Background-Checked",
-    content: "Your safety is our priority. Every technician on our team is fully licensed, insured, and has passed a thorough background and drug screening. You can trust the professional entering your home."
-  },
-  {
-    id: "why-5",
-    icon: HardHat,
-    title: "Installations & Replacements",
-    content: "From water heaters and fixtures to full-system repipes, our experts ensure every new component is integrated flawlessly for optimal performance and longevity."
-  },
-  {
-    id: "why-6",
-    icon: ShieldAlert,
-    title: "Preventive Maintenance",
-    content: "Avoid costly future repairs with our regular maintenance and thorough inspection services. We help you keep your plumbing system in top condition year-round."
-  },
-  {
-    id: "why-7",
-    icon: Zap,
-    title: "Drain Cleaning",
-    content: "We use the latest technology, including hydro-jetting and camera inspections, to tackle the most stubborn clogs and restore flow to your drains quickly and effectively."
+    content: "Your safety is our priority. Every technician is fully licensed, insured, and has passed a thorough background and drug screening."
   }
 ];
 
