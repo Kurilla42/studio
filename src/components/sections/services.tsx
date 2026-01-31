@@ -26,13 +26,17 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service) => {
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {services.map((service, index) => {
             const Icon = service.icon;
+            const isLarge = index === 0 || index === 3;
             return (
               <Card
                 key={service.id}
-                className="bg-card border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col p-8 relative"
+                className={cn(
+                  "bg-card border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col p-8 relative h-full",
+                  isLarge ? "md:col-span-2" : "md:col-span-1"
+                )}
               >
                 <div className="absolute top-8 right-8 p-3 bg-primary/10 rounded-lg flex-shrink-0">
                    <Icon className="w-6 h-6 text-primary" />
