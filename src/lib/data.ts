@@ -15,25 +15,25 @@ export const services: Service[] = [
     id: "service-1",
     icon: Wrench,
     title: "24/7 Emergency Plumbing",
-    description: "Burst pipe, overflowing toilet, or gas leak? We answer fast, arrive prepared, and stop the damage—day or night.",
+    description: "Burst pipe, overflowing toilet, or gas leak? We answer fast, arrive prepared, and stop the damage—day or night. Our certified team is available 24/7 for your peace of mind.",
   },
   {
     id: "service-2",
     icon: Droplet,
     title: "Installations & Upgrades",
-    description: "From faucets to full fixture installs, get clean work, code-compliant connections, and dependable performance.",
+    description: "From faucets to full fixture installs, get clean work, code-compliant connections, and dependable performance. We'll help you upgrade your home with modern, efficient plumbing.",
   },
   {
     id: "service-4",
     icon: Zap,
     title: "Drain Cleaning",
-    description: "Slow drains or recurring clogs? We clear blockages thoroughly using modern techniques to restore proper flow.",
+    description: "Slow drains or recurring clogs? We clear blockages thoroughly using modern techniques like hydro-jetting to restore proper flow and prevent future backups.",
   },
   {
     id: "service-3",
     icon: Shield,
     title: "Preventive Maintenance",
-    description: "Catch small issues before they become big repairs with annual checks, tune-ups, and honest recommendations.",
+    description: "Catch small issues before they become big repairs with our annual system checks, tune-ups, and honest recommendations. Keep your plumbing running smoothly and efficiently.",
   }
 ];
 
