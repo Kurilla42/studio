@@ -16,50 +16,24 @@ export const services: Service[] = [
     icon: Wrench,
     title: "24/7 Emergency Plumbing",
     description: "Burst pipe, overflowing toilet, or gas leak? We answer fast, arrive prepared, and stop the damage—day or night.",
-    features: ["Burst Pipes", "Gas Leaks", "Blocked Drains"],
-    imageUrl: "https://i.ibb.co/d0Mt5vYW/15015806.png",
-    pricing: "$150 - $500",
-    pricingDetails: "Depending on complexity. Service call fee is waived with completed repair."
   },
   {
     id: "service-2",
     icon: Droplet,
     title: "Installations & Upgrades",
     description: "From faucets to full fixture installs, get clean work, code-compliant connections, and dependable performance.",
-    features: ["Water Heaters", "Fixtures", "Appliances"],
-    imageUrl: "https://i.ibb.co/Pv89skpp/Whisk-3be546c194a8ef5862e45c9da3927f58dr.jpg",
-    pricing: "$125 - $2,500",
-    pricingDetails: "For fixtures, appliances, and water heaters. Price varies by item."
   },
   {
     id: "service-4",
     icon: Zap,
     title: "Drain Cleaning",
     description: "Slow drains or recurring clogs? We clear blockages thoroughly using modern techniques to restore proper flow.",
-    features: ["Hydro Jetting", "Camera Inspection", "Root Removal"],
-    imageUrl: "https://i.ibb.co/BHbvJ1bC/Whisk-f949fcc608cd6779bf84dc3d5850354ddr.jpg",
-    pricing: "$150 - $400",
-    pricingDetails: "For standard clogs. Hydro jetting may have different pricing."
   },
   {
     id: "service-3",
     icon: Shield,
     title: "Preventive Maintenance",
     description: "Catch small issues before they become big repairs with annual checks, tune-ups, and honest recommendations.",
-    features: ["Annual Checks", "Preventive Care", "System Audits"],
-    imageUrl: "https://i.ibb.co/GQh6QWG2/Whisk-028cb44d54956adbf3d474cd805f4969dr.jpg",
-    pricing: "Custom Quote",
-    pricingDetails: "Contact us for a personalized maintenance plan and quote."
-  },
-  {
-    id: "service-5",
-    icon: Search,
-    title: "Leak Detection",
-    description: "High water bill or damp spots? We pinpoint hidden leaks fast to prevent water damage and save you money.",
-    features: ["Electronic Leak Finders", "Slab & Wall Leaks", "Save on Water Bills"],
-    imageUrl: "https://i.ibb.co/QFXRdd5C/Whisk-b60815e8cde1df692d246340dd1e7cb5dr.jpg",
-    pricing: "Custom Quote",
-    pricingDetails: "Includes electronic leak finding for slabs, walls, and yards."
   }
 ];
 

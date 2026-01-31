@@ -10,10 +10,6 @@ export type Service = {
   icon: LucideIcon;
   title: string;
   description: string;
-  features: string[];
-  imageUrl?: string;
-  pricing: string;
-  pricingDetails: string;
 };
 
 export type Testimonial = {
