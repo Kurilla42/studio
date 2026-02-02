@@ -4,26 +4,26 @@
 
 @layer base {
   :root {
-    --page-background: 207 56% 90%; /* ICE BLUE */
-    --background: 201 38% 75%; /* POWDER BLUE */
+    --page-background: 0 0% 100%; /* White */
+    --background: 207 56% 90%; /* ICE BLUE */
     --foreground: 227 100% 7%; /* DEEP NAVY */
 
-    --card: 207 56% 95%; /* Lighter ICE BLUE */
+    --card: 0 0% 100%; /* White */
     --card-foreground: 227 100% 7%; /* DEEP NAVY */
 
-    --popover: 207 56% 95%;
+    --popover: 0 0% 100%; /* White */
     --popover-foreground: 227 100% 7%;
 
     --primary: 217 84% 40%; /* SAPPHIRE */
     --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 201 38% 75%;
-    --secondary-foreground: 227 100% 7%;
+    --secondary: 207 56% 90%; /* ICE BLUE */
+    --secondary-foreground: 227 100% 7%; /* DEEP NAVY */
 
-    --muted: 201 38% 85%;
+    --muted: 207 56% 95%; /* Lighter ICE BLUE */
     --muted-foreground: 227 100% 25%;
 
-    --accent: 201 38% 80%;
+    --accent: 207 56% 95%; /* Lighter ICE BLUE */
     --accent-foreground: 227 100% 7%;
 
     --destructive: 0 72% 56%;
@@ -74,10 +74,10 @@
   }
 
   .shadow-card {
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -4px rgba(0,0,0,0.05);
   }
   .shadow-card-hover {
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05);
   }
 
   .shadow-button-primary {
