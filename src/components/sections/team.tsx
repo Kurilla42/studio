@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, X } from 'lucide-react';
 import { teamMembers } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card } from '@/components/ui/card';
@@ -17,41 +17,32 @@ const TeamMemberDisplay = ({ member, imageAlignment }: { member: TeamMember; ima
   const image = PlaceHolderImages.find(p => p.id === member.image);
 
   return (
-    <div className={cn("grid grid-cols-1 md:grid-cols-2 gap-6 items-center",
-        imageAlignment === 'right' && "md:[direction:rtl]"
+    <div className={cn(
+      "grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center",
+      imageAlignment === 'right' && "md:[direction:rtl]"
     )}>
-      {/* Image container */}
-      <div className="relative w-full aspect-[4/5] rounded-lg overflow-hidden shadow-lg group [direction:ltr]">
-        {image && (
-          <Image
-            src={image.imageUrl}
-            alt={member.name}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
-            data-ai-hint={image.imageHint}
-          />
-        )}
-      </div>
-
-      {/* Text & Flippable Card container */}
-      <div className="[perspective:1000px] [direction:ltr]">
+      
+      {/* Flippable Column */}
+      <div className="[perspective:1000px] w-full aspect-[4/5] [direction:ltr]">
         <motion.div
-          className="relative transition-transform duration-700 [transform-style:preserve-3d] min-h-[250px]"
+          className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d]"
           animate={{ rotateY: isFlipped ? 180 : 0 }}
         >
-          {/* Front Face */}
-          <div className="absolute w-full h-full [backface-visibility:hidden] flex flex-col justify-center">
-            <h3 className="text-3xl text-foreground font-bold">{member.name}</h3>
-            <p className="text-muted-foreground text-lg mt-1">{member.role}</p>
-            <div className="my-4 inline-block bg-accent text-accent-foreground px-4 py-2 rounded-md font-medium text-sm self-start">
-              {member.experience}
-            </div>
-            <Button variant="link" onClick={() => setIsFlipped(true)} className="p-0 h-auto text-primary self-start font-semibold">
-              View Profile <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+          {/* Front Face: Image */}
+          <div className="absolute w-full h-full [backface-visibility:hidden] rounded-lg overflow-hidden shadow-lg group cursor-pointer" onClick={() => setIsFlipped(true)}>
+            {image && (
+              <Image
+                src={image.imageUrl}
+                alt={member.name}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                data-ai-hint={image.imageHint}
+              />
+            )}
+             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
           </div>
 
-          {/* Back Face */}
+          {/* Back Face: Details */}
           <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
             <Card className="h-full w-full flex flex-col p-6 shadow-xl bg-card">
               <div className="flex justify-between items-start mb-3">
@@ -59,8 +50,8 @@ const TeamMemberDisplay = ({ member, imageAlignment }: { member: TeamMember; ima
                   <h3 className="text-xl text-foreground font-bold">{member.name}</h3>
                   <p className="text-muted-foreground text-sm">{member.role}</p>
                 </div>
-                <Button variant="ghost" size="icon" className="w-8 h-8 -mr-2 -mt-2" onClick={() => setIsFlipped(false)}>
-                  <ArrowLeft className="w-5 h-5 text-primary" />
+                 <Button variant="ghost" size="icon" className="w-8 h-8 -mr-2 -mt-2" onClick={() => setIsFlipped(false)}>
+                  <X className="w-5 h-5 text-primary" />
                 </Button>
               </div>
               <p className="text-sm text-muted-foreground mb-4 flex-grow">{member.description}</p>
@@ -75,6 +66,18 @@ const TeamMemberDisplay = ({ member, imageAlignment }: { member: TeamMember; ima
             </Card>
           </div>
         </motion.div>
+      </div>
+
+      {/* Static Text & Button Column */}
+      <div className="[direction:ltr] flex flex-col justify-center">
+        <h3 className="text-[2.7rem] text-foreground font-headline leading-tight">{member.name}</h3>
+        <p className="text-[1.5rem] text-muted-foreground mt-1 leading-tight">{member.role}</p>
+        <div className="my-6 inline-block bg-accent text-accent-foreground px-4 py-2 rounded-md font-medium text-base self-start">
+          {member.experience}
+        </div>
+        <Button onClick={() => setIsFlipped(true)} className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 self-start px-6 py-5 text-base">
+           View Profile <ArrowRight className="w-4 h-4 ml-2" />
+        </Button>
       </div>
     </div>
   );
@@ -94,7 +97,7 @@ export default function Team() {
             <TeamMemberDisplay
               key={member.id}
               member={member}
-              imageAlignment={(index === 1 || index === 3) ? 'right' : 'left'}
+              imageAlignment={index % 2 !== 0 ? 'right' : 'left'}
             />
           ))}
         </div>
