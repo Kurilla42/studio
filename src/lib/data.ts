@@ -204,15 +204,15 @@ export const testimonials: Testimonial[] = [
 
 export const specialOffers: Offer[] = [
     {
-        id: "offer1",
-        discount: "$25 OFF",
-        title: "First Time Customers",
-        disclaimer: "Must be mentioned when booking appointment. Cannot be combined with any other offers or discounts."
-    },
-    {
         id: "offer2",
         discount: "$50 OFF",
         title: "Water filter cleaning",
+        disclaimer: "Must be mentioned when booking appointment. Cannot be combined with any other offers or discounts."
+    },
+    {
+        id: "offer1",
+        discount: "$25 OFF",
+        title: "First Time Customers",
         disclaimer: "Must be mentioned when booking appointment. Cannot be combined with any other offers or discounts."
     },
     {

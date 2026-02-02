@@ -59,7 +59,7 @@ export default function Faq() {
                   <AccordionItem
                     key={index}
                     value={value}
-                    className="border-none bg-background rounded-lg shadow-card transition-all duration-300"
+                    className="border-none bg-card rounded-lg shadow-card transition-all duration-300"
                   >
                     <AccordionTrigger className="p-6 text-lg font-medium hover:no-underline text-left font-body">
                       <span className="flex-1 pr-4">{faq.question}</span>

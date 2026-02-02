@@ -35,7 +35,7 @@ const FeatureBadge = ({ feature, onClick, isActive }: { feature: WhyChooseUsItem
         "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background",
         isActive
           ? "bg-primary text-primary-foreground shadow-lg"
-          : "bg-card/70 text-foreground hover:bg-card/100",
+          : "bg-card text-foreground hover:bg-muted",
         
         // Mobile layout: default, relative positioning within a flex container
         "relative w-full justify-between",
@@ -98,7 +98,7 @@ export default function About() {
 
             {/* Text Card: a flex item on mobile, absolutely positioned on desktop */}
             <div className="relative z-10 w-full md:absolute md:bottom-8 md:left-8 md:max-w-lg">
-              <Card className="bg-card/80 backdrop-blur-md rounded-xl p-6">
+              <Card className="bg-card rounded-xl p-6 shadow-lg">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeFeature ? activeFeature.id : 'default'}

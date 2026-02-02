@@ -1,6 +1,9 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { specialOffers } from '@/lib/data';
+import { cn } from '@/lib/utils';
 
 type SpecialOffersProps = {
   onClaimOfferClick: () => void;
@@ -18,27 +21,37 @@ export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps)
             Save money on your next service with our special deals.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {specialOffers.map((offer) => (
-            <div
-              key={offer.id}
-              className="relative p-1 bg-background rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300"
-            >
-              <div className="border-2 border-dashed border-border rounded-xl h-full p-8 flex flex-col text-center items-center">
-                <div className="flex items-center text-primary">
-                  <span className="text-5xl font-medium">{offer.discount}</span>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
+          {specialOffers.map((offer, index) => {
+            const isHighlighted = index === 1;
+            return (
+              <Card
+                key={offer.id}
+                className={cn(
+                  "flex flex-col p-8 transition-all duration-300 h-full",
+                  isHighlighted ? "bg-primary text-primary-foreground scale-105 shadow-2xl" : "bg-card shadow-card"
+                )}
+              >
+                <h3 className="text-2xl font-headline">{offer.title}</h3>
+                <div className="my-6">
+                  <span className="text-5xl font-bold">{offer.discount}</span>
+                  <span className={cn("text-lg ml-2", isHighlighted ? "text-primary-foreground/80" : "text-muted-foreground")}>one-time</span>
                 </div>
-                <h3 className="text-2xl text-foreground mt-4 h-14 flex items-center justify-center">{offer.title}</h3>
+                <p className={cn("text-base flex-grow", isHighlighted ? "text-primary-foreground/80" : "text-muted-foreground")}>
+                  {offer.disclaimer}
+                </p>
                 <Button
                   onClick={onClaimOfferClick}
-                  className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 mt-6 w-full max-w-xs"
+                  className={cn(
+                    "mt-8 w-full",
+                    isHighlighted ? "bg-card text-primary hover:bg-card/90" : "primary-gradient shadow-button-primary hover:shadow-button-primary-hover"
+                  )}
                 >
                   Get This Deal
                 </Button>
-                <p className="text-xs text-muted-foreground mt-auto pt-6">{offer.disclaimer}</p>
-              </div>
-            </div>
-          ))}
+              </Card>
+            )
+          })}
         </div>
       </div>
     </section>
