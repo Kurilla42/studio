@@ -31,7 +31,7 @@ const FeatureBadge = ({ feature, onClick, isActive }: { feature: WhyChooseUsItem
     <motion.button
       onClick={onClick}
       className={cn(
-        "absolute z-20 flex items-center gap-2 rounded-full py-2 px-4 text-sm font-medium transition-all duration-300 backdrop-blur-sm transform -translate-x-1/2 -translate-y-1/2",
+        "absolute z-20 flex items-center gap-3 rounded-full py-3 px-6 text-base font-medium transition-all duration-300 backdrop-blur-sm transform -translate-x-1/2 -translate-y-1/2",
         "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background",
         isActive
           ? "bg-primary text-primary-foreground shadow-lg scale-105"
@@ -42,8 +42,8 @@ const FeatureBadge = ({ feature, onClick, isActive }: { feature: WhyChooseUsItem
       transition={{ duration: 0.4, delay: 0.2 }}
     >
       <span>{feature.title}</span>
-      <span className={cn("flex h-5 w-5 items-center justify-center rounded-full", isActive ? "bg-white/20" : "bg-muted")}>
-        <ArrowRight className={cn("h-3 w-3", isActive ? "text-white" : "text-foreground")} />
+      <span className={cn("flex h-7 w-7 items-center justify-center rounded-full", isActive ? "bg-white/20" : "bg-muted")}>
+        <ArrowRight className={cn("h-4 w-4", isActive ? "text-white" : "text-foreground")} />
       </span>
     </motion.button>
   );
