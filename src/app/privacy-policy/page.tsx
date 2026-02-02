@@ -18,8 +18,8 @@ export default function PrivacyPolicyPage() {
       <main className="pt-20">
         <section className="bg-background">
           <div className="container max-w-4xl mx-auto py-12">
-            <h1 className="text-4xl text-foreground mb-8">Privacy Policy</h1>
-            <div className="space-y-6 text-muted-foreground">
+            <h1 className="text-[2.7rem] text-foreground mb-8 leading-tight">Privacy Policy</h1>
+            <div className="space-y-6 text-base text-muted-foreground">
               <p><strong>Last Updated:</strong> {new Date().toLocaleDateString()}</p>
               
               <h2 className="text-2xl font-medium text-foreground pt-4">1. Introduction</h2>

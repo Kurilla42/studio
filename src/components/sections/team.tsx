@@ -9,11 +9,11 @@ export default function Team() {
     <section id="team" className="bg-background">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl text-foreground">
+          <h2 className="text-[2.7rem] text-foreground leading-tight">
             Meet Our Expert Team
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {teamMembers.map((member) => {
             const image = PlaceHolderImages.find(p => p.id === member.image);
             return (
@@ -30,8 +30,8 @@ export default function Team() {
                   )}
                 </div>
                 <CardContent className="p-6 flex flex-col">
-                  <h3 className="text-xl text-foreground mb-2">{member.name}</h3>
-                  <p className="text-muted-foreground text-sm mb-4 flex-grow">{member.description}</p>
+                  <h3 className="text-2xl text-foreground mb-2">{member.name}</h3>
+                  <p className="text-muted-foreground text-base mb-4 flex-grow">{member.description}</p>
                   <div className="grid grid-cols-2 gap-x-4 gap-y-2 mt-auto">
                     {member.certifications.map((cert) => (
                       <div key={cert} className="flex items-center gap-2">

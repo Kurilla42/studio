@@ -98,7 +98,7 @@ export default function About() {
                   {activeFeature ? (
                     <div>
                       <h3 className="text-2xl font-semibold text-foreground mb-2">{activeFeature.title}</h3>
-                      <p className="text-muted-foreground text-sm">
+                      <p className="text-muted-foreground text-base">
                         {activeFeature.content}
                       </p>
                     </div>
@@ -107,7 +107,7 @@ export default function About() {
                       <div className="inline-block rounded-full border bg-background px-3 py-1 text-xs text-muted-foreground mb-4">
                         Why choose us
                       </div>
-                      <h2 className="text-3xl font-bold text-foreground">
+                      <h2 className="text-[2.7rem] font-bold text-foreground leading-tight">
                         Discover why Hundreds of Homeowners Choose Us.
                       </h2>
                     </div>

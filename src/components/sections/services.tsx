@@ -15,12 +15,12 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center mb-12">
           <div>
-            <h2 className="text-4xl md:text-5xl text-foreground text-left" style={{ fontSize: 'calc(2.25rem * 1.2)' }}>
+            <h2 className="text-[2.7rem] text-foreground text-left leading-tight">
               Our Plumbing Services
             </h2>
           </div>
           <div>
-            <p className="text-xl text-muted-foreground text-left lg:text-right" style={{ fontSize: 'calc(1.25rem * 1.2)' }}>
+            <p className="text-[1.5rem] text-muted-foreground text-left lg:text-right leading-tight">
               From urgent repairs to routine maintenance, we provide reliable solutions for your home.
             </p>
           </div>

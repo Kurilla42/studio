@@ -11,14 +11,14 @@ export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps)
     <section id="offers" className="bg-secondary">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl text-foreground">
+          <h2 className="text-[2.7rem] text-foreground leading-tight">
             Exclusive Offers
           </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-lg text-muted-foreground">
+          <p className="max-w-2xl mx-auto mt-4 text-[1.5rem] text-muted-foreground leading-tight">
             Save money on your next service with our special deals.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {specialOffers.map((offer) => (
             <div
               key={offer.id}

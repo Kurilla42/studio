@@ -72,7 +72,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0
               </div>
           </div>
         </div>
-        <CardContent className="p-0 text-sm text-muted-foreground">
+        <CardContent className="p-0 text-base text-muted-foreground">
           <p>{testimonial.testimonial}</p>
         </CardContent>
       </Card>
@@ -86,13 +86,13 @@ export default function Testimonials() {
     <section id="testimonials" className="bg-secondary !py-12 md:!py-16">
       <div className="container">
         <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl text-foreground">
+            <h2 className="text-[2.7rem] text-foreground leading-tight">
                 What Our Customers Say
             </h2>
-            <div className="inline-flex items-center gap-2 mt-4">
+            <div className="inline-flex items-center gap-2 mt-4 text-[1.5rem]">
                 <GoogleIcon />
-                <span className="text-lg text-muted-foreground">Google</span>
-                <span className="text-lg text-foreground font-medium">4.9</span>
+                <span className="text-muted-foreground">Google</span>
+                <span className="text-foreground font-medium">4.9</span>
             </div>
         </div>
         <div 

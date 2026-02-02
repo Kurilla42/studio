@@ -35,12 +35,12 @@ export default function Faq() {
   return (
     <section id="faq" className="bg-secondary">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           <div className="lg:sticky lg:top-24">
-            <h2 className="text-3xl md:text-4xl text-foreground font-headline">
+            <h2 className="text-[2.7rem] text-foreground font-headline leading-tight">
               Frequently Asked Questions
             </h2>
-            <p className="mt-4 text-muted-foreground text-base max-w-lg">
+            <p className="mt-4 text-[1.5rem] text-muted-foreground max-w-lg leading-tight">
               Have questions about our plumbing services? We've compiled answers to the most common inquiries we receive, from pricing and scheduling to warranties. If you don't find your answer here, please don't hesitate to contact us directly.
             </p>
           </div>
@@ -61,7 +61,7 @@ export default function Faq() {
                     value={value}
                     className="border-none bg-background rounded-lg shadow-card transition-all duration-300"
                   >
-                    <AccordionTrigger className="p-6 text-base font-medium hover:no-underline text-left font-body">
+                    <AccordionTrigger className="p-6 text-lg font-medium hover:no-underline text-left font-body">
                       <span className="flex-1 pr-4">{faq.question}</span>
                        <div className="w-7 h-7 flex items-center justify-center rounded-full bg-primary text-primary-foreground flex-shrink-0">
                         {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
