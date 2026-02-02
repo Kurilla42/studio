@@ -225,28 +225,40 @@ export const specialOffers: Offer[] = [
 
 export const teamMembers: TeamMember[] = [
     {
-        name: "Emergency Repairs Specialist",
+        id: "team-1",
+        name: "John Smith",
+        role: "Emergency Repairs Specialist",
+        experience: "15+ Years Of Experience",
         image: "team1-image",
-        description: "With over 15 years of experience in rapid response emergency plumbing, our specialist is an expert at diagnosing and resolving urgent issues under pressure, ensuring your home is safe and functional around the clock.",
-        certifications: ["Master Plumber License", "Gas Line Specialist", "Emergency Response Certified", "15+ Years Of Experience"]
+        description: "With over 15 years of experience in rapid response emergency plumbing, John is an expert at diagnosing and resolving urgent issues under pressure, ensuring your home is safe and functional around the clock.",
+        certifications: ["Master Plumber License", "Gas Line Specialist", "Emergency Response Certified", "Backflow Prevention Certified"]
     },
     {
-        name: "Installation Services Expert",
+        id: "team-2",
+        name: "Michael Johnson",
+        role: "Installation Services Expert",
+        experience: "12+ Years Of Experience",
         image: "team2-image",
-        description: "Specializing in water heater and fixture installations for 12+ years, this expert ensures every new component is integrated flawlessly into your system for optimal performance and longevity.",
-        certifications: ["Certified Installer", "Tankless Water Heater Pro", "Fixture Specialist", "12+ Years Of Experience"]
+        description: "Specializing in water heater and fixture installations for over a decade, Michael ensures every new component is integrated flawlessly into your system for optimal performance and longevity.",
+        certifications: ["Certified Installer", "Tankless Water Heater Pro", "Fixture Specialist", "Water Treatment Certified"]
     },
     {
-        name: "Maintenance & Inspection Pro",
+        id: "team-3",
+        name: "David Williams",
+        role: "Maintenance & Inspection Pro",
+        experience: "18+ Years Of Experience",
         image: "team3-image",
-        description: "Our preventive maintenance professional brings 18+ years of expertise in system diagnostics and inspections, helping homeowners avoid costly repairs through meticulous and proactive care.",
-        certifications: ["System Auditor", "Preventive Care Expert", "Leak Detection Certified", "18+ Years Of Experience"]
+        description: "Our preventive maintenance professional, David, brings nearly two decades of expertise in system diagnostics, helping homeowners avoid costly repairs through meticulous and proactive care.",
+        certifications: ["System Auditor", "Preventive Care Expert", "Leak Detection Certified", "Plumbing Inspector (CPI)"]
     },
     {
-        name: "Drain Cleaning Technician",
+        id: "team-4",
+        name: "Chris Brown",
+        role: "Drain Cleaning Technician",
+        experience: "14+ Years Of Experience",
         image: "team4-image",
-        description: "With 14+ years mastering advanced drain cleaning technology, our technician can tackle the most stubborn clogs using hydro-jetting and camera inspections to restore flow quickly and effectively.",
-        certifications: ["Hydro Jetting Certified", "Camera Inspection Pro", "Root Removal Specialist", "14+ Years Of Experience"]
+        description: "With extensive experience in advanced drain cleaning technology, Chris can tackle the most stubborn clogs using hydro-jetting and camera inspections to restore flow quickly and effectively.",
+        certifications: ["Hydro Jetting Certified", "Camera Inspection Pro", "Root Removal Specialist", "Confined Space Entry Certified"]
     }
 ];
 

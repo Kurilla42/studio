@@ -29,7 +29,10 @@ export type Offer = {
 };
 
 export type TeamMember = {
+    id: string;
     name: string;
+    role: string;
+    experience: string;
     image: string;
     description: string;
     certifications: string[];
