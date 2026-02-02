@@ -1,23 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Star } from 'lucide-react';
 import { testimonials } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-
-const GoogleIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
-    <path fill="#4285F4" d="M24 9.8c3.86 0 6.96 1.56 9.17 3.62l6.5-6.5C35.24 2.85 30.14 0 24 0 14.62 0 6.62 5.56 2.68 13.61l7.86 6.07C12.25 13.9 17.64 9.8 24 9.8z"></path>
-    <path fill="#34A853" d="M46.32 25.13c0-1.66-.15-3.3-.43-4.88H24v9.17h12.52c-.54 2.97-2.17 5.48-4.63 7.18l7.27 5.66c4.25-3.92 6.76-9.67 6.76-16.13z"></path>
-    <path fill="#FBBC05" d="M10.54 25.68c-.48-1.45-.76-3-.76-4.68s.28-3.23.76-4.68L2.68 10.27C1.03 13.4 0 17.15 0 21c0 3.85 1.03 7.6 2.68 10.73l7.86-6.05z"></path>
-    <path fill="#EA4335" d="M24 48c6.4 0 11.8-2.12 15.73-5.74l-7.27-5.66c-2.12 1.42-4.84 2.26-7.96 2.26-6.36 0-11.75-4.1-13.67-9.73l-7.86 6.07C6.62 42.44 14.62 48 24 48z"></path>
-    <path fill="none" d="M0 0h48v48H0z"></path>
-  </svg>
-)
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const fallbackColors = [
     'bg-red-500 text-white',
@@ -32,6 +25,14 @@ const fallbackColors = [
 
 let colorIndex = 0;
 
+const QuoteIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <path d="M18.8824 36H0L9.44118 0H28.3235L18.8824 36Z" fill="currentColor"/>
+        <path d="M47.3235 36H28.4412L37.8824 0H47.3235L47.3235 36Z" fill="currentColor"/>
+    </svg>
+);
+
+
 const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0] }) => {
   const image = testimonial.image ? PlaceHolderImages.find(p => p.id === testimonial.image) : null;
   const fallbackInitial = testimonial.name.charAt(0);
@@ -45,67 +46,100 @@ const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0
   }
 
   return (
-    <li className="w-[350px] max-w-[calc(100vw-2rem)] flex-shrink-0 px-3 py-1 list-none">
-      <Card className="h-full flex flex-col p-6 bg-card border-border shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
-        <div className="flex items-center mb-3">
-          <Avatar className="w-10 h-10 mr-3 border-2 border-primary/50">
-            {image ? (
-              <AvatarImage src={image.imageUrl} alt={testimonial.name} data-ai-hint={image.imageHint}/>
-            ) : (
-              <AvatarFallback className={cn("font-medium", fallbackColor)}>
-                {fallbackInitial}
-              </AvatarFallback>
-            )}
-          </Avatar>
-          
-          <div className="flex-1">
-              <div className="flex items-center gap-1.5">
-                  <p className="font-medium text-sm text-foreground">{testimonial.name}</p>
-              </div>
-              <div className="flex items-center gap-2">
-              <div className="flex items-center">
-                  {[...Array(5)].map((_, i) => (
-                  <Star key={i} className={cn("w-4 h-4", i < testimonial.rating ? "fill-yellow-400 text-yellow-400" : "fill-gray-300 text-gray-300")} />
-                  ))}
-              </div>
-              <p className="text-xs text-muted-foreground">{testimonial.time}</p>
-              </div>
-          </div>
-        </div>
-        <CardContent className="p-0 text-base text-muted-foreground">
+    <div className="flex-[0_0_90%] sm:flex-[0_0_45%] lg:flex-[0_0_32%] min-w-0 pl-4">
+      <Card className="h-full flex flex-col p-8 bg-card border-none rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-300">
+        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-6">Stories</p>
+        <CardContent className="p-0 text-muted-foreground flex-grow text-lg leading-relaxed">
           <p>{testimonial.testimonial}</p>
         </CardContent>
+        <div className="flex items-end justify-between mt-8 pt-8 border-t">
+          <div className="flex items-center gap-4">
+            <Avatar className="w-12 h-12">
+              {image ? (
+                <AvatarImage src={image.imageUrl} alt={testimonial.name} data-ai-hint={image.imageHint}/>
+              ) : (
+                <AvatarFallback className={cn("font-medium", fallbackColor)}>
+                  {fallbackInitial}
+                </AvatarFallback>
+              )}
+            </Avatar>
+            <div>
+              <p className="font-semibold text-foreground text-lg">{testimonial.name}</p>
+              <p className="text-sm text-muted-foreground">Customer</p>
+            </div>
+          </div>
+          <QuoteIcon className="w-12 h-auto text-border" />
+        </div>
       </Card>
-    </li>
+    </div>
   );
 };
 
 
 export default function Testimonials() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' }, [Autoplay({ delay: 5000, stopOnInteraction: true, playOnInit: true })]);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onScroll = useCallback(() => {
+    if (!emblaApi) return;
+    const progress = Math.max(0, Math.min(1, emblaApi.scrollProgress()));
+    setScrollProgress(progress * 100);
+  }, [emblaApi, setScrollProgress]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onScroll();
+    emblaApi.on('scroll', onScroll);
+    emblaApi.on('reInit', onScroll);
+  }, [emblaApi, onScroll]);
+
   return (
-    <section id="testimonials" className="bg-secondary !py-12 md:!py-16">
+    <section id="testimonials" className="bg-secondary !py-20">
       <div className="container">
-        <div className="text-center mb-12">
+        <div className="flex justify-between items-center mb-12">
             <h2 className="text-[2.7rem] text-foreground leading-tight">
-                What Our Customers Say
+                What Our Clients Say
             </h2>
-            <div className="inline-flex items-center gap-2 mt-4 text-[1.5rem]">
-                <GoogleIcon />
-                <span className="text-muted-foreground">Google</span>
-                <span className="text-foreground font-medium">4.9</span>
+            <div className="hidden sm:flex items-center gap-4">
+                <Button variant="ghost" size="icon" onClick={scrollPrev} className="rounded-full w-14 h-14 bg-card text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                    <ArrowLeft className="w-6 h-6" />
+                </Button>
+                 <Button variant="ghost" size="icon" onClick={scrollNext} className="rounded-full w-14 h-14 bg-card text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                    <ArrowRight className="w-6 h-6" />
+                </Button>
             </div>
         </div>
-        <div 
-          className="relative w-full overflow-hidden"
-          style={{
-            maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
-          }}
-        >
-          <div className="flex w-max animate-scroll">
-            {[...testimonials, ...testimonials].map((testimonial, index) => (
+
+        <div className="overflow-hidden -ml-4" ref={emblaRef}>
+          <div className="flex h-full">
+            {testimonials.map((testimonial, index) => (
               <TestimonialCard key={index} testimonial={testimonial} />
             ))}
           </div>
+        </div>
+        <div className="sm:hidden flex items-center gap-4 mt-8 justify-center">
+            <Button variant="ghost" size="icon" onClick={scrollPrev} className="rounded-full w-14 h-14 bg-card text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                <ArrowLeft className="w-6 h-6" />
+            </Button>
+            <Button variant="ghost" size="icon" onClick={scrollNext} className="rounded-full w-14 h-14 bg-card text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                <ArrowRight className="w-6 h-6" />
+            </Button>
+        </div>
+      </div>
+      <div className="container mt-12">
+        <div className="relative h-1 w-full bg-border rounded-full overflow-hidden">
+            <div 
+                className="absolute top-0 left-0 h-full bg-primary rounded-full transition-all duration-300 ease-out"
+                style={{ width: `${scrollProgress}%` }}
+            />
         </div>
       </div>
     </section>
