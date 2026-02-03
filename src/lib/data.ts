@@ -99,7 +99,7 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     id: "why-4",
     icon: UserCheck,
     title: "Background-Checked",
-    content: "Your safety is our priority. Every technician is fully licensed, insured, and has passed a thorough background and drug screening."
+    content: "Every technician on our team is 100% background-checked, licensed, and insured for your peace of mind."
   }
 ];
 
@@ -338,3 +338,5 @@ export const socialProofData = {
   avatars: ["social-proof-avatar-1", "social-proof-avatar-2", "social-proof-avatar-3", "social-proof-avatar-4"],
   names: ["Alex P.", "Maria K.", "John D.", "Samantha G.", "Michael B."],
 };
+
+    

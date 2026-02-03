@@ -2,15 +2,15 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "Friendly plumber with tools",
-      "imageUrl": "https://i.ibb.co/CKjJrcQG/2.png",
-      "imageHint": "plumber portrait"
+      "description": "Plumber working under a sink",
+      "imageUrl": "https://i.ibb.co/FLXJyW59/Whisk-6d4f4a17fae3c9a939f41efde438c028dr.jpg",
+      "imageHint": "plumber working"
     },
     {
       "id": "hero-background-mobile",
-      "description": "Friendly plumber with tools",
-      "imageUrl": "https://i.ibb.co/CKjJrcQG/2.png",
-      "imageHint": "plumber portrait"
+      "description": "Plumber working under a sink",
+      "imageUrl": "https://i.ibb.co/FLXJyW59/Whisk-6d4f4a17fae3c9a939f41efde438c028dr.jpg",
+      "imageHint": "plumber working"
     },
     {
       "id": "hero-plumber",

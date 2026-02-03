@@ -12,15 +12,16 @@ import { Card } from '@/components/ui/card';
 
 // Let's use 4 features for the interactive display, like in the reference image.
 const interactiveFeatures = whyChooseUsItems.filter(item => 
-  ['why-1', 'why-2', 'why-3', 'why-9'].includes(item.id)
+  ['why-1', 'why-2', 'why-9', 'why-3', 'why-4'].includes(item.id)
 );
 
 // Define positions for each badge to mimic the reference layout on desktop
 const badgePositions: { [key: string]: string } = {
-  'why-1': 'md:top-[15%] md:left-[25%]', // 24/7 Emergency Plumbing
-  'why-2': 'md:top-[30%] md:right-[10%] md:left-auto', // Upfront Pricing
-  'why-9': 'md:bottom-[35%] md:left-[55%]', // Licensed & Insured
-  'why-3': 'md:bottom-[15%] md:right-[20%] md:left-auto', // 1 Year Warranty
+  'why-1': 'md:top-[10%] md:left-[25%]',   // 24/7 Emergency Plumbing
+  'why-2': 'md:top-[30%] md:left-[10%]',   // Upfront Pricing
+  'why-9': 'md:top-[50%] md:left-[25%]',   // Licensed & Insured
+  'why-3': 'md:top-[70%] md:left-[10%]',   // 1 Year Warranty
+  'why-4': 'md:top-[90%] md:left-[25%]',   // Background-Checked
 };
 
 
@@ -81,7 +82,7 @@ export default function About() {
               data-ai-hint={backgroundImage.imageHint}
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10 md:bg-gradient-to-t md:from-black/60 md:via-black/20 md:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10 md:bg-gradient-to-r md:from-transparent md:via-black/10 md:to-black/60" />
           
           <div className="absolute inset-0 p-4 flex flex-col justify-end gap-4 md:p-6 lg:p-8 md:block">
             {/* Badge container: on mobile, a flex container. On desktop, a relative container for absolute children. */}
@@ -97,8 +98,8 @@ export default function About() {
             </div>
 
             {/* Text Card: a flex item on mobile, absolutely positioned on desktop */}
-            <div className="relative z-10 w-full md:absolute md:bottom-8 md:left-8 md:max-w-lg">
-              <Card className="bg-card rounded-xl p-6 shadow-lg">
+            <div className="relative z-10 w-full md:absolute md:bottom-8 md:right-8 md:max-w-lg">
+              <Card className="bg-card/80 backdrop-blur-sm border-white/20 rounded-xl p-6 shadow-lg">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeFeature ? activeFeature.id : 'default'}
@@ -135,3 +136,5 @@ export default function About() {
     </section>
   );
 }
+
+    
