@@ -38,7 +38,7 @@ const FlippableImageCard = ({ member, isFlipped, onHideDetails }: { member: Team
   const image = PlaceHolderImages.find(p => p.id === member.image);
 
   return (
-    <div className="w-full aspect-[4/5] [perspective:1000px]">
+    <div className="w-full h-full [perspective:1000px]">
         <motion.div
           className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d]"
           animate={{ rotateY: isFlipped ? 180 : 0 }}
@@ -140,7 +140,7 @@ export default function Team() {
                 </div>
 
                 {/* Desktop Layout: Image | Info-Top, Info-Bottom | Image */}
-                <div className="hidden md:grid md:grid-cols-4 md:gap-x-8 items-center">
+                <div className="hidden md:grid md:grid-cols-4 md:gap-x-8 items-stretch">
                   <div className="col-span-1">
                     <FlippableImageCard
                       member={member1}
