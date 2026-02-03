@@ -17,11 +17,11 @@ const interactiveFeatures = whyChooseUsItems.filter(item =>
 
 // Define positions for each badge on desktop (lg) to be random on the right side and within frame
 const badgePositions: { [key: string]: string } = {
-  'why-1': 'lg:top-[25%] lg:left-[55%]', // 24/7 Emergency Plumbing
-  'why-2': 'lg:top-[15%] lg:left-[75%]', // Upfront Pricing
-  'why-3': 'lg:top-[85%] lg:left-[80%]', // 1 Year Warranty
-  'why-9': 'lg:top-[60%] lg:left-[85%]', // Licensed & Insured
-  'why-4': 'lg:top-[45%] lg:left-[70%]', // Background-Checked
+  'why-1': 'lg:top-[25%] lg:left-[45%]', // 24/7 Emergency Plumbing
+  'why-2': 'lg:top-[15%] lg:left-[65%]', // Upfront Pricing
+  'why-3': 'lg:top-[85%] lg:left-[70%]', // 1 Year Warranty
+  'why-9': 'lg:top-[60%] lg:left-[75%]', // Licensed & Insured
+  'why-4': 'lg:top-[45%] lg:left-[60%]', // Background-Checked
 };
 
 const FeatureBadge = ({ feature, onClick, isActive }: { feature: WhyChooseUsItem; onClick: () => void; isActive: boolean; }) => {
