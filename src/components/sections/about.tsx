@@ -17,11 +17,11 @@ const interactiveFeatures = whyChooseUsItems.filter(item =>
 
 // Define positions for each badge to mimic the user's drawing on desktop (lg)
 const badgePositions: { [key: string]: string } = {
-  'why-1': 'lg:top-[12%] lg:left-[58%]', // 24/7 Emergency
-  'why-2': 'lg:top-[30%] lg:left-[64%]', // Upfront Pricing
-  'why-3': 'lg:top-[48%] lg:left-[72%]', // 1 Year Warranty
-  'why-4': 'lg:top-[68%] lg:left-[75%]', // Background-Checked
-  'why-9': 'lg:top-[85%] lg:left-[82%]', // Licensed & Insured
+  'why-1': 'lg:top-[18%] lg:left-[70%]', // 24/7 Emergency
+  'why-2': 'lg:top-[38%] lg:left-[88%]', // Upfront Pricing
+  'why-3': 'lg:top-[60%] lg:left-[65%]', // 1 Year Warranty
+  'why-4': 'lg:top-[85%] lg:left-[80%]', // Background-Checked
+  'why-9': 'lg:top-[90%] lg:left-[55%]', // Licensed & Insured
 };
 
 
