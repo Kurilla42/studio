@@ -13,6 +13,12 @@
       "imageHint": "plumber working"
     },
     {
+      "id": "about-background",
+      "description": "Plumber with tools in a modern kitchen",
+      "imageUrl": "https://i.ibb.co/sJFFN25R/Whisk-6d4f4a17fae3c9a939f41efde438c028dr.jpg",
+      "imageHint": "plumber kitchen"
+    },
+    {
       "id": "hero-plumber",
       "description": "Friendly plumber with tools, transparent background",
       "imageUrl": "https://i.ibb.co/CKjJrcQG/2.png",

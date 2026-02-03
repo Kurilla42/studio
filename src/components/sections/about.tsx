@@ -66,7 +66,7 @@ const FeatureBadge = ({ feature, onClick, isActive }: { feature: WhyChooseUsItem
 export default function About() {
   const [activeFeature, setActiveFeature] = useState<WhyChooseUsItem | null>(null);
 
-  const backgroundImage = PlaceHolderImages.find(p => p.id === 'hero-background');
+  const backgroundImage = PlaceHolderImages.find(p => p.id === 'about-background');
 
   const handleFeatureClick = (feature: WhyChooseUsItem) => {
     setActiveFeature(activeFeature?.id === feature.id ? null : feature);
