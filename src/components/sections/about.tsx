@@ -17,18 +17,18 @@ const interactiveFeatures = whyChooseUsItems.filter(item =>
 
 // Define positions for each badge to mimic the reference layout on desktop
 const badgePositions: { [key: string]: string } = {
-  // Tablet (md) - Semi-circle arrangement to avoid overlap with bottom-left info card
-  'why-1': 'md:top-[15%] md:left-[50%]', // Top-Center
-  'why-2': 'md:top-[35%] md:left-[85%]', // Right-Top
-  'why-9': 'md:top-[65%] md:left-[85%]', // Right-Bottom
-  'why-3': 'md:top-[85%] md:left-[50%]', // Bottom-Center
-  'why-4': 'md:top-[50%] md:left-[15%]', // Left-Center
+  // Tablet (md) - Arranged along top and right edges
+  'why-1': 'md:top-[10%] md:left-[20%]',
+  'why-2': 'md:top-[10%] md:left-[50%]',
+  'why-9': 'md:top-[10%] md:left-[80%]',
+  'why-3': 'md:top-[45%] md:left-[90%]',
+  'why-4': 'md:top-[80%] md:left-[90%]',
 
   // Desktop (lg) - From user's drawing, overrides tablet styles
   'why-1': 'lg:top-[10%] lg:left-[10%]',
   'why-2': 'lg:top-[25%] lg:left-[35%]',
   'why-9': 'lg:top-[70%] lg:left-[80%]',
-  'why-3': 'lg:top-[34%] lg:left-[50%]',
+  'why-3': 'lg:top-[38%] lg:left-[50%]',
   'why-4': 'lg:top-[60%] lg:left-[55%]',
 };
 
@@ -40,7 +40,8 @@ const FeatureBadge = ({ feature, onClick, isActive }: { feature: WhyChooseUsItem
     <motion.button
       onClick={onClick}
       className={cn(
-        "z-20 flex items-center gap-3 rounded-full py-3 px-6 text-base font-medium transition-all duration-300",
+        "z-20 flex items-center gap-3 rounded-full font-medium transition-all duration-300",
+        "py-3 px-6 text-base md:py-2 md:px-4 md:text-sm lg:py-3 lg:px-6 lg:text-base", // Responsive badge size
         "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background",
         isActive
           ? "bg-white text-primary ring-2 ring-primary shadow-lg"
@@ -79,7 +80,8 @@ export default function About() {
   return (
     <section id="about" className="bg-background !py-12 md:!py-16 lg:!py-20">
       <div className="container">
-        <div className="relative aspect-[9/16] md:aspect-video w-full rounded-2xl overflow-hidden shadow-2xl">
+        {/* Taller aspect ratio on mobile */}
+        <div className="relative aspect-[9/21] md:aspect-video w-full rounded-2xl overflow-hidden shadow-2xl">
           {backgroundImage && (
             <Image
               src={backgroundImage.imageUrl}
@@ -105,8 +107,8 @@ export default function About() {
               ))}
             </div>
 
-            {/* Text Card: order 2 on mobile, reset on md, absolutely positioned on desktop */}
-            <div className="order-2 md:order-none relative z-10 w-full md:absolute md:bottom-4 md:left-4 md:max-w-md lg:bottom-8 lg:left-8 lg:max-w-lg lg:h-[48%]">
+            {/* Text Card: order 2 on mobile, smaller on tablet */}
+            <div className="order-2 md:order-none relative z-10 w-full md:absolute md:bottom-4 md:left-4 md:max-w-xs lg:bottom-8 lg:left-8 lg:max-w-lg lg:h-[48%]">
               <Card className="bg-white text-foreground rounded-xl p-4 md:p-5 lg:p-6 shadow-xl h-full">
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -119,8 +121,9 @@ export default function About() {
                   >
                     {activeFeature ? (
                       <div>
-                        <h3 className="text-4xl lg:text-5xl font-semibold mb-4 text-foreground">{activeFeature.title}</h3>
-                        <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
+                        {/* Responsive font size for active feature */}
+                        <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 text-foreground">{activeFeature.title}</h3>
+                        <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed">
                           {activeFeature.content}
                         </p>
                       </div>
@@ -129,7 +132,8 @@ export default function About() {
                         <div className="inline-block rounded-full border border-border bg-muted px-3 py-1 text-xs text-muted-foreground mb-4">
                           Why choose us
                         </div>
-                        <h2 className="text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+                        {/* Responsive font size for default text */}
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
                           Discover why Hundreds of Homeowners Choose Us.
                         </h2>
                       </div>
