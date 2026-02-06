@@ -35,7 +35,6 @@ export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps)
                 <h3 className="text-2xl font-headline">{offer.title}</h3>
                 <div className="my-6">
                   <span className="text-5xl font-bold">{offer.discount}</span>
-                  <span className={cn("text-lg ml-2", isHighlighted ? "text-primary-foreground/80" : "text-muted-foreground")}>one-time</span>
                 </div>
                 <p className={cn("text-base flex-grow", isHighlighted ? "text-primary-foreground/80" : "text-muted-foreground")}>
                   {offer.disclaimer}
