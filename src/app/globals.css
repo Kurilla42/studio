@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --page-background: 0 0% 100%; /* White */
-    --background: 207 56% 90%; /* ICE BLUE */
+    --page-background: 0 0% 96%; /* Light Gray */
+    --background: 0 0% 100%; /* White */
     --foreground: 227 100% 7%; /* DEEP NAVY */
 
     --card: 0 0% 100%; /* White */

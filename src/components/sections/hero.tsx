@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -27,8 +26,8 @@ export default function Hero({ onScheduleClick }: HeroProps) {
     return () => clearInterval(interval);
   }, []);
 
-  const backgroundImage = PlaceHolderImages.find(p => p.id === 'hero-background');
-  const mobileBackgroundImage = PlaceHolderImages.find(p => p.id === 'hero-background-mobile');
+  const image1 = PlaceHolderImages.find(p => p.id === 'hero-new-1');
+  const image2 = PlaceHolderImages.find(p => p.id === 'hero-new-2');
 
 
   const containerVariants = {
@@ -45,14 +44,14 @@ export default function Hero({ onScheduleClick }: HeroProps) {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
-
+  
   const statCardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: 1.2 + i * 0.2,
+        delay: 0.5 + i * 0.2,
         duration: 0.8,
         ease: "easeOut",
       },
@@ -60,39 +59,10 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden !p-0">
-      <div
-        className="absolute inset-0 z-0"
-      >
-       {backgroundImage && (
-        <Image
-          src={backgroundImage.imageUrl}
-          alt={backgroundImage.description}
-          fill
-          priority
-          quality={100}
-          unoptimized={true}
-          className="object-cover object-center hidden md:block"
-          data-ai-hint={backgroundImage.imageHint}
-        />
-      )}
-      {mobileBackgroundImage && (
-        <Image
-          src={mobileBackgroundImage.imageUrl}
-          alt={mobileBackgroundImage.description}
-          fill
-          priority
-          quality={100}
-          unoptimized={true}
-          className="object-cover object-center md:hidden"
-          data-ai-hint={mobileBackgroundImage.imageHint}
-        />
-      )}
-      </div >
-      
-      <div className="container relative z-10 py-12">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-16">
+      <div className="container relative z-10">
         <motion.div 
-          className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center"
+          className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
           variants={containerVariants}
           initial="hidden"
           animate={isMounted ? "visible" : "hidden"}
@@ -100,7 +70,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           {/* Left Column: Content */}
           <div className="flex flex-col items-start text-left">
             <motion.h1 
-              className="text-[2.7rem] sm:text-5xl lg:text-6xl font-hero text-white text-shadow-hero leading-tight"
+              className="text-[2.7rem] sm:text-5xl lg:text-6xl font-hero text-foreground leading-tight"
               variants={itemVariants}
             >
               Expert Plumbing Services
@@ -114,13 +84,43 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     animate={{ y: '0%', opacity: 1 }}
                     exit={{ y: '-100%', opacity: 0 }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    className="inline-block text-white"
+                    className="inline-block text-foreground"
                   >
                     {rotatingWords[currentWordIndex]}
                   </motion.span>
                 </AnimatePresence>
               </div>
             </motion.h1>
+
+            <div className="mt-8 w-full">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {heroStats.map((stat, i) => (
+                  <motion.div
+                    key={stat.id}
+                    custom={i}
+                    variants={statCardVariants}
+                    initial="hidden"
+                    animate={isMounted ? "visible" : "hidden"}
+                    className="p-4"
+                  >
+                    <div className="flex flex-col text-left">
+                      <div className="text-[2.7rem] sm:text-5xl font-hero text-foreground flex items-center gap-1">
+                        {stat.id === 'stat-3' ? (
+                            <div className="flex items-baseline gap-2">
+                                <span className="text-4xl sm:text-5xl">4.9</span>
+                                <StarIcon className="w-9 h-9 text-yellow-400 fill-yellow-400 mt-1" />
+                            </div>
+                        ) : (
+                            <span className="text-4xl sm:text-5xl">{stat.number}</span>
+                        )}
+                      </div>
+                      <p className="text-sm sm:text-base text-muted-foreground">{stat.label}</p>
+                      <div className="mt-2 h-1 w-12 bg-primary rounded-full"></div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
 
             <motion.div 
               className="mt-8 flex flex-col sm:flex-row gap-4"
@@ -136,38 +136,30 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                 Schedule Service
               </Button>
             </motion.div>
-
-            <div className="mt-12 w-full">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {heroStats.map((stat, i) => (
-                  <motion.div
-                    key={stat.id}
-                    custom={i}
-                    variants={statCardVariants}
-                    initial="hidden"
-                    animate={isMounted ? "visible" : "hidden"}
-                    className="p-4"
-                  >
-                    <div className="flex flex-col text-left">
-                      <div className="text-[2.7rem] sm:text-5xl font-hero text-white flex items-center gap-1">
-                        {stat.id === 'stat-3' ? (
-                            <div className="flex items-baseline gap-2">
-                                <span className="text-4xl sm:text-5xl text-shadow-hero">4.9</span>
-                                <StarIcon className="w-9 h-9 text-yellow-400 fill-yellow-400 text-shadow-hero mt-1" />
-                            </div>
-                        ) : (
-                            <span className="text-4xl sm:text-5xl text-shadow-hero">{stat.number}</span>
-                        )}
-                      </div>
-                      <p className="text-sm sm:text-base text-gray-300 whitespace-nowrap">{stat.label}</p>
-                      <div className="mt-2 h-1 w-12 bg-primary rounded-full"></div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
           </div>
-          <div></div>
+          {/* Right Column: Images */}
+          <div className="relative hidden lg:block h-full min-h-[500px]">
+            {image2 && (
+              <motion.div 
+                className="absolute top-1/4 left-0 w-[80%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl"
+                initial={{ opacity: 0, x: 50, rotate: 5 }}
+                animate={{ opacity: 1, x: 0, rotate: 10 }}
+                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
+              >
+                  <Image src={image2.imageUrl} alt={image2.description} fill className="object-cover" data-ai-hint={image2.imageHint} />
+              </motion.div>
+            )}
+            {image1 && (
+              <motion.div 
+                className="absolute top-0 left-1/4 w-[70%] aspect-video rounded-2xl overflow-hidden shadow-2xl"
+                initial={{ opacity: 0, y: -50, rotate: -15 }}
+                animate={{ opacity: 1, y: 0, rotate: -5 }}
+                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+                >
+                <Image src={image1.imageUrl} alt={image1.description} fill className="object-cover" data-ai-hint={image1.imageHint} />
+              </motion.div>
+            )}
+          </div>
         </motion.div>
       </div>
     </section>

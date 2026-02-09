@@ -32,9 +32,7 @@ export default function RootLayout({
       <head>
       </head>
       <body className="font-body antialiased">
-        <div className="mx-4 my-4 bg-background rounded-xl overflow-hidden shadow-2xl">
-          {children}
-        </div>
+        {children}
         <Toaster />
       </body>
     </html>
