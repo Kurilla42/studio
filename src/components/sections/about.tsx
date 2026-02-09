@@ -37,11 +37,9 @@ const FeatureBadge = ({ feature, onClick, isActive }: { feature: WhyChooseUsItem
         "sm:py-3 sm:px-5 sm:text-xs", // Tablet
         "lg:py-3 lg:px-6 lg:text-base", // Desktop
         "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background",
-        isActive
-          ? "bg-primary text-primary-foreground ring-2 ring-primary"
-          : "bg-white text-foreground",
+        "bg-primary text-primary-foreground ring-2 ring-primary",
         "lg:absolute lg:w-auto lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2",
-        isActive && "lg:scale-105",
+        "lg:scale-105",
         positionClass
       )}
       initial={{ opacity: 0, scale: 0.5 }}
@@ -49,7 +47,7 @@ const FeatureBadge = ({ feature, onClick, isActive }: { feature: WhyChooseUsItem
       transition={{ duration: 0.4, delay: 0.2 }}
     >
       <span>{feature.title}</span>
-      <span className={cn("flex h-6 w-6 items-center justify-center rounded-full ml-auto shrink-0", isActive ? "bg-white/20" : "bg-muted")}>
+      <span className={cn("flex h-6 w-6 items-center justify-center rounded-full ml-auto shrink-0", "bg-white/20")}>
         <ArrowRight className="h-4 w-4" />
       </span>
     </motion.button>
