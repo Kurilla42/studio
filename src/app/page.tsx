@@ -17,6 +17,7 @@ import SocialProof from '@/components/floating/social-proof';
 import ContactModal from '@/components/modals/contact-modal';
 import ExitIntentModal from '@/components/modals/exit-intent-modal';
 import RevealOnScroll from '@/components/animations/reveal-on-scroll';
+import HowWeHelped from '@/components/sections/how-we-helped';
 
 export default function Home() {
   const [isContactModalOpen, setContactModalOpen] = useState(false);
@@ -47,11 +48,12 @@ export default function Home() {
             <RevealOnScroll delay={0.2}><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
           </div>
         </div>
-        <div className="bg-background py-12 md:py-16 lg:py-20">
+        <div className="bg-[#000926] bg-noise-dark py-12 md:py-16 lg:py-20">
           <div className="container">
             <RevealOnScroll delay={0.2}><Team /></RevealOnScroll>
           </div>
         </div>
+        <RevealOnScroll delay={0.2}><HowWeHelped /></RevealOnScroll>
         <RevealOnScroll delay={0.2}><Faq /></RevealOnScroll>
       </main>
       <Footer onFormSubmit={() => {}} />
