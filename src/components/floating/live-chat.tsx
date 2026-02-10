@@ -238,7 +238,7 @@ export default function LiveChat() {
             <Button
               size="icon"
               onClick={() => { setIsOpen(true); setHasInteracted(true); }}
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full primary-gradient shadow-lg hover:scale-110 transition-transform animate-pulse-glow"
+              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full primary-gradient shadow-lg hover:scale-110 transition-transform animate-pulse-glow border-2 border-primary-foreground"
               aria-label="Open live chat"
             >
               <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />

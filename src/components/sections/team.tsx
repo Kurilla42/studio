@@ -24,10 +24,8 @@ const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = f
       <div className={cn("flex flex-col text-white", alignmentClasses[alignment])}>
         <h3 className="text-3xl font-headline leading-tight text-shadow-md">{member.name}</h3>
         <p className="text-lg mt-1 leading-tight text-shadow-sm opacity-90">{member.role}</p>
-        <div className="my-4 inline-block bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-md font-medium text-sm self-start">
-          {member.experience}
-        </div>
-        <Button onClick={onShowDetails} className="bg-white text-primary hover:bg-gray-100 border-none shadow-lg transition-transform duration-300 hover:-translate-y-0.5 px-6 py-3">
+        <p className="text-base mt-1 text-shadow-sm opacity-90">{member.experience}</p>
+        <Button onClick={onShowDetails} className="bg-white text-primary hover:bg-gray-100 border-none shadow-lg transition-transform duration-300 hover:-translate-y-0.5 px-6 py-3 mt-4">
            View Profile <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
       </div>
@@ -38,10 +36,8 @@ const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = f
     <div className={cn("flex flex-col", alignmentClasses[alignment])}>
         <h3 className="text-[2.7rem] text-foreground font-headline leading-tight">{member.name}</h3>
         <p className="text-[1.5rem] text-muted-foreground mt-1 leading-tight">{member.role}</p>
-        <div className="my-6 inline-block bg-secondary text-secondary-foreground px-4 py-2 rounded-md font-medium text-base self-start">
-          {member.experience}
-        </div>
-        <Button onClick={onShowDetails} className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 px-6 py-5 text-base">
+        <p className="text-[1.5rem] text-muted-foreground mt-1 leading-tight">{member.experience}</p>
+        <Button onClick={onShowDetails} className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 px-6 py-5 text-base mt-6">
            View Profile <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
     </div>
