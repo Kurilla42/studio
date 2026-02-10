@@ -39,9 +39,10 @@ const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
 
 export default function About() {
   return (
-    <section id="about" className="bg-background p-12 rounded-2xl">
+    <section id="about" className="bg-background px-12 py-20 rounded-2xl">
+      <div className="h-8" />
       <div className="text-left mb-12">
-        <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#000926] max-w-3xl">
+        <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#0C0E28] max-w-3xl">
           Why Hundreds of Homeowners Choose&nbsp;Us
         </h2>
       </div>
@@ -51,6 +52,7 @@ export default function About() {
           <FeatureCard key={item.id} item={item} />
         ))}
       </div>
+      <div className="h-8" />
     </section>
   );
 }

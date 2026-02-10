@@ -11,9 +11,10 @@ type SpecialOffersProps = {
 
 export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps) {
   return (
-    <section id="offers" className="bg-background p-12 rounded-2xl">
+    <section id="offers" className="bg-background px-12 py-20 rounded-2xl">
+      <div className="h-8" />
       <div className="text-center mb-12">
-        <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#000926]">
+        <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#0C0E28]">
           Exclusive Offers
         </h2>
       </div>
@@ -48,6 +49,7 @@ export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps)
           )
         })}
       </div>
+      <div className="h-8" />
     </section>
   );
 }

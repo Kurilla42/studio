@@ -6,31 +6,31 @@
   :root {
     --page-background: 0 0% 95%; /* near #f1f1f1 */
     --background: 0 0% 95%; /* near #f1f1f1 */
-    --foreground: 227 100% 7%; /* DEEP NAVY */
+    --foreground: 233 55% 10%; /* near #0C0E28 */
 
     --card: 0 0% 95%; /* near #f1f1f1 */
-    --card-foreground: 227 100% 7%; /* DEEP NAVY */
+    --card-foreground: 233 55% 10%; /* near #0C0E28 */
 
     --popover: 0 0% 95%; /* near #f1f1f1 */
-    --popover-foreground: 227 100% 7%;
+    --popover-foreground: 233 55% 10%;
 
     --primary: 217 84% 40%; /* SAPPHIRE */
     --primary-foreground: 0 0% 95%; /* near #f1f1f1 */
 
     --secondary: 207 56% 90%; /* ICE BLUE */
-    --secondary-foreground: 227 100% 7%; /* DEEP NAVY */
+    --secondary-foreground: 233 55% 10%; /* near #0C0E28 */
 
     --muted: 207 56% 95%; /* Lighter ICE BLUE */
-    --muted-foreground: 227 100% 25%;
+    --muted-foreground: 233 55% 25%;
 
     --accent: 207 56% 95%; /* Lighter ICE BLUE */
-    --accent-foreground: 227 100% 7%;
+    --accent-foreground: 233 55% 10%;
 
     --destructive: 0 72% 56%;
     --destructive-foreground: 0 0% 95%;
 
-    --border: 227 100% 7% / 0.1;
-    --input: 227 100% 7% / 0.2;
+    --border: 233 55% 10% / 0.1;
+    --input: 233 55% 10% / 0.2;
     --ring: 217 84% 40%; /* SAPPHIRE */
 
     --radius: 0.75rem;
@@ -43,6 +43,7 @@
   }
   body {
     background-color: hsl(var(--page-background));
+    background-image: url('https://i.ibb.co/FbYz5zTH/image.png');
     @apply text-foreground;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -85,6 +86,10 @@
   }
   .shadow-button-primary-hover {
     box-shadow: 0 8px 25px hsla(var(--primary), 0.5), 0 4px 15px hsla(var(--primary), 0.4);
+  }
+
+  .bg-noise-dark {
+    background-image: url('https://i.ibb.co/Rpgy01Sp/image.png');
   }
 
   @keyframes pulseGlow {

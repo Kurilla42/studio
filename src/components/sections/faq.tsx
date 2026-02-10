@@ -33,7 +33,7 @@ export default function Faq() {
   };
 
   return (
-    <section id="faq" className="bg-[#000926]">
+    <section id="faq" className="bg-[#000926] bg-noise-dark">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           <div className="lg:sticky lg:top-24">

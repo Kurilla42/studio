@@ -116,7 +116,7 @@ export default function Team() {
   }
 
   return (
-    <section id="team" className="bg-[#000926]">
+    <section id="team" className="bg-[#000926] bg-noise-dark">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-white">
