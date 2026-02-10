@@ -114,7 +114,7 @@ export default function Team() {
   return (
     <section id="team" className="bg-background px-12 py-20 rounded-2xl">
       <div className="h-16" />
-      <div className="text-center mb-16">
+      <div className="text-left mb-16">
         <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#0C0E28]">
           Meet Our Expert Team
         </h2>

@@ -13,12 +13,12 @@ export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps)
   return (
     <section id="offers" className="bg-[#000926] bg-noise-dark">
       <div className="container">
-        <div className="text-center mb-12">
+        <div className="text-left mb-12">
           <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-white">
             Exclusive Offers
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {specialOffers.map((offer, index) => {
             const isHighlighted = index === 1;
             return (
