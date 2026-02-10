@@ -37,7 +37,7 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
                    <Icon className="w-6 h-6 text-primary" />
                 </div>
                 
-                <CardTitle className="font-headline text-2xl pr-16">{service.title}</CardTitle>
+                <CardTitle className="text-2xl pr-16">{service.title}</CardTitle>
                 
                 <CardContent className="p-0 flex-grow mt-4">
                   <p className="text-muted-foreground text-base">{service.description}</p>

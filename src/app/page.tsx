@@ -29,8 +29,12 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <Hero onScheduleClick={handleOpenContactModal} />
-        <RevealOnScroll><TrustStrip /></RevealOnScroll>
+        <div className="bg-[#000926] bg-noise-dark py-12 md:py-16 lg:py-20">
+          <div className="container">
+            <Hero onScheduleClick={handleOpenContactModal} />
+          </div>
+        </div>
+        {/* <RevealOnScroll><TrustStrip /></RevealOnScroll> */}
         <RevealOnScroll delay={0.2}><Services onGetPriceClick={handleOpenContactModal} /></RevealOnScroll>
         <div className="bg-[#000926] bg-noise-dark py-12 md:py-16 lg:py-20">
           <div className="container">
@@ -38,8 +42,12 @@ export default function Home() {
           </div>
         </div>
         <RevealOnScroll delay={0.2}><Testimonials /></RevealOnScroll>
-        <RevealOnScroll delay={0.2}><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
         <div className="bg-[#000926] bg-noise-dark py-12 md:py-16 lg:py-20">
+          <div className="container">
+            <RevealOnScroll delay={0.2}><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
+          </div>
+        </div>
+        <div className="bg-background py-12 md:py-16 lg:py-20">
           <div className="container">
             <RevealOnScroll delay={0.2}><Team /></RevealOnScroll>
           </div>
