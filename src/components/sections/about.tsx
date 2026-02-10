@@ -39,8 +39,8 @@ const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
 
 export default function About() {
   return (
-    <section id="about" className="bg-background !py-12 md:!py-16 lg:!py-20 !px-5 rounded-2xl">
-      <div className="container !px-0">
+    <section id="about" className="bg-background !py-12 md:!py-16 lg:!py-20 mx-5 rounded-2xl">
+      <div className="container">
         <div className="text-left mb-12">
           <h2 className="text-5xl lg:text-6xl font-headline leading-[1.1] text-foreground max-w-3xl">
             Discover why Hundreds of Homeowners Choose Us
