@@ -191,6 +191,30 @@
       "description": "HomeAdvisor Screened and Approved logo",
       "imageUrl": "https://i.ibb.co/7Nbs9RpC/home-advisor-seeklogo.png",
       "imageHint": "approval logo"
+    },
+    {
+      "id": "why-choose-us-1",
+      "description": "Plumber working with a wrench in a dark setting",
+      "imageUrl": "https://i.ibb.co/JW1G4B8S/f7d2a579-7cc8-4cd7-a1d4-8900670e0161.jpg",
+      "imageHint": "plumber wrench"
+    },
+    {
+      "id": "why-choose-us-2",
+      "description": "A person holding a calculator with glowing numbers",
+      "imageUrl": "https://i.ibb.co/Z6PdktJ5/2d0a330b-d6ee-411d-80f0-478e07c1bf6e.jpg",
+      "imageHint": "pricing calculator"
+    },
+    {
+      "id": "why-choose-us-3",
+      "description": "A shield icon in a digital, secure environment",
+      "imageUrl": "https://i.ibb.co/ycYrQxB0/7f48052f-8cab-4df8-8a7b-2598ba4227e2.jpg",
+      "imageHint": "security shield"
+    },
+    {
+      "id": "why-choose-us-4",
+      "description": "A warranty certificate with a seal",
+      "imageUrl": "https://i.ibb.co/BpcjLD3/798bad02-4725-43bf-9a8a-e0ab7f5fdc0a.jpg",
+      "imageHint": "warranty seal"
     }
   ]
 }

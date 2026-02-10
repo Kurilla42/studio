@@ -69,13 +69,15 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     id: "why-1",
     icon: Clock,
     title: "24/7 Emergency Plumbing",
-    content: "Burst pipe, overflowing toilet, no water? We answer fast, arrive prepared, and stop the damage—day or night."
+    content: "We answer fast to stop damage day or night, for any plumbing emergency you might face.",
+    image: "why-choose-us-1"
   },
   {
     id: "why-2",
     icon: DollarSign,
     title: "Upfront Pricing",
-    content: "We provide a free diagnostic and a detailed quote before any work begins. You'll know the exact price with no hidden fees or surprise charges."
+    content: "Receive a detailed, upfront quote before work begins, so there are no surprise fees.",
+    image: "why-choose-us-2"
   },
   {
     id: "why-8",
@@ -87,13 +89,15 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     id: "why-9",
     icon: ShieldCheck,
     title: "Licensed & Insured",
-    content: "Your peace of mind is paramount. We are fully licensed and insured, protecting you and your property throughout the entire service process."
+    content: "We are fully licensed and insured, ensuring your property and our work are completely protected.",
+    image: "why-choose-us-3"
   },
   {
     id: "why-3",
     icon: ShieldCheck,
     title: "1 Year Warranty",
-    content: "We stand behind our work. All repairs and installations are covered by a 1-year labor warranty. If you're not satisfied, we'll make it right."
+    content: "All of our repairs and new installations are fully covered by our one-year labor warranty.",
+    image: "why-choose-us-4"
   },
   {
     id: "why-4",

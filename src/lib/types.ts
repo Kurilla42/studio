@@ -43,6 +43,7 @@ export type WhyChooseUsItem = {
   title: string;
   content: string;
   icon: LucideIcon;
+  image?: string;
 };
 
 export type FaqItem = {
