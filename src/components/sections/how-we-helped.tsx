@@ -78,7 +78,7 @@ const CaseStudy = ({ title, description, before_image, after_image, layout }: (t
 
 export default function HowWeHelped() {
     return (
-        <section id="how-we-helped" className="bg-[#000926] bg-noise-dark">
+        <section id="how-we-helped">
             <div className="container">
                 <div className="text-center mb-12">
                     <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-white">

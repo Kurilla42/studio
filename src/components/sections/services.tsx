@@ -11,7 +11,7 @@ type ServicesProps = {
 export default function Services({ onGetPriceClick }: ServicesProps) {
   
   return (
-    <section id="services" className="bg-[#000926] bg-noise-dark">
+    <section id="services">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center mb-12">
           <div>

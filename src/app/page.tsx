@@ -29,26 +29,26 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
-        <div className="bg-[#000926] bg-noise-dark py-12 md:py-16 lg:py-20">
+      <main className="flex-1 bg-[#000926] bg-noise-dark">
+        <div className="py-12 md:py-16 lg:py-20">
           <div className="container">
             <Hero onScheduleClick={handleOpenContactModal} />
           </div>
         </div>
         {/* <RevealOnScroll><TrustStrip /></RevealOnScroll> */}
         <RevealOnScroll delay={0.2}><Services onGetPriceClick={handleOpenContactModal} /></RevealOnScroll>
-        <div className="bg-[#000926] bg-noise-dark py-12 md:py-16 lg:py-20">
+        <div className="py-12 md:py-16 lg:py-20">
           <div className="container">
             <RevealOnScroll delay={0.4}><About /></RevealOnScroll>
           </div>
         </div>
         <RevealOnScroll delay={0.2}><Testimonials /></RevealOnScroll>
-        <div className="bg-[#000926] bg-noise-dark py-12 md:py-16 lg:py-20">
+        <div className="py-12 md:py-16 lg:py-20">
           <div className="container">
             <RevealOnScroll delay={0.2}><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
           </div>
         </div>
-        <div className="bg-[#000926] bg-noise-dark py-12 md:py-16 lg:py-20">
+        <div className="py-12 md:py-16 lg:py-20">
           <div className="container">
             <RevealOnScroll delay={0.2}><Team /></RevealOnScroll>
           </div>
