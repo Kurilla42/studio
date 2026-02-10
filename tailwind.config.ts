@@ -17,9 +17,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['var(--font-inter)', 'sans-serif'],
-        headline: ['var(--font-oswald)', 'sans-serif'],
-        hero: ['var(--font-oswald)', 'sans-serif'],
+        body: ['var(--font-anton)', 'sans-serif'],
+        headline: ['var(--font-anton)', 'sans-serif'],
+        hero: ['var(--font-anton)', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

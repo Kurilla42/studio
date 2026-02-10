@@ -1,20 +1,14 @@
 import type { Metadata } from 'next';
 import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
-import { Inter, Oswald } from 'next/font/google';
+import { Anton } from 'next/font/google';
 import { cn } from '@/lib/utils';
 
-const inter = Inter({
+const anton = Anton({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
-});
-
-const oswald = Oswald({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-oswald',
-  weight: '700',
+  variable: '--font-anton',
+  weight: '400',
 });
 
 export const metadata: Metadata = {
@@ -28,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn('!scroll-smooth', inter.variable, oswald.variable)}>
+    <html lang="en" className={cn('!scroll-smooth', anton.variable)}>
       <head>
       </head>
       <body className="font-body antialiased">
