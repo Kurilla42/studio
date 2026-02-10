@@ -42,7 +42,7 @@ export default function About() {
     <section id="about" className="bg-background p-12 rounded-2xl">
       <div className="text-left mb-12">
         <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#000926] max-w-3xl">
-          Why Hundreds of Homeowners Choose Us
+          Why Hundreds of Homeowners Choose&nbsp;Us
         </h2>
       </div>
       
