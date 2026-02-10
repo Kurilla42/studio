@@ -10,7 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Star } from 'lucide-react';
 
 const fallbackColors = [
     'bg-red-500 text-white',
@@ -65,7 +65,14 @@ const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0
             </Avatar>
             <div>
               <p className="font-semibold text-foreground text-lg">{testimonial.name}</p>
-              <p className="text-sm text-muted-foreground">Customer</p>
+              <div className="flex items-center mt-1">
+                <div className="flex items-center">
+                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-sm text-muted-foreground ml-2">{testimonial.time}</p>
+              </div>
             </div>
           </div>
           <QuoteIcon className="w-12 h-auto text-border" />

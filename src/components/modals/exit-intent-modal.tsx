@@ -45,7 +45,7 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
             </DialogDescription>
             </DialogHeader>
 
-            <div className="relative my-8 py-3 px-6 text-center text-primary-foreground font-medium primary-gradient rounded-lg overflow-hidden max-w-xs mx-auto">
+            <div className="relative my-8 py-3 px-6 text-center text-primary-foreground font-medium bg-primary rounded-lg overflow-hidden max-w-xs mx-auto">
                 Just 1 day left
                 <div className="absolute top-0 left-0 w-full h-full animate-shimmer bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
             </div>
@@ -63,7 +63,7 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
                     <h3 className="text-xl text-foreground mt-4 h-14 flex items-center justify-center">{offer.title}</h3>
                     <Button
                     onClick={handleClaimOffer}
-                    className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 mt-6 w-full max-w-xs"
+                    className="transition-all duration-300 hover:-translate-y-0.5 mt-6 w-full max-w-xs"
                     >
                     Get This Deal
                     </Button>
@@ -72,7 +72,7 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
             ))}
             </div>
             <div className="text-center mt-10">
-                <Button size="lg" onClick={handleClaimOffer} className="primary-gradient">
+                <Button size="lg" onClick={handleClaimOffer}>
                     Claim Your Offer Now!
                 </Button>
                 <p className="mt-4 text-sm text-muted-foreground">Or call us: <a href="tel:5551234567" className="font-medium text-primary hover:underline">(555) 123-4567</a></p>

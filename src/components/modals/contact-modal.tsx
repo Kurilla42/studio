@@ -109,7 +109,7 @@ export default function ContactModal({ open, onOpenChange }: ContactModalProps) 
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="w-full primary-gradient" disabled={form.formState.isSubmitting}>
+              <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
                 {form.formState.isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>

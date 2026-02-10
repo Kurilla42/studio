@@ -40,8 +40,7 @@ export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps)
                 <Button
                   onClick={onClaimOfferClick}
                   className={cn(
-                    "mt-8 w-full",
-                    "primary-gradient shadow-button-primary hover:shadow-button-primary-hover"
+                    "mt-8 w-full"
                   )}
                 >
                   Get This Deal

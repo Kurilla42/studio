@@ -37,7 +37,7 @@ const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = f
         <h3 className="text-[2.7rem] text-foreground font-headline leading-tight">{member.name}</h3>
         <p className="text-[1.5rem] text-muted-foreground mt-1 leading-tight">{member.role}</p>
         <p className="text-[1.5rem] text-muted-foreground mt-1 leading-tight">{member.experience}</p>
-        <Button onClick={onShowDetails} className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 px-6 py-5 text-base mt-6">
+        <Button onClick={onShowDetails} className="transition-all duration-300 hover:-translate-y-0.5 px-6 py-5 text-base mt-6">
            View Profile <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
     </div>

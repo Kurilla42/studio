@@ -149,7 +149,7 @@ export default function LiveChat() {
             className="fixed bottom-20 right-4 sm:right-6 z-[9998] w-[calc(100vw-2rem)] max-w-sm"
           >
             <Card className="flex flex-col h-[60vh] max-h-[500px] shadow-2xl border-2">
-              <header className="flex items-center gap-3 p-3 primary-gradient text-primary-foreground rounded-t-lg">
+              <header className="flex items-center gap-3 p-3 bg-primary text-primary-foreground rounded-t-lg">
                 {consultantAvatar && (
                   <Image src={consultantAvatar.imageUrl} width={40} height={40} alt="Sarah Johnson" className="rounded-full border-2 border-white/50" data-ai-hint={consultantAvatar.imageHint} />
                 )}
@@ -178,7 +178,7 @@ export default function LiveChat() {
                     )}
                     <div className={cn('max-w-[80%] p-3 rounded-2xl text-sm', {
                       'bg-card shadow-sm rounded-bl-md': msg.role === 'bot',
-                      'primary-gradient text-primary-foreground rounded-br-md': msg.role === 'user',
+                      'bg-primary text-primary-foreground rounded-br-md': msg.role === 'user',
                     })}>
                       {msg.content}
                     </div>
@@ -199,7 +199,7 @@ export default function LiveChat() {
                             <Input name="phone" type="tel" placeholder="Phone Number" required className="text-sm"/>
                             <div className="flex gap-2">
                                 <Button type="button" variant="ghost" size="sm" onClick={() => setShowForm(false)}>Cancel</Button>
-                                <Button type="submit" size="sm" className="flex-1 primary-gradient">Request Appointment</Button>
+                                <Button type="submit" size="sm" className="flex-1 bg-primary">Request Appointment</Button>
                             </div>
                         </form>
                     </Card>
@@ -216,7 +216,7 @@ export default function LiveChat() {
                     rows={1}
                     className="flex-1 resize-none rounded-full px-4 py-2 min-h-[40px] max-h-24 text-sm"
                   />
-                  <Button type="submit" size="icon" className="rounded-full primary-gradient shrink-0" disabled={!inputValue.trim()}>
+                  <Button type="submit" size="icon" className="rounded-full bg-primary shrink-0" disabled={!inputValue.trim()}>
                     <Send className="w-5 h-5" />
                   </Button>
                 </form>
@@ -238,7 +238,7 @@ export default function LiveChat() {
             <Button
               size="icon"
               onClick={() => { setIsOpen(true); setHasInteracted(true); }}
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full primary-gradient shadow-lg hover:scale-110 transition-transform animate-pulse-glow border-2 border-primary-foreground"
+              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary shadow-lg hover:scale-110 transition-transform border-2 border-primary-foreground"
               aria-label="Open live chat"
             >
               <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
