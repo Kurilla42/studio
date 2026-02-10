@@ -24,7 +24,7 @@ const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
           data-ai-hint={image.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
       <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
         <h3 className="text-3xl font-bold font-headline text-shadow-md leading-tight">
           {item.title}
@@ -39,12 +39,11 @@ const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
 
 export default function About() {
   return (
-    <section id="about" className="bg-background !py-12 md:!py-16 lg:!py-20">
-      <div className="container">
+    <section id="about" className="bg-background !py-12 md:!py-16 lg:!py-20 !px-5 rounded-2xl">
+      <div className="container !px-0">
         <div className="text-left mb-12">
-          <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Why Choose Us</p>
-          <h2 className="text-[2.7rem] font-headline leading-tight text-foreground max-w-2xl">
-            Discover why Hundreds of Homeowners Choose Us.
+          <h2 className="text-5xl lg:text-6xl font-headline leading-[1.1] text-foreground max-w-3xl">
+            Discover why Hundreds of Homeowners Choose Us
           </h2>
         </div>
         
