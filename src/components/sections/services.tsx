@@ -19,11 +19,6 @@ export default function Services({ onGetPriceClick }: ServicesProps) {
               Our Plumbing Services
             </h2>
           </div>
-          <div>
-            <p className="text-[1.5rem] text-gray-400 text-left lg:text-right leading-tight">
-              From urgent repairs to routine maintenance, we provide reliable solutions for your home.
-            </p>
-          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

@@ -39,19 +39,17 @@ const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
 
 export default function About() {
   return (
-    <section id="about" className="bg-background !py-12 md:!py-16 lg:!py-20 mx-5 rounded-2xl">
-      <div className="container">
-        <div className="text-left mb-12">
-          <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#000926] max-w-3xl">
-            Discover why Hundreds of Homeowners Choose Us
-          </h2>
-        </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredItems.map((item) => (
-            <FeatureCard key={item.id} item={item} />
-          ))}
-        </div>
+    <section id="about" className="bg-background p-12 rounded-2xl">
+      <div className="text-left mb-12">
+        <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#000926] max-w-3xl">
+          Discover why Hundreds of Homeowners Choose Us
+        </h2>
+      </div>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {featuredItems.map((item) => (
+          <FeatureCard key={item.id} item={item} />
+        ))}
       </div>
     </section>
   );
