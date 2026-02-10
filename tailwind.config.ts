@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['var(--font-anton)', 'sans-serif'],
+        body: ['var(--font-body)', 'sans-serif'],
         headline: ['var(--font-anton)', 'sans-serif'],
         hero: ['var(--font-anton)', 'sans-serif'],
       },

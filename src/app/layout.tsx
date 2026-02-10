@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
-import { Anton } from 'next/font/google';
+import { Anton, Inter } from 'next/font/google';
 import { cn } from '@/lib/utils';
 
 const anton = Anton({
@@ -9,6 +9,12 @@ const anton = Anton({
   display: 'swap',
   variable: '--font-anton',
   weight: '400',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-body',
 });
 
 export const metadata: Metadata = {
@@ -22,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn('!scroll-smooth', anton.variable)}>
+    <html lang="en" className={cn('!scroll-smooth', anton.variable, inter.variable)}>
       <head>
       </head>
       <body className="font-body antialiased">
