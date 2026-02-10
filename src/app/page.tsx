@@ -38,12 +38,12 @@ export default function Home() {
           </div>
         </div>
         <RevealOnScroll delay={0.2}><Testimonials /></RevealOnScroll>
+        <RevealOnScroll delay={0.2}><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
         <div className="bg-[#000926] bg-noise-dark py-12 md:py-16 lg:py-20">
           <div className="container">
-            <RevealOnScroll delay={0.2}><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
+            <RevealOnScroll delay={0.2}><Team /></RevealOnScroll>
           </div>
         </div>
-        <RevealOnScroll delay={0.2}><Team /></RevealOnScroll>
         <RevealOnScroll delay={0.2}><Faq /></RevealOnScroll>
       </main>
       <Footer onFormSubmit={() => {}} />

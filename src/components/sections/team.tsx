@@ -36,9 +36,9 @@ const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = f
 
   return (
     <div className={cn("flex flex-col", alignmentClasses[alignment])}>
-        <h3 className="text-[2.7rem] text-white font-headline leading-tight">{member.name}</h3>
-        <p className="text-[1.5rem] text-gray-400 mt-1 leading-tight">{member.role}</p>
-        <div className="my-6 inline-block bg-white/10 text-white px-4 py-2 rounded-md font-medium text-base">
+        <h3 className="text-[2.7rem] text-foreground font-headline leading-tight">{member.name}</h3>
+        <p className="text-[1.5rem] text-muted-foreground mt-1 leading-tight">{member.role}</p>
+        <div className="my-6 inline-block bg-secondary text-secondary-foreground px-4 py-2 rounded-md font-medium text-base self-start">
           {member.experience}
         </div>
         <Button onClick={onShowDetails} className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 px-6 py-5 text-base">
@@ -116,85 +116,85 @@ export default function Team() {
   }
 
   return (
-    <section id="team" className="bg-[#000926] bg-noise-dark">
-      <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-white">
-            Meet Our Expert Team
-          </h2>
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="md:hidden flex flex-col gap-8">
-            {teamMembers.map((member) => (
-                <div key={member.id} className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-lg">
-                    <FlippableImageCard
-                        member={member}
-                        isFlipped={flippedStates[member.id]}
-                        onHideDetails={() => handleFlip(member.id)}
-                    />
-                    <AnimatePresence>
-                    {!flippedStates[member.id] && (
-                        <motion.div
-                            className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                        <MemberInfo
-                            member={member}
-                            onShowDetails={() => handleFlip(member.id)}
-                            alignment="left"
-                            isOverlay={true}
-                        />
-                        </motion.div>
-                    )}
-                    </AnimatePresence>
-                </div>
-            ))}
-        </div>
-
-        {/* Desktop Layout: Image | Info-Top, Info-Bottom | Image */}
-        <div className="hidden md:flex flex-col gap-y-16 md:gap-y-24">
-          {memberPairs.map((pair, index) => {
-            const [member1, member2] = pair;
-
-            return (
-              <div key={index} className="grid md:grid-cols-4 md:gap-x-8 items-stretch">
-                  <div className="col-span-1">
-                    <FlippableImageCard
-                      member={member1}
-                      isFlipped={flippedStates[member1.id]}
-                      onHideDetails={() => handleFlip(member1.id)}
-                    />
-                  </div>
-
-                  <div className="col-span-2 flex flex-col justify-between h-full">
-                    <MemberInfo
-                      member={member1}
-                      onShowDetails={() => handleFlip(member1.id)}
-                      alignment="left"
-                    />
-                    <MemberInfo
-                      member={member2}
-                      onShowDetails={() => handleFlip(member2.id)}
-                      alignment="right"
-                    />
-                  </div>
-                  
-                  <div className="col-span-1">
-                    <FlippableImageCard
-                      member={member2}
-                      isFlipped={flippedStates[member2.id]}
-                      onHideDetails={() => handleFlip(member2.id)}
-                    />
-                  </div>
-              </div>
-            );
-          })}
-        </div>
+    <section id="team" className="bg-background px-12 py-20 rounded-2xl">
+      <div className="h-16" />
+      <div className="text-center mb-16">
+        <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#0C0E28]">
+          Meet Our Expert Team
+        </h2>
       </div>
+
+      {/* Mobile Layout */}
+      <div className="md:hidden flex flex-col gap-8">
+          {teamMembers.map((member) => (
+              <div key={member.id} className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-lg">
+                  <FlippableImageCard
+                      member={member}
+                      isFlipped={flippedStates[member.id]}
+                      onHideDetails={() => handleFlip(member.id)}
+                  />
+                  <AnimatePresence>
+                  {!flippedStates[member.id] && (
+                      <motion.div
+                          className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.5 }}
+                      >
+                      <MemberInfo
+                          member={member}
+                          onShowDetails={() => handleFlip(member.id)}
+                          alignment="left"
+                          isOverlay={true}
+                      />
+                      </motion.div>
+                  )}
+                  </AnimatePresence>
+              </div>
+          ))}
+      </div>
+
+      {/* Desktop Layout: Image | Info-Top, Info-Bottom | Image */}
+      <div className="hidden md:flex flex-col gap-y-16 md:gap-y-24">
+        {memberPairs.map((pair, index) => {
+          const [member1, member2] = pair;
+
+          return (
+            <div key={index} className="grid md:grid-cols-4 md:gap-x-8 items-stretch">
+                <div className="col-span-1">
+                  <FlippableImageCard
+                    member={member1}
+                    isFlipped={flippedStates[member1.id]}
+                    onHideDetails={() => handleFlip(member1.id)}
+                  />
+                </div>
+
+                <div className="col-span-2 flex flex-col justify-between h-full">
+                  <MemberInfo
+                    member={member1}
+                    onShowDetails={() => handleFlip(member1.id)}
+                    alignment="left"
+                  />
+                  <MemberInfo
+                    member={member2}
+                    onShowDetails={() => handleFlip(member2.id)}
+                    alignment="right"
+                  />
+                </div>
+                
+                <div className="col-span-1">
+                  <FlippableImageCard
+                    member={member2}
+                    isFlipped={flippedStates[member2.id]}
+                    onHideDetails={() => handleFlip(member2.id)}
+                  />
+                </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="h-16" />
     </section>
   );
 }
