@@ -33,14 +33,14 @@ export default function Faq() {
   };
 
   return (
-    <section id="faq" className="bg-secondary">
+    <section id="faq" className="bg-[#000926]">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           <div className="lg:sticky lg:top-24">
-            <h2 className="text-[2.7rem] text-foreground font-headline leading-tight">
+            <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-white">
               Frequently Asked Questions
             </h2>
-            <p className="mt-4 text-[1.5rem] text-muted-foreground max-w-lg leading-tight">
+            <p className="mt-4 text-[1.5rem] text-gray-400 max-w-lg leading-tight">
               Have questions about our plumbing services? We've compiled answers to the most common inquiries we receive, from pricing and scheduling to warranties. If you don't find your answer here, please don't hesitate to contact us directly.
             </p>
           </div>

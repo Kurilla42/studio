@@ -45,13 +45,13 @@ export default function Footer({ onFormSubmit }: FooterProps) {
   }
 
   return (
-    <footer id="contact" className="bg-secondary border-t pt-16 sm:pt-20 pb-8">
+    <footer id="contact" className="bg-background border-t pt-16 sm:pt-20 pb-8 text-[#000926]">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Form Column */}
           <div>
-            <h3 className="text-[2.7rem] text-foreground mb-2 leading-tight">Contact Us</h3>
-            <p className="text-[1.5rem] text-muted-foreground mb-8 leading-tight">Leave your contact details and our team will reach out today to provide a free, no-obligation quote.</p>
+            <h3 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] mb-2">Contact Us</h3>
+            <p className="text-[1.5rem] opacity-80 mb-8 leading-tight">Leave your contact details and our team will reach out today to provide a free, no-obligation quote.</p>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
@@ -116,28 +116,28 @@ export default function Footer({ onFormSubmit }: FooterProps) {
           {/* Info & Map Column */}
           <div className="flex flex-col gap-8">
             <div>
-              <h4 className="text-[2.7rem] text-foreground mb-4 leading-tight">ProFlow Plumbing</h4>
+              <h4 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] mb-4">ProFlow Plumbing</h4>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-primary" />
-                  <a href="tel:5551234567" className="text-base text-muted-foreground hover:text-primary transition-colors">(555) 123-4567</a>
+                  <a href="tel:5551234567" className="text-base opacity-80 hover:text-primary transition-colors">(555) 123-4567</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-primary" />
-                  <a href="mailto:info@proflow.com" className="text-base text-muted-foreground hover:text-primary transition-colors">info@proflow.com</a>
+                  <a href="mailto:info@proflow.com" className="text-base opacity-80 hover:text-primary transition-colors">info@proflow.com</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span className="text-base text-muted-foreground">123 Main Street, Your City, ST 12345</span>
+                  <span className="text-base opacity-80">123 Main Street, Your City, ST 12345</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-primary" />
-                  <span className="text-base text-muted-foreground">24/7 Emergency Service</span>
+                  <span className="text-base opacity-80">24/7 Emergency Service</span>
                 </li>
               </ul>
             </div>
             <div className="flex-1 flex flex-col min-h-[300px]">
-              <h4 className="text-2xl text-foreground mb-4">Location</h4>
+              <h4 className="text-2xl mb-4">Location</h4>
               <div className="relative flex-1 rounded-lg overflow-hidden group">
                  <a href="https://www.google.com/maps/search/?api=1&query=Empire+State+Building" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10">
                     <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center flex-col text-white">
@@ -162,10 +162,10 @@ export default function Footer({ onFormSubmit }: FooterProps) {
         </div>
 
         <div className="mt-16 border-t pt-8 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4">
-          <p className="text-sm text-muted-foreground">© 2025 ProFlow Plumbing. All rights reserved.</p>
+          <p className="text-sm opacity-80">© 2025 ProFlow Plumbing. All rights reserved.</p>
           <div className="flex gap-8 text-sm">
-            <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="opacity-80 hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="opacity-80 hover:text-primary transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

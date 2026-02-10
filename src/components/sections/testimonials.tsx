@@ -102,10 +102,10 @@ export default function Testimonials() {
   }, [emblaApi, onScroll]);
 
   return (
-    <section id="testimonials" className="bg-secondary !py-20">
+    <section id="testimonials" className="bg-[#000926] !py-20">
       <div className="container">
         <div className="flex justify-between items-center mb-12">
-            <h2 className="text-[2.7rem] text-foreground leading-tight">
+            <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-white">
                 What Our Clients Say
             </h2>
             <div className="hidden sm:flex items-center gap-4">

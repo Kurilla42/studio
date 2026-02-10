@@ -11,16 +11,16 @@ type ServicesProps = {
 export default function Services({ onGetPriceClick }: ServicesProps) {
   
   return (
-    <section id="services" className="bg-secondary">
+    <section id="services" className="bg-[#000926]">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center mb-12">
           <div>
-            <h2 className="text-[2.7rem] text-foreground text-left leading-tight">
+            <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-white text-left">
               Our Plumbing Services
             </h2>
           </div>
           <div>
-            <p className="text-[1.5rem] text-muted-foreground text-left lg:text-right leading-tight">
+            <p className="text-[1.5rem] text-gray-400 text-left lg:text-right leading-tight">
               From urgent repairs to routine maintenance, we provide reliable solutions for your home.
             </p>
           </div>

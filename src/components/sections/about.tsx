@@ -42,7 +42,7 @@ export default function About() {
     <section id="about" className="bg-background !py-12 md:!py-16 lg:!py-20 mx-5 rounded-2xl">
       <div className="container">
         <div className="text-left mb-12">
-          <h2 className="text-5xl lg:text-6xl font-headline leading-[1.1] text-foreground max-w-3xl">
+          <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#000926] max-w-3xl">
             Discover why Hundreds of Homeowners Choose Us
           </h2>
         </div>

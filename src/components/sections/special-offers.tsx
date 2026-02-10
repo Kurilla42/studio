@@ -11,15 +11,12 @@ type SpecialOffersProps = {
 
 export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps) {
   return (
-    <section id="offers" className="bg-secondary">
+    <section id="offers" className="bg-background !py-12 md:!py-16 lg:!py-20 mx-5 rounded-2xl">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-[2.7rem] text-foreground leading-tight">
+          <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#000926]">
             Exclusive Offers
           </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-[1.5rem] text-muted-foreground leading-tight">
-            Save money on your next service with our special deals.
-          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
           {specialOffers.map((offer, index) => {

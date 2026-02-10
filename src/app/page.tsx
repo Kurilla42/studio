@@ -32,11 +32,13 @@ export default function Home() {
         <Hero onScheduleClick={handleOpenContactModal} />
         <RevealOnScroll><TrustStrip /></RevealOnScroll>
         <RevealOnScroll delay={0.2}><Services onGetPriceClick={handleOpenContactModal} /></RevealOnScroll>
-        <div className="bg-[#a6c5d7]">
+        <div className="bg-[#000926]">
           <RevealOnScroll delay={0.4}><About /></RevealOnScroll>
         </div>
         <RevealOnScroll delay={0.2}><Testimonials /></RevealOnScroll>
-        <RevealOnScroll delay={0.2}><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
+        <div className="bg-[#000926]">
+          <RevealOnScroll delay={0.2}><SpecialOffers onClaimOfferClick={handleOpenContactModal} /></RevealOnScroll>
+        </div>
         <RevealOnScroll delay={0.2}><Team /></RevealOnScroll>
         <RevealOnScroll delay={0.2}><Faq /></RevealOnScroll>
       </main>
