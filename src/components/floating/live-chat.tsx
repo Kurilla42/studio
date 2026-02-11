@@ -162,7 +162,7 @@ export default function LiveChat() {
                 </div>
                 <div className="ml-auto flex items-center">
                     <Button variant="ghost" size="icon" className="w-8 h-8 hover:bg-white/20" asChild>
-                        <a href="tel:5551234567"><Phone size={18} /></a>
+                        <a href="tel:3155268735"><Phone size={18} /></a>
                     </Button>
                     <Button variant="ghost" size="icon" className="w-8 h-8 hover:bg-white/20" onClick={() => setIsOpen(false)}>
                         <X size={18} />

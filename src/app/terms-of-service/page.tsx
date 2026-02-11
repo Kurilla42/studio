@@ -63,9 +63,9 @@ export default function TermsOfServicePage() {
               </p>
               <div className="pl-4">
                 <p>Empire State Plumbing</p>
-                <p>123 Main Street, Your City, ST 12345</p>
+                <p>3060 NY-2200 Frederick Douglass Blvd, New York, NY 10026</p>
                 <p>Email: info@empirestateplumbing.com</p>
-                <p>Phone: (555) 123-4567</p>
+                <p>Phone: (315) 526-8735</p>
               </div>
             </div>
           </div>

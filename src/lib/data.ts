@@ -309,7 +309,7 @@ export const faqs: FaqItem[] = [
         question: "What is your service process?",
         answer: `Our streamlined service process ensures you get fast, professional results every time:`,
         list: [
-          { title: "Step 1 - Contact Us", detail: "Call us at (555) 123-4567 or submit an online request. We'll gather details about your plumbing issue." },
+          { title: "Step 1 - Contact Us", detail: "Call us at (315) 526-8735 or submit an online request. We'll gather details about your plumbing issue." },
           { title: "Step 2 - Fast Response", detail: "For emergencies, our certified Empire State Plumbing technician arrives within 60 minutes, fully equipped to solve most common problems." },
           { title: "Step 3 - Diagnosis & Quote", detail: "We perform a thorough inspection and provide upfront pricing with no hidden fees or surprise charges." },
           { title: "Step 4 - Expert Repair", detail: "Once you approve, we complete the work using quality parts and proven techniques. Most jobs are finished the same day." },

@@ -130,7 +130,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-primary" />
-                  <a href="tel:5551234567" className="text-base opacity-80 hover:text-primary transition-colors">(555) 123-4567</a>
+                  <a href="tel:3155268735" className="text-base opacity-80 hover:text-primary transition-colors">(315) 526-8735</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-primary" />
@@ -138,7 +138,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
                 </li>
                 <li className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span className="text-base opacity-80">123 Main Street, Your City, ST 12345</span>
+                  <span className="text-base opacity-80">3060 NY-2200 Frederick Douglass Blvd, New York, NY 10026</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-primary" />
@@ -149,7 +149,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
             <div className="flex-1 flex flex-col min-h-[300px]">
               <h4 className="text-2xl mb-4">Location</h4>
               <div className="relative flex-1 rounded-lg overflow-hidden group">
-                 <a href="https://www.google.com/maps/search/?api=1&query=Empire+State+Building" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10">
+                 <a href="https://www.google.com/maps/search/?api=1&query=3060+NY-2200+Frederick+Douglass+Blvd,+New+York,+NY+10026" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10">
                     <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center flex-col text-white">
                         <MapPin className="h-8 w-8 mb-2" />
                         <p className="font-semibold">Click to open in Google Maps</p>

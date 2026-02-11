@@ -114,7 +114,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                             <span className="text-4xl sm:text-5xl">{stat.number}</span>
                         )}
                       </div>
-                      <p className="text-sm sm:text-base text-muted-foreground no-underline">{stat.label}</p>
+                      <p className="text-sm sm:text-base text-muted-foreground">{stat.label}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -126,9 +126,9 @@ export default function Hero({ onScheduleClick }: HeroProps) {
               variants={itemVariants}
             >
               <Button size="lg" className="bg-[#f2cf17] text-primary hover:bg-[#f2cf17]/90 border-2 border-primary shadow-button-primary hover:shadow-button-primary-hover animate-pulse-glow transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg" asChild>
-                <a href="tel:5551234567">
+                <a href="tel:3155268735">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call Now: (555) 123-4567
+                  Call Now: (315) 526-8735
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg" onClick={onScheduleClick}>

@@ -20,6 +20,7 @@ import RevealOnScroll from '@/components/animations/reveal-on-scroll';
 import HowWeHelped from '@/components/sections/how-we-helped';
 import { Button } from '@/components/ui/button';
 import EmergencyBanner from '@/components/sections/emergency-banner';
+import Image from 'next/image';
 
 export default function Home() {
   const [isContactModalOpen, setContactModalOpen] = useState(false);
@@ -67,7 +68,16 @@ export default function Home() {
       </AnimatePresence>
 
       <main className="flex-1 bg-[#0C0E28] bg-noise-dark">
-        <div className="bg-background">
+        <div className="bg-background relative">
+          <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10 h-12 w-32 sm:h-16 sm:w-40">
+              <Image
+                  src="https://i.ibb.co/5W38Bwg1/491d9415-6cff-4653-adcf-752aeb03a16f-removebg-preview.png"
+                  alt="Empire State Plumbing Logo"
+                  fill
+                  className="object-contain"
+                  priority
+              />
+          </div>
           <Header />
           <Hero onScheduleClick={handleOpenContactModal} />
         </div>
