@@ -34,7 +34,7 @@ const CaseStudy = ({ title, description, before_image, after_image, layout }: (t
     const textContent = (
         <div className="flex flex-col justify-center text-white">
             <h3 className="text-3xl lg:text-4xl font-headline mb-4">{title}</h3>
-            <p className="text-gray-400 leading-relaxed max-w-lg">{description}</p>
+            <p className="text-xl text-gray-400 leading-relaxed max-w-lg">{description}</p>
         </div>
     );
 

@@ -40,7 +40,7 @@ export default function Faq() {
             <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-white">
               Frequently Asked Questions
             </h2>
-            <p className="mt-4 text-[1.5rem] text-gray-400 max-w-lg leading-tight">
+            <p className="mt-4 text-xl text-gray-400 max-w-lg leading-tight">
               Have questions about our plumbing services? We've compiled answers to the most common inquiries we receive, from pricing and scheduling to warranties. If you don't find your answer here, please don't hesitate to contact us directly.
             </p>
           </div>
