@@ -106,7 +106,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
+                <Button type="submit" disabled={form.formState.isSubmitting}>
                   {form.formState.isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>

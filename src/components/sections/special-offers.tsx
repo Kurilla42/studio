@@ -11,7 +11,7 @@ type SpecialOffersProps = {
 
 export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps) {
   return (
-    <section id="offers" className="bg-[#000926] bg-noise-dark">
+    <section id="offers" className="w-full">
       <div className="container">
         <div className="text-left mb-12">
           <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-white">
@@ -30,7 +30,7 @@ export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps)
                   isHighlighted && "scale-105 shadow-2xl"
                 )}
               >
-                <h3 className="text-2xl font-headline">{offer.title}</h3>
+                <h3 className="text-2xl font-body font-bold">{offer.title}</h3>
                 <div className="my-6">
                   <span className="text-5xl font-bold">{offer.discount}</span>
                 </div>
@@ -40,7 +40,8 @@ export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps)
                 <Button
                   onClick={onClaimOfferClick}
                   className={cn(
-                    "mt-8 w-full"
+                    "mt-8 w-full",
+                    isHighlighted && "bg-[#f2cf17] text-primary hover:bg-[#f2cf17]/90 border-2 border-primary shadow-button-primary hover:shadow-button-primary-hover"
                   )}
                 >
                   Get This Deal

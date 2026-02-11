@@ -107,7 +107,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                       {stat.id === 'stat-3' ? (
                           <div className="flex items-baseline gap-2">
                               <span className="text-4xl sm:text-5xl">4.9</span>
-                              <StarIcon className="w-9 h-9 text-primary fill-yellow-400 mt-1" strokeWidth={1.5} />
+                              <StarIcon className="w-9 h-9 text-primary fill-yellow-400 mt-1 ring-2 ring-primary rounded-full" strokeWidth={1.5} />
                           </div>
                       ) : (
                           <span className="text-4xl sm:text-5xl">{stat.number}</span>
@@ -139,7 +139,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
         <div className="relative hidden lg:block h-full min-h-[500px]">
           {image2 && (
             <motion.div 
-              className="absolute top-1/4 left-0 w-[80%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl"
+              className="absolute top-1/4 left-0 w-[80%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
               initial={{ opacity: 0, x: 50, rotate: 5 }}
               animate={{ opacity: 1, x: 0, rotate: 10 }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
@@ -149,7 +149,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           )}
           {image1 && (
             <motion.div 
-              className="absolute top-0 left-1/4 w-[70%] aspect-video rounded-2xl overflow-hidden shadow-2xl"
+              className="absolute top-0 left-1/4 w-[70%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
               initial={{ opacity: 0, y: -50, rotate: -15 }}
               animate={{ opacity: 1, y: 0, rotate: -5 }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
