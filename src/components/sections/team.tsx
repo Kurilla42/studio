@@ -38,7 +38,7 @@ const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = f
 
   return (
     <div className={cn("flex flex-col", alignmentClasses[alignment])}>
-        <h3 className="text-3xl text-foreground font-body font-bold leading-tight">{member.name}</h3>
+        <h3 className="text-3xl lg:text-4xl text-foreground font-body font-bold leading-tight">{member.name}</h3>
         <p className="text-xl text-muted-foreground mt-1 leading-tight">{member.role}</p>
         <p className="text-xl text-muted-foreground mt-1 leading-tight">{member.experience}</p>
         <Button onClick={onShowDetails} className="transition-all duration-300 hover:-translate-y-0.5 px-6 py-5 text-base mt-6">
@@ -76,7 +76,7 @@ const FlippableImageCard = ({ member, isFlipped, onHideDetails }: { member: Team
             <Card className="h-full w-full flex flex-col p-6 shadow-xl bg-card">
               <div className="flex justify-between items-start mb-3">
                 <div>
-                  <h3 className="text-xl text-foreground font-bold font-body">{member.name}</h3>
+                  <h3 className="text-xl text-foreground font-bold font-inter">{member.name}</h3>
                   <p className="text-muted-foreground text-sm">{member.role}</p>
                 </div>
                  <Button variant="ghost" size="icon" className="w-8 h-8 -mr-2 -mt-2" onClick={onHideDetails}>
@@ -127,7 +127,7 @@ export default function Team({ onBookPlumberClick }: TeamProps) {
       {/* Mobile Layout */}
       <div className="md:hidden flex flex-col gap-8">
           {teamMembers.map((member) => (
-              <div key={member.id} className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-lg">
+              <div key={member.id} className="relative aspect-[3/5] w-full rounded-2xl overflow-hidden shadow-lg">
                   <FlippableImageCard
                       member={member}
                       isFlipped={flippedStates[member.id]}
@@ -170,7 +170,7 @@ export default function Team({ onBookPlumberClick }: TeamProps) {
                   />
                 </div>
 
-                <div className="col-span-2 flex flex-col justify-between h-full">
+                <div className="col-span-2 flex flex-col justify-between">
                   <MemberInfo
                     member={member1}
                     onShowDetails={() => handleFlip(member1.id)}
