@@ -29,8 +29,8 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
       <main className="flex-1 bg-[#000926] bg-noise-dark">
+        <Header />
         <div className="py-12 md:py-16 lg:py-20">
           <div className="container">
             <Hero onScheduleClick={handleOpenContactModal} />
