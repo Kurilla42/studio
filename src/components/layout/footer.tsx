@@ -106,9 +106,11 @@ export default function Footer({ onFormSubmit }: FooterProps) {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" disabled={form.formState.isSubmitting}>
-                  {form.formState.isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
+                <div className="flex justify-center">
+                  <Button type="submit" disabled={form.formState.isSubmitting}>
+                    {form.formState.isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+                </div>
               </form>
             </Form>
           </div>

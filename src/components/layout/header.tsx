@@ -9,8 +9,8 @@ const faqItem = navItems.find(item => item.name === 'FAQ');
 
 export default function Header() {
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-max px-4">
-      <div className="flex items-center justify-center bg-primary bg-noise-dark rounded-full p-1.5 gap-1 sm:gap-2 shadow-lg">
+    <header className="w-full py-4 px-4">
+      <div className="mx-auto max-w-max flex items-center justify-center bg-primary bg-noise-dark rounded-full p-1.5 gap-1 sm:gap-2 shadow-lg">
         <nav className="flex items-center gap-1">
           {displayNavItems.map((item) => (
             <Link

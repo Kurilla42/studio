@@ -14,8 +14,8 @@ export default function PrivacyPolicyPage() {
 
   return (
     <>
-      <Header onGetQuoteClick={handleOpenContactModal} />
-      <main className="pt-20">
+      <Header />
+      <main>
         <section className="bg-background">
           <div className="container max-w-4xl mx-auto py-12">
             <h1 className="text-[2.7rem] text-foreground mb-8 leading-tight">Privacy Policy</h1>
