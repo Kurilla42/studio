@@ -37,7 +37,7 @@ const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
       )}
       <div className="absolute inset-0 bg-primary/70" />
       <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
-        <h3 className="text-3xl font-inter font-medium text-shadow-md leading-tight">
+        <h3 className="text-3xl font-body font-medium text-shadow-md leading-tight">
           {item.title}
         </h3>
         <p className="text-base text-shadow-sm opacity-90 leading-snug line-clamp-3">

@@ -63,7 +63,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           {/* Left Column: Content */}
           <div className="flex flex-col items-start text-left">
             <motion.h1 
-              className="text-5xl lg:text-[5rem] font-hero text-foreground leading-[1.1]"
+              className="text-[5rem] font-hero text-foreground leading-[1.1]"
               variants={itemVariants}
             >
               Trusted Plumbing Services in Upper Manhattan
@@ -91,7 +91,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                             <span className="text-4xl sm:text-5xl">{stat.number}</span>
                         )}
                       </div>
-                      <p className="text-sm sm:text-base text-muted-foreground">{stat.label}</p>
+                      <p className="text-base text-muted-foreground">{stat.label}</p>
                     </div>
                   </motion.div>
                 ))}
