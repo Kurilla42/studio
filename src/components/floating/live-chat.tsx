@@ -124,7 +124,8 @@ export default function LiveChat() {
     const formData = new FormData(e.currentTarget);
     const name = formData.get('name');
     const phone = formData.get('phone');
-    console.log({name, phone});
+    const message = formData.get('message');
+    console.log({name, phone, message});
     setShowForm(false);
     const successMessage: ChatMessage = {
         id: `bot-success-${Date.now()}`,
@@ -197,6 +198,7 @@ export default function LiveChat() {
                         <form onSubmit={handleFormSubmit} className="space-y-3">
                             <Input name="name" placeholder="Your Name" required className="text-sm"/>
                             <Input name="phone" type="tel" placeholder="Phone Number" required className="text-sm"/>
+                            <Textarea name="message" placeholder="Your message (optional)" className="text-sm" rows={3}/>
                             <div className="flex gap-2">
                                 <Button type="button" variant="ghost" size="sm" onClick={() => setShowForm(false)}>Cancel</Button>
                                 <Button type="submit" size="sm" className="flex-1 bg-primary">Request Appointment</Button>

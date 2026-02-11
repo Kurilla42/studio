@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Phone, Star as StarIcon } from 'lucide-react';
 import { heroStats } from '@/lib/data';
@@ -15,16 +15,6 @@ type HeroProps = {
 export default function Hero({ onScheduleClick }: HeroProps) {
   const [isMounted, setIsMounted] = useState(false);
   
-  const heroRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-      target: heroRef,
-      offset: ['start start', 'end start'],
-  });
-
-  const y1 = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
-  const y2 = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
-
-
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -62,7 +52,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   };
 
   return (
-    <section id="hero" ref={heroRef} className="pt-12 pb-24 overflow-hidden">
+    <section id="hero" className="pt-12 pb-24 overflow-hidden">
       <div className="container">
         <motion.div 
           className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
@@ -73,7 +63,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           {/* Left Column: Content */}
           <div className="flex flex-col items-start text-left">
             <motion.h1 
-              className="text-[2.7rem] sm:text-5xl lg:text-6xl font-hero text-foreground leading-tight"
+              className="text-5xl lg:text-[5rem] font-hero text-foreground leading-[1.1]"
               variants={itemVariants}
             >
               Trusted Plumbing Services in Upper Manhattan
@@ -131,7 +121,6 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                 initial={{ opacity: 0, x: 50, rotate: 5 }}
                 animate={{ opacity: 1, x: 0, rotate: 10 }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
-                style={{ y: y2 }}
               >
                   <Image src={image2.imageUrl} alt={image2.description} fill className="object-cover" data-ai-hint={image2.imageHint} />
               </motion.div>
@@ -142,7 +131,6 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                 initial={{ opacity: 0, y: -50, rotate: -15 }}
                 animate={{ opacity: 1, y: 0, rotate: -5 }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-                style={{ y: y1 }}
                 >
                 <Image src={image1.imageUrl} alt={image1.description} fill className="object-cover" data-ai-hint={image1.imageHint} />
               </motion.div>
