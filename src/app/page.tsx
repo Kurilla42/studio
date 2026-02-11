@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Hero from '@/components/sections/hero';
-import TrustStrip from '@/components/sections/trust-strip';
 import Services from '@/components/sections/services';
 import About from '@/components/sections/about';
 import Testimonials from '@/components/sections/testimonials';
@@ -69,23 +68,21 @@ export default function Home() {
 
       <main className="flex-1 bg-[#0C0E28] bg-noise-dark">
         <Header />
-        <div className="py-6 md:py-8 lg:py-10">
+        <Hero onScheduleClick={handleOpenContactModal} />
+        
+        <div className="py-12 md:py-16 lg:py-20">
           <div className="container">
-            <Hero onScheduleClick={handleOpenContactModal} />
+            <RevealOnScroll delay={0.4}><About /></RevealOnScroll>
           </div>
         </div>
-        <RevealOnScroll><TrustStrip /></RevealOnScroll>
+        
         <RevealOnScroll delay={0.2}><Services onGetPriceClick={handleOpenContactModal} /></RevealOnScroll>
         <div className="container text-center pt-0 pb-12 md:pb-16 lg:pb-20">
             <Button size="lg" className="bg-[#f2cf17] text-primary hover:bg-[#f2cf17]/90 border-2 border-primary shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg" onClick={handleOpenContactModal}>
                 Get Exact Price for Free
             </Button>
         </div>
-        <div className="py-12 md:py-16 lg:py-20">
-          <div className="container">
-            <RevealOnScroll delay={0.4}><About /></RevealOnScroll>
-          </div>
-        </div>
+        
         <RevealOnScroll delay={0.2}><Testimonials /></RevealOnScroll>
         <div className="py-12 md:py-16 lg:py-20">
           <div className="container">

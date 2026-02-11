@@ -5,10 +5,21 @@ import { whyChooseUsItems } from '@/lib/data';
 import type { WhyChooseUsItem } from '@/lib/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 
 const featuredItems = whyChooseUsItems.filter(item => 
   ['why-1', 'why-2', 'why-9', 'why-3'].includes(item.id)
 );
+
+const trustLogosIds = [
+  'trust-logo-1',
+  'trust-logo-2',
+  'trust-logo-3',
+  'trust-logo-4',
+  'trust-logo-5',
+];
+const trustLogos = PlaceHolderImages.filter(p => trustLogosIds.includes(p.id));
+
 
 const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
   const image = item.image ? PlaceHolderImages.find(p => p.id === item.image) : null;
@@ -26,7 +37,7 @@ const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
       )}
       <div className="absolute inset-0 bg-primary/70" />
       <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
-        <h3 className="text-3xl font-bold font-body text-shadow-md leading-tight">
+        <h3 className="text-3xl font-body font-bold text-shadow-md leading-tight">
           {item.title}
         </h3>
         <p className="text-base text-shadow-sm opacity-90 leading-snug line-clamp-3">
@@ -39,7 +50,7 @@ const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
 
 export default function About() {
   return (
-    <section id="about" className="bg-background px-12 py-20 rounded-2xl">
+    <section id="about" className="bg-background py-20 rounded-2xl">
       <div className="h-16" />
       <div className="text-left mb-12">
         <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#0C0E28] max-w-3xl">
@@ -51,6 +62,37 @@ export default function About() {
         {featuredItems.map((item) => (
           <FeatureCard key={item.id} item={item} />
         ))}
+      </div>
+
+      <div className="mt-20">
+        <div className="grid grid-cols-6 gap-x-4 gap-y-6 md:flex md:items-center md:justify-center md:gap-x-12 lg:gap-x-16">
+          {trustLogos.map((logo, index) => (
+            <div 
+              key={logo.id} 
+              className={cn(
+                "relative transition-transform duration-300 justify-self-center",
+                
+                "col-span-2", 
+                index === 3 && "col-start-2", 
+                index === 4 && "col-start-4", 
+                "md:col-auto", 
+
+                {
+                  "h-16 w-36 sm:h-[6.5rem] sm:w-60 lg:h-[7.3rem] lg:w-64": logo.id === 'trust-logo-4',
+                  "h-8 w-24 sm:h-14 sm:w-36 lg:h-16 lg:w-40": logo.id !== 'trust-logo-4'
+                }
+              )}
+            >
+              <Image
+                src={logo.imageUrl}
+                alt={logo.description}
+                fill
+                className="object-contain"
+                data-ai-hint={logo.imageHint}
+              />
+            </div>
+          ))}
+        </div>
       </div>
       <div className="h-16" />
     </section>
