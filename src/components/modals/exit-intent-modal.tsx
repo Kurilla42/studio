@@ -68,13 +68,10 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
                     <div className="my-6">
                       <span className="text-5xl font-bold">{offer.discount}</span>
                     </div>
-                    <p className={cn("text-base flex-grow text-muted-foreground")}>
-                      {offer.disclaimer}
-                    </p>
                     <Button
                       onClick={handleClaimOffer}
                       className={cn(
-                        "mt-8 w-full",
+                        "mt-auto w-full",
                         isHighlighted && "bg-[#f2cf17] text-primary hover:bg-[#f2cf17]/90 border-2 border-primary shadow-button-primary hover:shadow-button-primary-hover"
                       )}
                     >

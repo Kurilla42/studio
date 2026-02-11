@@ -11,6 +11,10 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import type { TeamMember } from '@/lib/types';
 
+type TeamProps = {
+  onBookPlumberClick: () => void;
+};
+
 // Helper component for the static text info
 const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = false }: { member: TeamMember, onShowDetails: () => void, alignment?: 'left' | 'right' | 'center', isOverlay?: boolean }) => {
   const alignmentClasses = {
@@ -95,7 +99,7 @@ const FlippableImageCard = ({ member, isFlipped, onHideDetails }: { member: Team
   );
 }
 
-export default function Team() {
+export default function Team({ onBookPlumberClick }: TeamProps) {
   const [flippedStates, setFlippedStates] = useState<Record<string, boolean>>(
     teamMembers.reduce((acc, member) => ({ ...acc, [member.id]: false }), {})
   );
@@ -191,6 +195,11 @@ export default function Team() {
         })}
       </div>
       <div className="h-16" />
+      <div className="text-center mt-12">
+        <Button size="lg" className="bg-[#f2cf17] text-primary hover:bg-[#f2cf17]/90 border-2 border-primary shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg" onClick={onBookPlumberClick}>
+            Book Your Plumber
+        </Button>
+      </div>
     </section>
   );
 }

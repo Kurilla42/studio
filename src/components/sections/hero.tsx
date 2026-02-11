@@ -61,6 +61,15 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   return (
     <section id="hero" className="py-20">
       <div className="container">
+        <div className="relative z-10 h-14 w-36 sm:h-20 sm:w-48 mb-4">
+            <Image
+                src="https://i.ibb.co/5W38Bwg1/491d9415-6cff-4653-adcf-752aeb03a16f-removebg-preview.png"
+                alt="Empire State Plumbing Logo"
+                fill
+                className="object-contain object-left"
+                priority
+            />
+        </div>
         <motion.div 
           className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
           variants={containerVariants}
@@ -108,7 +117,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                         {stat.id === 'stat-3' ? (
                             <div className="flex items-baseline gap-2">
                                 <span className="text-4xl sm:text-5xl">4.9</span>
-                                <StarIcon className="w-9 h-9 text-primary fill-yellow-400 mt-1" stroke="hsl(var(--primary))" strokeWidth={1.5} />
+                                <StarIcon className="w-9 h-9 text-primary fill-yellow-400 mt-1" strokeWidth={1.5} />
                             </div>
                         ) : (
                             <span className="text-4xl sm:text-5xl">{stat.number}</span>
