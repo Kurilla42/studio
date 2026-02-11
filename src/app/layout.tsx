@@ -32,7 +32,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="https://i.ibb.co/5W38Bwg1/491d9415-6cff-4653-adcf-752aeb03a16f-removebg-preview.png" />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased overflow-x-hidden">
         {children}
         <Toaster />
       </body>

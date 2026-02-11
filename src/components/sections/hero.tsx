@@ -52,7 +52,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   };
 
   return (
-    <section id="hero" className="pt-12 pb-24 overflow-hidden">
+    <section id="hero" className="pt-12 pb-24">
       <div className="container">
         <motion.div 
           className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
