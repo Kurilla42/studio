@@ -70,8 +70,8 @@ export default function Home() {
       <main className="flex-1 bg-[#0C0E28] bg-noise-dark">
         <div className="bg-background relative">
           <div className="container">
-              <header className="flex items-center justify-between py-4">
-                  <div className="relative z-10 h-14 w-36 sm:h-16 sm:w-44">
+              <header className="relative flex items-center justify-center py-4">
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-14 w-44 sm:h-16 sm:w-52">
                       <Image
                           src="https://i.ibb.co/5W38Bwg1/491d9415-6cff-4653-adcf-752aeb03a16f-removebg-preview.png"
                           alt="Empire State Plumbing Logo"

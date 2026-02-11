@@ -12,10 +12,7 @@ type HeroProps = {
   onScheduleClick: () => void;
 };
 
-const rotatingWords = ['Trust', 'Afford', 'Get Fast'];
-
 export default function Hero({ onScheduleClick }: HeroProps) {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
   
   const heroRef = useRef(null);
@@ -30,10 +27,6 @@ export default function Hero({ onScheduleClick }: HeroProps) {
 
   useEffect(() => {
     setIsMounted(true);
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % rotatingWords.length);
-    }, 3000);
-    return () => clearInterval(interval);
   }, []);
 
   const image1 = PlaceHolderImages.find(p => p.id === 'hero-new-1');
@@ -83,23 +76,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
               className="text-[2.7rem] sm:text-5xl lg:text-6xl font-hero text-foreground leading-tight"
               variants={itemVariants}
             >
-              Expert Plumbing Services
-              <br />
-              <div className="inline-flex items-center h-[1.2em] z-10 relative">
-                You Can&nbsp;
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={currentWordIndex}
-                    initial={{ y: '100%', opacity: 0 }}
-                    animate={{ y: '0%', opacity: 1 }}
-                    exit={{ y: '-100%', opacity: 0 }}
-                    transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    className="inline-block text-foreground"
-                  >
-                    {rotatingWords[currentWordIndex]}
-                  </motion.span>
-                </AnimatePresence>
-              </div>
+              Trusted Plumbing Services in Upper Manhattan
             </motion.h1>
 
             <div className="mt-8 w-full">
