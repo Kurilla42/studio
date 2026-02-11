@@ -24,7 +24,7 @@ const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
           data-ai-hint={image.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-primary/70" />
       <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
         <h3 className="text-3xl font-bold font-headline text-shadow-md leading-tight">
           {item.title}
