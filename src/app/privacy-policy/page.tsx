@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
               
               <h2 className="text-2xl font-medium text-foreground pt-4">1. Introduction</h2>
               <p>
-                ProFlow Plumbing ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+                Empire State Plumbing ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
               </p>
 
               <h2 className="text-2xl font-medium text-foreground pt-4">2. Collection of Your Information</h2>
@@ -80,9 +80,9 @@ export default function PrivacyPolicyPage() {
                 If you have questions or comments about this Privacy Policy, please contact us at:
               </p>
               <div className="pl-4">
-                <p>ProFlow Plumbing</p>
+                <p>Empire State Plumbing</p>
                 <p>123 Main Street, Your City, ST 12345</p>
-                <p>Email: info@proflow.com</p>
+                <p>Email: info@empirestateplumbing.com</p>
                 <p>Phone: (555) 123-4567</p>
               </div>
             </div>

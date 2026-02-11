@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import Link from 'next/link';
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
@@ -118,7 +119,14 @@ export default function Footer({ onFormSubmit }: FooterProps) {
           {/* Info & Map Column */}
           <div className="flex flex-col gap-8">
             <div>
-              <h4 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] mb-4">ProFlow Plumbing</h4>
+              <div className="relative h-20 mb-4">
+                  <Image
+                      src="https://i.ibb.co/5W38Bwg1/491d9415-6cff-4653-adcf-752aeb03a16f-removebg-preview.png"
+                      alt="Empire State Plumbing Logo"
+                      fill
+                      className="object-contain object-left"
+                  />
+              </div>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-primary" />
@@ -126,7 +134,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-primary" />
-                  <a href="mailto:info@proflow.com" className="text-base opacity-80 hover:text-primary transition-colors">info@proflow.com</a>
+                  <a href="mailto:info@empirestateplumbing.com" className="text-base opacity-80 hover:text-primary transition-colors">info@empirestateplumbing.com</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-primary" />
@@ -155,7 +163,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="ProFlow Plumbing Location"
+                  title="Empire State Plumbing Location"
                   className="grayscale-[50%] contrast-125"
                 ></iframe>
               </div>
@@ -164,7 +172,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
         </div>
 
         <div className="mt-16 border-t pt-8 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4">
-          <p className="text-sm opacity-80">© 2025 ProFlow Plumbing. All rights reserved.</p>
+          <p className="text-sm opacity-80">© 2025 Empire State Plumbing. All rights reserved.</p>
           <div className="flex gap-8 text-sm">
             <Link href="/privacy-policy" className="opacity-80 hover:text-primary transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-service" className="opacity-80 hover:text-primary transition-colors">Terms of Service</Link>

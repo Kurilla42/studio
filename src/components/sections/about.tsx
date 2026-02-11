@@ -37,7 +37,7 @@ const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
       )}
       <div className="absolute inset-0 bg-primary/70" />
       <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
-        <h3 className="text-3xl font-body font-bold text-shadow-md leading-tight">
+        <h3 className="text-3xl font-inter font-bold text-shadow-md leading-tight">
           {item.title}
         </h3>
         <p className="text-base text-shadow-sm opacity-90 leading-snug line-clamp-3">
@@ -64,13 +64,13 @@ export default function About() {
         ))}
       </div>
 
-      <div className="mt-20">
+      <div className="mt-10">
         <div className="grid grid-cols-6 gap-x-4 gap-y-6 md:flex md:items-center md:justify-center md:gap-x-12 lg:gap-x-16">
           {trustLogos.map((logo, index) => (
             <div 
               key={logo.id} 
               className={cn(
-                "relative transition-transform duration-300 justify-self-center",
+                "relative transition-transform duration-300 justify-self-center lg:scale-110",
                 
                 "col-span-2", 
                 index === 3 && "col-start-2", 
@@ -94,7 +94,7 @@ export default function About() {
           ))}
         </div>
       </div>
-      <div className="h-16" />
+      <div className="h-8" />
     </section>
   );
 }

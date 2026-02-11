@@ -156,7 +156,7 @@ export const testimonials: Testimonial[] = [
     name: "Tom Wilson",
     image: null,
     fallbackColor: "bg-indigo-500 text-white",
-    testimonial: "Had a recurring drain clog that other companies couldn't fix. ProFlow's hydro-jetting service cleared it completely. It's been months with no issues.",
+    testimonial: "Had a recurring drain clog that other companies couldn't fix. Empire State Plumbing's hydro-jetting service cleared it completely. It's been months with no issues.",
     rating: 5,
     time: "1 week ago",
   },
@@ -200,7 +200,7 @@ export const testimonials: Testimonial[] = [
     name: "James Martinez",
     image: null,
     fallbackColor: "bg-purple-500 text-white",
-    testimonial: "Always reliable. I've used ProFlow for both big and small jobs over the years and they consistently deliver high-quality work.",
+    testimonial: "Always reliable. I've used Empire State Plumbing for both big and small jobs over the years and they consistently deliver high-quality work.",
     rating: 5,
     time: "2 months ago",
   }
@@ -310,7 +310,7 @@ export const faqs: FaqItem[] = [
         answer: `Our streamlined service process ensures you get fast, professional results every time:`,
         list: [
           { title: "Step 1 - Contact Us", detail: "Call us at (555) 123-4567 or submit an online request. We'll gather details about your plumbing issue." },
-          { title: "Step 2 - Fast Response", detail: "For emergencies, our certified technician arrives within 60 minutes, fully equipped to solve most common problems." },
+          { title: "Step 2 - Fast Response", detail: "For emergencies, our certified Empire State Plumbing technician arrives within 60 minutes, fully equipped to solve most common problems." },
           { title: "Step 3 - Diagnosis & Quote", detail: "We perform a thorough inspection and provide upfront pricing with no hidden fees or surprise charges." },
           { title: "Step 4 - Expert Repair", detail: "Once you approve, we complete the work using quality parts and proven techniques. Most jobs are finished the same day." },
           { title: "Step 5 - Warranty & Payment", detail: "We clean up, review everything with you, and provide a 2-year warranty. You only pay when 100% satisfied." }
@@ -320,14 +320,14 @@ export const faqs: FaqItem[] = [
     {
         id: 'faq-5',
         question: "Are your technicians licensed and certified?",
-        answer: `Yes, absolutely. Every ProFlow technician is fully licensed, insured, and certified. Here's what that means for you:`,
+        answer: `Yes, absolutely. Every Empire State Plumbing technician is fully licensed, insured, and certified. Here's what that means for you:`,
         list: [
             { title: "State Licensed", detail: "All technicians hold current state plumbing licenses" },
             { title: "Fully Insured", detail: "We carry comprehensive liability and workers' compensation insurance" },
             { title: "Ongoing Training", detail: "Our team participates in continuous education to stay current with the latest techniques and code requirements" },
             { title: "Background Checked", detail: "Every team member passes thorough background and drug screening" }
         ],
-        conclusion: `When you hire ProFlow, you're hiring experienced professionals who meet the highest industry standards.`
+        conclusion: `When you hire Empire State Plumbing, you're hiring experienced professionals who meet the highest industry standards.`
     }
 ]
 

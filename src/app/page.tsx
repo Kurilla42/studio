@@ -67,8 +67,10 @@ export default function Home() {
       </AnimatePresence>
 
       <main className="flex-1 bg-[#0C0E28] bg-noise-dark">
-        <Header />
-        <Hero onScheduleClick={handleOpenContactModal} />
+        <div className="bg-background">
+          <Header />
+          <Hero onScheduleClick={handleOpenContactModal} />
+        </div>
         
         <div className="py-12 md:py-16 lg:py-20">
           <div className="container">

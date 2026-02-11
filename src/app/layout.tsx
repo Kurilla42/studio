@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'ProFlow Plumbing - Expert Plumbing Services',
+  title: 'Empire State Plumbing - Expert Plumbing Services',
   description: 'Expert Plumbing Services You Can Trust, Afford, and Get Fast. Licensed and insured specialists for emergency repairs, installations, and maintenance.',
 };
 
@@ -30,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn('!scroll-smooth', anton.variable, inter.variable)}>
       <head>
+        <link rel="icon" href="https://i.ibb.co/5W38Bwg1/491d9415-6cff-4653-adcf-752aeb03a16f-removebg-preview.png" />
       </head>
       <body className="font-body antialiased">
         {children}

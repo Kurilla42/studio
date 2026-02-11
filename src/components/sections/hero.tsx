@@ -59,7 +59,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   };
 
   return (
-    <section id="hero" className="bg-background py-20">
+    <section id="hero" className="py-20">
       <div className="container">
         <motion.div 
           className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
@@ -114,7 +114,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                             <span className="text-4xl sm:text-5xl">{stat.number}</span>
                         )}
                       </div>
-                      <p className="text-sm sm:text-base text-muted-foreground">{stat.label}</p>
+                      <p className="text-sm sm:text-base text-muted-foreground no-underline">{stat.label}</p>
                     </div>
                   </motion.div>
                 ))}
