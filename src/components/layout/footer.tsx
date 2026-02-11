@@ -52,7 +52,7 @@ export default function Footer({ onFormSubmit }: FooterProps) {
           {/* Form Column */}
           <div>
             <h3 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] mb-2">Contact Us</h3>
-            <p className="text-[1.5rem] opacity-80 mb-8 leading-tight">Leave your contact details and our team will reach out today to provide a free, no-obligation quote.</p>
+            <p className="text-xl opacity-80 mb-8 leading-tight">Leave your contact details and our team will reach out today to provide a free, no-obligation quote.</p>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField

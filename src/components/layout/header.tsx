@@ -18,8 +18,7 @@ export default function Header() {
               href={item.href}
               className={cn(
                 "font-medium transition-colors rounded-full",
-                "text-xs px-2 py-1", // Mobile size
-                "sm:text-sm sm:px-4 sm:py-2", // Desktop size
+                "text-sm px-3 py-2",
                 "text-primary-foreground hover:bg-white/10"
               )}
             >
@@ -32,8 +31,7 @@ export default function Header() {
                 href={faqItem.href}
                 className={cn(
                     "font-medium transition-colors rounded-full",
-                    "text-xs px-2 py-1", // Mobile size
-                    "sm:text-sm sm:px-4 sm:py-2", // Desktop size
+                    "text-sm px-3 py-2",
                     "text-primary-foreground hover:bg-white/10"
                 )}
                 >
