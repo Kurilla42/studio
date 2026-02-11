@@ -5,18 +5,18 @@ export default function EmergencyBanner() {
   return (
     <section id="emergency-banner" className="!p-0">
       <div className="relative emergency-gradient text-primary-foreground overflow-hidden">
-        <div className="container py-12 md:py-16">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="bg-white/20 p-4 rounded-full">
-                <Phone className="w-8 h-8 text-white" />
+        <div className="container py-3 md:py-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <div className="bg-white/20 p-3 rounded-full">
+                <Phone className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-2xl md:text-3xl">Plumbing Emergency?</h3>
-                <p className="opacity-90 mt-1">We're available 24/7 for urgent repairs. Fast response guaranteed!</p>
+                <h3 className="text-xl md:text-2xl">Plumbing Emergency?</h3>
+                <p className="opacity-90 text-sm md:text-base mt-1">We're available 24/7 for urgent repairs. Fast response guaranteed!</p>
               </div>
             </div>
-            <Button asChild size="lg" className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 shrink-0">
+            <Button asChild size="lg" className="primary-gradient shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 shrink-0 h-12 px-8 text-base">
               <a href="tel:5551234567">Call Emergency Line</a>
             </Button>
           </div>
