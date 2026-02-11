@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
@@ -68,7 +69,20 @@ export default function Home() {
 
       <main className="flex-1 bg-[#0C0E28] bg-noise-dark">
         <div className="bg-background relative">
-          <Header />
+          <div className="container">
+              <header className="flex items-center justify-between py-4">
+                  <div className="relative z-10 h-14 w-36 sm:h-16 sm:w-44">
+                      <Image
+                          src="https://i.ibb.co/5W38Bwg1/491d9415-6cff-4653-adcf-752aeb03a16f-removebg-preview.png"
+                          alt="Empire State Plumbing Logo"
+                          fill
+                          className="object-contain object-left"
+                          priority
+                      />
+                  </div>
+                  <Header />
+              </header>
+          </div>
           <Hero onScheduleClick={handleOpenContactModal} />
         </div>
         

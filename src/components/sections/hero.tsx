@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Phone, Star as StarIcon } from 'lucide-react';
 import { heroStats } from '@/lib/data';
@@ -17,6 +17,16 @@ const rotatingWords = ['Trust', 'Afford', 'Get Fast'];
 export default function Hero({ onScheduleClick }: HeroProps) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
+  
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+      target: heroRef,
+      offset: ['start start', 'end start'],
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+  const y2 = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
+
 
   useEffect(() => {
     setIsMounted(true);
@@ -59,17 +69,8 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   };
 
   return (
-    <section id="hero" className="py-20">
+    <section id="hero" ref={heroRef} className="pt-12 pb-20 overflow-hidden">
       <div className="container">
-        <div className="relative z-10 h-14 w-36 sm:h-20 sm:w-48 mb-4">
-            <Image
-                src="https://i.ibb.co/5W38Bwg1/491d9415-6cff-4653-adcf-752aeb03a16f-removebg-preview.png"
-                alt="Empire State Plumbing Logo"
-                fill
-                className="object-contain object-left"
-                priority
-            />
-        </div>
         <motion.div 
           className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
           variants={containerVariants}
@@ -153,6 +154,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                 initial={{ opacity: 0, x: 50, rotate: 5 }}
                 animate={{ opacity: 1, x: 0, rotate: 10 }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
+                style={{ y: y2 }}
               >
                   <Image src={image2.imageUrl} alt={image2.description} fill className="object-cover" data-ai-hint={image2.imageHint} />
               </motion.div>
@@ -163,6 +165,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                 initial={{ opacity: 0, y: -50, rotate: -15 }}
                 animate={{ opacity: 1, y: 0, rotate: -5 }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+                style={{ y: y1 }}
                 >
                 <Image src={image1.imageUrl} alt={image1.description} fill className="object-cover" data-ai-hint={image1.imageHint} />
               </motion.div>

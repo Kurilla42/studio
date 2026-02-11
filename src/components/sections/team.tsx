@@ -195,7 +195,7 @@ export default function Team({ onBookPlumberClick }: TeamProps) {
         })}
       </div>
       <div className="h-16" />
-      <div className="text-center mt-12">
+      <div className="text-center mt-6">
         <Button size="lg" className="bg-[#f2cf17] text-primary hover:bg-[#f2cf17]/90 border-2 border-primary shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg" onClick={onBookPlumberClick}>
             Book Your Plumber
         </Button>
