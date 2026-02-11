@@ -230,7 +230,7 @@ export const specialOffers: Offer[] = [
 export const teamMembers: TeamMember[] = [
     {
         id: "team-1",
-        name: "John Smith",
+        name: "Winston Reed",
         role: "Emergency Repairs Specialist",
         experience: "15+ Years Of Experience",
         image: "team1-image",
@@ -239,7 +239,7 @@ export const teamMembers: TeamMember[] = [
     },
     {
         id: "team-2",
-        name: "Michael Johnson",
+        name: "Mario Vance",
         role: "Installation Services Expert",
         experience: "12+ Years Of Experience",
         image: "team2-image",
@@ -248,7 +248,7 @@ export const teamMembers: TeamMember[] = [
     },
     {
         id: "team-3",
-        name: "David Williams",
+        name: "Javier Solis",
         role: "Maintenance & Inspection Pro",
         experience: "18+ Years Of Experience",
         image: "team3-image",
@@ -257,7 +257,7 @@ export const teamMembers: TeamMember[] = [
     },
     {
         id: "team-4",
-        name: "Chris Brown",
+        name: "Keegan Hayes",
         role: "Drain Cleaning Technician",
         experience: "14+ Years Of Experience",
         image: "team4-image",
@@ -315,7 +315,7 @@ export const faqs: FaqItem[] = [
           { title: "Step 4 - Expert Repair", detail: "Once you approve, we complete the work using quality parts and proven techniques. Most jobs are finished the same day." },
           { title: "Step 5 - Warranty & Payment", detail: "We clean up, review everything with you, and provide a 2-year warranty. You only pay when 100% satisfied." }
         ],
-        conclusion: `This proven process has helped 1,000+ homeowners solve their plumbing problems quickly and reliably.`
+        conclusion: `This proven process has helped 9,000+ homeowners solve their plumbing problems quickly and reliably.`
     },
     {
         id: 'faq-5',

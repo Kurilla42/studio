@@ -41,7 +41,7 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
       <DialogContent className="max-w-4xl p-0" onOpenAutoFocus={(e) => e.preventDefault()}>
         <div className="p-8 sm:p-12">
             <DialogHeader className="text-center mb-6">
-            <DialogTitle className="text-3xl md:text-4xl text-foreground text-center font-body font-bold">Wait! Don't Miss Our Special Offers!</DialogTitle>
+            <DialogTitle className="text-3xl md:text-4xl text-foreground text-center font-inter font-bold">Wait! Don't Miss Our Special Offers!</DialogTitle>
             <DialogDescription className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
                 Before you go, check out these exclusive deals to save on your next service.
             </DialogDescription>
@@ -64,7 +64,9 @@ export default function ExitIntentModal({ onGetQuoteClick }: ExitIntentModalProp
                       isHighlighted && "scale-105 shadow-2xl"
                     )}
                   >
-                    <h3 className="text-2xl font-body font-bold">{offer.title}</h3>
+                    <h3 className="text-2xl font-body font-bold h-16 flex items-center justify-center">
+                      {offer.id === 'offer3' ? <div className="text-center leading-tight">Drain<br/>cleaning</div> : offer.title}
+                    </h3>
                     <div className="my-6">
                       <span className="text-5xl font-bold">{offer.discount}</span>
                     </div>

@@ -25,12 +25,14 @@ export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps)
               <Card
                 key={offer.id}
                 className={cn(
-                  "flex flex-col p-8 transition-all duration-300 h-full",
+                  "flex flex-col text-center p-8 transition-all duration-300 h-full",
                   "bg-card shadow-card",
                   isHighlighted && "scale-105 shadow-2xl"
                 )}
               >
-                <h3 className="text-2xl font-body font-bold">{offer.title}</h3>
+                <h3 className="text-2xl font-body font-bold h-16 flex items-center justify-center">
+                  {offer.id === 'offer3' ? <div className="leading-tight">Drain<br/>cleaning</div> : offer.title}
+                </h3>
                 <div className="my-6">
                   <span className="text-5xl font-bold">{offer.discount}</span>
                 </div>
