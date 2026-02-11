@@ -49,7 +49,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0
     <div className="flex-[0_0_90%] sm:flex-[0_0_45%] lg:flex-[0_0_33%] min-w-0 pl-4">
       <Card className="h-full flex flex-col p-8 bg-card border-none rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-300">
         <p className="text-xs uppercase tracking-widest text-muted-foreground mb-6">Stories</p>
-        <CardContent className="p-0 text-muted-foreground flex-grow text-lg leading-relaxed">
+        <CardContent className="p-0 text-muted-foreground flex-grow text-xl leading-relaxed">
           <p>{testimonial.testimonial}</p>
         </CardContent>
         <div className="flex items-end justify-between mt-8 pt-8 border-t">

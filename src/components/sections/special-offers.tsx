@@ -31,7 +31,7 @@ export default function SpecialOffers({ onClaimOfferClick }: SpecialOffersProps)
                 )}
               >
                 <h3 className="text-2xl font-body font-bold h-16 flex items-center justify-center">
-                  {offer.id === 'offer3' ? <div className="leading-tight">Drain<br/>cleaning</div> : offer.title}
+                  {offer.title}
                 </h3>
                 <div className="my-6">
                   <span className="text-5xl font-bold">{offer.discount}</span>

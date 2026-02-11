@@ -68,12 +68,12 @@ export default function Faq() {
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="p-6 pt-0 font-body">
-                      <div className="space-y-4 border-t pt-4">
-                        {faq.answer && <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">
+                      <div className="space-y-4 border-t pt-4 text-xl">
+                        {faq.answer && <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
                           {faq.answer}
                         </p>}
                         {faq.list && <FaqList items={faq.list} />}
-                        {faq.conclusion && <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line pt-2">
+                        {faq.conclusion && <p className="text-muted-foreground leading-relaxed whitespace-pre-line pt-2">
                           {faq.conclusion}
                         </p>}
                       </div>

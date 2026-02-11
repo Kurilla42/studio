@@ -38,9 +38,9 @@ const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = f
 
   return (
     <div className={cn("flex flex-col", alignmentClasses[alignment])}>
-        <h3 className="text-[2.7rem] text-foreground font-body font-bold leading-tight">{member.name}</h3>
-        <p className="text-[1.5rem] text-muted-foreground mt-1 leading-tight">{member.role}</p>
-        <p className="text-[1.5rem] text-muted-foreground mt-1 leading-tight">{member.experience}</p>
+        <h3 className="text-3xl text-foreground font-body font-bold leading-tight">{member.name}</h3>
+        <p className="text-xl text-muted-foreground mt-1 leading-tight">{member.role}</p>
+        <p className="text-xl text-muted-foreground mt-1 leading-tight">{member.experience}</p>
         <Button onClick={onShowDetails} className="transition-all duration-300 hover:-translate-y-0.5 px-6 py-5 text-base mt-6">
            View Profile <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
@@ -76,7 +76,7 @@ const FlippableImageCard = ({ member, isFlipped, onHideDetails }: { member: Team
             <Card className="h-full w-full flex flex-col p-6 shadow-xl bg-card">
               <div className="flex justify-between items-start mb-3">
                 <div>
-                  <h3 className="text-xl text-foreground font-bold">{member.name}</h3>
+                  <h3 className="text-xl text-foreground font-bold font-body">{member.name}</h3>
                   <p className="text-muted-foreground text-sm">{member.role}</p>
                 </div>
                  <Button variant="ghost" size="icon" className="w-8 h-8 -mr-2 -mt-2" onClick={onHideDetails}>
@@ -194,7 +194,7 @@ export default function Team({ onBookPlumberClick }: TeamProps) {
           );
         })}
       </div>
-      <div className="h-16" />
+      <div className="h-8" />
       <div className="text-center mt-6">
         <Button size="lg" className="bg-[#f2cf17] text-primary hover:bg-[#f2cf17]/90 border-2 border-primary shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg" onClick={onBookPlumberClick}>
             Book Your Plumber
