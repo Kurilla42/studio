@@ -115,73 +115,55 @@ export default function Hero({ onScheduleClick }: HeroProps) {
             </motion.div>
 
             {/* Mobile Images */}
-            <motion.div className="mt-12 block lg:hidden w-full" variants={itemVariants}>
+            <div className="mt-12 block lg:hidden w-full">
                 <div className="relative h-80">
                     {image2 && (
-                    <motion.div 
+                    <div 
                         className="absolute top-0 left-0 w-[50%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-                        initial={{ opacity: 0, y: -50, rotate: 10 }}
-                        animate={{ opacity: 1, y: 0, rotate: 4 }}
-                        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
                         >
                         <Image src={image2.imageUrl} alt={image2.description} fill className="object-cover" data-ai-hint={image2.imageHint} />
-                    </motion.div>
-                    )}
-                    {image1 && (
-                    <motion.div 
-                        className="absolute top-1/4 right-0 w-[55%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-                        initial={{ opacity: 0, x: 50, rotate: -8 }}
-                        animate={{ opacity: 1, x: 0, rotate: -6 }}
-                        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
-                    >
-                        <Image src={image1.imageUrl} alt={image1.description} fill className="object-cover" data-ai-hint={image1.imageHint} />
-                    </motion.div>
+                    </div>
                     )}
                     {image3 && (
-                    <motion.div 
-                        className="absolute bottom-0 left-1/4 w-[40%] aspect-square rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-                        initial={{ opacity: 0, y: 50, rotate: -3 }}
-                        animate={{ opacity: 1, y: 0, rotate: 3 }}
-                        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
-                        >
+                    <div 
+                        className="absolute top-1/4 right-0 w-[55%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
+                    >
                         <Image src={image3.imageUrl} alt={image3.description} fill className="object-cover" data-ai-hint={image3.imageHint} />
-                    </motion.div>
+                    </div>
+                    )}
+                    {image1 && (
+                    <div 
+                        className="absolute bottom-0 left-1/4 w-[40%] aspect-square rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
+                        >
+                        <Image src={image1.imageUrl} alt={image1.description} fill className="object-cover" data-ai-hint={image1.imageHint} />
+                    </div>
                     )}
                 </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Column: Desktop Images */}
           <div className="relative hidden lg:block h-full min-h-[550px]">
             {image2 && (
-              <motion.div 
-                className="absolute top-0 left-20 w-[50%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-                initial={{ opacity: 0, y: -50, rotate: 10 }}
-                animate={{ opacity: 1, y: 0, rotate: 4 }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+              <div 
+                className="absolute top-0 left-[10%] w-[50%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
                 >
                 <Image src={image2.imageUrl} alt={image2.description} fill className="object-cover" data-ai-hint={image2.imageHint} />
-              </motion.div>
+              </div>
             )}
-            {image1 && (
-              <motion.div 
-                className="absolute top-1/4 right-0 w-[55%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-                initial={{ opacity: 0, x: 50, rotate: -8 }}
-                animate={{ opacity: 1, x: 0, rotate: -6 }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
+            {image3 && (
+              <div 
+                className="absolute top-[25%] right-0 w-[50%] aspect-square rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
               >
-                  <Image src={image1.imageUrl} alt={image1.description} fill className="object-cover" data-ai-hint={image1.imageHint} />
-              </motion.div>
+                  <Image src={image3.imageUrl} alt={image3.description} fill className="object-cover" data-ai-hint={image3.imageHint} />
+              </div>
             )}
-             {image3 && (
-              <motion.div 
-                className="absolute bottom-16 left-1/4 w-[40%] aspect-square rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-                initial={{ opacity: 0, y: 50, rotate: -3 }}
-                animate={{ opacity: 1, y: 0, rotate: 3 }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
+             {image1 && (
+              <div 
+                className="absolute bottom-10 left-[20%] w-[55%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
                 >
-                <Image src={image3.imageUrl} alt={image3.description} fill className="object-cover" data-ai-hint={image3.imageHint} />
-              </motion.div>
+                <Image src={image1.imageUrl} alt={image1.description} fill className="object-cover" data-ai-hint={image1.imageHint} />
+              </div>
             )}
           </div>
         </motion.div>
