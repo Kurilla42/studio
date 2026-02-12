@@ -76,7 +76,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
       {image3 && (
         <motion.div
           className="absolute w-[70%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background origin-bottom-left"
-          style={{ bottom: '10%', left: '10%', rotate: 8 }}
+          style={{ bottom: '15%', left: '10%', rotate: -8 }}
           variants={imageVariants(2)}
         >
           <Image src={image3.imageUrl} alt={image3.description} fill className="object-cover" data-ai-hint={image3.imageHint} />
