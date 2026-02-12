@@ -1,8 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Hero from '@/components/sections/hero';
@@ -20,20 +19,9 @@ import ExitIntentModal from '@/components/modals/exit-intent-modal';
 import RevealOnScroll from '@/components/animations/reveal-on-scroll';
 import HowWeHelped from '@/components/sections/how-we-helped';
 import { Button } from '@/components/ui/button';
-import EmergencyBanner from '@/components/sections/emergency-banner';
 
 export default function Home() {
   const [isContactModalOpen, setContactModalOpen] = useState(false);
-  const [showEmergencyBanner, setShowEmergencyBanner] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-        setShowEmergencyBanner(true);
-    }, 15000); // 15 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
-
 
   const handleOpenContactModal = () => {
     setContactModalOpen(true);
@@ -41,23 +29,6 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <AnimatePresence>
-        {showEmergencyBanner && (
-          <motion.div
-            className="fixed top-0 left-0 right-0 z-50"
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            exit={{ y: -100 }}
-            transition={{ duration: 0.3 }}
-          >
-            <EmergencyBanner 
-              onClose={() => setShowEmergencyBanner(false)}
-              onOpenContactModal={handleOpenContactModal}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <main className="flex-1 bg-[#0C0E28] bg-noise-dark">
         <div className="bg-background relative">
           <div className="container">
