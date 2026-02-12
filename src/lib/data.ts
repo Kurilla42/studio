@@ -69,14 +69,14 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     id: "why-1",
     icon: Clock,
     title: "24/7 Emergency Plumbing",
-    content: "We answer fast to stop damage day or night, for any plumbing emergency you might face.",
+    content: "We answer fast to stop damage day or night for any plumbing emergency.",
     image: "why-choose-us-1"
   },
   {
     id: "why-2",
     icon: DollarSign,
     title: "Upfront Pricing",
-    content: "Receive a detailed, upfront quote before work begins, so there are no surprise fees.",
+    content: "Receive a detailed, upfront quote before work begins, with no surprise fees.",
     image: "why-choose-us-2"
   },
   {
@@ -89,14 +89,14 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     id: "why-9",
     icon: ShieldCheck,
     title: "Licensed & Insured",
-    content: "We are fully licensed and insured, ensuring your property and our work are completely protected.",
+    content: "We are fully licensed and insured, ensuring your property and our work is protected.",
     image: "why-choose-us-3"
   },
   {
     id: "why-3",
     icon: ShieldCheck,
     title: "1 Year Warranty",
-    content: "All of our repairs and new installations are fully covered by our one-year labor warranty.",
+    content: "All repairs and new installations are covered by our one-year labor warranty.",
     image: "why-choose-us-4"
   },
   {
