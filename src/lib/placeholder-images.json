@@ -25,6 +25,12 @@
       "imageHint": "plumber portrait"
     },
     {
+      "id": "hero-new-3",
+      "description": "Plumber holding a wrench",
+      "imageUrl": "https://i.ibb.co/Z6LW6rss/1b575db0-366f-436d-8d08-243defafd24c.png",
+      "imageHint": "plumber wrench"
+    },
+    {
       "id": "about-background",
       "description": "Plumber holding tools",
       "imageUrl": "https://i.ibb.co/MyrRstQn/76b877d6-8567-46b3-a496-bd39fe7b3479.jpg",
