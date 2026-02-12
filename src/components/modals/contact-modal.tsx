@@ -52,6 +52,8 @@ export default function ContactModal({ open, onOpenChange }: ContactModalProps) 
           <DialogTitle className="text-2xl">Get a Free Quote</DialogTitle>
           <DialogDescription>
             Our team will reach out to you shortly to provide a no-obligation quote.
+            <br />
+            Or call Emergency Line - <a href="tel:3155268735" className="font-medium text-primary hover:underline">(315) 526-8735</a>
           </DialogDescription>
         </DialogHeader>
         <div className="py-4">
@@ -119,3 +121,5 @@ export default function ContactModal({ open, onOpenChange }: ContactModalProps) 
     </Dialog>
   );
 }
+
+    

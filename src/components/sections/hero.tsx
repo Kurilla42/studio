@@ -109,7 +109,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                   Call Now: (315) 526-8735
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg" onClick={onScheduleClick}>
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg" onClick={onScheduleClick}>
                 Schedule Service
               </Button>
             </motion.div>
@@ -128,7 +128,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
             )}
             {image2 && (
               <motion.div 
-                className="absolute top-0 right-5 w-[50%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
+                className="absolute top-0 right-20 w-[50%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
                 initial={{ opacity: 0, y: -50, rotate: 10 }}
                 animate={{ opacity: 1, y: 0, rotate: 4 }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
@@ -152,3 +152,5 @@ export default function Hero({ onScheduleClick }: HeroProps) {
     </section>
   );
 }
+
+    

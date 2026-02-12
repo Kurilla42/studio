@@ -24,26 +24,14 @@ import EmergencyBanner from '@/components/sections/emergency-banner';
 
 export default function Home() {
   const [isContactModalOpen, setContactModalOpen] = useState(false);
-  const [showStickyBanner, setShowStickyBanner] = useState(false);
+  const [showEmergencyBanner, setShowEmergencyBanner] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const heroElement = document.getElementById('hero');
-      if (heroElement) {
-        if (window.scrollY > heroElement.offsetHeight) {
-          setShowStickyBanner(true);
-        } else {
-          setShowStickyBanner(false);
-        }
-      } else if (window.scrollY > 500) {
-        setShowStickyBanner(true);
-      } else {
-        setShowStickyBanner(false);
-      }
-    };
+    const timer = setTimeout(() => {
+        setShowEmergencyBanner(true);
+    }, 15000); // 15 seconds
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => clearTimeout(timer);
   }, []);
 
 
@@ -54,7 +42,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <AnimatePresence>
-        {showStickyBanner && (
+        {showEmergencyBanner && (
           <motion.div
             className="fixed top-0 left-0 right-0 z-50"
             initial={{ y: -100 }}
@@ -62,7 +50,10 @@ export default function Home() {
             exit={{ y: -100 }}
             transition={{ duration: 0.3 }}
           >
-            <EmergencyBanner />
+            <EmergencyBanner 
+              onClose={() => setShowEmergencyBanner(false)}
+              onOpenContactModal={handleOpenContactModal}
+            />
           </motion.div>
         )}
       </AnimatePresence>
@@ -129,3 +120,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
