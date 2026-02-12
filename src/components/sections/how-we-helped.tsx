@@ -5,6 +5,7 @@ import {
   ImageComparisonImage,
   ImageComparisonSlider
 } from "@/components/ui/image-comparison";
+import { cn } from "@/lib/utils";
 
 const examples = [
     {
@@ -31,6 +32,8 @@ const examples = [
 ];
 
 const CaseStudy = ({ title, description, before_image, after_image, layout }: (typeof examples)[0]) => {
+    const isTextLeftOnDesktop = layout === 'text-left';
+
     const textContent = (
         <div className="flex flex-col justify-center text-white">
             <h3 className="text-3xl lg:text-4xl font-headline mb-4">{title}</h3>
@@ -59,18 +62,13 @@ const CaseStudy = ({ title, description, before_image, after_image, layout }: (t
     );
 
     return (
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center py-12">
-            {layout === 'text-left' ? (
-                <>
-                    {textContent}
-                    {imageContent}
-                </>
-            ) : (
-                <>
-                    {imageContent}
-                    {textContent}
-                </>
-            )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center py-12">
+            <div className={cn({ 'md:order-2': isTextLeftOnDesktop })}>
+                {imageContent}
+            </div>
+            <div className={cn({ 'md:order-1': isTextLeftOnDesktop })}>
+                {textContent}
+            </div>
         </div>
     )
 }

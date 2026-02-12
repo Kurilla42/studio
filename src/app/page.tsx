@@ -62,7 +62,7 @@ export default function Home() {
         <div className="bg-background relative">
           <div className="container">
               <header className="relative flex items-center justify-center py-4">
-                  <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-14 w-44 sm:h-16 sm:w-52">
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-14 w-44 sm:h-16 sm:w-52 hidden sm:block">
                       <Image
                           src="https://i.ibb.co/5W38Bwg1/491d9415-6cff-4653-adcf-752aeb03a16f-removebg-preview.png"
                           alt="Empire State Plumbing Logo"
@@ -120,5 +120,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

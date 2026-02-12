@@ -38,7 +38,7 @@ const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = f
 
   return (
     <div className={cn("flex flex-col", alignmentClasses[alignment])}>
-        <h3 className="text-4xl text-foreground font-body font-bold leading-tight">{member.name}</h3>
+        <h3 className="text-3xl lg:text-4xl text-foreground font-body font-bold leading-tight">{member.name}</h3>
         <p className="text-xl text-muted-foreground mt-1 leading-tight">{member.role}</p>
         <p className="text-xl text-muted-foreground mt-1 leading-tight">{member.experience}</p>
         <Button onClick={onShowDetails} className="transition-all duration-300 hover:-translate-y-0.5 px-6 py-5 text-base mt-6">
@@ -83,8 +83,8 @@ const FlippableImageCard = ({ member, isFlipped, onHideDetails }: { member: Team
                   <X className="w-5 h-5 text-primary" />
                 </Button>
               </div>
-              <p className="text-sm text-muted-foreground mb-4 flex-grow">{member.description}</p>
-              <div className="space-y-2 mt-auto">
+              <p className="text-sm text-muted-foreground mb-4">{member.description}</p>
+              <div className="space-y-2 mt-4">
                 {member.certifications.map((cert) => (
                   <div key={cert} className="flex items-center gap-2.5">
                     <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
@@ -116,7 +116,7 @@ export default function Team({ onBookPlumberClick }: TeamProps) {
   }
 
   return (
-    <section id="team" className="bg-background px-12 py-20 rounded-2xl">
+    <section id="team" className="bg-background px-6 md:px-12 py-20 rounded-2xl">
       <div className="h-16" />
       <div className="text-left mb-16">
         <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#0C0E28]">
@@ -125,9 +125,9 @@ export default function Team({ onBookPlumberClick }: TeamProps) {
       </div>
 
       {/* Mobile Layout */}
-      <div className="md:hidden flex flex-col gap-8">
+      <div className="md:hidden flex flex-col gap-12">
           {teamMembers.map((member) => (
-              <div key={member.id} className="relative h-[700px] w-full rounded-2xl overflow-hidden shadow-lg">
+              <div key={member.id} className="relative h-[48rem] w-full rounded-2xl overflow-hidden shadow-lg">
                   <FlippableImageCard
                       member={member}
                       isFlipped={flippedStates[member.id]}
@@ -161,7 +161,7 @@ export default function Team({ onBookPlumberClick }: TeamProps) {
           const [member1, member2] = pair;
 
           return (
-            <div key={index} className="grid md:grid-cols-4 md:gap-x-8 items-stretch">
+            <div key={index} className="grid md:grid-cols-4 md:gap-x-8 items-stretch h-[48rem]">
                 <div className="col-span-1">
                   <FlippableImageCard
                     member={member1}
@@ -170,7 +170,7 @@ export default function Team({ onBookPlumberClick }: TeamProps) {
                   />
                 </div>
 
-                <div className="col-span-2 flex flex-col justify-between py-12">
+                <div className="col-span-2 flex flex-col justify-around py-12">
                   <MemberInfo
                     member={member1}
                     onShowDetails={() => handleFlip(member1.id)}

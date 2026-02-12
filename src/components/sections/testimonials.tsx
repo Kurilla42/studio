@@ -65,13 +65,13 @@ const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0
             </Avatar>
             <div>
               <p className="font-semibold text-foreground text-lg">{testimonial.name}</p>
-              <div className="flex items-center mt-1">
+              <div className="flex flex-col items-start mt-1 sm:flex-row sm:items-center">
                 <div className="flex items-center">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
-                <p className="text-sm text-muted-foreground ml-2">{testimonial.time}</p>
+                <p className="text-sm text-muted-foreground mt-1 sm:mt-0 sm:ml-2">{testimonial.time}</p>
               </div>
             </div>
           </div>

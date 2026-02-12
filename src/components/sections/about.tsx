@@ -37,7 +37,7 @@ const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
       )}
       <div className="absolute inset-0 bg-primary/70" />
       <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
-        <h3 className="text-3xl font-inter font-medium text-shadow-md leading-tight">
+        <h3 className="text-2xl font-inter font-medium text-shadow-md leading-tight">
           {item.title}
         </h3>
         <p className="text-xl text-shadow-sm opacity-90 leading-snug line-clamp-3">
@@ -65,21 +65,17 @@ export default function About() {
       </div>
 
       <div className="mt-10">
-        <div className="grid grid-cols-6 gap-x-4 gap-y-6 md:flex md:items-center md:justify-center md:gap-x-12 lg:gap-x-16">
+        <div className="grid grid-cols-2 gap-8 md:flex md:items-center md:justify-center md:gap-x-12 lg:gap-x-16">
           {trustLogos.map((logo, index) => (
             <div 
               key={logo.id} 
               className={cn(
-                "relative transition-transform duration-300 justify-self-center lg:scale-110",
-                
-                "col-span-2", 
-                index === 3 && "col-start-2", 
-                index === 4 && "col-start-4", 
-                "md:col-auto", 
-
+                "relative transition-transform duration-300 justify-self-center",
+                "md:col-auto",
+                index === 4 ? "col-span-2" : "col-span-1",
                 {
-                  "h-16 w-36 sm:h-[6.5rem] sm:w-60 lg:h-[7.3rem] lg:w-64": logo.id === 'trust-logo-4',
-                  "h-8 w-24 sm:h-14 sm:w-36 lg:h-16 lg:w-40": logo.id !== 'trust-logo-4'
+                  "h-20 w-44 sm:h-[6.5rem] sm:w-60 lg:h-[7.3rem] lg:w-64": logo.id === 'trust-logo-4',
+                  "h-12 w-32 sm:h-14 sm:w-36 lg:h-16 lg:w-40": logo.id !== 'trust-logo-4'
                 }
               )}
             >
