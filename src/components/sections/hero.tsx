@@ -39,41 +39,48 @@ export default function Hero({ onScheduleClick }: HeroProps) {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
   
-  const statCardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i: number) => ({
+  const imageVariants = (delay: number) => ({
+    hidden: { opacity: 0, scale: 0.9, y: 20 },
+    visible: {
       opacity: 1,
+      scale: 1,
       y: 0,
       transition: {
-        delay: 0.5 + i * 0.2,
+        delay: 0.5 + delay * 0.15,
         duration: 0.8,
         ease: "easeOut",
       },
-    }),
-  };
+    },
+  });
 
   const ImageLayout = () => (
     <div className="relative w-full h-full">
       {image1 && (
-        <div 
-          className="absolute top-0 left-0 w-[60%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-          >
+        <motion.div
+          className="absolute w-[60%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background origin-bottom-left"
+          style={{ top: '0%', left: '0%', rotate: -5 }}
+          variants={imageVariants(0)}
+        >
           <Image src={image1.imageUrl} alt={image1.description} fill className="object-cover" data-ai-hint={image1.imageHint} />
-        </div>
+        </motion.div>
       )}
       {image2 && (
-        <div 
-          className="absolute top-[10%] right-0 w-[50%] aspect-square rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
+        <motion.div
+          className="absolute w-[55%] aspect-square rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background origin-top-right"
+          style={{ top: '10%', right: '0%', rotate: 5 }}
+          variants={imageVariants(1)}
         >
             <Image src={image2.imageUrl} alt={image2.description} fill className="object-cover" data-ai-hint={image2.imageHint} />
-        </div>
+        </motion.div>
       )}
       {image3 && (
-        <div 
-          className="absolute bottom-0 left-[15%] w-[70%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-          >
+        <motion.div
+          className="absolute w-[70%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background origin-bottom-left"
+          style={{ bottom: '10%', left: '10%', rotate: -8 }}
+          variants={imageVariants(2)}
+        >
           <Image src={image3.imageUrl} alt={image3.description} fill className="object-cover" data-ai-hint={image3.imageHint} />
-        </div>
+        </motion.div>
       )}
     </div>
   );
@@ -102,9 +109,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                   <motion.div
                     key={stat.id}
                     custom={i}
-                    variants={statCardVariants}
-                    initial="hidden"
-                    animate={isMounted ? "visible" : "hidden"}
+                    variants={itemVariants}
                     className="p-4"
                   >
                     <div className="flex flex-col text-left">
@@ -139,20 +144,18 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                 Schedule Service
               </Button>
             </motion.div>
-
-            {/* Mobile Images */}
-            <div className="mt-12 block lg:hidden w-full">
-                <div className="relative mx-auto max-w-sm aspect-[1/1]">
-                  <ImageLayout />
-                </div>
-            </div>
           </div>
 
-          {/* Right Column: Desktop Images */}
-          <div className="relative hidden lg:flex h-full min-h-[550px] items-center justify-center">
-            <div className="relative w-full max-w-lg aspect-square">
+          {/* Right Column: Images */}
+          <div className="relative h-full min-h-[500px] lg:min-h-[550px] items-center justify-center">
+            <motion.div 
+              className="relative w-full max-w-lg aspect-square mx-auto"
+              variants={containerVariants}
+              initial="hidden"
+              animate={isMounted ? "visible" : "hidden"}
+            >
               <ImageLayout />
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
