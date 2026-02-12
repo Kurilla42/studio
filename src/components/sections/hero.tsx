@@ -138,7 +138,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
             )}
              {image3 && (
               <motion.div 
-                className="absolute bottom-16 right-0 w-[40%] aspect-square rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
+                className="absolute bottom-16 right-20 w-[40%] aspect-square rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
                 initial={{ opacity: 0, y: 50, rotate: -3 }}
                 animate={{ opacity: 1, y: 0, rotate: 3 }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
