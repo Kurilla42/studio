@@ -102,7 +102,7 @@ export default function Home() {
           </div>
         </div>
         <RevealOnScroll delay={0.2}><HowWeHelped /></RevealOnScroll>
-        <div className="container text-center py-12 md:py-16 lg:py-20">
+        <div className="container text-center py-6 md:py-8 lg:py-10">
             <Button size="lg" className="bg-[#f2cf17] text-primary hover:bg-[#f2cf17]/90 border-2 border-primary shadow-button-primary hover:shadow-button-primary-hover transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg" onClick={handleOpenContactModal}>
                Similar Problem? Schedule Inspection
            </Button>

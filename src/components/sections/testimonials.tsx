@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback } from 'react';
 import Image from 'next/image';
 import { testimonials } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -85,7 +85,6 @@ const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0
 
 export default function Testimonials() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' }, [Autoplay({ delay: 5000, stopOnInteraction: true, playOnInit: true })]);
-  const [scrollProgress, setScrollProgress] = useState(0);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -94,19 +93,6 @@ export default function Testimonials() {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
-
-  const onScroll = useCallback(() => {
-    if (!emblaApi) return;
-    const progress = Math.max(0, Math.min(1, emblaApi.scrollProgress()));
-    setScrollProgress(progress * 100);
-  }, [emblaApi, setScrollProgress]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    onScroll();
-    emblaApi.on('scroll', onScroll);
-    emblaApi.on('reInit', onScroll);
-  }, [emblaApi, onScroll]);
 
   return (
     <section id="testimonials" className="!py-20">
@@ -139,14 +125,6 @@ export default function Testimonials() {
             <Button variant="ghost" size="icon" onClick={scrollNext} className="rounded-full w-14 h-14 bg-card text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
                 <ArrowRight className="w-6 h-6" />
             </Button>
-        </div>
-      </div>
-      <div className="container mt-12">
-        <div className="relative h-1 w-full bg-card rounded-full overflow-hidden">
-            <div 
-                className="absolute top-0 left-0 h-full bg-primary rounded-full transition-all duration-300 ease-out"
-                style={{ width: `${scrollProgress}%` }}
-            />
         </div>
       </div>
     </section>
