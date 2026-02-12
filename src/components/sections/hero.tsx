@@ -52,6 +52,32 @@ export default function Hero({ onScheduleClick }: HeroProps) {
     }),
   };
 
+  const ImageLayout = () => (
+    <div className="relative w-full h-full">
+      {image1 && (
+        <div 
+          className="absolute top-0 left-0 w-[60%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
+          >
+          <Image src={image1.imageUrl} alt={image1.description} fill className="object-cover" data-ai-hint={image1.imageHint} />
+        </div>
+      )}
+      {image2 && (
+        <div 
+          className="absolute top-[10%] right-0 w-[50%] aspect-square rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
+        >
+            <Image src={image2.imageUrl} alt={image2.description} fill className="object-cover" data-ai-hint={image2.imageHint} />
+        </div>
+      )}
+      {image3 && (
+        <div 
+          className="absolute bottom-0 left-[15%] w-[70%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
+          >
+          <Image src={image3.imageUrl} alt={image3.description} fill className="object-cover" data-ai-hint={image3.imageHint} />
+        </div>
+      )}
+    </div>
+  );
+
   return (
     <section id="hero" className="pt-12 pb-20 md:pb-32">
       <div className="container">
@@ -116,28 +142,8 @@ export default function Hero({ onScheduleClick }: HeroProps) {
 
             {/* Mobile Images */}
             <div className="mt-12 block lg:hidden w-full">
-                <div className="relative h-80">
-                    {image2 && (
-                    <div 
-                        className="absolute top-0 left-0 w-[50%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-                        >
-                        <Image src={image2.imageUrl} alt={image2.description} fill className="object-cover" data-ai-hint={image2.imageHint} />
-                    </div>
-                    )}
-                    {image3 && (
-                    <div 
-                        className="absolute top-1/4 right-0 w-[55%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-                    >
-                        <Image src={image3.imageUrl} alt={image3.description} fill className="object-cover" data-ai-hint={image3.imageHint} />
-                    </div>
-                    )}
-                    {image1 && (
-                    <div 
-                        className="absolute bottom-0 left-1/4 w-[40%] aspect-square rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-                        >
-                        <Image src={image1.imageUrl} alt={image1.description} fill className="object-cover" data-ai-hint={image1.imageHint} />
-                    </div>
-                    )}
+                <div className="relative mx-auto max-w-sm aspect-[1/1]">
+                  <ImageLayout />
                 </div>
             </div>
           </div>
@@ -145,27 +151,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           {/* Right Column: Desktop Images */}
           <div className="relative hidden lg:flex h-full min-h-[550px] items-center justify-center">
             <div className="relative w-full max-w-lg aspect-square">
-              {image1 && (
-                <div 
-                  className="absolute top-0 left-0 w-[55%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-                  >
-                  <Image src={image1.imageUrl} alt={image1.description} fill className="object-cover" data-ai-hint={image1.imageHint} />
-                </div>
-              )}
-              {image3 && (
-                <div 
-                  className="absolute top-[25%] left-[50%] w-[50%] aspect-square rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-                >
-                    <Image src={image3.imageUrl} alt={image3.description} fill className="object-cover" data-ai-hint={image3.imageHint} />
-                </div>
-              )}
-              {image2 && (
-                <div 
-                  className="absolute top-[50%] left-[15%] w-[65%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background"
-                  >
-                  <Image src={image2.imageUrl} alt={image2.description} fill className="object-cover" data-ai-hint={image2.imageHint} />
-                </div>
-              )}
+              <ImageLayout />
             </div>
           </div>
         </motion.div>
