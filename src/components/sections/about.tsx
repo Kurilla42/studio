@@ -66,28 +66,33 @@ export default function About() {
 
       <div className="mt-10">
         <div className="grid grid-cols-2 gap-8 md:flex md:items-center md:justify-center md:gap-x-12 lg:gap-x-16">
-          {trustLogos.map((logo, index) => (
-            <div 
-              key={logo.id} 
-              className={cn(
-                "relative transition-transform duration-300 justify-self-center",
-                "md:col-auto",
-                index === 4 ? "col-span-2" : "col-span-1",
-                {
-                  "h-20 w-44 sm:h-[6.5rem] sm:w-60 lg:h-[7.3rem] lg:w-64": logo.id === 'trust-logo-4',
-                  "h-12 w-32 sm:h-14 sm:w-36 lg:h-16 lg:w-40": logo.id !== 'trust-logo-4'
-                }
-              )}
-            >
-              <Image
-                src={logo.imageUrl}
-                alt={logo.description}
-                fill
-                className="object-contain"
-                data-ai-hint={logo.imageHint}
-              />
-            </div>
-          ))}
+          {trustLogos.map((logo, index) => {
+            const isLogo4 = logo.id === 'trust-logo-4';
+            const isEnlargedMobile = ['trust-logo-2', 'trust-logo-3', 'trust-logo-5'].includes(logo.id);
+            return (
+              <div 
+                key={logo.id} 
+                className={cn(
+                  "relative transition-transform duration-300 justify-self-center",
+                  "md:col-auto",
+                  index === 4 ? "col-span-2" : "col-span-1",
+                  // Mobile sizes
+                  isLogo4 ? "h-22 w-48" : isEnlargedMobile ? "h-14 w-36" : "h-12 w-32",
+                  // Desktop sizes
+                  isLogo4 ? "sm:h-[6.5rem] sm:w-60 lg:h-[7.3rem] lg:w-64" : "sm:h-14 sm:w-36 lg:h-16 lg:w-40",
+                  logo.id === 'trust-logo-3' && "mt-2"
+                )}
+              >
+                <Image
+                  src={logo.imageUrl}
+                  alt={logo.description}
+                  fill
+                  className="object-contain"
+                  data-ai-hint={logo.imageHint}
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
       <div className="h-8" />
