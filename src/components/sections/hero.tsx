@@ -76,7 +76,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
       {image3 && (
         <motion.div
           className="absolute w-[70%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background origin-bottom-left"
-          style={{ bottom: '15%', left: '10%', rotate: -8 }}
+          style={{ bottom: '15%', left: '10%', rotate: 8 }}
           variants={imageVariants(2)}
         >
           <Image src={image3.imageUrl} alt={image3.description} fill className="object-cover" data-ai-hint={image3.imageHint} />
@@ -86,7 +86,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   );
 
   return (
-    <section id="hero" className="pt-12 pb-20 md:pb-32">
+    <section id="hero" className="pt-12 pb-10 md:pb-32">
       <div className="container">
         <motion.div 
           className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
@@ -147,7 +147,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           </div>
 
           {/* Right Column: Images */}
-          <div className="relative h-full min-h-[500px] lg:min-h-[550px] items-center justify-center">
+          <div className="relative h-full min-h-[500px] lg:min-h-[550px] items-center justify-center hidden md:flex">
             <motion.div 
               className="relative w-full max-w-lg aspect-square mx-auto"
               variants={containerVariants}
@@ -159,6 +159,17 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           </div>
         </motion.div>
       </div>
+       {/* Images for Mobile */}
+       <div className="md:hidden mt-12 relative h-full min-h-[350px] sm:min-h-[500px] flex items-center justify-center">
+            <motion.div 
+              className="relative w-full max-w-md sm:max-w-lg aspect-square mx-auto"
+              variants={containerVariants}
+              initial="hidden"
+              animate={isMounted ? "visible" : "hidden"}
+            >
+              <ImageLayout />
+            </motion.div>
+        </div>
     </section>
   );
 }

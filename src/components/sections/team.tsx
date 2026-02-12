@@ -27,8 +27,7 @@ const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = f
     return (
       <div className={cn("flex flex-col text-white", alignmentClasses[alignment])}>
         <h3 className="text-2xl font-body font-bold leading-tight text-shadow-md">{member.name}</h3>
-        <p className="text-base mt-1 leading-tight text-shadow-sm opacity-90">{member.role}</p>
-        <p className="text-base mt-1 text-shadow-sm opacity-90">{member.experience}</p>
+        <p className="text-base mt-1 leading-tight text-shadow-sm opacity-90">{member.experience}</p>
         <Button onClick={onShowDetails} className="bg-white text-primary hover:bg-gray-100 border-none shadow-lg transition-transform duration-300 hover:-translate-y-0.5 px-6 py-3 mt-4">
            View Profile <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
@@ -39,7 +38,6 @@ const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = f
   return (
     <div className={cn("flex flex-col", alignmentClasses[alignment])}>
         <h3 className="text-3xl text-foreground font-body font-bold leading-tight xl:text-4xl">{member.name}</h3>
-        <p className="text-xl text-muted-foreground mt-1 leading-tight">{member.role}</p>
         <p className="text-xl text-muted-foreground mt-1 leading-tight">{member.experience}</p>
         <Button onClick={onShowDetails} className="transition-all duration-300 hover:-translate-y-0.5 px-6 py-5 text-base mt-6">
            View Profile <ArrowRight className="w-4 h-4 ml-2" />
@@ -77,14 +75,13 @@ const FlippableImageCard = ({ member, isFlipped, onHideDetails }: { member: Team
               <div className="flex justify-between items-start mb-3">
                 <div>
                   <h3 className="text-2xl text-foreground font-inter font-bold">{member.name}</h3>
-                  <p className="text-base text-muted-foreground">{member.role}</p>
                 </div>
                  <Button variant="ghost" size="icon" className="w-8 h-8 -mr-2 -mt-2" onClick={onHideDetails}>
                   <X className="w-5 h-5 text-primary" />
                 </Button>
               </div>
-              <p className="text-base text-muted-foreground">{member.description}</p>
-              <div className="space-y-2 mt-4">
+              <p className="text-base text-muted-foreground flex-grow">{member.description}</p>
+              <div className="mt-4 space-y-2">
                 {member.certifications.map((cert) => (
                   <div key={cert} className="flex items-center gap-2.5">
                     <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
