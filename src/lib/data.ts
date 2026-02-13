@@ -76,7 +76,7 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     id: "why-2",
     icon: DollarSign,
     title: "Upfront Pricing",
-    content: "You see the full price before work, with no hidden fees ever.",
+    content: "You see the full price before work, with no hidden fees.",
     image: "why-choose-us-2"
   },
   {
@@ -96,7 +96,7 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     id: "why-3",
     icon: ShieldCheck,
     title: "1-Year Warranty",
-    content: "New installs and repairs are covered by our one-year workmanship warranty.",
+    content: "All new installs and repairs are backed by a 1‑year warranty.",
     image: "why-choose-us-4"
   },
   {
