@@ -27,6 +27,7 @@ const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = f
     return (
       <div className={cn("flex flex-col text-white", alignmentClasses[alignment])}>
         <h3 className="text-2xl font-body font-bold leading-tight text-shadow-md">{member.name}</h3>
+        <p className="text-base mt-1 leading-tight text-shadow-sm opacity-90">{member.role}</p>
         <p className="text-base mt-1 leading-tight text-shadow-sm opacity-90">{member.experience}</p>
         <Button onClick={onShowDetails} className="bg-white text-primary hover:bg-gray-100 border-none shadow-lg transition-transform duration-300 hover:-translate-y-0.5 px-6 py-3 mt-4">
            View Profile <ArrowRight className="w-4 h-4 ml-2" />
@@ -38,6 +39,7 @@ const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = f
   return (
     <div className={cn("flex flex-col", alignmentClasses[alignment])}>
         <h3 className="text-3xl text-foreground font-body font-bold leading-tight xl:text-4xl">{member.name}</h3>
+        <p className="text-lg text-primary font-medium mt-2">{member.role}</p>
         <p className="text-xl text-muted-foreground mt-1 leading-tight">{member.experience}</p>
         <Button onClick={onShowDetails} className="transition-all duration-300 hover:-translate-y-0.5 px-6 py-5 text-base mt-6">
            View Profile <ArrowRight className="w-4 h-4 ml-2" />
