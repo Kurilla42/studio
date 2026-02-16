@@ -50,7 +50,7 @@ const FeatureCard = ({ item }: { item: WhyChooseUsItem }) => {
 
 export default function About() {
   return (
-    <section id="about" className="bg-background py-20 rounded-2xl">
+    <section id="about" className="bg-background px-6 md:px-12 py-20 rounded-2xl">
       <div className="h-16" />
       <div className="text-left mb-12">
         <h2 className="text-5xl lg:text-[5rem] font-headline leading-[1.1] text-[#0C0E28] max-w-3xl">
