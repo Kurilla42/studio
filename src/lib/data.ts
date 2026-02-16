@@ -80,12 +80,6 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     image: "why-choose-us-2"
   },
   {
-    id: "why-8",
-    icon: Clock,
-    title: "Response Time - 60 min",
-    content: "In an emergency, every minute counts. We guarantee to have a certified technician at your door within 60 minutes of your call."
-  },
-  {
     id: "why-9",
     icon: ShieldCheck,
     title: "Licensed & Insured",
@@ -96,14 +90,8 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     id: "why-3",
     icon: ShieldCheck,
     title: "1-Year Warranty",
-    content: "All new installs and repairs are backed by a 1‑year warranty.",
+    content: "All new installs and repairs are backed by a 1-year warranty.",
     image: "why-choose-us-4"
-  },
-  {
-    id: "why-4",
-    icon: UserCheck,
-    title: "Background-Checked",
-    content: "Every technician on our team is 100% background-checked, licensed, and insured for your peace of mind."
   }
 ];
 
@@ -234,7 +222,7 @@ export const teamMembers: TeamMember[] = [
         role: "Emergency Repairs Specialist",
         experience: "15+ Years Of Experience",
         image: "team1-image",
-        description: "With over 15 years of experience in rapid response emergency plumbing, John is an expert at diagnosing and resolving urgent issues under pressure, ensuring your home is safe and functional around the clock.",
+        description: "With 15 years of experience in rapid response emergency plumbing, Winston is an expert at diagnosing and resolving urgent issues under pressure, ensuring your home is safe around the clock.",
         certifications: ["Master Plumber License", "Gas Line Specialist", "Emergency Response Certified", "Backflow Prevention Certified"]
     },
     {
@@ -243,7 +231,7 @@ export const teamMembers: TeamMember[] = [
         role: "Installation Services Expert",
         experience: "12+ Years Of Experience",
         image: "team2-image",
-        description: "Specializing in water heater and fixture installations for over a decade, Michael ensures every new component is integrated flawlessly into your system for optimal performance and longevity.",
+        description: "Specializing in water heater and fixture installations for over a decade, Mario ensures every new component is integrated flawlessly into your system for optimal performance and longevity.",
         certifications: ["Certified Installer", "Tankless Water Heater Pro", "Fixture Specialist", "Water Treatment Certified"]
     },
     {
@@ -252,7 +240,7 @@ export const teamMembers: TeamMember[] = [
         role: "Maintenance & Inspection Pro",
         experience: "18+ Years Of Experience",
         image: "team3-image",
-        description: "Our preventive maintenance professional, David, brings nearly two decades of expertise in system diagnostics, helping homeowners avoid costly repairs through meticulous and proactive care.",
+        description: "Our preventive maintenance professional, Javier, brings nearly two decades of expertise in system diagnostics, helping homeowners avoid costly repairs through meticulous and proactive care.",
         certifications: ["System Auditor", "Preventive Care Expert", "Leak Detection Certified", "Plumbing Inspector (CPI)"]
     },
     {
@@ -261,7 +249,7 @@ export const teamMembers: TeamMember[] = [
         role: "Drain Cleaning Technician",
         experience: "14+ Years Of Experience",
         image: "team4-image",
-        description: "With extensive experience in advanced drain cleaning technology, Chris can tackle the most stubborn clogs using hydro-jetting and camera inspections to restore flow quickly and effectively.",
+        description: "With extensive experience in advanced drain cleaning technology, Keegan can tackle the most stubborn clogs using hydro-jetting and camera inspections to restore flow quickly and effectively.",
         certifications: ["Hydro Jetting Certified", "Camera Inspection Pro", "Root Removal Specialist", "Confined Space Entry Certified"]
     }
 ];
