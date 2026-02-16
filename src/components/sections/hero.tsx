@@ -165,7 +165,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
        {/* Images for Mobile */}
        <div className="md:hidden mt-12 relative h-full min-h-[350px] sm:min-h-[500px] flex items-center justify-center">
             <motion.div 
-              className="relative w-full max-w-md sm:max-w-lg aspect-square mx-auto"
+              className="relative w-full max-w-sm sm:max-w-md aspect-square mx-auto"
               variants={containerVariants}
               initial="hidden"
               animate={isMounted ? "visible" : "hidden"}

@@ -80,7 +80,7 @@ export default function About() {
                   isLogo4 ? "h-24 w-52" : isEnlargedMobile ? "h-14 w-36" : "h-12 w-32",
                   // Desktop sizes
                   isLogo4 ? "sm:h-[6.5rem] sm:w-60 lg:h-[7.3rem] lg:w-64" : "sm:h-14 sm:w-36 lg:h-16 lg:w-40",
-                  logo.id === 'trust-logo-3' && "mt-2"
+                  logo.id === 'trust-logo-3' && "mt-6 md:mt-2"
                 )}
               >
                 <Image

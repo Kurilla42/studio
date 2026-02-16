@@ -22,7 +22,14 @@ export default function Header() {
                 "text-primary-foreground hover:bg-white/10"
               )}
             >
-              {item.name}
+              {item.name === 'Special Offers' ? (
+                <>
+                  <span className="inline md:hidden">Offers</span>
+                  <span className="hidden md:inline">Special Offers</span>
+                </>
+              ) : (
+                item.name
+              )}
             </Link>
           ))}
           {faqItem && (
