@@ -15,7 +15,7 @@ type HeroProps = {
   onScheduleClick: () => void;
 };
 
-const rotatingWords = ['Trust', 'Afford', 'Get Fast'];
+const rotatingWords = ['Trust', 'Afford', 'Depend', 'Choose'];
 
 export default function Hero({ onScheduleClick }: HeroProps) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
