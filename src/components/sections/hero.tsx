@@ -60,6 +60,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           className="absolute w-[60%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background origin-bottom-left"
           style={{ top: '0%', left: '0%', rotate: -5 }}
           variants={imageVariants(0)}
+          whileHover={{ scale: 1.05, y: -5, rotate: -7, transition: { duration: 0.3 } }}
         >
           <Image src={image1.imageUrl} alt={image1.description} fill className="object-cover" data-ai-hint={image1.imageHint} />
         </motion.div>
@@ -69,6 +70,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           className="absolute w-[55%] aspect-square rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background origin-top-right"
           style={{ top: '10%', right: '0%', rotate: 5 }}
           variants={imageVariants(1)}
+          whileHover={{ scale: 1.05, y: -5, rotate: 7, transition: { duration: 0.3 } }}
         >
             <Image src={image2.imageUrl} alt={image2.description} fill className="object-cover" data-ai-hint={image2.imageHint} />
         </motion.div>
@@ -78,6 +80,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           className="absolute w-[70%] aspect-video rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary ring-offset-4 ring-offset-background origin-bottom-left"
           style={{ bottom: '15%', left: '10%', rotate: 8 }}
           variants={imageVariants(2)}
+          whileHover={{ scale: 1.05, y: -5, rotate: 10, transition: { duration: 0.3 } }}
         >
           <Image src={image3.imageUrl} alt={image3.description} fill className="object-cover" data-ai-hint={image3.imageHint} />
         </motion.div>
