@@ -39,7 +39,7 @@ const MemberInfo = ({ member, onShowDetails, alignment = 'center', isOverlay = f
   return (
     <div className={cn("flex flex-col", alignmentClasses[alignment])}>
         <h3 className="text-3xl text-foreground font-body font-bold leading-tight xl:text-4xl">{member.name}</h3>
-        <p className="text-lg text-primary font-medium mt-2">{member.role}</p>
+        <p className="text-xl text-muted-foreground mt-2 leading-tight">{member.role}</p>
         <p className="text-xl text-muted-foreground mt-1 leading-tight">{member.experience}</p>
         <Button onClick={onShowDetails} className="transition-all duration-300 hover:-translate-y-0.5 px-6 py-5 text-base mt-6">
            View Profile <ArrowRight className="w-4 h-4 ml-2" />
@@ -74,7 +74,7 @@ const FlippableImageCard = ({ member, isFlipped, onHideDetails }: { member: Team
           {/* Back Face: Details */}
           <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
             <Card className="h-full w-full flex flex-col p-6 shadow-xl bg-card">
-              <div className="flex justify-between items-start mb-3">
+              <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="text-2xl text-foreground font-inter font-bold">{member.name}</h3>
                 </div>
@@ -82,7 +82,7 @@ const FlippableImageCard = ({ member, isFlipped, onHideDetails }: { member: Team
                   <X className="w-5 h-5 text-primary" />
                 </Button>
               </div>
-              <p className="text-base text-muted-foreground flex-grow">{member.description}</p>
+              <p className="text-base text-muted-foreground mb-4">{member.description}</p>
               <div className="mt-4 space-y-2">
                 {member.certifications.map((cert) => (
                   <div key={cert} className="flex items-center gap-2.5">
