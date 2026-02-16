@@ -52,10 +52,10 @@
     @apply font-headline;
   }
   section {
-    @apply px-6 !py-8;
+    @apply !py-8;
   }
   .container {
-    @apply mx-auto w-full max-w-7xl px-4;
+    @apply mx-auto w-full max-w-[1920px] px-6;
   }
   .bg-card, section.bg-background, footer.bg-background, div.bg-background {
     background-image: url('https://i.ibb.co/FbYz5zTH/image.png');
