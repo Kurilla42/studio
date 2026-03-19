@@ -89,7 +89,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
   );
 
   return (
-    <section id="hero" className="pt-12 pb-10 md:pb-32">
+    <section id="hero" className="flex flex-grow items-center py-12 md:py-0">
       <div className="container">
         <motion.div 
           className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
@@ -100,7 +100,7 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           {/* Left Column: Content */}
           <div className="flex flex-col items-start text-left">
             <motion.h1 
-              className="text-[5rem] font-hero text-foreground leading-[1.1]"
+              className="text-[4rem] sm:text-[5rem] lg:text-[6.5rem] font-hero text-foreground leading-[1.1]"
               variants={itemVariants}
             >
               Trusted Plumbing Services in Upper Manhattan
@@ -116,17 +116,17 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                     className="p-4"
                   >
                     <div className="flex flex-col text-left">
-                      <div className="text-[2.7rem] sm:text-5xl font-hero text-foreground flex items-center gap-1">
+                      <div className="text-[2.7rem] sm:text-5xl lg:text-6xl font-hero text-foreground flex items-center gap-1">
                         {stat.id === 'stat-3' ? (
                             <div className="flex items-baseline gap-2">
-                                <span className="text-4xl sm:text-5xl">4.9</span>
-                                <StarIcon className="w-9 h-9 text-primary fill-yellow-400 mt-1" strokeWidth={1.5} />
+                                <span className="text-4xl sm:text-5xl lg:text-6xl">4.9</span>
+                                <StarIcon className="w-9 h-9 lg:w-11 lg:h-11 text-primary fill-yellow-400 mt-1" strokeWidth={1.5} />
                             </div>
                         ) : (
-                            <span className="text-4xl sm:text-5xl">{stat.number}</span>
+                            <span className="text-4xl sm:text-5xl lg:text-6xl">{stat.number}</span>
                         )}
                       </div>
-                      <p className="text-xl text-muted-foreground">{stat.label}</p>
+                      <p className="text-xl lg:text-2xl text-muted-foreground">{stat.label}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -137,22 +137,22 @@ export default function Hero({ onScheduleClick }: HeroProps) {
               className="mt-8 flex flex-col sm:flex-row gap-4"
               variants={itemVariants}
             >
-              <Button size="lg" className="bg-[#f2cf17] text-primary hover:bg-[#f2cf17]/90 border-2 border-primary shadow-button-primary hover:shadow-button-primary-hover animate-pulse-glow transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg" asChild>
+              <Button size="lg" className="bg-[#f2cf17] text-primary hover:bg-[#f2cf17]/90 border-2 border-primary shadow-button-primary hover:shadow-button-primary-hover animate-pulse-glow transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg lg:h-16 lg:px-14 lg:text-xl" asChild>
                 <a href="tel:3155268735">
-                  <Phone className="mr-2 h-5 w-5" />
+                  <Phone className="mr-2 h-5 w-5 lg:h-6 lg:w-6" />
                   Call Now: (315) 526-8735
                 </a>
               </Button>
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg" onClick={onScheduleClick}>
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 h-12 px-6 text-base sm:h-14 sm:px-12 sm:text-lg lg:h-16 lg:px-14 lg:text-xl" onClick={onScheduleClick}>
                 Schedule Service
               </Button>
             </motion.div>
           </div>
 
           {/* Right Column: Images */}
-          <div className="relative h-full min-h-[500px] lg:min-h-[550px] items-center justify-center hidden md:flex">
+          <div className="relative h-full min-h-[500px] lg:min-h-[650px] items-center justify-center hidden md:flex">
             <motion.div 
-              className="relative w-full max-w-lg aspect-square mx-auto"
+              className="relative w-full max-w-lg lg:max-w-xl xl:max-w-2xl aspect-square mx-auto"
               variants={containerVariants}
               initial="hidden"
               animate={isMounted ? "visible" : "hidden"}
@@ -163,9 +163,9 @@ export default function Hero({ onScheduleClick }: HeroProps) {
         </motion.div>
       </div>
        {/* Images for Mobile */}
-       <div className="md:hidden mt-12 relative h-full min-h-[350px] sm:min-h-[500px] flex items-center justify-center">
+       <div className="md:hidden mt-12 relative h-full min-h-[400px] sm:min-h-[550px] flex items-center justify-center">
             <motion.div 
-              className="relative w-full max-w-sm sm:max-w-md aspect-square mx-auto"
+              className="relative w-full max-w-md sm:max-w-lg aspect-square mx-auto"
               variants={containerVariants}
               initial="hidden"
               animate={isMounted ? "visible" : "hidden"}

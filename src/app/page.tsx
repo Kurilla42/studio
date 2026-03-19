@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1 bg-[#0C0E28] bg-noise-dark">
-        <div className="bg-background relative">
+        <div className="bg-background relative flex flex-col min-h-screen">
           <div className="container">
               <header className="relative flex items-center justify-center py-4">
                   <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-14 w-44 sm:h-16 sm:w-52 hidden sm:block">
