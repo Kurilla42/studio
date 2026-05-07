@@ -68,7 +68,7 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
   {
     id: "why-1",
     icon: Clock,
-    title: "24/7 Emergency Plumbing",
+    title: "24/7 Emergency",
     content: "Fast response day or night to stop leaks and flooding.",
     image: "why-choose-us-1"
   },
@@ -330,6 +330,3 @@ export const socialProofData = {
   avatars: ["social-proof-avatar-1", "social-proof-avatar-2", "social-proof-avatar-3", "social-proof-avatar-4"],
   names: ["Alex P.", "Maria K.", "John D.", "Samantha G.", "Michael B."],
 };
-
-    
-    
