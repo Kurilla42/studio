@@ -261,7 +261,7 @@ export const faqs: FaqItem[] = [
         answer: `Our pricing is transparent and upfront - no hidden fees or surprise charges. Here's our pricing structure:`,
         list: [
             { title: "Service Call", detail: "$79 (waived with completed repair)" },
-            { title: "Emergency Repairs", detail: "Starting at $150-$500 depending on complexity" },
+            { title: "Emergency Repairs", detail: "$150-$500 depending on complexity" },
             { title: "Water Heater Installation", detail: "$800-$2,500 (depends on type and capacity)" },
             { title: "Drain Cleaning", detail: "$150-$400 (standard cleaning)" },
             { title: "Fixture Installation", detail: "$125-$350 per fixture" }

@@ -147,9 +147,21 @@ export default function Hero({ onScheduleClick }: HeroProps) {
                 Schedule Service
               </Button>
             </motion.div>
+
+            {/* Images for Mobile (Visible only on mobile, placed below buttons) */}
+            <div className="md:hidden mt-12 relative w-full aspect-square flex items-center justify-center">
+                <motion.div 
+                  className="relative w-full max-w-md sm:max-w-lg aspect-square mx-auto"
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate={isMounted ? "visible" : "hidden"}
+                >
+                  <ImageLayout />
+                </motion.div>
+            </div>
           </div>
 
-          {/* Right Column: Images */}
+          {/* Right Column: Images (Desktop only) */}
           <div className="relative h-full min-h-[500px] lg:min-h-[650px] items-center justify-center hidden md:flex">
             <motion.div 
               className="relative w-full max-w-lg lg:max-w-xl xl:max-w-2xl aspect-square mx-auto"
@@ -162,17 +174,6 @@ export default function Hero({ onScheduleClick }: HeroProps) {
           </div>
         </motion.div>
       </div>
-       {/* Images for Mobile */}
-       <div className="md:hidden mt-12 relative h-full min-h-[400px] sm:min-h-[550px] flex items-center justify-center">
-            <motion.div 
-              className="relative w-full max-w-md sm:max-w-lg aspect-square mx-auto"
-              variants={containerVariants}
-              initial="hidden"
-              animate={isMounted ? "visible" : "hidden"}
-            >
-              <ImageLayout />
-            </motion.div>
-        </div>
     </section>
   );
 }
